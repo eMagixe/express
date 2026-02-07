@@ -25,9 +25,9 @@ const reviews = <Review[]> [{
 </script>
 
 <template>
-	<section class="section-reviews w-full mx-auto h-screen">
+	<section class="section-order w-full mx-auto h-screen">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
-			<SectionTitle title="Отзывы" />
+			<SectionTitle title="Заказ" />
 			<div class=" w-full flex flex-col justify-start items-center pt-10 gap-10">
 				<template v-for="(item, index) in reviews as Review[]" :key="index">
 					<div class="item flex flex-col justify-start items-start gap-1 w-full">
@@ -49,18 +49,12 @@ const reviews = <Review[]> [{
 						<div class="text-gray-600 text-[20px] uppercase">{{ item.text }}</div>
 					</div>
 				</template>
-				<div class="w-full flex flex-row justify-between items-center pt-10 gap-5">
+				<div class="w-full flex flex-row justify-center items-center pt-10 gap-5">
 					<UButton
-							class="button-gradient uppercase"
-							icon="i-lucide-ellipsis"
+							class="button-gradient uppercase h-16"
+							icon="i-lucide-send"
 					>
-						еще
-					</UButton>
-					<UButton
-							class="button-gradient uppercase"
-							icon="i-lucide-plus"
-					>
-						оставить отзыв
+						Отправить
 					</UButton>
 				</div>
 			</div>

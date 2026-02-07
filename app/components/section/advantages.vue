@@ -69,7 +69,7 @@ const advantages = <Advantage[]> [
 <template>
 	<section class="section-advantages w-full mx-auto h-screen">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
-			<SectionHeader title="Наши преимущества" />
+			<SectionTitle title="Наши преимущества" />
 			<div class="lg:w-[70%] flex flex-col justify-center items-center pt-10 gap-5">
 				<template v-for="(item, index) in advantages as Advantage[]" :key="index">
 					<div class="item flex flex-col justify-center items-center gap-1 w-full">

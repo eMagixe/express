@@ -1,9 +1,25 @@
 <script setup lang="ts">
-const { title } = defineProps<{
-	title: string
-}>()
+
 </script>
 
 <template>
-	<h2 class="w-full border-b border-b-white text-[32px] md:text-[40px] lg:text-[48px] text-center">{{ title }}</h2>
+	<UContainer>
+		<UHeader back="/" class="border-gray-700 relative">
+			<template #left>
+				<Logo/>
+			</template>
+			
+			<template #body>
+				<Phones />
+			</template>
+			
+			<template #right>
+				<Phones class="not-lg:hidden"/>
+			</template>
+		</UHeader>
+	</UContainer>
 </template>
+
+<style scoped>
+
+</style>

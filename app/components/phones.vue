@@ -16,7 +16,7 @@
 			</a>
 		</div>
 		<UButton
-				class="button-gradient h-16"
+				class="button-gradient h-16 uppercase"
 				icon="i-lucide-phone-call"
 		>
 				Вызвать
