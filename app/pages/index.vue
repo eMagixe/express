@@ -74,12 +74,14 @@ const reviews = [{
 }]
 
 </script>
+
 <template>
 	<div class="first-screen w-full mx-auto h-screen">
+		
 		<UContainer>
-			<UHeader back="/" class="py-15 border-gray-700 relative">
+			<UHeader back="/" class="border-gray-700 relative">
 				<template #left>
-					<Logo/>
+						<Logo/>
 				</template>
 				
 				<template #body>
@@ -112,11 +114,11 @@ const reviews = [{
 			<div class="font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5">быстро и с комфортом</div>
 		</UContainer>
 	</div>
+	
 	<section class="two-section w-full mx-auto h-screen">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
-			<h2 class="mt-10 text-[32px] md:text-[40px] lg:text-[64px]">Наши преимущества</h2>
-			
-			<div class="border-t border-t-white lg:w-[70%] flex flex-col justify-center items-center pt-10 gap-5">
+			<SectionHeader title="Наши преимущества" />
+			<div class="lg:w-[70%] flex flex-col justify-center items-center pt-10 gap-5">
 				<template v-for="(item, index) in items" :key="index">
 					<div class="item flex flex-col justify-center items-center gap-1 w-full">
 						<div class="flex flex-row justify-center items-center gap-2 w-full text-white">
@@ -132,29 +134,44 @@ const reviews = [{
 	
 	<section class="reviews-section w-full mx-auto h-screen">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
-			<h2 class="border-b text-[32px] md:text-[40px] lg:text-[64px] border-b-white lg:w-[60%] text-center mt-10">Отзывы</h2>
-			
+			<SectionHeader title="Отзывы" />
 			<div class=" w-full flex flex-col justify-start items-center pt-10 gap-10">
 				<template v-for="(item, index) in reviews" :key="index">
 					<div class="item flex flex-col justify-start items-start gap-1 w-full">
 						<div class="flex flex-row justify-between items-start gap-2 w-full text-white">
 							<div class="flex flex-row justify-center items-center gap-5">
-								<span class="uppercase text-[40px]">{{ item.name }}</span>
+								<span class="uppercase text-[40px]">
+									<UIcon name="i-lucide-circle-user-round" size="32" />
+									{{ item.name }}
+								</span>
 								<div class="flex flex-row justify-center items-center gap-1">
-									<img v-for="n in item.rating" src="/images/svg/star.svg" alt="star">
+									<img height="20" width="20" v-for="n in item.rating" src="/images/svg/star.svg" :alt="`star +${n}`" />
 								</div>
 							</div>
-							<div>{{ item.date }}</div>
+							<div class="flex flex-row justify-center items-center gap-1">
+								<UIcon name="i-lucide-calendar" size="14" />
+								<p>{{ item.date }}</p>
+							</div>
 						</div>
 						<div class="text-white text-[20px] uppercase">{{ item.text }}</div>
 					</div>
 				</template>
-				
-				<div class="w-full flex flex-row justify-between items-center pt-10 gap-5 font-thin text-[24px] text-white mt-20 underline decoration-1 underline-offset-5 uppercase">
-					<p>еще</p>
-					<p>оставить отзыв</p>
+				<div class="w-full flex flex-row justify-between items-center pt-10 gap-5">
+					<UButton
+							class="button-gradient uppercase"
+							icon="i-lucide-ellipsis"
+					>
+						еще
+					</UButton>
+					<UButton
+							class="button-gradient uppercase"
+							icon="i-lucide-plus"
+					>
+						оставить отзыв
+					</UButton>
 				</div>
 			</div>
 		</UContainer>
 	</section>
+	
 </template>

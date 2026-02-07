@@ -12,6 +12,7 @@
     --ui-bg-muted: #FFC400;
     --ui-bg-elevated: #FFC400;
     --ui-bg-accented: #FF6600;
+    --ui-header-height: 100px;
 }
 
 header {
@@ -60,8 +61,8 @@ header {
     }
 
     .item {
-        background: linear-gradient(rgba(103, 62, 6, 0.2), #995900 100%);
-        border: #FFC400 solid 1px;
+        background: linear-gradient(#995900, rgba(103, 62, 6, 0.2) 100%);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
         padding: 16px;
         border-radius: 16px;
         backdrop-filter: blur(5px);
@@ -69,13 +70,9 @@ header {
 }
 
 .button-gradient {
-    height: 64px;
     background: linear-gradient(90deg, #FFC400 0%, #FF6600 100%);
     border-radius: 8px;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-style: italic;
     font-weight: 600;
     color: #0A0B08;
