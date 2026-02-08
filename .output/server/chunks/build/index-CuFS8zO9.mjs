@@ -11110,7 +11110,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       const _component_UButton = _sfc_main$m;
       const _component_UCalendar = _sfc_main$4;
       const _component_UCheckbox = _sfc_main$3;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-screen py-20" }, _attrs))}>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-screen" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -11457,7 +11457,7 @@ const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_Logo = __nuxt_component_0$1;
   const _component_UIcon = _sfc_main$r;
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end h-70 gap-5 sm:gap-2" }, _attrs))}>`);
+  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end gap-5 sm:gap-2" }, _attrs))}><div class="h-25 w-full"></div>`);
   _push(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent));
   _push(`<div class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"><a href="tel:+7 (917) 766-68-33">`);
   _push(ssrRenderComponent(_component_UIcon, {
@@ -11504,4 +11504,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-Cf_oxRTI.mjs.map
+//# sourceMappingURL=index-CuFS8zO9.mjs.map

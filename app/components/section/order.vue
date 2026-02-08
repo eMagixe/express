@@ -34,7 +34,7 @@ const reset = (): void => {
 </script>
 
 <template>
-	<section class="section-order w-full mx-auto h-screen py-20">
+	<section class="section-order w-full mx-auto h-screen">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
 			<SectionTitle title="Сделать заявку"/>
 			<div class=" w-full flex flex-col justify-start items-center pt-10 gap-10">

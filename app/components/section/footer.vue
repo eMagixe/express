@@ -3,7 +3,8 @@
 </script>
 
 <template>
-	<footer class="flex flex-col w-full justify-end h-70 gap-5 sm:gap-2">
+	<footer class="flex flex-col w-full justify-end gap-5 sm:gap-2">
+		<div class="h-25 w-full"></div>
 		<Logo class="h-14"/>
 		<div
 				class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic">
