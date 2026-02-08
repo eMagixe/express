@@ -4548,7 +4548,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$t;
   const _component_UIcon = _sfc_main$s;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-40" }, {
+  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-20" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
@@ -4581,7 +4581,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
+        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div><div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
@@ -4625,7 +4625,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
               createTextVNode(" САЛАВАТ ")
             ])
           ]),
-          createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки"),
+          createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode("div", { class: "font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
@@ -11674,4 +11674,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-CAdZu4vY.mjs.map
+//# sourceMappingURL=index-CYIk8qNn.mjs.map
