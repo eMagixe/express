@@ -3,7 +3,9 @@ import {CalendarDate} from '@internationalized/date'
 
 const inputDate = useTemplateRef('inputDate')
 
-const modelValue = shallowRef(new CalendarDate(2022, 1, 10))
+const dateNow = new Date(Date.now())
+const currentDate = new CalendarDate(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDay())
+const date = shallowRef(currentDate)
 
 const check = ref(false)
 
@@ -20,6 +22,15 @@ const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уф�
 const from_cities = computed(() => cities.value.filter(i => i !== data.to))
 
 const to_cities = computed(() => cities.value.filter(i => i !== data.from))
+
+const reset = (): void => {
+	data.to_address = ''
+	data.from_address = ''
+	data.to = ''
+	data.from = ''
+	data.name = ''
+	date.value = currentDate
+}
 </script>
 
 <template>
@@ -78,7 +89,7 @@ const to_cities = computed(() => cities.value.filter(i => i !== data.from))
 				/>
 				<UInputDate
 						ref="inputDate"
-						v-model="modelValue"
+						v-model="date"
 						:ui="{
 							base: 'h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px] flex justify-center items-center gap-10',
 						}"
@@ -101,7 +112,7 @@ const to_cities = computed(() => cities.value.filter(i => i !== data.from))
 							
 							<template #content>
 								<UCalendar
-										v-model="modelValue"
+										v-model="date"
 										class="p-2"
 								/>
 							</template>
@@ -127,11 +138,13 @@ const to_cities = computed(() => cities.value.filter(i => i !== data.from))
 					<UButton
 							class="button-gradient uppercase h-16"
 							icon="i-lucide-send"
+							:disabled="!check"
 					>
 						Отправить
 					</UButton>
 					<UButton
 							class="button-gradient uppercase h-16"
+							@click="reset"
 					>
 						Очистить
 					</UButton>
