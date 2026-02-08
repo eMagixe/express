@@ -3,9 +3,10 @@
 </script>
 
 <template>
-	<SectionHeader />
-	<SectionWelcome />
-	<SectionAdvantages />
-	<SectionReviews />
-	<SectionOrder />
+	<SectionHeader/>
+	<SectionWelcome/>
+	<SectionAdvantages/>
+	<SectionReviews/>
+	<SectionOrder/>
+	<SectionFooter/>
 </template>
