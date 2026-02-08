@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div class="welcome-section w-full mx-auto h-screen">
+	<div class="welcome-section w-full mx-auto h-screen pb-20">
 		<UContainer>
 			<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10">
 				<div>КУМЕРТАУ</div>
@@ -23,7 +23,7 @@
 			<p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30">
 				Круглосуточные перевозки</p>
 			<div
-					class="font-thin text-[32px] text-white mt-20 pb-20 text-center lg:text-left underline decoration-1 underline-offset-5">
+					class="font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5">
 				быстро и с комфортом
 			</div>
 		</UContainer>
