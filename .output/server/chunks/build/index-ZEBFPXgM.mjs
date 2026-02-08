@@ -4551,7 +4551,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   _push(ssrRenderComponent(_component_UContainer, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>МЕЛЕУЗ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>САЛАВАТ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>УФА</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30"${_scopeId}>Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}>быстро и с комфортом</div>`);
+        _push2(`<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>МЕЛЕУЗ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>САЛАВАТ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>УФА</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white mt-20 mb-20 text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10" }, [
@@ -4585,8 +4585,8 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
             }),
             createVNode("div", null, "КУМЕРТАУ")
           ]),
-          createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30" }, "Круглосуточные перевозки"),
-          createVNode("div", { class: "font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5" }, "быстро и с комфортом")
+          createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30" }, " Круглосуточные перевозки"),
+          createVNode("div", { class: "font-thin text-[32px] text-white mt-20 mb-20 text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
     }),
@@ -11232,7 +11232,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                 label: "text-white text-lg"
               }
             }, null, _parent2, _scopeId));
-            _push2(`</div><div class="w-full flex flex-row justify-center items-center pt-5 gap-5"${_scopeId}>`);
+            _push2(`</div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UButton, {
               class: "button-gradient uppercase h-16",
               icon: "i-lucide-send",
@@ -11374,7 +11374,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                     }
                   }, null, 8, ["modelValue", "onUpdate:modelValue"])
                 ]),
-                createVNode("div", { class: "w-full flex flex-row justify-center items-center pt-5 gap-5" }, [
+                createVNode("div", { class: "w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" }, [
                   createVNode(_component_UButton, {
                     class: "button-gradient uppercase h-16",
                     icon: "i-lucide-send",
@@ -11633,4 +11633,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-C_H_OaAB.mjs.map
+//# sourceMappingURL=index-ZEBFPXgM.mjs.map

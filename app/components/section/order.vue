@@ -134,7 +134,7 @@ const reset = (): void => {
 				</div>
 				
 				
-				<div class="w-full flex flex-row justify-center items-center pt-5 gap-5">
+				<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
 					<UButton
 							class="button-gradient uppercase h-16"
 							icon="i-lucide-send"
