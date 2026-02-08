@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {CalendarDate} from '@internationalized/date'
+import {vMaska} from 'maska/vue'
 
 const inputDate = useTemplateRef('inputDate')
 
@@ -19,9 +20,21 @@ const data = reactive({
 
 const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
 
-const from_cities = computed(() => cities.value.filter(i => i !== data.to))
+const from_cities = computed(() => {
+	if (data.to === 'Уфа') {
+		return cities.value.filter(i => i !== 'Уфа')
+	} else {
+		return cities.value
+	}
+})
 
-const to_cities = computed(() => cities.value.filter(i => i !== data.from))
+const to_cities = computed(() => {
+	if (data.from === 'Уфа') {
+		return cities.value.filter(i => i !== 'Уфа')
+	} else {
+		return cities.value.filter(i => i === 'Уфа')
+	}
+})
 
 const reset = (): void => {
 	data.to_address = ''
@@ -42,6 +55,15 @@ const reset = (): void => {
 						v-model="data.name"
 						color="primary"
 						placeholder="Ф.И.О"
+						size="xl"
+						:ui="{
+							base: 'h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]',
+						}"
+				/>
+				<UInput
+						v-maska="'+7-(###)-###-##-##'"
+						placeholder="+7-(000)-000-00-00"
+						icon="i-lucide-phone"
 						size="xl"
 						:ui="{
 							base: 'h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]',
