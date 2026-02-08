@@ -4,7 +4,7 @@
 
 <template>
 	<UFooter>
-		<div class="flex flex-col w-full gap-5 sm:gap-2 pt-20 pb-10">
+		<div class="flex flex-col w-full justify-end h-50 gap-5 sm:gap-2">
 			<Logo class="h-14"/>
 			<div class="flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic">
 				<a href="tel:+7 (917) 766-68-33">

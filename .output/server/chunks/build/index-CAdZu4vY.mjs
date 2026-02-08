@@ -1,5 +1,5 @@
-import { withCtx, createVNode, mergeProps, defineComponent, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, ref, createTextVNode, unref, useTemplateRef, shallowRef, reactive, computed, isRef, renderSlot, useSlots, useModel, watch, toRef, mergeModels, resolveDynamicComponent, toHandlers, inject, nextTick, withModifiers, useId, toValue, provide, toRaw, useSSRContext } from 'vue';
-import { ssrRenderComponent, ssrRenderAttrs, ssrRenderAttr, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderSlot, ssrRenderVNode } from 'vue/server-renderer';
+import { withCtx, createVNode, mergeProps, createTextVNode, defineComponent, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, ref, unref, useTemplateRef, shallowRef, reactive, computed, isRef, renderSlot, useSlots, useModel, watch, toRef, mergeModels, resolveDynamicComponent, toHandlers, inject, nextTick, withModifiers, useId, toValue, provide, toRaw, useSSRContext } from 'vue';
+import { ssrRenderComponent, ssrRenderAttrs, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderSlot, ssrRenderVNode } from 'vue/server-renderer';
 import { Primitive, useForwardProps, useForwardPropsEmits, DialogRoot, DialogContent, VisuallyHidden, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, useFilter, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, Label, CheckboxRoot, CheckboxIndicator, Slot } from 'reka-ui';
 import { createTV } from 'tailwind-variants';
 import { _ as _export_sfc, b as useAppConfig, c as useRoute, a as appConfig } from './server.mjs';
@@ -4543,50 +4543,90 @@ _sfc_main$g.setup = (props, ctx) => {
   return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$g, [["ssrRender", _sfc_ssrRender$3]]), { __name: "SectionHeader" });
-const _imports_0$1 = publicAssetsURL("/images/svg/arrow-b.svg");
 const _sfc_main$f = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$t;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto h-screen pb-20" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, null, {
+  const _component_UIcon = _sfc_main$s;
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
+  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-40" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>МЕЛЕУЗ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>САЛАВАТ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>УФА</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
+        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` УФА `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` КУМЕРТАУ </div><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` УФА `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` МЕЛЕУЗ </div><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> САЛАВАТ `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` УФА `);
+        _push2(ssrRenderComponent(_component_UIcon, {
+          name: "i-lucide-arrow-right",
+          class: "h-6 w-6"
+        }, null, _parent2, _scopeId));
+        _push2(` САЛАВАТ </div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
-          createVNode("div", { class: "cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10" }, [
-            createVNode("div", null, "КУМЕРТАУ"),
-            createVNode("div", { class: "not-md:hidden arrow" }, "→"),
-            createVNode("img", {
-              src: _imports_0$1,
-              alt: "arrow-b",
-              class: "h-7 md:hidden"
-            }),
-            createVNode("div", null, "МЕЛЕУЗ"),
-            createVNode("div", { class: "not-md:hidden arrow" }, "→"),
-            createVNode("img", {
-              src: _imports_0$1,
-              alt: "arrow-b",
-              class: "h-7 md:hidden"
-            }),
-            createVNode("div", null, "САЛАВАТ"),
-            createVNode("div", { class: "not-md:hidden arrow" }, "→"),
-            createVNode("img", {
-              src: _imports_0$1,
-              alt: "arrow-b",
-              class: "h-7 md:hidden"
-            }),
-            createVNode("div", null, "УФА"),
-            createVNode("div", { class: "not-md:hidden arrow" }, "→"),
-            createVNode("img", {
-              src: _imports_0$1,
-              alt: "arrow-b",
-              class: "h-7 md:hidden"
-            }),
-            createVNode("div", null, "КУМЕРТАУ")
+          createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
+            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+              createTextVNode(" КУМЕРТАУ "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" УФА "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" КУМЕРТАУ ")
+            ]),
+            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+              createTextVNode(" МЕЛЕУЗ "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" УФА "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" МЕЛЕУЗ ")
+            ]),
+            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+              createTextVNode(" САЛАВАТ "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" УФА "),
+              createVNode(_component_UIcon, {
+                name: "i-lucide-arrow-right",
+                class: "h-6 w-6"
+              }),
+              createTextVNode(" САЛАВАТ ")
+            ])
           ]),
-          createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30" }, " Круглосуточные перевозки"),
-          createVNode("div", { class: "font-thin text-[32px] text-white mt-20 text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
+          createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки"),
+          createVNode("div", { class: "font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
     }),
@@ -4620,6 +4660,7 @@ _sfc_main$e.setup = (props, ctx) => {
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const __nuxt_component_1 = Object.assign(_sfc_main$e, { __name: "SectionTitle" });
+const _imports_0$1 = publicAssetsURL("/images/svg/arrow-b.svg");
 const _sfc_main$d = /* @__PURE__ */ defineComponent({
   __name: "advantages",
   __ssrInlineRender: true,
@@ -4682,7 +4723,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$t;
       const _component_SectionTitle = __nuxt_component_1;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto sm:h-screen pb-15" }, _attrs))}>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -5910,7 +5951,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       const _component_UMarquee = _sfc_main$c;
       const _component_UInput = _sfc_main$b;
       const _component_UTextarea = _sfc_main$a;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto" }, _attrs))}>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -11069,7 +11110,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       const _component_UButton = _sfc_main$n;
       const _component_UCalendar = _sfc_main$5;
       const _component_UCheckbox = _sfc_main$4;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-screen pt-20" }, _attrs))}>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -11560,7 +11601,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(ssrRenderComponent(_component_UFooter, _attrs, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="flex flex-col w-full gap-5 sm:gap-2 pt-20 pb-10"${_scopeId}>`);
+        _push2(`<div class="flex flex-col w-full justify-end h-50 gap-5 sm:gap-2"${_scopeId}>`);
         _push2(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent2, _scopeId));
         _push2(`<div class="flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"${_scopeId}><a href="tel:+7 (917) 766-68-33"${_scopeId}>`);
         _push2(ssrRenderComponent(_component_UIcon, {
@@ -11575,7 +11616,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
         _push2(` +7 (927) 324-25-82 </a></div></div>`);
       } else {
         return [
-          createVNode("div", { class: "flex flex-col w-full gap-5 sm:gap-2 pt-20 pb-10" }, [
+          createVNode("div", { class: "flex flex-col w-full justify-end h-50 gap-5 sm:gap-2" }, [
             createVNode(_component_Logo, { class: "h-14" }),
             createVNode("div", { class: "flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic" }, [
               createVNode("a", { href: "tel:+7 (917) 766-68-33" }, [
@@ -11633,4 +11674,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-CjPfL0XL.mjs.map
+//# sourceMappingURL=index-CAdZu4vY.mjs.map

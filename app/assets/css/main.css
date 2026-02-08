@@ -134,8 +134,7 @@ header {
     font-size: 32px;
     color: #FFC400;
 
-    .arrow {
+    span {
         color: white;
-        padding-bottom: 12px;
     }
 }
