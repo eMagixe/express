@@ -23,7 +23,7 @@
 			<p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30">
 				Круглосуточные перевозки</p>
 			<div
-					class="font-thin text-[32px] text-white mt-20 mb-20 text-center lg:text-left underline decoration-1 underline-offset-5">
+					class="font-thin text-[32px] text-white mt-20 pb-20 text-center lg:text-left underline decoration-1 underline-offset-5">
 				быстро и с комфортом
 			</div>
 		</UContainer>

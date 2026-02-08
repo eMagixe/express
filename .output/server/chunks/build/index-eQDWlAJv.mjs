@@ -4551,7 +4551,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   _push(ssrRenderComponent(_component_UContainer, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>МЕЛЕУЗ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>САЛАВАТ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>УФА</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white mt-20 mb-20 text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
+        _push2(`<div class="cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>МЕЛЕУЗ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>САЛАВАТ</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>УФА</div><div class="not-md:hidden arrow"${_scopeId}>→</div><img${ssrRenderAttr("src", _imports_0$1)} alt="arrow-b" class="h-7 md:hidden"${_scopeId}><div${_scopeId}>КУМЕРТАУ</div></div><p class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30"${_scopeId}> Круглосуточные перевозки</p><div class="font-thin text-[32px] text-white mt-20 pb-20 text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex not-md:flex-col justify-center items-center gap-2 my-10" }, [
@@ -4586,7 +4586,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
             createVNode("div", null, "КУМЕРТАУ")
           ]),
           createVNode("p", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[50%] mt-30" }, " Круглосуточные перевозки"),
-          createVNode("div", { class: "font-thin text-[32px] text-white mt-20 mb-20 text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
+          createVNode("div", { class: "font-thin text-[32px] text-white mt-20 pb-20 text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
     }),
@@ -11560,7 +11560,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(ssrRenderComponent(_component_UFooter, _attrs, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="flex flex-col w-full gap-5 sm:gap-2 py-5 mt-20"${_scopeId}>`);
+        _push2(`<div class="flex flex-col w-full gap-5 sm:gap-2 pt-20 pb-10"${_scopeId}>`);
         _push2(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent2, _scopeId));
         _push2(`<div class="flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"${_scopeId}><a href="tel:+7 (917) 766-68-33"${_scopeId}>`);
         _push2(ssrRenderComponent(_component_UIcon, {
@@ -11575,7 +11575,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
         _push2(` +7 (927) 324-25-82 </a></div></div>`);
       } else {
         return [
-          createVNode("div", { class: "flex flex-col w-full gap-5 sm:gap-2 py-5 mt-20" }, [
+          createVNode("div", { class: "flex flex-col w-full gap-5 sm:gap-2 pt-20 pb-10" }, [
             createVNode(_component_Logo, { class: "h-14" }),
             createVNode("div", { class: "flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic" }, [
               createVNode("a", { href: "tel:+7 (917) 766-68-33" }, [
@@ -11633,4 +11633,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-ZEBFPXgM.mjs.map
+//# sourceMappingURL=index-eQDWlAJv.mjs.map
