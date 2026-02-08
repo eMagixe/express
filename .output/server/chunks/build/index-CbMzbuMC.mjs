@@ -4427,7 +4427,7 @@ const _sfc_main$g = {};
 function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$r;
   const _component_NuxtLink = __nuxt_component_0$3;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
   _push(ssrRenderComponent(_component_UIcon, {
     name: "i-lucide-phone",
     size: "18"
@@ -11504,4 +11504,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-CuFS8zO9.mjs.map
+//# sourceMappingURL=index-CbMzbuMC.mjs.map
