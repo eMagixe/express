@@ -5,8 +5,8 @@ import { createTV } from 'tailwind-variants';
 import { _ as _export_sfc, b as useAppConfig, c as useRoute, a as appConfig } from './server.mjs';
 import { y as serialize, v as defu, p as publicAssetsURL, z as isEqual } from '../nitro/nitro.mjs';
 import { createReusableTemplate, reactivePick, useVModel, reactiveOmit, useDebounceFn } from '@vueuse/core';
-import __nuxt_component_0$1 from './index-DBjtLWkV.mjs';
-import { _ as __nuxt_component_0$2 } from './nuxt-link-CvU-yVO0.mjs';
+import __nuxt_component_0$2 from './index-DBjtLWkV.mjs';
+import { _ as __nuxt_component_0$3 } from './nuxt-link-CvU-yVO0.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import { DateRangeField, DateField, HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
@@ -122,10 +122,10 @@ class DiffHashedObject {
 
 const appConfigTv = appConfig;
 const tv = /* @__PURE__ */ createTV(appConfigTv.ui?.tv);
-const theme$h = {
+const theme$g = {
   "base": "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8"
 };
-const _sfc_main$t = {
+const _sfc_main$s = {
   __name: "UContainer",
   __ssrInlineRender: true,
   props: {
@@ -135,7 +135,7 @@ const _sfc_main$t = {
   setup(__props) {
     const props = __props;
     const appConfig2 = useAppConfig();
-    const ui = computed(() => tv({ extend: tv(theme$h), ...appConfig2.ui?.container || {} }));
+    const ui = computed(() => tv({ extend: tv(theme$g), ...appConfig2.ui?.container || {} }));
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(Primitive), mergeProps({
         as: __props.as,
@@ -155,11 +155,11 @@ const _sfc_main$t = {
     };
   }
 };
-const _sfc_setup$t = _sfc_main$t.setup;
-_sfc_main$t.setup = (props, ctx) => {
+const _sfc_setup$s = _sfc_main$s.setup;
+_sfc_main$s.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Container.vue");
-  return _sfc_setup$t ? _sfc_setup$t(props, ctx) : void 0;
+  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
 };
 function omit(data, keys) {
   const result = { ...data };
@@ -588,7 +588,7 @@ function isPartiallyEqual(item1, item2) {
   const item2Filtered = Object.fromEntries(Object.entries(item2).filter(([key]) => !diffedKeys.has(key)));
   return isEqual(item1Filtered, item2Filtered);
 }
-const _sfc_main$s = {
+const _sfc_main$r = {
   __name: "UIcon",
   __ssrInlineRender: true,
   props: {
@@ -601,7 +601,7 @@ const _sfc_main$s = {
     const props = __props;
     const iconProps = useForwardProps(reactivePick(props, "name", "mode", "size", "customize"));
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_Icon = __nuxt_component_0$1;
+      const _component_Icon = __nuxt_component_0$2;
       if (typeof __props.name === "string") {
         _push(ssrRenderComponent(_component_Icon, mergeProps(unref(iconProps), _attrs), null, _parent));
       } else {
@@ -610,11 +610,11 @@ const _sfc_main$s = {
     };
   }
 };
-const _sfc_setup$s = _sfc_main$s.setup;
-_sfc_main$s.setup = (props, ctx) => {
+const _sfc_setup$r = _sfc_main$r.setup;
+_sfc_main$r.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Icon.vue");
-  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
+  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
 };
 const ImageComponent = "img";
 const avatarGroupInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.avatar-group");
@@ -626,7 +626,7 @@ function useAvatarGroup(props) {
     size
   };
 }
-const theme$g = {
+const theme$f = {
   "slots": {
     "root": "relative inline-flex items-center justify-center shrink-0",
     "base": "rounded-full ring ring-bg flex items-center justify-center text-inverted font-medium whitespace-nowrap"
@@ -693,7 +693,7 @@ const theme$g = {
     "position": "top-right"
   }
 };
-const _sfc_main$r = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UChip",
   __ssrInlineRender: true,
   props: /* @__PURE__ */ mergeModels({
@@ -716,7 +716,7 @@ const _sfc_main$r = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const show = useModel(__props, "show", { type: Boolean, ...{ default: true } });
     const { size } = useAvatarGroup(props);
     const appConfig2 = useAppConfig();
-    const ui = computed(() => tv({ extend: tv(theme$g), ...appConfig2.ui?.chip || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$f), ...appConfig2.ui?.chip || {} })({
       color: props.color,
       size: size.value,
       position: props.position,
@@ -777,13 +777,13 @@ const _sfc_main$r = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$r = _sfc_main$r.setup;
-_sfc_main$r.setup = (props, ctx) => {
+const _sfc_setup$q = _sfc_main$q.setup;
+_sfc_main$q.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Chip.vue");
-  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
+  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
 };
-const theme$f = {
+const theme$e = {
   "slots": {
     "root": "inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated",
     "image": "h-full w-full rounded-[inherit] object-cover",
@@ -825,7 +825,7 @@ const theme$f = {
     "size": "md"
   }
 };
-const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$p = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UAvatar",
   __ssrInlineRender: true,
   props: {
@@ -851,7 +851,7 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const fallback = computed(() => props.text || (props.alt || "").split(" ").map((word) => word.charAt(0)).join("").substring(0, 2));
     const appConfig2 = useAppConfig();
     const { size } = useAvatarGroup(props);
-    const ui = computed(() => tv({ extend: tv(theme$f), ...appConfig2.ui?.avatar || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$e), ...appConfig2.ui?.avatar || {} })({
       size: size.value
     }));
     const sizePx = computed(() => ({
@@ -875,7 +875,7 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       error.value = true;
     }
     return (_ctx, _push, _parent, _attrs) => {
-      ssrRenderVNode(_push, createVNode(resolveDynamicComponent(props.chip ? _sfc_main$r : unref(Primitive)), mergeProps({
+      ssrRenderVNode(_push, createVNode(resolveDynamicComponent(props.chip ? _sfc_main$q : unref(Primitive)), mergeProps({
         as: as.value.root
       }, props.chip ? typeof props.chip === "object" ? { inset: true, ...props.chip } : { inset: true } : {}, {
         "data-slot": "root",
@@ -901,7 +901,7 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                   if (_push3) {
                     ssrRenderSlot(_ctx.$slots, "default", {}, () => {
                       if (__props.icon) {
-                        _push3(ssrRenderComponent(_sfc_main$s, {
+                        _push3(ssrRenderComponent(_sfc_main$r, {
                           name: __props.icon,
                           "data-slot": "icon",
                           class: ui.value.icon({ class: props.ui?.icon })
@@ -913,7 +913,7 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                   } else {
                     return [
                       renderSlot(_ctx.$slots, "default", {}, () => [
-                        __props.icon ? (openBlock(), createBlock(_sfc_main$s, {
+                        __props.icon ? (openBlock(), createBlock(_sfc_main$r, {
                           key: 0,
                           name: __props.icon,
                           "data-slot": "icon",
@@ -945,7 +945,7 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               }), null, 16, ["src", "alt", "width", "height", "class"])) : (openBlock(), createBlock(unref(Slot), mergeProps({ key: 1 }, _ctx.$attrs), {
                 default: withCtx(() => [
                   renderSlot(_ctx.$slots, "default", {}, () => [
-                    __props.icon ? (openBlock(), createBlock(_sfc_main$s, {
+                    __props.icon ? (openBlock(), createBlock(_sfc_main$r, {
                       key: 0,
                       name: __props.icon,
                       "data-slot": "icon",
@@ -967,13 +967,13 @@ const _sfc_main$q = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$q = _sfc_main$q.setup;
-_sfc_main$q.setup = (props, ctx) => {
+const _sfc_setup$p = _sfc_main$p.setup;
+_sfc_main$p.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Avatar.vue");
-  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
+  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
 };
-const _sfc_main$p = {
+const _sfc_main$o = {
   __name: "ULinkBase",
   __ssrInlineRender: true,
   props: {
@@ -1037,13 +1037,13 @@ const _sfc_main$p = {
     };
   }
 };
-const _sfc_setup$p = _sfc_main$p.setup;
-_sfc_main$p.setup = (props, ctx) => {
+const _sfc_setup$o = _sfc_main$o.setup;
+_sfc_main$o.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/LinkBase.vue");
-  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
+  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
 };
-const theme$e = {
+const theme$d = {
   "base": "focus-visible:outline-primary",
   "variants": {
     "active": {
@@ -1065,7 +1065,7 @@ const theme$e = {
     }
   ]
 };
-const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$n = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "ULink",
   __ssrInlineRender: true,
   props: {
@@ -1103,7 +1103,7 @@ const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const appConfig2 = useAppConfig();
     const nuxtLinkProps = useForwardProps(reactiveOmit(props, "as", "type", "disabled", "active", "exact", "exactQuery", "exactHash", "activeClass", "inactiveClass", "to", "href", "raw", "custom", "class"));
     const ui = computed(() => tv({
-      extend: tv(theme$e),
+      extend: tv(theme$d),
       ...defu({
         variants: {
           active: {
@@ -1142,7 +1142,7 @@ const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       return ui.value({ class: props.class, active, disabled: props.disabled });
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$2;
+      const _component_NuxtLink = __nuxt_component_0$3;
       _push(ssrRenderComponent(_component_NuxtLink, mergeProps(unref(nuxtLinkProps), {
         to: to.value,
         custom: ""
@@ -1164,7 +1164,7 @@ const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 active: isLinkActive({ route: linkRoute, isActive, isExactActive })
               }, null, _push2, _parent2, _scopeId);
             } else {
-              _push2(ssrRenderComponent(_sfc_main$p, mergeProps({
+              _push2(ssrRenderComponent(_sfc_main$o, mergeProps({
                 ..._ctx.$attrs,
                 ...__props.exact && isExactActive ? { "aria-current": props.ariaCurrentValue } : {},
                 as: __props.as,
@@ -1208,7 +1208,7 @@ const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 target,
                 isExternal,
                 active: isLinkActive({ route: linkRoute, isActive, isExactActive })
-              })) : (openBlock(), createBlock(_sfc_main$p, mergeProps({ key: 1 }, {
+              })) : (openBlock(), createBlock(_sfc_main$o, mergeProps({ key: 1 }, {
                 ..._ctx.$attrs,
                 ...__props.exact && isExactActive ? { "aria-current": props.ariaCurrentValue } : {},
                 as: __props.as,
@@ -1237,13 +1237,13 @@ const _sfc_main$o = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$o = _sfc_main$o.setup;
-_sfc_main$o.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Link.vue");
-  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
-const theme$d = {
+const theme$c = {
   "slots": {
     "base": [
       "rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75",
@@ -1594,7 +1594,7 @@ const theme$d = {
     "size": "md"
   }
 };
-const _sfc_main$n = {
+const _sfc_main$m = {
   __name: "UButton",
   __ssrInlineRender: true,
   props: {
@@ -1667,7 +1667,7 @@ const _sfc_main$n = {
       computed(() => ({ ...props, loading: isLoading.value }))
     );
     const ui = computed(() => tv({
-      extend: tv(theme$d),
+      extend: tv(theme$c),
       ...defu({
         variants: {
           active: {
@@ -1692,13 +1692,13 @@ const _sfc_main$n = {
       fieldGroup: orientation.value
     }));
     return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(_sfc_main$o, mergeProps({
+      _push(ssrRenderComponent(_sfc_main$n, mergeProps({
         type: __props.type,
         disabled: __props.disabled || isLoading.value
       }, unref(omit)(unref(linkProps), ["type", "disabled", "onClick"]), { custom: "" }, _attrs), {
         default: withCtx(({ active, ...slotProps }, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_sfc_main$p, mergeProps(slotProps, {
+            _push2(ssrRenderComponent(_sfc_main$o, mergeProps(slotProps, {
               "data-slot": "base",
               class: ui.value.base({
                 class: [props.ui?.base, props.class],
@@ -1712,13 +1712,13 @@ const _sfc_main$n = {
                 if (_push3) {
                   ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
                     if (unref(isLeading) && unref(leadingIconName)) {
-                      _push3(ssrRenderComponent(_sfc_main$s, {
+                      _push3(ssrRenderComponent(_sfc_main$r, {
                         name: unref(leadingIconName),
                         "data-slot": "leadingIcon",
                         class: ui.value.leadingIcon({ class: props.ui?.leadingIcon, active })
                       }, null, _parent3, _scopeId2));
                     } else if (!!__props.avatar) {
-                      _push3(ssrRenderComponent(_sfc_main$q, mergeProps({
+                      _push3(ssrRenderComponent(_sfc_main$p, mergeProps({
                         size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                       }, __props.avatar, {
                         "data-slot": "leadingAvatar",
@@ -1737,7 +1737,7 @@ const _sfc_main$n = {
                   }, _push3, _parent3, _scopeId2);
                   ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
                     if (unref(isTrailing) && unref(trailingIconName)) {
-                      _push3(ssrRenderComponent(_sfc_main$s, {
+                      _push3(ssrRenderComponent(_sfc_main$r, {
                         name: unref(trailingIconName),
                         "data-slot": "trailingIcon",
                         class: ui.value.trailingIcon({ class: props.ui?.trailingIcon, active })
@@ -1749,12 +1749,12 @@ const _sfc_main$n = {
                 } else {
                   return [
                     renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                      unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                      unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                         key: 0,
                         name: unref(leadingIconName),
                         "data-slot": "leadingIcon",
                         class: ui.value.leadingIcon({ class: props.ui?.leadingIcon, active })
-                      }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                      }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                         key: 1,
                         size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                       }, __props.avatar, {
@@ -1770,7 +1770,7 @@ const _sfc_main$n = {
                       }, toDisplayString(__props.label), 3)) : createCommentVNode("", true)
                     ]),
                     renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                      unref(isTrailing) && unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                      unref(isTrailing) && unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                         key: 0,
                         name: unref(trailingIconName),
                         "data-slot": "trailingIcon",
@@ -1784,7 +1784,7 @@ const _sfc_main$n = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(_sfc_main$p, mergeProps(slotProps, {
+              createVNode(_sfc_main$o, mergeProps(slotProps, {
                 "data-slot": "base",
                 class: ui.value.base({
                   class: [props.ui?.base, props.class],
@@ -1796,12 +1796,12 @@ const _sfc_main$n = {
               }), {
                 default: withCtx(() => [
                   renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                    unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                    unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                       key: 0,
                       name: unref(leadingIconName),
                       "data-slot": "leadingIcon",
                       class: ui.value.leadingIcon({ class: props.ui?.leadingIcon, active })
-                    }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                    }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                       key: 1,
                       size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                     }, __props.avatar, {
@@ -1817,7 +1817,7 @@ const _sfc_main$n = {
                     }, toDisplayString(__props.label), 3)) : createCommentVNode("", true)
                   ]),
                   renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                    unref(isTrailing) && unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                    unref(isTrailing) && unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                       key: 0,
                       name: unref(trailingIconName),
                       "data-slot": "trailingIcon",
@@ -1835,11 +1835,11 @@ const _sfc_main$n = {
     };
   }
 };
-const _sfc_setup$n = _sfc_main$n.setup;
-_sfc_main$n.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Button.vue");
-  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
 const portalTargetInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.portal-target");
 function usePortal(portal) {
@@ -1852,7 +1852,7 @@ function usePortal(portal) {
     disabled: disabled.value
   }));
 }
-const theme$c = {
+const theme$b = {
   "slots": {
     "overlay": "fixed inset-0 bg-elevated/75",
     "content": "fixed bg-default divide-y divide-default sm:ring ring-default sm:shadow-lg flex flex-col focus:outline-none",
@@ -1977,7 +1977,7 @@ const theme$c = {
     }
   ]
 };
-const _sfc_main$m = {
+const _sfc_main$l = {
   __name: "USlideover",
   __ssrInlineRender: true,
   props: {
@@ -2021,7 +2021,7 @@ const _sfc_main$m = {
       }
       return {};
     });
-    const ui = computed(() => tv({ extend: tv(theme$c), ...appConfig2.ui?.slideover || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$b), ...appConfig2.ui?.slideover || {} })({
       transition: props.transition,
       side: props.side,
       inset: props.inset
@@ -2199,7 +2199,7 @@ const _sfc_main$m = {
                                     if (_push5) {
                                       ssrRenderSlot(_ctx.$slots, "close", { ui: ui.value }, () => {
                                         if (props.close) {
-                                          _push5(ssrRenderComponent(_sfc_main$n, mergeProps({
+                                          _push5(ssrRenderComponent(_sfc_main$m, mergeProps({
                                             icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                             color: "neutral",
                                             variant: "ghost",
@@ -2215,7 +2215,7 @@ const _sfc_main$m = {
                                     } else {
                                       return [
                                         renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                          props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                          props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                             key: 0,
                                             icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                             color: "neutral",
@@ -2316,7 +2316,7 @@ const _sfc_main$m = {
                                 }, {
                                   default: withCtx(() => [
                                     renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                      props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                      props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                         key: 0,
                                         icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                         color: "neutral",
@@ -2431,7 +2431,7 @@ const _sfc_main$m = {
                               }, {
                                 default: withCtx(() => [
                                   renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                    props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                    props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                       key: 0,
                                       icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                       color: "neutral",
@@ -2561,7 +2561,7 @@ const _sfc_main$m = {
                             }, {
                               default: withCtx(() => [
                                 renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                  props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                  props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                     key: 0,
                                     icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                     color: "neutral",
@@ -2605,13 +2605,13 @@ const _sfc_main$m = {
     };
   }
 };
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Slideover.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const theme$b = {
+const theme$a = {
   "slots": {
     "overlay": "fixed inset-0",
     "content": "bg-default divide-y divide-default flex flex-col focus:outline-none",
@@ -2671,7 +2671,7 @@ const theme$b = {
     }
   ]
 };
-const _sfc_main$l = {
+const _sfc_main$k = {
   __name: "UModal",
   __ssrInlineRender: true,
   props: {
@@ -2728,7 +2728,7 @@ const _sfc_main$l = {
       return {};
     });
     const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
-    const ui = computed(() => tv({ extend: tv(theme$b), ...appConfig2.ui?.modal || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$a), ...appConfig2.ui?.modal || {} })({
       transition: props.transition,
       fullscreen: props.fullscreen,
       overlay: props.overlay,
@@ -2879,7 +2879,7 @@ const _sfc_main$l = {
                                     if (_push5) {
                                       ssrRenderSlot(_ctx.$slots, "close", { ui: ui.value }, () => {
                                         if (props.close) {
-                                          _push5(ssrRenderComponent(_sfc_main$n, mergeProps({
+                                          _push5(ssrRenderComponent(_sfc_main$m, mergeProps({
                                             icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                             color: "neutral",
                                             variant: "ghost",
@@ -2895,7 +2895,7 @@ const _sfc_main$l = {
                                     } else {
                                       return [
                                         renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                          props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                          props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                             key: 0,
                                             icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                             color: "neutral",
@@ -3000,7 +3000,7 @@ const _sfc_main$l = {
                                 }, {
                                   default: withCtx(() => [
                                     renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                      props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                      props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                         key: 0,
                                         icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                         color: "neutral",
@@ -3110,7 +3110,7 @@ const _sfc_main$l = {
                               }, {
                                 default: withCtx(() => [
                                   renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                    props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                    props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                       key: 0,
                                       icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                       color: "neutral",
@@ -3300,7 +3300,7 @@ const _sfc_main$l = {
                             }, {
                               default: withCtx(() => [
                                 renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [
-                                  props.close ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                                  props.close ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                                     key: 0,
                                     icon: __props.closeIcon || unref(appConfig2).ui.icons.close,
                                     color: "neutral",
@@ -3377,13 +3377,13 @@ const _sfc_main$l = {
     };
   }
 };
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Modal.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const theme$a = {
+const theme$9 = {
   "slots": {
     "overlay": "fixed inset-0 bg-elevated/75",
     "content": "fixed bg-default ring ring-default flex focus:outline-none",
@@ -3525,7 +3525,7 @@ const theme$a = {
     }
   ]
 };
-const _sfc_main$k = {
+const _sfc_main$j = {
   __name: "UDrawer",
   __ssrInlineRender: true,
   props: {
@@ -3578,7 +3578,7 @@ const _sfc_main$k = {
       }
       return {};
     });
-    const ui = computed(() => tv({ extend: tv(theme$a), ...appConfig2.ui?.drawer || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$9), ...appConfig2.ui?.drawer || {} })({
       direction: props.direction,
       inset: props.inset,
       snapPoints: props.snapPoints && props.snapPoints.length > 0
@@ -4075,13 +4075,13 @@ const _sfc_main$k = {
     };
   }
 };
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Drawer.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const theme$9 = {
+const theme$8 = {
   "slots": {
     "root": "bg-default/75 backdrop-blur border-b border-default h-(--ui-header-height) sticky top-0 z-50",
     "container": "flex items-center justify-between gap-3 h-full",
@@ -4106,7 +4106,7 @@ const theme$9 = {
     }
   }
 };
-const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$i = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UHeader",
   __ssrInlineRender: true,
   props: /* @__PURE__ */ mergeModels({
@@ -4141,11 +4141,11 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     watch(() => route.fullPath, () => {
       open.value = false;
     });
-    const ui = computed(() => tv({ extend: tv(theme$9), ...appConfig2.ui?.header || {} })());
+    const ui = computed(() => tv({ extend: tv(theme$8), ...appConfig2.ui?.header || {} })());
     const Menu = computed(() => ({
-      slideover: _sfc_main$m,
-      modal: _sfc_main$l,
-      drawer: _sfc_main$k
+      slideover: _sfc_main$l,
+      modal: _sfc_main$k,
+      drawer: _sfc_main$j
     })[props.mode]);
     const menuProps = toRef(() => defu(props.menu, {
       content: {
@@ -4166,7 +4166,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               ui: ui.value
             }, () => {
               if (__props.toggle) {
-                _push2(ssrRenderComponent(_sfc_main$n, mergeProps({
+                _push2(ssrRenderComponent(_sfc_main$m, mergeProps({
                   color: "neutral",
                   variant: "ghost",
                   "aria-label": open.value ? unref(t)("header.close") : unref(t)("header.open"),
@@ -4187,7 +4187,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 toggle: toggleOpen,
                 ui: ui.value
               }, () => [
-                __props.toggle ? (openBlock(), createBlock(_sfc_main$n, mergeProps({
+                __props.toggle ? (openBlock(), createBlock(_sfc_main$m, mergeProps({
                   key: 0,
                   color: "neutral",
                   variant: "ghost",
@@ -4214,7 +4214,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<!---->`);
             }
             ssrRenderSlot(_ctx.$slots, "left", {}, () => {
-              _push2(ssrRenderComponent(_sfc_main$o, {
+              _push2(ssrRenderComponent(_sfc_main$n, {
                 to: __props.to,
                 "aria-label": ariaLabel.value,
                 "data-slot": "title",
@@ -4245,7 +4245,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               }, [
                 __props.toggleSide === "left" ? (openBlock(), createBlock(unref(ReuseToggleTemplate), { key: 0 })) : createCommentVNode("", true),
                 renderSlot(_ctx.$slots, "left", {}, () => [
-                  createVNode(_sfc_main$o, {
+                  createVNode(_sfc_main$n, {
                     to: __props.to,
                     "aria-label": ariaLabel.value,
                     "data-slot": "title",
@@ -4297,7 +4297,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             ssrRenderSlot(_ctx.$slots, "top", {}, null, _push2, _parent2, _scopeId);
-            _push2(ssrRenderComponent(_sfc_main$t, {
+            _push2(ssrRenderComponent(_sfc_main$s, {
               "data-slot": "container",
               class: ui.value.container({ class: props.ui?.container })
             }, {
@@ -4327,7 +4327,7 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
           } else {
             return [
               renderSlot(_ctx.$slots, "top"),
-              createVNode(_sfc_main$t, {
+              createVNode(_sfc_main$s, {
                 "data-slot": "container",
                 class: ui.value.container({ class: props.ui?.container })
               }, {
@@ -4402,31 +4402,31 @@ const _sfc_main$j = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Header.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const _imports_0$2 = publicAssetsURL("/images/svg/logo.svg");
-const _sfc_main$i = {};
+const _sfc_main$h = {};
 function _sfc_ssrRender$5(_ctx, _push, _parent, _attrs) {
   _push(`<img${ssrRenderAttrs(mergeProps({
     src: _imports_0$2,
     alt: "Logo"
   }, _attrs))}>`);
 }
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/logo.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const __nuxt_component_1$2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$i, [["ssrRender", _sfc_ssrRender$5]]), { __name: "Logo" });
-const _sfc_main$h = {};
+const __nuxt_component_0$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$h, [["ssrRender", _sfc_ssrRender$5]]), { __name: "Logo" });
+const _sfc_main$g = {};
 function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
-  const _component_UIcon = _sfc_main$s;
-  const _component_NuxtLink = __nuxt_component_0$2;
+  const _component_UIcon = _sfc_main$r;
+  const _component_NuxtLink = __nuxt_component_0$3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
   _push(ssrRenderComponent(_component_UIcon, {
     name: "i-lucide-phone",
@@ -4464,18 +4464,18 @@ function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
   }, _parent));
   _push(`</div>`);
 }
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/phones.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const __nuxt_component_3$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$h, [["ssrRender", _sfc_ssrRender$4]]), { __name: "Phones" });
-const _sfc_main$g = {};
+const __nuxt_component_3$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$g, [["ssrRender", _sfc_ssrRender$4]]), { __name: "Phones" });
+const _sfc_main$f = {};
 function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
-  const _component_UContainer = _sfc_main$t;
-  const _component_UHeader = _sfc_main$j;
-  const _component_Logo = __nuxt_component_1$2;
+  const _component_UContainer = _sfc_main$s;
+  const _component_UHeader = _sfc_main$i;
+  const _component_Logo = __nuxt_component_0$1;
   const _component_Phones = __nuxt_component_3$1;
   _push(ssrRenderComponent(_component_UContainer, _attrs, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -4536,17 +4536,17 @@ function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
     _: 1
   }, _parent));
 }
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/header.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$g, [["ssrRender", _sfc_ssrRender$3]]), { __name: "SectionHeader" });
-const _sfc_main$f = {};
+const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$f, [["ssrRender", _sfc_ssrRender$3]]), { __name: "SectionHeader" });
+const _sfc_main$e = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
-  const _component_UContainer = _sfc_main$t;
-  const _component_UIcon = _sfc_main$s;
+  const _component_UContainer = _sfc_main$s;
+  const _component_UIcon = _sfc_main$r;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-20" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -4634,14 +4634,14 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   }, _parent));
   _push(`</div>`);
 }
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const __nuxt_component_1$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$f, [["ssrRender", _sfc_ssrRender$2]]), { __name: "SectionWelcome" });
-const _sfc_main$e = /* @__PURE__ */ defineComponent({
+const __nuxt_component_1$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$2]]), { __name: "SectionWelcome" });
+const _sfc_main$d = /* @__PURE__ */ defineComponent({
   __name: "title",
   __ssrInlineRender: true,
   props: {
@@ -4653,15 +4653,15 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/title.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const __nuxt_component_1 = Object.assign(_sfc_main$e, { __name: "SectionTitle" });
+const __nuxt_component_1 = Object.assign(_sfc_main$d, { __name: "SectionTitle" });
 const _imports_0$1 = publicAssetsURL("/images/svg/arrow-b.svg");
-const _sfc_main$d = /* @__PURE__ */ defineComponent({
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "advantages",
   __ssrInlineRender: true,
   setup(__props) {
@@ -4721,7 +4721,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
       }
     ];
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UContainer = _sfc_main$t;
+      const _component_UContainer = _sfc_main$s;
       const _component_SectionTitle = __nuxt_component_1;
       _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
@@ -4777,14 +4777,14 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const __nuxt_component_2 = Object.assign(_sfc_main$d, { __name: "SectionAdvantages" });
-const theme$8 = {
+const __nuxt_component_2 = Object.assign(_sfc_main$c, { __name: "SectionAdvantages" });
+const theme$7 = {
   "slots": {
     "root": "group relative flex items-center overflow-hidden gap-(--gap) [--gap:--spacing(16)] [--duration:20s]",
     "content": "flex items-center shrink-0 justify-around gap-(--gap) min-w-max"
@@ -4845,7 +4845,7 @@ const theme$8 = {
     }
   ]
 };
-const _sfc_main$c = {
+const _sfc_main$b = {
   __name: "UMarquee",
   __ssrInlineRender: true,
   props: {
@@ -4861,7 +4861,7 @@ const _sfc_main$c = {
   setup(__props) {
     const props = __props;
     const appConfig2 = useAppConfig();
-    const ui = computed(() => tv({ extend: tv(theme$8), ...appConfig2.ui?.marquee || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$7), ...appConfig2.ui?.marquee || {} })({
       pauseOnHover: props.pauseOnHover,
       orientation: props.orientation,
       reverse: props.reverse,
@@ -4902,13 +4902,13 @@ const _sfc_main$c = {
     };
   }
 };
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Marquee.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const theme$7 = {
+const theme$6 = {
   "slots": {
     "root": "relative inline-flex items-center",
     "base": [
@@ -5171,7 +5171,7 @@ const theme$7 = {
     "variant": "outline"
   }
 };
-const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UInput",
   __ssrInlineRender: true,
   props: {
@@ -5214,7 +5214,7 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const { orientation, size: fieldGroupSize } = useFieldGroup(props);
     const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
     const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
-    const ui = computed(() => tv({ extend: tv(theme$7), ...appConfig2.ui?.input || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$6), ...appConfig2.ui?.input || {} })({
       type: props.type,
       color: color.value,
       variant: props.variant,
@@ -5292,13 +5292,13 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
                 if (unref(isLeading) && unref(leadingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                   }, null, _parent2, _scopeId));
                 } else if (!!__props.avatar) {
-                  _push2(ssrRenderComponent(_sfc_main$q, mergeProps({
+                  _push2(ssrRenderComponent(_sfc_main$p, mergeProps({
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
                     "data-slot": "leadingAvatar",
@@ -5316,7 +5316,7 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
                 if (unref(trailingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
                     class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
@@ -5357,12 +5357,12 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.leading({ class: props.ui?.leading })
               }, [
                 renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                     key: 1,
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
@@ -5377,7 +5377,7 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.trailing({ class: props.ui?.trailing })
               }, [
                 renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
@@ -5393,13 +5393,13 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Input.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const theme$6 = {
+const theme$5 = {
   "slots": {
     "root": "relative inline-flex items-center",
     "base": [
@@ -5667,7 +5667,7 @@ const theme$6 = {
     "variant": "outline"
   }
 };
-const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$9 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UTextarea",
   __ssrInlineRender: true,
   props: {
@@ -5710,7 +5710,7 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const appConfig2 = useAppConfig();
     const { emitFormFocus, emitFormBlur, emitFormInput, emitFormChange, size, color, id, name, highlight, disabled, ariaAttrs } = useFormField(props, { deferInputValidation: true });
     const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
-    const ui = computed(() => tv({ extend: tv(theme$6), ...appConfig2.ui?.textarea || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$5), ...appConfig2.ui?.textarea || {} })({
       color: color.value,
       variant: props.variant,
       size: size?.value,
@@ -5809,13 +5809,13 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
                 if (unref(isLeading) && unref(leadingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                   }, null, _parent2, _scopeId));
                 } else if (!!__props.avatar) {
-                  _push2(ssrRenderComponent(_sfc_main$q, mergeProps({
+                  _push2(ssrRenderComponent(_sfc_main$p, mergeProps({
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
                     "data-slot": "leadingAvatar",
@@ -5833,7 +5833,7 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
                 if (unref(trailingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
                     class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
@@ -5873,12 +5873,12 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.leading({ class: props.ui?.leading })
               }, [
                 renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                     key: 1,
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
@@ -5893,7 +5893,7 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.trailing({ class: props.ui?.trailing })
               }, [
                 renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
@@ -5909,14 +5909,14 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Textarea.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "reviews",
   __ssrInlineRender: true,
   setup(__props) {
@@ -5943,14 +5943,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       date: ""
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UContainer = _sfc_main$t;
+      const _component_UContainer = _sfc_main$s;
       const _component_SectionTitle = __nuxt_component_1;
-      const _component_UIcon = _sfc_main$s;
-      const _component_UModal = _sfc_main$l;
-      const _component_UButton = _sfc_main$n;
-      const _component_UMarquee = _sfc_main$c;
-      const _component_UInput = _sfc_main$b;
-      const _component_UTextarea = _sfc_main$a;
+      const _component_UIcon = _sfc_main$r;
+      const _component_UModal = _sfc_main$k;
+      const _component_UButton = _sfc_main$m;
+      const _component_UMarquee = _sfc_main$b;
+      const _component_UInput = _sfc_main$a;
+      const _component_UTextarea = _sfc_main$9;
       _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -6403,13 +6403,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/reviews.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const __nuxt_component_3 = Object.assign(_sfc_main$9, { __name: "SectionReviews" });
+const __nuxt_component_3 = Object.assign(_sfc_main$8, { __name: "SectionReviews" });
 function itemHasDescription(item, descriptionKey) {
   if (typeof item !== "object" || item === null) {
     return false;
@@ -6448,7 +6448,7 @@ function getEstimateSize(items, size, descriptionKey, hasDescriptionSlot) {
     return itemHasDescription(items[index2], descriptionKey) ? sizeWithDescription : sizeWithoutDescription;
   };
 }
-const theme$5 = {
+const theme$4 = {
   "slots": {
     "root": "relative inline-flex items-center",
     "base": [
@@ -6883,7 +6883,7 @@ const theme$5 = {
     "variant": "outline"
   }
 };
-const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UInputMenu",
   __ssrInlineRender: true,
   props: /* @__PURE__ */ mergeModels({
@@ -6979,7 +6979,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
         }
       }
     });
-    const ui = computed(() => tv({ extend: tv(theme$5), ...appConfig2.ui?.inputMenu || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$4), ...appConfig2.ui?.inputMenu || {} })({
       color: color.value,
       variant: props.variant,
       size: inputSize?.value,
@@ -7232,20 +7232,20 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                         ui: ui.value
                       }, () => {
                         if (isInputItem(item) && item.icon) {
-                          _push3(ssrRenderComponent(_sfc_main$s, {
+                          _push3(ssrRenderComponent(_sfc_main$r, {
                             name: item.icon,
                             "data-slot": "itemLeadingIcon",
                             class: ui.value.itemLeadingIcon({ class: [props.ui?.itemLeadingIcon, item.ui?.itemLeadingIcon] })
                           }, null, _parent3, _scopeId2));
                         } else if (isInputItem(item) && item.avatar) {
-                          _push3(ssrRenderComponent(_sfc_main$q, mergeProps({
+                          _push3(ssrRenderComponent(_sfc_main$p, mergeProps({
                             size: item.ui?.itemLeadingAvatarSize || props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                           }, item.avatar, {
                             "data-slot": "itemLeadingAvatar",
                             class: ui.value.itemLeadingAvatar({ class: [props.ui?.itemLeadingAvatar, item.ui?.itemLeadingAvatar] })
                           }), null, _parent3, _scopeId2));
                         } else if (isInputItem(item) && item.chip) {
-                          _push3(ssrRenderComponent(_sfc_main$r, mergeProps({
+                          _push3(ssrRenderComponent(_sfc_main$q, mergeProps({
                             size: item.ui?.itemLeadingChipSize || props.ui?.itemLeadingChipSize || ui.value.itemLeadingChipSize(),
                             inset: "",
                             standalone: ""
@@ -7286,14 +7286,14 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       _push3(ssrRenderComponent(unref(ComboboxItemIndicator), { "as-child": "" }, {
                         default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                           if (_push4) {
-                            _push4(ssrRenderComponent(_sfc_main$s, {
+                            _push4(ssrRenderComponent(_sfc_main$r, {
                               name: __props.selectedIcon || unref(appConfig2).ui.icons.check,
                               "data-slot": "itemTrailingIcon",
                               class: ui.value.itemTrailingIcon({ class: [props.ui?.itemTrailingIcon, isInputItem(item) && item.ui?.itemTrailingIcon] })
                             }, null, _parent4, _scopeId3));
                           } else {
                             return [
-                              createVNode(_sfc_main$s, {
+                              createVNode(_sfc_main$r, {
                                 name: __props.selectedIcon || unref(appConfig2).ui.icons.check,
                                 "data-slot": "itemTrailingIcon",
                                 class: ui.value.itemTrailingIcon({ class: [props.ui?.itemTrailingIcon, isInputItem(item) && item.ui?.itemTrailingIcon] })
@@ -7317,18 +7317,18 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                           index: index2,
                           ui: ui.value
                         }, () => [
-                          isInputItem(item) && item.icon ? (openBlock(), createBlock(_sfc_main$s, {
+                          isInputItem(item) && item.icon ? (openBlock(), createBlock(_sfc_main$r, {
                             key: 0,
                             name: item.icon,
                             "data-slot": "itemLeadingIcon",
                             class: ui.value.itemLeadingIcon({ class: [props.ui?.itemLeadingIcon, item.ui?.itemLeadingIcon] })
-                          }, null, 8, ["name", "class"])) : isInputItem(item) && item.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                          }, null, 8, ["name", "class"])) : isInputItem(item) && item.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                             key: 1,
                             size: item.ui?.itemLeadingAvatarSize || props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                           }, item.avatar, {
                             "data-slot": "itemLeadingAvatar",
                             class: ui.value.itemLeadingAvatar({ class: [props.ui?.itemLeadingAvatar, item.ui?.itemLeadingAvatar] })
-                          }), null, 16, ["size", "class"])) : isInputItem(item) && item.chip ? (openBlock(), createBlock(_sfc_main$r, mergeProps({
+                          }), null, 16, ["size", "class"])) : isInputItem(item) && item.chip ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
                             key: 2,
                             size: item.ui?.itemLeadingChipSize || props.ui?.itemLeadingChipSize || ui.value.itemLeadingChipSize(),
                             inset: "",
@@ -7377,7 +7377,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                           }),
                           createVNode(unref(ComboboxItemIndicator), { "as-child": "" }, {
                             default: withCtx(() => [
-                              createVNode(_sfc_main$s, {
+                              createVNode(_sfc_main$r, {
                                 name: __props.selectedIcon || unref(appConfig2).ui.icons.check,
                                 "data-slot": "itemTrailingIcon",
                                 class: ui.value.itemTrailingIcon({ class: [props.ui?.itemTrailingIcon, isInputItem(item) && item.ui?.itemTrailingIcon] })
@@ -7427,18 +7427,18 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       index: index2,
                       ui: ui.value
                     }, () => [
-                      isInputItem(item) && item.icon ? (openBlock(), createBlock(_sfc_main$s, {
+                      isInputItem(item) && item.icon ? (openBlock(), createBlock(_sfc_main$r, {
                         key: 0,
                         name: item.icon,
                         "data-slot": "itemLeadingIcon",
                         class: ui.value.itemLeadingIcon({ class: [props.ui?.itemLeadingIcon, item.ui?.itemLeadingIcon] })
-                      }, null, 8, ["name", "class"])) : isInputItem(item) && item.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                      }, null, 8, ["name", "class"])) : isInputItem(item) && item.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                         key: 1,
                         size: item.ui?.itemLeadingAvatarSize || props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                       }, item.avatar, {
                         "data-slot": "itemLeadingAvatar",
                         class: ui.value.itemLeadingAvatar({ class: [props.ui?.itemLeadingAvatar, item.ui?.itemLeadingAvatar] })
-                      }), null, 16, ["size", "class"])) : isInputItem(item) && item.chip ? (openBlock(), createBlock(_sfc_main$r, mergeProps({
+                      }), null, 16, ["size", "class"])) : isInputItem(item) && item.chip ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
                         key: 2,
                         size: item.ui?.itemLeadingChipSize || props.ui?.itemLeadingChipSize || ui.value.itemLeadingChipSize(),
                         inset: "",
@@ -7487,7 +7487,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       }),
                       createVNode(unref(ComboboxItemIndicator), { "as-child": "" }, {
                         default: withCtx(() => [
-                          createVNode(_sfc_main$s, {
+                          createVNode(_sfc_main$r, {
                             name: __props.selectedIcon || unref(appConfig2).ui.icons.check,
                             "data-slot": "itemTrailingIcon",
                             class: ui.value.itemTrailingIcon({ class: [props.ui?.itemTrailingIcon, isInputItem(item) && item.ui?.itemTrailingIcon] })
@@ -7584,7 +7584,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                           index: index2,
                                           ui: ui.value
                                         }, () => {
-                                          _push6(ssrRenderComponent(_sfc_main$s, {
+                                          _push6(ssrRenderComponent(_sfc_main$r, {
                                             name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                             "data-slot": "tagsItemDeleteIcon",
                                             class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -7597,7 +7597,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                             index: index2,
                                             ui: ui.value
                                           }, () => [
-                                            createVNode(_sfc_main$s, {
+                                            createVNode(_sfc_main$r, {
                                               name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                               "data-slot": "tagsItemDeleteIcon",
                                               class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -7635,7 +7635,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                           index: index2,
                                           ui: ui.value
                                         }, () => [
-                                          createVNode(_sfc_main$s, {
+                                          createVNode(_sfc_main$r, {
                                             name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                             "data-slot": "tagsItemDeleteIcon",
                                             class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -7722,7 +7722,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                         index: index2,
                                         ui: ui.value
                                       }, () => [
-                                        createVNode(_sfc_main$s, {
+                                        createVNode(_sfc_main$r, {
                                           name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                           "data-slot": "tagsItemDeleteIcon",
                                           class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -7785,13 +7785,13 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       ui: ui.value
                     }, () => {
                       if (unref(isLeading) && unref(leadingIconName)) {
-                        _push3(ssrRenderComponent(_sfc_main$s, {
+                        _push3(ssrRenderComponent(_sfc_main$r, {
                           name: unref(leadingIconName),
                           "data-slot": "leadingIcon",
                           class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                         }, null, _parent3, _scopeId2));
                       } else if (!!__props.avatar) {
-                        _push3(ssrRenderComponent(_sfc_main$q, mergeProps({
+                        _push3(ssrRenderComponent(_sfc_main$p, mergeProps({
                           size: props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                         }, __props.avatar, {
                           "data-slot": "itemLeadingAvatar",
@@ -7821,7 +7821,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                               _push4(ssrRenderComponent(unref(ComboboxCancel), { "as-child": "" }, {
                                 default: withCtx((_3, _push5, _parent5, _scopeId4) => {
                                   if (_push5) {
-                                    _push5(ssrRenderComponent(_sfc_main$n, mergeProps({
+                                    _push5(ssrRenderComponent(_sfc_main$m, mergeProps({
                                       as: "span",
                                       icon: __props.clearIcon || unref(appConfig2).ui.icons.close,
                                       variant: "link",
@@ -7834,7 +7834,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                     }), null, _parent5, _scopeId4));
                                   } else {
                                     return [
-                                      createVNode(_sfc_main$n, mergeProps({
+                                      createVNode(_sfc_main$m, mergeProps({
                                         as: "span",
                                         icon: __props.clearIcon || unref(appConfig2).ui.icons.close,
                                         variant: "link",
@@ -7851,7 +7851,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                 _: 2
                               }, _parent4, _scopeId3));
                             } else if (unref(trailingIconName)) {
-                              _push4(ssrRenderComponent(_sfc_main$s, {
+                              _push4(ssrRenderComponent(_sfc_main$r, {
                                 name: unref(trailingIconName),
                                 "data-slot": "trailingIcon",
                                 class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
@@ -7872,7 +7872,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                 "as-child": ""
                               }, {
                                 default: withCtx(() => [
-                                  createVNode(_sfc_main$n, mergeProps({
+                                  createVNode(_sfc_main$m, mergeProps({
                                     as: "span",
                                     icon: __props.clearIcon || unref(appConfig2).ui.icons.close,
                                     variant: "link",
@@ -7885,7 +7885,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                   }), null, 16, ["icon", "class"])
                                 ]),
                                 _: 1
-                              })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                              })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                                 key: 1,
                                 name: unref(trailingIconName),
                                 "data-slot": "trailingIcon",
@@ -7947,7 +7947,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                     index: index2,
                                     ui: ui.value
                                   }, () => [
-                                    createVNode(_sfc_main$s, {
+                                    createVNode(_sfc_main$r, {
                                       name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                       "data-slot": "tagsItemDeleteIcon",
                                       class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -8008,12 +8008,12 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                         open,
                         ui: ui.value
                       }, () => [
-                        unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                        unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                           key: 0,
                           name: unref(leadingIconName),
                           "data-slot": "leadingIcon",
                           class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                        }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                        }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                           key: 1,
                           size: props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                         }, __props.avatar, {
@@ -8038,7 +8038,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                             "as-child": ""
                           }, {
                             default: withCtx(() => [
-                              createVNode(_sfc_main$n, mergeProps({
+                              createVNode(_sfc_main$m, mergeProps({
                                 as: "span",
                                 icon: __props.clearIcon || unref(appConfig2).ui.icons.close,
                                 variant: "link",
@@ -8051,7 +8051,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                               }), null, 16, ["icon", "class"])
                             ]),
                             _: 1
-                          })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                          })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                             key: 1,
                             name: unref(trailingIconName),
                             "data-slot": "trailingIcon",
@@ -8455,7 +8455,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                                   index: index2,
                                   ui: ui.value
                                 }, () => [
-                                  createVNode(_sfc_main$s, {
+                                  createVNode(_sfc_main$r, {
                                     name: __props.deleteIcon || unref(appConfig2).ui.icons.close,
                                     "data-slot": "tagsItemDeleteIcon",
                                     class: ui.value.tagsItemDeleteIcon({ class: [props.ui?.tagsItemDeleteIcon, isInputItem(item) && item.ui?.tagsItemDeleteIcon] })
@@ -8516,12 +8516,12 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       open,
                       ui: ui.value
                     }, () => [
-                      unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                      unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                         key: 0,
                         name: unref(leadingIconName),
                         "data-slot": "leadingIcon",
                         class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                      }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                      }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                         key: 1,
                         size: props.ui?.itemLeadingAvatarSize || ui.value.itemLeadingAvatarSize()
                       }, __props.avatar, {
@@ -8546,7 +8546,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                           "as-child": ""
                         }, {
                           default: withCtx(() => [
-                            createVNode(_sfc_main$n, mergeProps({
+                            createVNode(_sfc_main$m, mergeProps({
                               as: "span",
                               icon: __props.clearIcon || unref(appConfig2).ui.icons.close,
                               variant: "link",
@@ -8559,7 +8559,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                             }), null, 16, ["icon", "class"])
                           ]),
                           _: 1
-                        })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                        })) : unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                           key: 1,
                           name: unref(trailingIconName),
                           "data-slot": "trailingIcon",
@@ -8677,13 +8677,13 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/InputMenu.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const theme$4 = {
+const theme$3 = {
   "slots": {
     "base": [
       "group relative inline-flex items-center rounded-md select-none",
@@ -8994,7 +8994,7 @@ const theme$4 = {
     "variant": "outline"
   }
 };
-const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$6 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UInputDate",
   __ssrInlineRender: true,
   props: {
@@ -9046,7 +9046,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
     const [DefineSegmentsTemplate, ReuseSegmentsTemplate] = createReusableTemplate();
     const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
-    const ui = computed(() => tv({ extend: tv(theme$4), ...appConfig2.ui?.inputDate || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$3), ...appConfig2.ui?.inputDate || {} })({
       color: color.value,
       variant: props.variant,
       size: inputSize.value,
@@ -9152,7 +9152,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 type: "start"
               }, null, _parent2, _scopeId));
               ssrRenderSlot(_ctx.$slots, "separator", { ui: ui.value }, () => {
-                _push2(ssrRenderComponent(_sfc_main$s, {
+                _push2(ssrRenderComponent(_sfc_main$r, {
                   name: __props.separatorIcon || unref(appConfig2).ui.icons.minus,
                   "data-slot": "separatorIcon",
                   class: ui.value.separatorIcon({ class: props.ui?.separatorIcon })
@@ -9169,13 +9169,13 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
                 if (unref(isLeading) && unref(leadingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                   }, null, _parent2, _scopeId));
                 } else if (!!__props.avatar) {
-                  _push2(ssrRenderComponent(_sfc_main$q, mergeProps({
+                  _push2(ssrRenderComponent(_sfc_main$p, mergeProps({
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
                     "data-slot": "leadingAvatar",
@@ -9193,7 +9193,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
                 if (unref(trailingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$s, {
+                  _push2(ssrRenderComponent(_sfc_main$r, {
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
                     class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
@@ -9217,7 +9217,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                   type: "start"
                 }, null, 8, ["segments"]),
                 renderSlot(_ctx.$slots, "separator", { ui: ui.value }, () => [
-                  createVNode(_sfc_main$s, {
+                  createVNode(_sfc_main$r, {
                     name: __props.separatorIcon || unref(appConfig2).ui.icons.minus,
                     "data-slot": "separatorIcon",
                     class: ui.value.separatorIcon({ class: props.ui?.separatorIcon })
@@ -9235,12 +9235,12 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.leading({ class: props.ui?.leading })
               }, [
                 renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
                     class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$q, mergeProps({
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$p, mergeProps({
                     key: 1,
                     size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
@@ -9255,7 +9255,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 class: ui.value.trailing({ class: props.ui?.trailing })
               }, [
                 renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$s, {
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$r, {
                     key: 0,
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
@@ -9272,19 +9272,19 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/InputDate.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const theme$3 = {
+const theme$2 = {
   "slots": {
     "content": "bg-default shadow-lg rounded-md ring ring-default data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-popover-content-transform-origin) focus:outline-none pointer-events-auto",
     "arrow": "fill-default"
   }
 };
-const _sfc_main$6 = {
+const _sfc_main$5 = {
   __name: "UPopover",
   __ssrInlineRender: true,
   props: {
@@ -9326,7 +9326,7 @@ const _sfc_main$6 = {
       return {};
     });
     const arrowProps = toRef(() => props.arrow);
-    const ui = computed(() => tv({ extend: tv(theme$3), ...appConfig2.ui?.popover || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$2), ...appConfig2.ui?.popover || {} })({
       side: contentProps.value.side
     }));
     const Component = computed(() => props.mode === "hover" ? HoverCard : Popover);
@@ -9468,13 +9468,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Popover.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const theme$2 = {
+const theme$1 = {
   "slots": {
     "root": "",
     "header": "flex items-center justify-between",
@@ -9780,7 +9780,7 @@ const theme$2 = {
     "variant": "solid"
   }
 };
-const _sfc_main$5 = {
+const _sfc_main$4 = {
   __name: "UCalendar",
   __ssrInlineRender: true,
   props: {
@@ -9839,7 +9839,7 @@ const _sfc_main$5 = {
     const nextMonthIcon = computed(() => props.nextMonthIcon || (dir.value === "rtl" ? appConfig2.ui.icons.chevronLeft : appConfig2.ui.icons.chevronRight));
     const prevYearIcon = computed(() => props.prevYearIcon || (dir.value === "rtl" ? appConfig2.ui.icons.chevronDoubleRight : appConfig2.ui.icons.chevronDoubleLeft));
     const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === "rtl" ? appConfig2.ui.icons.chevronRight : appConfig2.ui.icons.chevronLeft));
-    const ui = computed(() => tv({ extend: tv(theme$2), ...appConfig2.ui?.calendar || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig2.ui?.calendar || {} })({
       color: props.color,
       size: props.size,
       variant: props.variant,
@@ -9875,7 +9875,7 @@ const _sfc_main$5 = {
                     }, {
                       default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_sfc_main$n, mergeProps({
+                          _push4(ssrRenderComponent(_sfc_main$m, mergeProps({
                             icon: prevYearIcon.value,
                             size: props.size,
                             color: "neutral",
@@ -9883,7 +9883,7 @@ const _sfc_main$5 = {
                           }, props.prevYear), null, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_sfc_main$n, mergeProps({
+                            createVNode(_sfc_main$m, mergeProps({
                               icon: prevYearIcon.value,
                               size: props.size,
                               color: "neutral",
@@ -9904,7 +9904,7 @@ const _sfc_main$5 = {
                     }, {
                       default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_sfc_main$n, mergeProps({
+                          _push4(ssrRenderComponent(_sfc_main$m, mergeProps({
                             icon: prevMonthIcon.value,
                             size: props.size,
                             color: "neutral",
@@ -9912,7 +9912,7 @@ const _sfc_main$5 = {
                           }, props.prevMonth), null, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_sfc_main$n, mergeProps({
+                            createVNode(_sfc_main$m, mergeProps({
                               icon: prevMonthIcon.value,
                               size: props.size,
                               color: "neutral",
@@ -9952,7 +9952,7 @@ const _sfc_main$5 = {
                     }, {
                       default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_sfc_main$n, mergeProps({
+                          _push4(ssrRenderComponent(_sfc_main$m, mergeProps({
                             icon: nextMonthIcon.value,
                             size: props.size,
                             color: "neutral",
@@ -9960,7 +9960,7 @@ const _sfc_main$5 = {
                           }, props.nextMonth), null, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_sfc_main$n, mergeProps({
+                            createVNode(_sfc_main$m, mergeProps({
                               icon: nextMonthIcon.value,
                               size: props.size,
                               color: "neutral",
@@ -9982,7 +9982,7 @@ const _sfc_main$5 = {
                     }, {
                       default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_sfc_main$n, mergeProps({
+                          _push4(ssrRenderComponent(_sfc_main$m, mergeProps({
                             icon: nextYearIcon.value,
                             size: props.size,
                             color: "neutral",
@@ -9990,7 +9990,7 @@ const _sfc_main$5 = {
                           }, props.nextYear), null, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_sfc_main$n, mergeProps({
+                            createVNode(_sfc_main$m, mergeProps({
                               icon: nextYearIcon.value,
                               size: props.size,
                               color: "neutral",
@@ -10013,7 +10013,7 @@ const _sfc_main$5 = {
                       "as-child": ""
                     }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$n, mergeProps({
+                        createVNode(_sfc_main$m, mergeProps({
                           icon: prevYearIcon.value,
                           size: props.size,
                           color: "neutral",
@@ -10028,7 +10028,7 @@ const _sfc_main$5 = {
                       "as-child": ""
                     }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$n, mergeProps({
+                        createVNode(_sfc_main$m, mergeProps({
                           icon: prevMonthIcon.value,
                           size: props.size,
                           color: "neutral",
@@ -10054,7 +10054,7 @@ const _sfc_main$5 = {
                       "as-child": ""
                     }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$n, mergeProps({
+                        createVNode(_sfc_main$m, mergeProps({
                           icon: nextMonthIcon.value,
                           size: props.size,
                           color: "neutral",
@@ -10070,7 +10070,7 @@ const _sfc_main$5 = {
                       "as-child": ""
                     }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$n, mergeProps({
+                        createVNode(_sfc_main$m, mergeProps({
                           icon: nextYearIcon.value,
                           size: props.size,
                           color: "neutral",
@@ -10438,7 +10438,7 @@ const _sfc_main$5 = {
                     "as-child": ""
                   }, {
                     default: withCtx(() => [
-                      createVNode(_sfc_main$n, mergeProps({
+                      createVNode(_sfc_main$m, mergeProps({
                         icon: prevYearIcon.value,
                         size: props.size,
                         color: "neutral",
@@ -10453,7 +10453,7 @@ const _sfc_main$5 = {
                     "as-child": ""
                   }, {
                     default: withCtx(() => [
-                      createVNode(_sfc_main$n, mergeProps({
+                      createVNode(_sfc_main$m, mergeProps({
                         icon: prevMonthIcon.value,
                         size: props.size,
                         color: "neutral",
@@ -10479,7 +10479,7 @@ const _sfc_main$5 = {
                     "as-child": ""
                   }, {
                     default: withCtx(() => [
-                      createVNode(_sfc_main$n, mergeProps({
+                      createVNode(_sfc_main$m, mergeProps({
                         icon: nextMonthIcon.value,
                         size: props.size,
                         color: "neutral",
@@ -10495,7 +10495,7 @@ const _sfc_main$5 = {
                     "as-child": ""
                   }, {
                     default: withCtx(() => [
-                      createVNode(_sfc_main$n, mergeProps({
+                      createVNode(_sfc_main$m, mergeProps({
                         icon: nextYearIcon.value,
                         size: props.size,
                         color: "neutral",
@@ -10608,13 +10608,13 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Calendar.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const theme$1 = {
+const theme = {
   "slots": {
     "root": "relative flex items-start",
     "container": "flex items-center",
@@ -10822,7 +10822,7 @@ const theme$1 = {
     "indicator": "start"
   }
 };
-const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+const _sfc_main$3 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
   __name: "UCheckbox",
   __ssrInlineRender: true,
   props: /* @__PURE__ */ mergeModels({
@@ -10857,7 +10857,7 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const rootProps = useForwardProps(reactivePick(props, "required", "value", "defaultValue"));
     const { id: _id, emitFormChange, emitFormInput, size, color, name, disabled, ariaAttrs } = useFormField(props);
     const id = _id.value ?? useId();
-    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig2.ui?.checkbox || {} })({
+    const ui = computed(() => tv({ extend: tv(theme), ...appConfig2.ui?.checkbox || {} })({
       size: size.value,
       color: color.value,
       variant: props.variant,
@@ -10897,13 +10897,13 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                     default: withCtx((_2, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         if (modelValue2 === "indeterminate") {
-                          _push4(ssrRenderComponent(_sfc_main$s, {
+                          _push4(ssrRenderComponent(_sfc_main$r, {
                             name: __props.indeterminateIcon || unref(appConfig2).ui.icons.minus,
                             "data-slot": "icon",
                             class: ui.value.icon({ class: props.ui?.icon })
                           }, null, _parent4, _scopeId3));
                         } else {
-                          _push4(ssrRenderComponent(_sfc_main$s, {
+                          _push4(ssrRenderComponent(_sfc_main$r, {
                             name: __props.icon || unref(appConfig2).ui.icons.check,
                             "data-slot": "icon",
                             class: ui.value.icon({ class: props.ui?.icon })
@@ -10911,12 +10911,12 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                         }
                       } else {
                         return [
-                          modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$s, {
+                          modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$r, {
                             key: 0,
                             name: __props.indeterminateIcon || unref(appConfig2).ui.icons.minus,
                             "data-slot": "icon",
                             class: ui.value.icon({ class: props.ui?.icon })
-                          }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$s, {
+                          }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$r, {
                             key: 1,
                             name: __props.icon || unref(appConfig2).ui.icons.check,
                             "data-slot": "icon",
@@ -10934,12 +10934,12 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       class: ui.value.indicator({ class: props.ui?.indicator })
                     }, {
                       default: withCtx(() => [
-                        modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$s, {
+                        modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$r, {
                           key: 0,
                           name: __props.indeterminateIcon || unref(appConfig2).ui.icons.minus,
                           "data-slot": "icon",
                           class: ui.value.icon({ class: props.ui?.icon })
-                        }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$s, {
+                        }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$r, {
                           key: 1,
                           name: __props.icon || unref(appConfig2).ui.icons.check,
                           "data-slot": "icon",
@@ -11013,12 +11013,12 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                       class: ui.value.indicator({ class: props.ui?.indicator })
                     }, {
                       default: withCtx(() => [
-                        modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$s, {
+                        modelValue2 === "indeterminate" ? (openBlock(), createBlock(_sfc_main$r, {
                           key: 0,
                           name: __props.indeterminateIcon || unref(appConfig2).ui.icons.minus,
                           "data-slot": "icon",
                           class: ui.value.icon({ class: props.ui?.icon })
-                        }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$s, {
+                        }, null, 8, ["name", "class"])) : (openBlock(), createBlock(_sfc_main$r, {
                           key: 1,
                           name: __props.icon || unref(appConfig2).ui.icons.check,
                           "data-slot": "icon",
@@ -11067,13 +11067,13 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     };
   }
 });
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Checkbox.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "order",
   __ssrInlineRender: true,
   setup(__props) {
@@ -11101,15 +11101,15 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       date.value = currentDate;
     };
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UContainer = _sfc_main$t;
+      const _component_UContainer = _sfc_main$s;
       const _component_SectionTitle = __nuxt_component_1;
-      const _component_UInput = _sfc_main$b;
-      const _component_UInputMenu = _sfc_main$8;
-      const _component_UInputDate = _sfc_main$7;
-      const _component_UPopover = _sfc_main$6;
-      const _component_UButton = _sfc_main$n;
-      const _component_UCalendar = _sfc_main$5;
-      const _component_UCheckbox = _sfc_main$4;
+      const _component_UInput = _sfc_main$a;
+      const _component_UInputMenu = _sfc_main$7;
+      const _component_UInputDate = _sfc_main$6;
+      const _component_UPopover = _sfc_main$5;
+      const _component_UButton = _sfc_main$m;
+      const _component_UCalendar = _sfc_main$4;
+      const _component_UCheckbox = _sfc_main$3;
       _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-screen py-20" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -11446,200 +11446,30 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/order.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
-};
-const __nuxt_component_4 = Object.assign(_sfc_main$3, { __name: "SectionOrder" });
-const theme = {
-  "slots": {
-    "root": "",
-    "top": "py-8 lg:py-12",
-    "bottom": "py-8 lg:py-12",
-    "container": "py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3",
-    "left": "flex items-center justify-center lg:justify-start lg:flex-1 gap-x-1.5 mt-3 lg:mt-0 lg:order-1",
-    "center": "mt-3 lg:mt-0 lg:order-2 flex items-center justify-center",
-    "right": "lg:flex-1 flex items-center justify-center lg:justify-end gap-x-1.5 lg:order-3"
-  }
-};
-const _sfc_main$2 = {
-  __name: "UFooter",
-  __ssrInlineRender: true,
-  props: {
-    as: { type: null, required: false, default: "footer" },
-    class: { type: null, required: false },
-    ui: { type: null, required: false }
-  },
-  setup(__props) {
-    const props = __props;
-    const slots = useSlots();
-    const appConfig2 = useAppConfig();
-    const ui = computed(() => tv({ extend: tv(theme), ...appConfig2.ui?.footer || {} })());
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(unref(Primitive), mergeProps({
-        as: __props.as,
-        "data-slot": "root",
-        class: ui.value.root({ class: [props.ui?.root, props.class] })
-      }, _attrs), {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            if (!!slots.top) {
-              _push2(`<div data-slot="top" class="${ssrRenderClass(ui.value.top({ class: props.ui?.top }))}"${_scopeId}>`);
-              ssrRenderSlot(_ctx.$slots, "top", {}, null, _push2, _parent2, _scopeId);
-              _push2(`</div>`);
-            } else {
-              _push2(`<!---->`);
-            }
-            _push2(ssrRenderComponent(_sfc_main$t, {
-              "data-slot": "container",
-              class: ui.value.container({ class: props.ui?.container })
-            }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div data-slot="right" class="${ssrRenderClass(ui.value.right({ class: props.ui?.right }))}"${_scopeId2}>`);
-                  ssrRenderSlot(_ctx.$slots, "right", {}, null, _push3, _parent3, _scopeId2);
-                  _push3(`</div><div data-slot="center" class="${ssrRenderClass(ui.value.center({ class: props.ui?.center }))}"${_scopeId2}>`);
-                  ssrRenderSlot(_ctx.$slots, "default", {}, null, _push3, _parent3, _scopeId2);
-                  _push3(`</div><div data-slot="left" class="${ssrRenderClass(ui.value.left({ class: props.ui?.left }))}"${_scopeId2}>`);
-                  ssrRenderSlot(_ctx.$slots, "left", {}, null, _push3, _parent3, _scopeId2);
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", {
-                      "data-slot": "right",
-                      class: ui.value.right({ class: props.ui?.right })
-                    }, [
-                      renderSlot(_ctx.$slots, "right")
-                    ], 2),
-                    createVNode("div", {
-                      "data-slot": "center",
-                      class: ui.value.center({ class: props.ui?.center })
-                    }, [
-                      renderSlot(_ctx.$slots, "default")
-                    ], 2),
-                    createVNode("div", {
-                      "data-slot": "left",
-                      class: ui.value.left({ class: props.ui?.left })
-                    }, [
-                      renderSlot(_ctx.$slots, "left")
-                    ], 2)
-                  ];
-                }
-              }),
-              _: 3
-            }, _parent2, _scopeId));
-            if (!!slots.bottom) {
-              _push2(`<div data-slot="bottom" class="${ssrRenderClass(ui.value.bottom({ class: props.ui?.bottom }))}"${_scopeId}>`);
-              ssrRenderSlot(_ctx.$slots, "bottom", {}, null, _push2, _parent2, _scopeId);
-              _push2(`</div>`);
-            } else {
-              _push2(`<!---->`);
-            }
-          } else {
-            return [
-              !!slots.top ? (openBlock(), createBlock("div", {
-                key: 0,
-                "data-slot": "top",
-                class: ui.value.top({ class: props.ui?.top })
-              }, [
-                renderSlot(_ctx.$slots, "top")
-              ], 2)) : createCommentVNode("", true),
-              createVNode(_sfc_main$t, {
-                "data-slot": "container",
-                class: ui.value.container({ class: props.ui?.container })
-              }, {
-                default: withCtx(() => [
-                  createVNode("div", {
-                    "data-slot": "right",
-                    class: ui.value.right({ class: props.ui?.right })
-                  }, [
-                    renderSlot(_ctx.$slots, "right")
-                  ], 2),
-                  createVNode("div", {
-                    "data-slot": "center",
-                    class: ui.value.center({ class: props.ui?.center })
-                  }, [
-                    renderSlot(_ctx.$slots, "default")
-                  ], 2),
-                  createVNode("div", {
-                    "data-slot": "left",
-                    class: ui.value.left({ class: props.ui?.left })
-                  }, [
-                    renderSlot(_ctx.$slots, "left")
-                  ], 2)
-                ]),
-                _: 3
-              }, 8, ["class"]),
-              !!slots.bottom ? (openBlock(), createBlock("div", {
-                key: 1,
-                "data-slot": "bottom",
-                class: ui.value.bottom({ class: props.ui?.bottom })
-              }, [
-                renderSlot(_ctx.$slots, "bottom")
-              ], 2)) : createCommentVNode("", true)
-            ];
-          }
-        }),
-        _: 3
-      }, _parent));
-    };
-  }
-};
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Footer.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/order.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
+const __nuxt_component_4 = Object.assign(_sfc_main$2, { __name: "SectionOrder" });
 const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  const _component_UFooter = _sfc_main$2;
-  const _component_Logo = __nuxt_component_1$2;
-  const _component_UIcon = _sfc_main$s;
-  _push(ssrRenderComponent(_component_UFooter, _attrs, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<div class="flex flex-col w-full justify-end h-50 gap-5 sm:gap-2"${_scopeId}>`);
-        _push2(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent2, _scopeId));
-        _push2(`<div class="flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"${_scopeId}><a href="tel:+7 (917) 766-68-33"${_scopeId}>`);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-phone",
-          size: "18"
-        }, null, _parent2, _scopeId));
-        _push2(` +7 (917) 766-68-33 </a><a href="tel:+7 (927) 324-25-82"${_scopeId}>`);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-phone",
-          size: "18"
-        }, null, _parent2, _scopeId));
-        _push2(` +7 (927) 324-25-82 </a></div></div>`);
-      } else {
-        return [
-          createVNode("div", { class: "flex flex-col w-full justify-end h-50 gap-5 sm:gap-2" }, [
-            createVNode(_component_Logo, { class: "h-14" }),
-            createVNode("div", { class: "flex flex-col sm:flex-row text-center gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic" }, [
-              createVNode("a", { href: "tel:+7 (917) 766-68-33" }, [
-                createVNode(_component_UIcon, {
-                  name: "i-lucide-phone",
-                  size: "18"
-                }),
-                createTextVNode(" +7 (917) 766-68-33 ")
-              ]),
-              createVNode("a", { href: "tel:+7 (927) 324-25-82" }, [
-                createVNode(_component_UIcon, {
-                  name: "i-lucide-phone",
-                  size: "18"
-                }),
-                createTextVNode(" +7 (927) 324-25-82 ")
-              ])
-            ])
-          ])
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
+  const _component_Logo = __nuxt_component_0$1;
+  const _component_UIcon = _sfc_main$r;
+  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end h-70 gap-5 sm:gap-2" }, _attrs))}>`);
+  _push(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent));
+  _push(`<div class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"><a href="tel:+7 (917) 766-68-33">`);
+  _push(ssrRenderComponent(_component_UIcon, {
+    name: "i-lucide-phone",
+    size: "18"
+  }, null, _parent));
+  _push(` +7 (917) 766-68-33 </a><a href="tel:+7 (927) 324-25-82">`);
+  _push(ssrRenderComponent(_component_UIcon, {
+    name: "i-lucide-phone",
+    size: "18"
+  }, null, _parent));
+  _push(` +7 (927) 324-25-82 </a></div></footer>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -11674,4 +11504,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-CYIk8qNn.mjs.map
+//# sourceMappingURL=index-Cf_oxRTI.mjs.map
