@@ -40,7 +40,7 @@ const fetchReviews = async () => {
 	await $fetch('/api/review/all', {
 		method: 'GET'
 	}).then((data: any) => {
-		if (Array.isArray(data) && data.length > 0) {
+		if (data) {
 			reviewsViews.value = data.slice(0, 3).map((review: any) => {
 				return {
 					name: review.name,
@@ -54,6 +54,7 @@ const fetchReviews = async () => {
 }
 
 fetchReviews()
+fetchAllReviews()
 
 const addReview = async () => {
 	if (review.value.name && review.value.text && review.value.rating) {
@@ -110,7 +111,7 @@ const addReview = async () => {
 								<p>{{ item.date }}</p>
 							</div>
 						</div>
-						<div class="text-gray-600 text-[20px] uppercase">{{ item.text }}</div>
+						<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>
 					</div>
 				</template>
 				<p v-else class="text-primary">Отзывов пока нет</p>
@@ -124,9 +125,9 @@ const addReview = async () => {
 						<UButton class="button-gradient uppercase" icon="i-lucide-ellipsis"> все отзывы </UButton>
 						<template #content>
 							<div class="modal-reviews">
-								<UMarquee v-if="reviews.length > 0" :overlay="false">
+								<UMarquee class="m-10" v-if="reviews.length > 0" :overlay="false">
 									<template v-for="(item, index) in reviews as Review[]" :key="index">
-										<div class="item flex flex-col justify-start items-start gap-1 w-105">
+										<div class="item flex flex-col justify-start items-start gap-1 w-[25%]">
 											<div class="flex w-full flex-row justify-between items-start gap-2">
 												<div
 													class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"
@@ -152,7 +153,7 @@ const addReview = async () => {
 													<p>{{ item.date }}</p>
 												</div>
 											</div>
-											<div class="text-gray-600 text-[20px] uppercase">{{ item.text }}</div>
+											<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>
 										</div>
 									</template>
 								</UMarquee>

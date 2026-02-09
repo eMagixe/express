@@ -1,9 +1,9 @@
-import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$8, g as _sfc_main$h, h as _sfc_main$9, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-iiLtdd6p.mjs';
+import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$8, g as _sfc_main$h, h as _sfc_main$9, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-Cn5KO8Ds.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createTextVNode, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
 import { c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$3 } from './Input-Ckrjnse3.mjs';
+import { _ as _sfc_main$3 } from './Input-Cw8gz7ua.mjs';
 import { useVModel } from '@vueuse/core';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import 'tailwind-variants';
@@ -686,12 +686,27 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     const toast = useToast();
     const modalAddReviewOpen = ref(false);
-    ref(false);
+    const modalAllReviewsOpen = ref(false);
+    const fetchAllReviews = async () => {
+      await $fetch("/api/review/all", {
+        method: "GET"
+      }).then((data) => {
+        reviews2.value = data.map((review2) => {
+          return {
+            name: review2.name,
+            text: review2.text,
+            rating: Number(review2.rating),
+            date: new Date(review2.createdAt).toLocaleDateString("ru-RU")
+          };
+        });
+        modalAllReviewsOpen.value = true;
+      });
+    };
     const fetchReviews = async () => {
       await $fetch("/api/review/all", {
         method: "GET"
       }).then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
+        if (data) {
           reviewsViews.value = data.slice(0, 3).map((review2) => {
             return {
               name: review2.name,
@@ -704,6 +719,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       });
     };
     fetchReviews();
+    fetchAllReviews();
     const addReview = async () => {
       if (review.value.name && review.value.text && review.value.rating) {
         await $fetch("/api/review/add", {
@@ -755,7 +771,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   name: "i-lucide-calendar",
                   size: "14"
                 }, null, _parent2, _scopeId));
-                _push2(`<p${_scopeId}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[20px] uppercase"${_scopeId}>${ssrInterpolate(item.text)}</div></div>`);
+                _push2(`<p${_scopeId}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]"${_scopeId}>${ssrInterpolate(item.text)}</div></div>`);
               });
               _push2(`<!--]-->`);
             } else {
@@ -770,12 +786,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 if (_push3) {
                   _push3(`<div class="modal-reviews"${_scopeId2}>`);
                   if (unref(reviews2).length > 0) {
-                    _push3(ssrRenderComponent(_component_UMarquee, { overlay: false }, {
+                    _push3(ssrRenderComponent(_component_UMarquee, {
+                      class: "m-10",
+                      overlay: false
+                    }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<!--[-->`);
                           ssrRenderList(unref(reviews2), (item, index) => {
-                            _push4(`<div class="item flex flex-col justify-start items-start gap-1 w-105"${_scopeId3}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId3}><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"${_scopeId3}><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]"${_scopeId3}>`);
+                            _push4(`<div class="item flex flex-col justify-start items-start gap-1 w-[25%]"${_scopeId3}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId3}><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"${_scopeId3}><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]"${_scopeId3}>`);
                             _push4(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent4, _scopeId3));
                             _push4(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"${_scopeId3}><!--[-->`);
                             ssrRenderList(item.rating, (n) => {
@@ -786,7 +805,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                               name: "i-lucide-calendar",
                               size: "14"
                             }, null, _parent4, _scopeId3));
-                            _push4(`<p${_scopeId3}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[20px] uppercase"${_scopeId3}>${ssrInterpolate(item.text)}</div></div>`);
+                            _push4(`<p${_scopeId3}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]"${_scopeId3}>${ssrInterpolate(item.text)}</div></div>`);
                           });
                           _push4(`<!--]-->`);
                         } else {
@@ -794,7 +813,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                               return openBlock(), createBlock("div", {
                                 key: index,
-                                class: "item flex flex-col justify-start items-start gap-1 w-105"
+                                class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
                               }, [
                                 createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                   createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -821,7 +840,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                                     createVNode("p", null, toDisplayString(item.date), 1)
                                   ])
                                 ]),
-                                createVNode("div", { class: "text-gray-600 text-[20px] uppercase" }, toDisplayString(item.text), 1)
+                                createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
                               ]);
                             }), 128))
                           ];
@@ -838,13 +857,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     createVNode("div", { class: "modal-reviews" }, [
                       unref(reviews2).length > 0 ? (openBlock(), createBlock(_component_UMarquee, {
                         key: 0,
+                        class: "m-10",
                         overlay: false
                       }, {
                         default: withCtx(() => [
                           (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                             return openBlock(), createBlock("div", {
                               key: index,
-                              class: "item flex flex-col justify-start items-start gap-1 w-105"
+                              class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
                             }, [
                               createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                 createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -871,7 +891,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                                   createVNode("p", null, toDisplayString(item.date), 1)
                                 ])
                               ]),
-                              createVNode("div", { class: "text-gray-600 text-[20px] uppercase" }, toDisplayString(item.text), 1)
+                              createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
                             ]);
                           }), 128))
                         ]),
@@ -1092,7 +1112,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         createVNode("p", null, toDisplayString(item.date), 1)
                       ])
                     ]),
-                    createVNode("div", { class: "text-gray-600 text-[20px] uppercase" }, toDisplayString(item.text), 1)
+                    createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
                   ]);
                 }), 128)) : (openBlock(), createBlock("p", {
                   key: 1,
@@ -1107,13 +1127,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       createVNode("div", { class: "modal-reviews" }, [
                         unref(reviews2).length > 0 ? (openBlock(), createBlock(_component_UMarquee, {
                           key: 0,
+                          class: "m-10",
                           overlay: false
                         }, {
                           default: withCtx(() => [
                             (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                               return openBlock(), createBlock("div", {
                                 key: index,
-                                class: "item flex flex-col justify-start items-start gap-1 w-105"
+                                class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
                               }, [
                                 createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                   createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -1140,7 +1161,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                                     createVNode("p", null, toDisplayString(item.date), 1)
                                   ])
                                 ]),
-                                createVNode("div", { class: "text-gray-600 text-[20px] uppercase" }, toDisplayString(item.text), 1)
+                                createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
                               ]);
                             }), 128))
                           ]),
@@ -1255,4 +1276,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = Object.assign(_sfc_main, { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-B0jdvstX.mjs.map
+//# sourceMappingURL=reviews-kQjw3QAY.mjs.map
