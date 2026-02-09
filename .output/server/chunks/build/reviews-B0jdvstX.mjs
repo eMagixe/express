@@ -1,9 +1,9 @@
-import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$9, g as _sfc_main$h, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-B8D1reGi.mjs';
+import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$8, g as _sfc_main$h, h as _sfc_main$9, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-iiLtdd6p.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createTextVNode, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
 import { c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$3 } from './Input-DZVi7K7h.mjs';
+import { _ as _sfc_main$3 } from './Input-Ckrjnse3.mjs';
 import { useVModel } from '@vueuse/core';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import 'tailwind-variants';
@@ -686,34 +686,21 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     const toast = useToast();
     const modalAddReviewOpen = ref(false);
-    const modalAllReviewsOpen = ref(false);
-    const fetchAllReviews = async () => {
-      await $fetch("/api/review/all", {
-        method: "GET"
-      }).then((data) => {
-        reviews2.value = data.map((review2) => {
-          return {
-            name: review2.name,
-            text: review2.text,
-            rating: Number(review2.rating),
-            date: new Date(review2.createdAt).toLocaleDateString("ru-RU")
-          };
-        });
-        modalAllReviewsOpen.value = true;
-      });
-    };
+    ref(false);
     const fetchReviews = async () => {
       await $fetch("/api/review/all", {
         method: "GET"
       }).then((data) => {
-        reviewsViews.value = data.slice(0, 3).map((review2) => {
-          return {
-            name: review2.name,
-            text: review2.text,
-            rating: Number(review2.rating),
-            date: new Date(review2.createdAt).toLocaleDateString("ru-RU")
-          };
-        });
+        if (Array.isArray(data) && data.length > 0) {
+          reviewsViews.value = data.slice(0, 3).map((review2) => {
+            return {
+              name: review2.name,
+              text: review2.text,
+              rating: Number(review2.rating),
+              date: new Date(review2.createdAt).toLocaleDateString("ru-RU")
+            };
+          });
+        }
       });
     };
     fetchReviews();
@@ -742,9 +729,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UContainer = _sfc_main$b;
       const _component_SectionTitle = __nuxt_component_0;
       const _component_UIcon = _sfc_main$m;
-      const _component_UModal = _sfc_main$9;
+      const _component_UDrawer = _sfc_main$8;
       const _component_UButton = _sfc_main$h;
       const _component_UMarquee = _sfc_main$2;
+      const _component_UModal = _sfc_main$9;
       const _component_UInput = _sfc_main$3;
       const _component_UTextarea = _sfc_main$1;
       _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
@@ -774,19 +762,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               _push2(`<p class="text-primary"${_scopeId}>Отзывов пока нет</p>`);
             }
             _push2(`<div class="w-full flex flex-row justify-between items-center pt-10 gap-5"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UModal, {
-              title: "Все отзывы",
-              "close-icon": "i-lucide-circle-x",
-              open: unref(modalAllReviewsOpen),
-              "onUpdate:open": ($event) => modalAllReviewsOpen.value = !unref(modalAllReviewsOpen),
-              fullscreen: "",
-              ui: {
-                body: "bg-gray-600 text-gray-200",
-                header: "bg-gray-600 border-gray-600",
-                title: "text-gray-200"
-              }
-            }, {
-              body: withCtx((_2, _push3, _parent3, _scopeId2) => {
+            _push2(ssrRenderComponent(_component_UDrawer, { ui: {
+              body: "bg-gray-600 text-gray-200",
+              content: "min-h-[400px] bg-gray-600 border-gray-600"
+            } }, {
+              content: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="modal-reviews"${_scopeId2}>`);
                   if (unref(reviews2).length > 0) {
@@ -907,7 +887,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(ssrRenderComponent(_component_UButton, {
-                    onClick: fetchAllReviews,
                     class: "button-gradient uppercase",
                     icon: "i-lucide-ellipsis"
                   }, {
@@ -925,7 +904,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 } else {
                   return [
                     createVNode(_component_UButton, {
-                      onClick: fetchAllReviews,
                       class: "button-gradient uppercase",
                       icon: "i-lucide-ellipsis"
                     }, {
@@ -1121,19 +1099,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   class: "text-primary"
                 }, "Отзывов пока нет")),
                 createVNode("div", { class: "w-full flex flex-row justify-between items-center pt-10 gap-5" }, [
-                  createVNode(_component_UModal, {
-                    title: "Все отзывы",
-                    "close-icon": "i-lucide-circle-x",
-                    open: unref(modalAllReviewsOpen),
-                    "onUpdate:open": ($event) => modalAllReviewsOpen.value = !unref(modalAllReviewsOpen),
-                    fullscreen: "",
-                    ui: {
-                      body: "bg-gray-600 text-gray-200",
-                      header: "bg-gray-600 border-gray-600",
-                      title: "text-gray-200"
-                    }
-                  }, {
-                    body: withCtx(() => [
+                  createVNode(_component_UDrawer, { ui: {
+                    body: "bg-gray-600 text-gray-200",
+                    content: "min-h-[400px] bg-gray-600 border-gray-600"
+                  } }, {
+                    content: withCtx(() => [
                       createVNode("div", { class: "modal-reviews" }, [
                         unref(reviews2).length > 0 ? (openBlock(), createBlock(_component_UMarquee, {
                           key: 0,
@@ -1183,7 +1153,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     ]),
                     default: withCtx(() => [
                       createVNode(_component_UButton, {
-                        onClick: fetchAllReviews,
                         class: "button-gradient uppercase",
                         icon: "i-lucide-ellipsis"
                       }, {
@@ -1194,7 +1163,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       })
                     ]),
                     _: 1
-                  }, 8, ["open", "onUpdate:open"]),
+                  }),
                   createVNode(_component_UModal, {
                     title: "Оставить отзыв",
                     "close-icon": "i-lucide-circle-x",
@@ -1286,4 +1255,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = Object.assign(_sfc_main, { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-W4MIM5Pa.mjs.map
+//# sourceMappingURL=reviews-B0jdvstX.mjs.map

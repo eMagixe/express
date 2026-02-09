@@ -40,14 +40,16 @@ const fetchReviews = async () => {
 	await $fetch('/api/review/all', {
 		method: 'GET'
 	}).then((data: any) => {
-		reviewsViews.value = data.slice(0, 3).map((review: any) => {
-			return {
-				name: review.name,
-				text: review.text,
-				rating: Number(review.rating),
-				date: new Date(review.createdAt).toLocaleDateString('ru-RU')
-			}
-		}) as Review[]
+		if (Array.isArray(data) && data.length > 0) {
+			reviewsViews.value = data.slice(0, 3).map((review: any) => {
+				return {
+					name: review.name,
+					text: review.text,
+					rating: Number(review.rating),
+					date: new Date(review.createdAt).toLocaleDateString('ru-RU')
+				}
+			}) as Review[]
+		}
 	})
 }
 
@@ -113,22 +115,14 @@ const addReview = async () => {
 				</template>
 				<p v-else class="text-primary">Отзывов пока нет</p>
 				<div class="w-full flex flex-row justify-between items-center pt-10 gap-5">
-					<UModal
-						title="Все отзывы"
-						close-icon="i-lucide-circle-x"
-						:open="modalAllReviewsOpen"
-						@update:open="modalAllReviewsOpen = !modalAllReviewsOpen"
-						fullscreen
+					<UDrawer
 						:ui="{
 							body: 'bg-gray-600 text-gray-200',
-							header: 'bg-gray-600 border-gray-600',
-							title: 'text-gray-200'
+							content: 'min-h-[400px] bg-gray-600 border-gray-600'
 						}"
 					>
-						<UButton @click="fetchAllReviews" class="button-gradient uppercase" icon="i-lucide-ellipsis">
-							все отзывы
-						</UButton>
-						<template #body>
+						<UButton class="button-gradient uppercase" icon="i-lucide-ellipsis"> все отзывы </UButton>
+						<template #content>
 							<div class="modal-reviews">
 								<UMarquee v-if="reviews.length > 0" :overlay="false">
 									<template v-for="(item, index) in reviews as Review[]" :key="index">
@@ -165,7 +159,7 @@ const addReview = async () => {
 								<p v-else class="text-primary w-full text-center">Отзывов пока нет</p>
 							</div>
 						</template>
-					</UModal>
+					</UDrawer>
 
 					<UModal
 						title="Оставить отзыв"
