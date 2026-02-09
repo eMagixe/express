@@ -117,6 +117,8 @@ const addReview = async () => {
 				<p v-else class="text-primary">Отзывов пока нет</p>
 				<div class="w-full flex flex-row justify-between items-center pt-10 gap-5">
 					<UDrawer
+						title="Отзывы"
+						description="Все отзывы о компании"
 						:ui="{
 							body: 'bg-gray-600 text-gray-200',
 							content: 'min-h-[400px] bg-gray-600 border-gray-600'
@@ -127,7 +129,9 @@ const addReview = async () => {
 							<div class="modal-reviews">
 								<UMarquee class="m-10" v-if="reviews.length > 0" :overlay="false">
 									<template v-for="(item, index) in reviews as Review[]" :key="index">
-										<div class="item flex flex-col justify-start items-start gap-1 w-[25%]">
+										<div
+											class="item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
+										>
 											<div class="flex w-full flex-row justify-between items-start gap-2">
 												<div
 													class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"
@@ -179,9 +183,9 @@ const addReview = async () => {
 								v-model="review.name"
 								color="primary"
 								placeholder="Имя"
-								size="xl"
 								:ui="{
-									base: 'h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]'
+									root: 'w-full',
+									base: 'h-12 text-white bg-gray-600 rounded-[26px] min-w-full'
 								}"
 							/>
 							<div class="flex flex-row justify-start items-start gap-1 pl-1 w-full cursor-pointer">
@@ -200,9 +204,11 @@ const addReview = async () => {
 							<UTextarea
 								v-model="review.text"
 								placeholder="Текст"
+								maxlength="30"
 								:rows="3"
 								:ui="{
-									base: 'min-h-[30px] p-3 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]'
+									root: 'w-full',
+									base: 'p-3 text-white bg-gray-600 rounded-[26px] min-w-full'
 								}"
 							/>
 							<div class="w-full flex justify-center items-center">

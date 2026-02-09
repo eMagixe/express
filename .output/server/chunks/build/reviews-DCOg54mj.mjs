@@ -1,9 +1,9 @@
-import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$8, g as _sfc_main$h, h as _sfc_main$9, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-Cn5KO8Ds.mjs';
+import { c as useToast, d as _sfc_main$b, e as __nuxt_component_0, _ as _sfc_main$m, f as _sfc_main$8, g as _sfc_main$h, h as _sfc_main$9, t as tv, u as useFormField, a as useComponentIcons, b as _sfc_main$k, l as looseToNumber } from './index-gHKoDx9B.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createTextVNode, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
 import { c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$3 } from './Input-Cw8gz7ua.mjs';
+import { _ as _sfc_main$3 } from './Input-CNadnYtq.mjs';
 import { useVModel } from '@vueuse/core';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import 'tailwind-variants';
@@ -778,10 +778,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               _push2(`<p class="text-primary"${_scopeId}>Отзывов пока нет</p>`);
             }
             _push2(`<div class="w-full flex flex-row justify-between items-center pt-10 gap-5"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UDrawer, { ui: {
-              body: "bg-gray-600 text-gray-200",
-              content: "min-h-[400px] bg-gray-600 border-gray-600"
-            } }, {
+            _push2(ssrRenderComponent(_component_UDrawer, {
+              title: "Отзывы",
+              description: "Все отзывы о компании",
+              ui: {
+                body: "bg-gray-600 text-gray-200",
+                content: "min-h-[400px] bg-gray-600 border-gray-600"
+              }
+            }, {
               content: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="modal-reviews"${_scopeId2}>`);
@@ -794,7 +798,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         if (_push4) {
                           _push4(`<!--[-->`);
                           ssrRenderList(unref(reviews2), (item, index) => {
-                            _push4(`<div class="item flex flex-col justify-start items-start gap-1 w-[25%]"${_scopeId3}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId3}><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"${_scopeId3}><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]"${_scopeId3}>`);
+                            _push4(`<div class="item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"${_scopeId3}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId3}><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"${_scopeId3}><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]"${_scopeId3}>`);
                             _push4(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent4, _scopeId3));
                             _push4(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"${_scopeId3}><!--[-->`);
                             ssrRenderList(item.rating, (n) => {
@@ -813,7 +817,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                               return openBlock(), createBlock("div", {
                                 key: index,
-                                class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
+                                class: "item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
                               }, [
                                 createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                   createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -864,7 +868,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                             return openBlock(), createBlock("div", {
                               key: index,
-                              class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
+                              class: "item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
                             }, [
                               createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                 createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -955,9 +959,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     "onUpdate:modelValue": ($event) => unref(review).name = $event,
                     color: "primary",
                     placeholder: "Имя",
-                    size: "xl",
                     ui: {
-                      base: "h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                      root: "w-full",
+                      base: "h-12 text-white bg-gray-600 rounded-[26px] min-w-full"
                     }
                   }, null, _parent3, _scopeId2));
                   _push3(`<div class="flex flex-row justify-start items-start gap-1 pl-1 w-full cursor-pointer"${_scopeId2}><!--[-->`);
@@ -971,9 +975,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     modelValue: unref(review).text,
                     "onUpdate:modelValue": ($event) => unref(review).text = $event,
                     placeholder: "Текст",
+                    maxlength: "30",
                     rows: 3,
                     ui: {
-                      base: "min-h-[30px] p-3 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                      root: "w-full",
+                      base: "p-3 text-white bg-gray-600 rounded-[26px] min-w-full"
                     }
                   }, null, _parent3, _scopeId2));
                   _push3(`<div class="w-full flex justify-center items-center"${_scopeId2}>`);
@@ -1001,9 +1007,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       "onUpdate:modelValue": ($event) => unref(review).name = $event,
                       color: "primary",
                       placeholder: "Имя",
-                      size: "xl",
                       ui: {
-                        base: "h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                        root: "w-full",
+                        base: "h-12 text-white bg-gray-600 rounded-[26px] min-w-full"
                       }
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                     createVNode("div", { class: "flex flex-row justify-start items-start gap-1 pl-1 w-full cursor-pointer" }, [
@@ -1024,9 +1030,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       modelValue: unref(review).text,
                       "onUpdate:modelValue": ($event) => unref(review).text = $event,
                       placeholder: "Текст",
+                      maxlength: "30",
                       rows: 3,
                       ui: {
-                        base: "min-h-[30px] p-3 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                        root: "w-full",
+                        base: "p-3 text-white bg-gray-600 rounded-[26px] min-w-full"
                       }
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                     createVNode("div", { class: "w-full flex justify-center items-center" }, [
@@ -1119,10 +1127,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   class: "text-primary"
                 }, "Отзывов пока нет")),
                 createVNode("div", { class: "w-full flex flex-row justify-between items-center pt-10 gap-5" }, [
-                  createVNode(_component_UDrawer, { ui: {
-                    body: "bg-gray-600 text-gray-200",
-                    content: "min-h-[400px] bg-gray-600 border-gray-600"
-                  } }, {
+                  createVNode(_component_UDrawer, {
+                    title: "Отзывы",
+                    description: "Все отзывы о компании",
+                    ui: {
+                      body: "bg-gray-600 text-gray-200",
+                      content: "min-h-[400px] bg-gray-600 border-gray-600"
+                    }
+                  }, {
                     content: withCtx(() => [
                       createVNode("div", { class: "modal-reviews" }, [
                         unref(reviews2).length > 0 ? (openBlock(), createBlock(_component_UMarquee, {
@@ -1134,7 +1146,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                               return openBlock(), createBlock("div", {
                                 key: index,
-                                class: "item flex flex-col justify-start items-start gap-1 w-[25%]"
+                                class: "item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
                               }, [
                                 createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
                                   createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
@@ -1202,9 +1214,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(review).name = $event,
                         color: "primary",
                         placeholder: "Имя",
-                        size: "xl",
                         ui: {
-                          base: "h-12 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                          root: "w-full",
+                          base: "h-12 text-white bg-gray-600 rounded-[26px] min-w-full"
                         }
                       }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                       createVNode("div", { class: "flex flex-row justify-start items-start gap-1 pl-1 w-full cursor-pointer" }, [
@@ -1225,9 +1237,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         modelValue: unref(review).text,
                         "onUpdate:modelValue": ($event) => unref(review).text = $event,
                         placeholder: "Текст",
+                        maxlength: "30",
                         rows: 3,
                         ui: {
-                          base: "min-h-[30px] p-3 text-white bg-gray-600 rounded-[26px] w-[320px] sm:w-[440px]"
+                          root: "w-full",
+                          base: "p-3 text-white bg-gray-600 rounded-[26px] min-w-full"
                         }
                       }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                       createVNode("div", { class: "w-full flex justify-center items-center" }, [
@@ -1276,4 +1290,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = Object.assign(_sfc_main, { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-kQjw3QAY.mjs.map
+//# sourceMappingURL=reviews-DCOg54mj.mjs.map
