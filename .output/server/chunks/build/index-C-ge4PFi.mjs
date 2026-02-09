@@ -6064,7 +6064,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$m;
   const _component_NuxtLink = __nuxt_component_0$3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-20" }, {
+  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] py-8 flex flex-col justify-center gap-20" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
@@ -6339,9 +6339,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-D5jRMNcf.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-Bq5m21pL.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-Ca1UWULN.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-qQDJ8N7E.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BwZDHKgJ.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-CUUeQ9qK.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UApp = __nuxt_component_0$2;
@@ -6387,4 +6387,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-2vydP7qu.mjs.map
+//# sourceMappingURL=index-C-ge4PFi.mjs.map
