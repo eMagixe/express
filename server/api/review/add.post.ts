@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event)
 
-	return $fetch('/create-order', {
+	return $fetch('/add-review', {
 		method: 'POST',
 		baseURL: useRuntimeConfig().apiBase,
 		body
