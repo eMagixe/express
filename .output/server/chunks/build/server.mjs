@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, getCurrentInstance, defineAsyncComponent, defineComponent, h, computed, unref, shallowRef, provide, shallowReactive, createElementBlock, ref, Suspense, Fragment, createApp, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, mergeProps, getCurrentScope, toRef, withCtx, nextTick, isReadonly, useSSRContext, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { l as defuFn, m as klona, f as createError$1, n as hasProtocol, o as isScriptProtocol, j as joinURL, w as withQuery, s as sanitizeStatusCode, q as getContext, $ as $fetch$1, r as baseURL, t as createHooks, v as defu, x as executeAsync } from '../nitro/nitro.mjs';
+import { m as defuFn, n as klona, h as createError$1, o as hasProtocol, q as isScriptProtocol, k as joinURL, w as withQuery, s as sanitizeStatusCode, t as getContext, $ as $fetch$1, v as baseURL, x as createHooks, y as defu, z as executeAsync } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
@@ -242,6 +242,9 @@ function useRuntimeConfig(_event) {
 function defineGetter(obj, key, val) {
   Object.defineProperty(obj, key, { get: () => val });
 }
+function defineAppConfig(config) {
+  return config;
+}
 const LayoutMetaSymbol = /* @__PURE__ */ Symbol("layout-meta");
 const PageRouteSymbol = /* @__PURE__ */ Symbol("route");
 globalThis._importMeta_.url.replace(/\/app\/.*$/, "/");
@@ -397,7 +400,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CbMzbuMC.mjs')
+    component: () => import('./index-B8D1reGi.mjs').then((n) => n.B)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -751,7 +754,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-DBjtLWkV.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-B6dJa6dm.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -761,6 +764,39 @@ const components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8 = /* @__PURE
     for (const [name, component] of lazyGlobalComponents) {
       nuxtApp.vueApp.component(name, component);
       nuxtApp.vueApp.component("Lazy" + name, component);
+    }
+  }
+});
+const cfg0 = defineAppConfig({
+  ui: {
+    toast: {
+      slots: {
+        root: "bg-gray-600 text-white rounded-lg shadow-lg p-4",
+        title: "text-lg text-white",
+        description: "text-sm text-white",
+        icon: "text-white"
+      }
+    },
+    input: {
+      slots: {
+        base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]"
+      }
+    },
+    inputMenu: {
+      slots: {
+        base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]",
+        item: "text-primary bg-gray-600 hover:bg-primary/70 rounded-0"
+      }
+    },
+    inputDate: {
+      slots: {
+        base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px] flex justify-center items-center !gap-10"
+      }
+    },
+    formField: {
+      slots: {
+        error: "text-red-200 pl-4 text-sm"
+      }
     }
   }
 });
@@ -1063,7 +1099,7 @@ const inlineConfig = {
     "fetchTimeout": 1500
   }
 };
-const appConfig = /* @__PURE__ */ defuFn(inlineConfig);
+const appConfig = /* @__PURE__ */ defuFn(cfg0, inlineConfig);
 function useAppConfig() {
   const nuxtApp = useNuxtApp();
   nuxtApp._appConfig ||= klona(appConfig);
@@ -1427,7 +1463,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-2LFZDz-y.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-H_3sS4mG.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1509,5 +1545,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, appConfig as a, useAppConfig as b, useRoute as c, useRouter as d, entry_default as default, useNuxtApp as e, useRuntimeConfig as f, nuxtLinkDefaults as g, asyncDataDefaults as h, createError as i, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRouter as e, useRuntimeConfig as f, nuxtLinkDefaults as g, asyncDataDefaults as h, createError as i, navigateTo as n, resolveRouteObject as r, useHead as u };
 //# sourceMappingURL=server.mjs.map
