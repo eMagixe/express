@@ -5,8 +5,8 @@ import { reactivePick, createReusableTemplate, createSharedComposable, reactiveO
 import { A as serialize, y as defu, p as publicAssetsURL, B as isEqual } from '../nitro/nitro.mjs';
 import { _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, a as useNuxtApp } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import __nuxt_component_0$3 from './index-B6dJa6dm.mjs';
-import { _ as __nuxt_component_0$4 } from './nuxt-link-Cto9_xmT.mjs';
+import __nuxt_component_0$4 from './index-B6dJa6dm.mjs';
+import { _ as __nuxt_component_0$3 } from './nuxt-link-Cto9_xmT.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import 'node:http';
 import 'node:https';
@@ -502,7 +502,7 @@ const _sfc_main$m = {
     const props = __props;
     const iconProps = useForwardProps(reactivePick(props, "name", "mode", "size", "customize"));
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_Icon = __nuxt_component_0$3;
+      const _component_Icon = __nuxt_component_0$4;
       if (typeof __props.name === "string") {
         _push(ssrRenderComponent(_component_Icon, mergeProps(unref(iconProps), _attrs), null, _parent));
       } else {
@@ -1201,7 +1201,7 @@ const _sfc_main$i = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       return ui.value({ class: props.class, active, disabled: props.disabled });
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$4;
+      const _component_NuxtLink = __nuxt_component_0$3;
       _push(ssrRenderComponent(_component_NuxtLink, mergeProps(unref(nuxtLinkProps), {
         to: to.value,
         custom: ""
@@ -5941,7 +5941,7 @@ const __nuxt_component_0$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main
 const _sfc_main$5 = {};
 function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$m;
-  const _component_NuxtLink = __nuxt_component_0$4;
+  const _component_NuxtLink = __nuxt_component_0$3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
   _push(ssrRenderComponent(_component_UIcon, {
     name: "i-lucide-phone",
@@ -6062,6 +6062,7 @@ const _sfc_main$3 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UIcon = _sfc_main$m;
+  const _component_NuxtLink = __nuxt_component_0$3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-center gap-20" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -6096,7 +6097,32 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div><div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
+        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
+        _push2(ssrRenderComponent(_component_NuxtLink, {
+          class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
+          icon: "i-lucide-phone-call",
+          to: "tel:+79177666833"
+        }, {
+          default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+            if (_push3) {
+              _push3(ssrRenderComponent(_component_UIcon, {
+                name: "i-lucide-phone-call",
+                size: "18"
+              }, null, _parent3, _scopeId2));
+              _push3(` Вызвать `);
+            } else {
+              return [
+                createVNode(_component_UIcon, {
+                  name: "i-lucide-phone-call",
+                  size: "18"
+                }),
+                createTextVNode(" Вызвать ")
+              ];
+            }
+          }),
+          _: 1
+        }, _parent2, _scopeId));
+        _push2(`<div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
@@ -6141,6 +6167,20 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
             ])
           ]),
           createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
+          createVNode(_component_NuxtLink, {
+            class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
+            icon: "i-lucide-phone-call",
+            to: "tel:+79177666833"
+          }, {
+            default: withCtx(() => [
+              createVNode(_component_UIcon, {
+                name: "i-lucide-phone-call",
+                size: "18"
+              }),
+              createTextVNode(" Вызвать ")
+            ]),
+            _: 1
+          }),
           createVNode("div", { class: "font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
@@ -6299,9 +6339,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DCOg54mj.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-e1xbPPdJ.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-D7CyHZKW.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-D5jRMNcf.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-Bq5m21pL.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-Ca1UWULN.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UApp = __nuxt_component_0$2;
@@ -6346,5 +6386,5 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   default: index
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, useComponentIcons as a, _sfc_main$k as b, useToast as c, _sfc_main$b as d, __nuxt_component_0 as e, _sfc_main$8 as f, _sfc_main$h as g, _sfc_main$9 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-gHKoDx9B.mjs.map
+export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
+//# sourceMappingURL=index-2vydP7qu.mjs.map

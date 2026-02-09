@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<div class="welcome-section w-full mx-auto">
@@ -8,38 +6,46 @@
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
 				<div class="flex not-sm:text-[18px] justify-center items-center gap-1">
 					КУМЕРТАУ
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					УФА
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					КУМЕРТАУ
 				</div>
 				<div class="flex not-sm:text-[18px] justify-center items-center gap-1">
 					МЕЛЕУЗ
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					УФА
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					МЕЛЕУЗ
 				</div>
 				<div class="flex not-sm:text-[18px] justify-center items-center gap-1">
 					САЛАВАТ
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					УФА
-					<UIcon name="i-lucide-arrow-right" class="h-6 w-6"/>
+					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					САЛАВАТ
 				</div>
 			</div>
 			<div
-					class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]">
+				class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"
+			>
 				Круглосуточные перевозки
 			</div>
+			<NuxtLink
+				class="sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3"
+				icon="i-lucide-phone-call"
+				to="tel:+79177666833"
+			>
+				<UIcon name="i-lucide-phone-call" size="18" />
+				Вызвать
+			</NuxtLink>
 			<div
-					class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5">
+				class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"
+			>
 				быстро и с комфортом
 			</div>
 		</UContainer>
 	</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

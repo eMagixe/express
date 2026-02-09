@@ -1,22 +1,12 @@
 <script setup lang="ts">
 import { CalendarDate } from '@internationalized/date'
+import type { Order } from '#shared/types/global'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
-import type { FormSubmitEvent } from '@nuxt/ui'
 
 //Form data
 const check = ref(false)
 const inputDate = useTemplateRef('inputDate')
-
-type Order = {
-	name: string
-	phone: string
-	from: string
-	from_address: string
-	to: string
-	to_address: string
-	date: any
-}
 
 const dateNow = new Date(Date.now())
 const currentDate = new CalendarDate(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDay())
@@ -41,8 +31,6 @@ const schema = v.object({
 	from_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
 	date: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения'))
 })
-
-type Schema = v.InferOutput<typeof schema>
 
 //Cities
 const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
@@ -83,7 +71,7 @@ const createOrder = async () => {
 	})
 }
 
-const onSubmit = async (event: FormSubmitEvent<Schema>) => {
+const onSubmit = async () => {
 	createOrder()
 		.then(() => {
 			toast.add({ title: 'Ответ', description: 'Заявка была успешно создана', color: 'success' })
