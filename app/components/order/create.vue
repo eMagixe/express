@@ -12,7 +12,7 @@ const df = new DateFormatter('ru-RU', {
 //Form data
 const check = ref(false)
 
-const [month, day, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
+const [day, month, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
 
 const defaultTime = new Time(16, 30, 0)
 const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
@@ -170,6 +170,7 @@ const onSubmit = async () => {
 					<UPopover>
 						<UButton
 							icon="i-lucide-calendar"
+							id="date-button"
 							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
 						>
 							{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}

@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CbN78tsr.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-DDpPljLL.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, createTextVNode, toDisplayString, isRef, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-CSmswoC4.mjs';
+import { _ as _sfc_main$9 } from './Input-MA8LI68V.mjs';
 import { y as defu, C as isEqual } from '../nitro/nitro.mjs';
 import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
@@ -5259,7 +5259,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       dateStyle: "medium"
     });
     const check = ref(false);
-    const [month, day, year] = new Date(Date.now()).toLocaleDateString("ru-RU").split(".");
+    const [day, month, year] = new Date(Date.now()).toLocaleDateString("ru-RU").split(".");
     const defaultTime = new Time(16, 30, 0);
     const currentDate = new CalendarDate(Number(year), Number(month), Number(day));
     const toast = useToast();
@@ -5556,6 +5556,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         if (_push4) {
                           _push4(ssrRenderComponent(_component_UButton, {
                             icon: "i-lucide-calendar",
+                            id: "date-button",
                             class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
@@ -5573,6 +5574,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           return [
                             createVNode(_component_UButton, {
                               icon: "i-lucide-calendar",
+                              id: "date-button",
                               class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
                             }, {
                               default: withCtx(() => [
@@ -5599,6 +5601,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         default: withCtx(() => [
                           createVNode(_component_UButton, {
                             icon: "i-lucide-calendar",
+                            id: "date-button",
                             class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
                           }, {
                             default: withCtx(() => [
@@ -5791,6 +5794,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           default: withCtx(() => [
                             createVNode(_component_UButton, {
                               icon: "i-lucide-calendar",
+                              id: "date-button",
                               class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
                             }, {
                               default: withCtx(() => [
@@ -5903,4 +5907,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-Cz6yOZlD.mjs.map
+//# sourceMappingURL=order-u0VpOdlW.mjs.map
