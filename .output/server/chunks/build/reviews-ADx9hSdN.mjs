@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-CM-HjZRo.mjs';
+import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-D0Q3X4-_.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive } from 'reka-ui';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$6 } from './Input-80k-2aPM.mjs';
+import { _ as _sfc_main$6 } from './Input-CAPeXM_z.mjs';
 import { useVModel } from '@vueuse/core';
 import 'tailwind-variants';
 import './index-B6dJa6dm.mjs';
@@ -254,7 +254,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                 if (_push3) {
                   _push3(`<!--[-->`);
                   ssrRenderList(unref(reviews2), (item, index) => {
-                    _push3(`<div class="item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId2}><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"${_scopeId2}><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]"${_scopeId2}>`);
+                    _push3(`<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]"${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId2}><div class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]"${_scopeId2}>`);
                     _push3(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent3, _scopeId2));
                     _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"${_scopeId2}><!--[-->`);
                     ssrRenderList(item.rating, (n) => {
@@ -273,11 +273,11 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                     (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                       return openBlock(), createBlock("div", {
                         key: index,
-                        class: "item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
+                        class: "item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]"
                       }, [
                         createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
-                          createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
-                            createVNode("div", { class: "uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" }, [
+                          createVNode("div", { class: "flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
+                            createVNode("div", { class: "uppercase text-[14px] not-lg:text-[30px]" }, [
                               createVNode(_component_UIcon, { name: "i-lucide-circle-user-round" }),
                               createTextVNode(" " + toDisplayString(item.name), 1)
                             ]),
@@ -320,11 +320,11 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                     (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
                       return openBlock(), createBlock("div", {
                         key: index,
-                        class: "item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]"
+                        class: "item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]"
                       }, [
                         createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
-                          createVNode("div", { class: "flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" }, [
-                            createVNode("div", { class: "uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" }, [
+                          createVNode("div", { class: "flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
+                            createVNode("div", { class: "uppercase text-[14px] not-lg:text-[30px]" }, [
                               createVNode(_component_UIcon, { name: "i-lucide-circle-user-round" }),
                               createTextVNode(" " + toDisplayString(item.name), 1)
                             ]),
@@ -1152,4 +1152,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-C-Q4l3No.mjs.map
+//# sourceMappingURL=reviews-ADx9hSdN.mjs.map

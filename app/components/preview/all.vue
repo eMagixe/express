@@ -38,12 +38,12 @@ await fetchAllReviews()
 			<div class="modal-reviews">
 				<UMarquee class="m-10" :overlay="false">
 					<template v-for="(item, index) in reviews as Review[]" :key="index">
-						<div class="item flex flex-col justify-start items-start gap-1 w-[90vw] sm:w-[25vw]">
+						<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]">
 							<div class="flex w-full flex-row justify-between items-start gap-2">
 								<div
-									class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"
+									class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"
 								>
-									<div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">
+									<div class="uppercase text-[14px] not-lg:text-[30px]">
 										<UIcon name="i-lucide-circle-user-round" />
 										{{ item.name }}
 									</div>
