@@ -17,8 +17,7 @@
     "tailwindcss": "^4.1.18",
     "valibot": "^1.2.0",
     "vue": "^3.5.27",
-    "vue-router": "^4.6.4",
-    "yandex-metrika-module-nuxt3": "^1.5.3"
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.89"

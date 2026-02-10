@@ -2,22 +2,7 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: true },
-	modules: [
-		'@nuxt/ui',
-		[
-			'yandex-metrika-module-nuxt3',
-			{
-				id: '106766232',
-				ssr: true,
-				webvisor: true,
-				clickmap: true,
-				ecommerce: 'dataLayer',
-				url: '/',
-				accurateTrackBounce: true,
-				trackLinks: true
-			}
-		]
-	],
+	modules: ['@nuxt/ui'],
 	css: ['/assets/css/main.css'],
 	runtimeConfig: {
 		apiBase: 'https://tidideckasast.beget.app/webhook'
@@ -32,6 +17,12 @@ export default defineNuxtConfig({
 					rel: 'icon',
 					type: 'image/x-icon',
 					href: '/favicon.ico'
+				}
+			],
+			script: [
+				{
+					src: '/js/yandex-metrika.js',
+					tagPosition: 'bodyClose'
 				}
 			]
 		}
