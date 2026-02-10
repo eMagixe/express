@@ -5,6 +5,12 @@ export default defineNuxtConfig({
 	modules: ['@nuxt/ui'],
 	css: ['/assets/css/main.css'],
 	debug: false,
+	vite: {
+		build: {
+			cssCodeSplit: true,
+			minify: 'esbuild'
+		}
+	},
 	runtimeConfig: {
 		apiBase: 'https://tidideckasast.beget.app/webhook'
 	},
