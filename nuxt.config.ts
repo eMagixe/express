@@ -15,7 +15,10 @@ export default defineNuxtConfig({
 		apiBase: 'https://tidideckasast.beget.app/webhook'
 	},
 	ui: {
-		colorMode: false
+		colorMode: false,
+		experimental: {
+			componentDetection: true
+		}
 	},
 	app: {
 		head: {
