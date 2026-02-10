@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-BBPjR-L0.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CbN78tsr.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, createTextVNode, toDisplayString, isRef, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-BF6Fbhyj.mjs';
+import { _ as _sfc_main$9 } from './Input-CSmswoC4.mjs';
 import { y as defu, C as isEqual } from '../nitro/nitro.mjs';
 import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
@@ -5367,7 +5367,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       "onUpdate:modelValue": ($event) => unref(data).name = $event,
                       color: "primary",
                       placeholder: "Ф.И.О",
-                      size: "xl"
+                      size: "xl",
+                      id: "name"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5376,7 +5377,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).name = $event,
                         color: "primary",
                         placeholder: "Ф.И.О",
-                        size: "xl"
+                        size: "xl",
+                        id: "name"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ];
                   }
@@ -5391,7 +5393,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       "onUpdate:modelValue": ($event) => unref(data).phone = $event,
                       placeholder: "+7-(000)-000-00-00",
                       icon: "i-lucide-phone",
-                      size: "xl"
+                      size: "xl",
+                      id: "phone"
                     }, ssrGetDirectiveProps(_ctx, unref(vMaska), "+7-(###)-###-##-##")), null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5400,7 +5403,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).phone = $event,
                         placeholder: "+7-(000)-000-00-00",
                         icon: "i-lucide-phone",
-                        size: "xl"
+                        size: "xl",
+                        id: "phone"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
                         [unref(vMaska), "+7-(###)-###-##-##"]
                       ])
@@ -5419,7 +5423,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       items: unref(from_cities),
                       color: "primary",
                       placeholder: "Город отправления",
-                      size: "xl"
+                      size: "xl",
+                      id: "from"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5430,7 +5435,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         items: unref(from_cities),
                         color: "primary",
                         placeholder: "Город отправления",
-                        size: "xl"
+                        size: "xl",
+                        id: "from"
                       }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
                     ];
                   }
@@ -5445,7 +5451,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
                       color: "primary",
                       placeholder: "Адрес отправления",
-                      size: "xl"
+                      size: "xl",
+                      id: "from_address"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5454,7 +5461,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
                         color: "primary",
                         placeholder: "Адрес отправления",
-                        size: "xl"
+                        size: "xl",
+                        id: "from_address"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ];
                   }
@@ -5471,7 +5479,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       items: unref(to_cities),
                       color: "primary",
                       placeholder: "Город прибытия",
-                      size: "xl"
+                      size: "xl",
+                      id: "to"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5482,7 +5491,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         items: unref(to_cities),
                         color: "primary",
                         placeholder: "Город прибытия",
-                        size: "xl"
+                        size: "xl",
+                        id: "to"
                       }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
                     ];
                   }
@@ -5497,7 +5507,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
                       color: "primary",
                       placeholder: "Адрес прибытия",
-                      size: "xl"
+                      size: "xl",
+                      id: "to_address"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
@@ -5506,7 +5517,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
                         color: "primary",
                         placeholder: "Адрес прибытия",
-                        size: "xl"
+                        size: "xl",
+                        id: "to_address"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ];
                   }
@@ -5526,14 +5538,16 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           _push4(ssrRenderComponent(_component_UCalendar, {
                             modelValue: unref(data).date,
                             "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                            class: "p-2"
+                            class: "p-2",
+                            id: "date"
                           }, null, _parent4, _scopeId3));
                         } else {
                           return [
                             createVNode(_component_UCalendar, {
                               modelValue: unref(data).date,
                               "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                              class: "p-2"
+                              class: "p-2",
+                              id: "date"
                             }, null, 8, ["modelValue", "onUpdate:modelValue"])
                           ];
                         }
@@ -5578,7 +5592,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           createVNode(_component_UCalendar, {
                             modelValue: unref(data).date,
                             "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                            class: "p-2"
+                            class: "p-2",
+                            id: "date"
                           }, null, 8, ["modelValue", "onUpdate:modelValue"])
                         ]),
                         default: withCtx(() => [
@@ -5608,14 +5623,16 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                     _push3(ssrRenderComponent(_component_UInputTime, {
                       class: "w-full",
                       "hour-cycle": 24,
-                      "default-value": unref(data).time
+                      "default-value": unref(data).time,
+                      id: "time"
                     }, null, _parent3, _scopeId2));
                   } else {
                     return [
                       createVNode(_component_UInputTime, {
                         class: "w-full",
                         "hour-cycle": 24,
-                        "default-value": unref(data).time
+                        "default-value": unref(data).time,
+                        id: "time"
                       }, null, 8, ["default-value"])
                     ];
                   }
@@ -5632,7 +5649,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                   base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
                   description: "text-primary/70",
                   label: "text-white text-lg"
-                }
+                },
+                id: "check"
               }, null, _parent2, _scopeId));
               _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5"${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UButton, {
@@ -5678,7 +5696,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).name = $event,
                         color: "primary",
                         placeholder: "Ф.И.О",
-                        size: "xl"
+                        size: "xl",
+                        id: "name"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ]),
                     _: 1
@@ -5690,7 +5709,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).phone = $event,
                         placeholder: "+7-(000)-000-00-00",
                         icon: "i-lucide-phone",
-                        size: "xl"
+                        size: "xl",
+                        id: "phone"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
                         [unref(vMaska), "+7-(###)-###-##-##"]
                       ])
@@ -5706,7 +5726,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         items: unref(from_cities),
                         color: "primary",
                         placeholder: "Город отправления",
-                        size: "xl"
+                        size: "xl",
+                        id: "from"
                       }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
                     ]),
                     _: 1
@@ -5718,7 +5739,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
                         color: "primary",
                         placeholder: "Адрес отправления",
-                        size: "xl"
+                        size: "xl",
+                        id: "from_address"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ]),
                     _: 1
@@ -5732,7 +5754,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         items: unref(to_cities),
                         color: "primary",
                         placeholder: "Город прибытия",
-                        size: "xl"
+                        size: "xl",
+                        id: "to"
                       }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
                     ]),
                     _: 1
@@ -5744,7 +5767,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
                         color: "primary",
                         placeholder: "Адрес прибытия",
-                        size: "xl"
+                        size: "xl",
+                        id: "to_address"
                       }, null, 8, ["modelValue", "onUpdate:modelValue"])
                     ]),
                     _: 1
@@ -5760,7 +5784,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                             createVNode(_component_UCalendar, {
                               modelValue: unref(data).date,
                               "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                              class: "p-2"
+                              class: "p-2",
+                              id: "date"
                             }, null, 8, ["modelValue", "onUpdate:modelValue"])
                           ]),
                           default: withCtx(() => [
@@ -5787,7 +5812,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         createVNode(_component_UInputTime, {
                           class: "w-full",
                           "hour-cycle": 24,
-                          "default-value": unref(data).time
+                          "default-value": unref(data).time,
+                          id: "time"
                         }, null, 8, ["default-value"])
                       ]),
                       _: 1
@@ -5803,7 +5829,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                         base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
                         description: "text-primary/70",
                         label: "text-white text-lg"
-                      }
+                      },
+                      id: "check"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"])
                   ])
                 ]),
@@ -5876,4 +5903,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-DWehYg_0.mjs.map
+//# sourceMappingURL=order-Cz6yOZlD.mjs.map
