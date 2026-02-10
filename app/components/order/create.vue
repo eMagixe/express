@@ -84,7 +84,7 @@ const onSubmit = async () => {
 </script>
 
 <template>
-	<SectionTitle title="Сделать заявку" />
+	<SectionTitle title="Оставить заявку" />
 	<UForm
 		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
 		:schema="schema"
