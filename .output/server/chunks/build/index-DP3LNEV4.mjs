@@ -5992,12 +5992,13 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_UHeader = _sfc_main$7;
   const _component_Logo = __nuxt_component_0$1;
   const _component_Phones = __nuxt_component_3$1;
-  _push(ssrRenderComponent(_component_UContainer, _attrs, {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "border-b border-b-primary/70" }, _attrs))}>`);
+  _push(ssrRenderComponent(_component_UContainer, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_UHeader, {
           back: "/",
-          class: "border-gray-700 relative"
+          class: "border-b-0 relative"
         }, {
           left: withCtx((_2, _push3, _parent3, _scopeId2) => {
             if (_push3) {
@@ -6032,7 +6033,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
         return [
           createVNode(_component_UHeader, {
             back: "/",
-            class: "border-gray-700 relative"
+            class: "border-b-0 relative"
           }, {
             left: withCtx(() => [
               createVNode(_component_Logo)
@@ -6050,6 +6051,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
     }),
     _: 1
   }, _parent));
+  _push(`</div>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
@@ -6063,8 +6065,8 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UIcon = _sfc_main$m;
   const _component_NuxtLink = __nuxt_component_0$3;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] py-8 flex flex-col justify-center gap-20" }, {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))}>`);
+  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-start gap-10" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
@@ -6097,7 +6099,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
+        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
         _push2(ssrRenderComponent(_component_NuxtLink, {
           class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
           icon: "i-lucide-phone-call",
@@ -6166,7 +6168,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
               createTextVNode(" САЛАВАТ ")
             ])
           ]),
-          createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
+          createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode(_component_NuxtLink, {
             class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
             icon: "i-lucide-phone-call",
@@ -6204,7 +6206,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<h2${ssrRenderAttrs(mergeProps({ class: "w-full border-b border-b-white text-[22px] md:text-[36px] lg:text-[48px] text-center" }, _attrs))}>${ssrInterpolate(__props.title)}</h2>`);
+      _push(`<h2${ssrRenderAttrs(mergeProps({ class: "w-full text-[22px] md:text-[36px] lg:text-[48px] text-center" }, _attrs))}>${ssrInterpolate(__props.title)}</h2>`);
     };
   }
 });
@@ -6278,12 +6280,12 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$b;
       const _component_SectionTitle = __nuxt_component_0;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto sm:h-screen py-20" }, _attrs))}>`);
-      _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto py-5 border-b border-b-primary/70" }, _attrs))}>`);
+      _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent2, _scopeId));
-            _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center pt-10 gap-5"${_scopeId}><!--[-->`);
+            _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5"${_scopeId}><!--[-->`);
             ssrRenderList(advantages, (item, index2) => {
               _push2(`<!--[--><div class="item flex flex-col justify-center items-center gap-1 w-full"${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white"${_scopeId}><!--[-->`);
               ssrRenderList(item.message, (i) => {
@@ -6301,7 +6303,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createVNode(_component_SectionTitle, { title: "Наши преимущества" }),
-              createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center pt-10 gap-5" }, [
+              createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [
                 (openBlock(true), createBlock(Fragment, null, renderList(advantages, (item, index2) => {
                   return openBlock(), createBlock(Fragment, { key: index2 }, [
                     createVNode("div", { class: "item flex flex-col justify-center items-center gap-1 w-full" }, [
@@ -6328,7 +6330,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</section>`);
+      _push(`</div>`);
     };
   }
 });
@@ -6339,9 +6341,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-qQDJ8N7E.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BwZDHKgJ.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-CUUeQ9qK.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DhtyEdyB.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-Cio4sc_3.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-BVeKCLRg.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UApp = __nuxt_component_0$2;
@@ -6387,4 +6389,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-C-ge4PFi.mjs.map
+//# sourceMappingURL=index-DP3LNEV4.mjs.map

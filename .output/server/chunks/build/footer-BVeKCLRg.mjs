@@ -1,4 +1,4 @@
-import { B as __nuxt_component_0$1, _ as _sfc_main$m } from './index-C-ge4PFi.mjs';
+import { B as __nuxt_component_0$1, _ as _sfc_main$m } from './index-DP3LNEV4.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
@@ -34,7 +34,7 @@ const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_Logo = __nuxt_component_0$1;
   const _component_UIcon = _sfc_main$m;
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end gap-5 sm:gap-2 border-t border-gray-800 pt-10" }, _attrs))}>`);
+  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end gap-5 sm:gap-2 pt-5" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent));
   _push(`<div class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"><a href="tel:+7 (917) 766-68-33">`);
   _push(ssrRenderComponent(_component_UIcon, {
@@ -57,4 +57,4 @@ _sfc_main.setup = (props, ctx) => {
 const footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionFooter" });
 
 export { footer as default };
-//# sourceMappingURL=footer-CUUeQ9qK.mjs.map
+//# sourceMappingURL=footer-BVeKCLRg.mjs.map

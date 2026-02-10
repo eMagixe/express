@@ -1,11 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-	<section class="section-order w-full mx-auto h-auto">
+	<div class="section-order w-full mx-auto h-auto py-5 border-b border-b-primary/70">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
 			<OrderCreate />
 		</UContainer>
-	</section>
+	</div>
 </template>
 
 <style scoped></style>

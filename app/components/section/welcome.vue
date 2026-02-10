@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div class="welcome-section w-full mx-auto">
-		<UContainer class="h-[calc(100vh-100px)] py-8 flex flex-col justify-center gap-20">
+	<div class="welcome-section w-full pt-10 mx-auto">
+		<UContainer class="h-[calc(100vh-100px)] flex flex-col justify-start gap-10">
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
 				<div class="flex not-sm:text-[18px] justify-center items-center gap-1">
 					КУМЕРТАУ
@@ -26,9 +26,7 @@
 					САЛАВАТ
 				</div>
 			</div>
-			<div
-				class="font-medium text-[32px] lg:text-[64px] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"
-			>
+			<div class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]">
 				Круглосуточные перевозки
 			</div>
 			<NuxtLink
