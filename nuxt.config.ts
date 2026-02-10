@@ -21,8 +21,7 @@ export default defineNuxtConfig({
 			],
 			script: [
 				{
-					src: '/js/yandex-metrika.js',
-					tagPosition: 'bodyClose'
+					src: '/js/yandex-metrika.js'
 				}
 			]
 		}
