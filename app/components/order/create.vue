@@ -86,12 +86,12 @@ const onSubmit = async () => {
 <template>
 	<SectionTitle title="Сделать заявку" />
 	<UForm
-		class="w-full flex flex-col justify-start items-center pt-10 gap-5"
+		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
 		:schema="schema"
 		:state="data"
 		@submit="onSubmit"
 	>
-		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center pt-10 gap-5">
+		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5">
 			<UFormField name="name">
 				<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" />
 			</UFormField>

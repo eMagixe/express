@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-DP3LNEV4.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-DQtM_t6s.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, useTemplateRef, reactive, shallowRef, computed, unref, withDirectives, isRef, createTextVNode, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, watch, toDisplayString, openBlock, createBlock, createCommentVNode, useModel, toRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-BsagbtTX.mjs';
+import { _ as _sfc_main$9 } from './Input-ZAbyx7Cy.mjs';
 import { y as defu, B as isEqual } from '../nitro/nitro.mjs';
 import { DateRangeField, DateField, HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
@@ -5395,14 +5395,14 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       _push(`<!--[-->`);
       _push(ssrRenderComponent(_component_SectionTitle, { title: "Сделать заявку" }, null, _parent));
       _push(ssrRenderComponent(_component_UForm, {
-        class: "w-full flex flex-col justify-start items-center pt-10 gap-5",
+        class: "w-full flex flex-col justify-start items-center pt-5 gap-5",
         schema: unref(schema),
         state: unref(data),
         onSubmit
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center pt-10 gap-5"${_scopeId}>`);
+            _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UFormField, { name: "name" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
@@ -5734,7 +5734,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             _push2(`</div>`);
           } else {
             return [
-              createVNode("div", { class: "flex flex-col lg:grid lg:grid-cols-2 justify-start items-center pt-10 gap-5" }, [
+              createVNode("div", { class: "flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5" }, [
                 createVNode(_component_UFormField, { name: "name" }, {
                   default: withCtx(() => [
                     createVNode(_component_UInput, {
@@ -5931,4 +5931,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-Cio4sc_3.mjs.map
+//# sourceMappingURL=order-DUeFwzVc.mjs.map
