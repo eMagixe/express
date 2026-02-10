@@ -400,7 +400,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BWMmZpvk.mjs').then((n) => n.C)
+    component: () => import('./index-CEtuMSNm.mjs').then((n) => n.C)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -784,7 +784,8 @@ const cfg0 = defineAppConfig({
     },
     inputMenu: {
       slots: {
-        base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]",
+        viewport: "bg-gray-600",
+        base: "h-12 !text-white text-left !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]",
         item: "text-primary bg-gray-600 hover:bg-primary/70 rounded-0"
       }
     },

@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-BWMmZpvk.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CEtuMSNm.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, useTemplateRef, reactive, shallowRef, computed, unref, withDirectives, isRef, createTextVNode, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, watch, toDisplayString, openBlock, createBlock, createCommentVNode, useModel, toRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-DuTTBrD8.mjs';
+import { _ as _sfc_main$9 } from './Input-tmmEN0cS.mjs';
 import { y as defu, B as isEqual } from '../nitro/nitro.mjs';
 import { DateRangeField, DateField, HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
@@ -5457,6 +5457,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(ssrRenderComponent(_component_UInputMenu, {
+                    type: "button",
                     modelValue: unref(data).from,
                     "onUpdate:modelValue": ($event) => unref(data).from = $event,
                     items: unref(from_cities),
@@ -5467,6 +5468,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 } else {
                   return [
                     createVNode(_component_UInputMenu, {
+                      type: "button",
                       modelValue: unref(data).from,
                       "onUpdate:modelValue": ($event) => unref(data).from = $event,
                       items: unref(from_cities),
@@ -5507,6 +5509,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(ssrRenderComponent(_component_UInputMenu, {
+                    type: "button",
                     modelValue: unref(data).to,
                     "onUpdate:modelValue": ($event) => unref(data).to = $event,
                     items: unref(to_cities),
@@ -5517,6 +5520,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 } else {
                   return [
                     createVNode(_component_UInputMenu, {
+                      type: "button",
                       modelValue: unref(data).to,
                       "onUpdate:modelValue": ($event) => unref(data).to = $event,
                       items: unref(to_cities),
@@ -5693,8 +5697,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               label: "Подтверждение",
               description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
               ui: {
-                base: "h-5 w-5 text-white bg-gray-600 mt-10 mr-2",
-                description: "text-gray-400",
+                base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
+                description: "text-primary/70",
                 label: "text-white text-lg"
               }
             }, null, _parent2, _scopeId));
@@ -5764,6 +5768,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 createVNode(_component_UFormField, { name: "from" }, {
                   default: withCtx(() => [
                     createVNode(_component_UInputMenu, {
+                      type: "button",
                       modelValue: unref(data).from,
                       "onUpdate:modelValue": ($event) => unref(data).from = $event,
                       items: unref(from_cities),
@@ -5789,6 +5794,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 createVNode(_component_UFormField, { name: "to" }, {
                   default: withCtx(() => [
                     createVNode(_component_UInputMenu, {
+                      type: "button",
                       modelValue: unref(data).to,
                       "onUpdate:modelValue": ($event) => unref(data).to = $event,
                       items: unref(to_cities),
@@ -5858,8 +5864,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                     label: "Подтверждение",
                     description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
                     ui: {
-                      base: "h-5 w-5 text-white bg-gray-600 mt-10 mr-2",
-                      description: "text-gray-400",
+                      base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
+                      description: "text-primary/70",
                       label: "text-white text-lg"
                     }
                   }, null, 8, ["modelValue", "onUpdate:modelValue"])
@@ -5931,4 +5937,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-CqfqAefN.mjs.map
+//# sourceMappingURL=order-CLHJUPUK.mjs.map

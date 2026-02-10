@@ -106,6 +106,7 @@ const onSubmit = async () => {
 			</UFormField>
 			<UFormField name="from">
 				<UInputMenu
+					type="button"
 					v-model="data.from"
 					:items="from_cities"
 					color="primary"
@@ -118,6 +119,7 @@ const onSubmit = async () => {
 			</UFormField>
 			<UFormField name="to">
 				<UInputMenu
+					type="button"
 					v-model="data.to"
 					:items="to_cities"
 					color="primary"
@@ -159,8 +161,8 @@ const onSubmit = async () => {
 					label="Подтверждение"
 					description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
 					:ui="{
-						base: 'h-5 w-5 text-white bg-gray-600 mt-10 mr-2',
-						description: 'text-gray-400',
+						base: 'h-5 w-5 text-white bg-gray-600 mt-10 m-2',
+						description: 'text-primary/70',
 						label: 'text-white text-lg'
 					}"
 				/>
