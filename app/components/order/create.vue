@@ -113,7 +113,7 @@ const onSubmit = async () => {
 	>
 		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5">
 			<UFormField name="name">
-				<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" />
+				<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
 			</UFormField>
 			<UFormField name="phone">
 				<UInput
@@ -122,6 +122,7 @@ const onSubmit = async () => {
 					placeholder="+7-(000)-000-00-00"
 					icon="i-lucide-phone"
 					size="xl"
+					id="phone"
 				/>
 			</UFormField>
 			<UFormField name="from">
@@ -132,10 +133,17 @@ const onSubmit = async () => {
 					color="primary"
 					placeholder="Город отправления"
 					size="xl"
+					id="from"
 				/>
 			</UFormField>
 			<UFormField name="from_address">
-				<UInput v-model="data.from_address" color="primary" placeholder="Адрес отправления" size="xl" />
+				<UInput
+					v-model="data.from_address"
+					color="primary"
+					placeholder="Адрес отправления"
+					size="xl"
+					id="from_address"
+				/>
 			</UFormField>
 			<UFormField name="to">
 				<UInputMenu
@@ -145,10 +153,17 @@ const onSubmit = async () => {
 					color="primary"
 					placeholder="Город прибытия"
 					size="xl"
+					id="to"
 				/>
 			</UFormField>
 			<UFormField name="to_address">
-				<UInput v-model="data.to_address" color="primary" placeholder="Адрес прибытия" size="xl" />
+				<UInput
+					v-model="data.to_address"
+					color="primary"
+					placeholder="Адрес прибытия"
+					size="xl"
+					id="to_address"
+				/>
 			</UFormField>
 			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
 				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
@@ -161,12 +176,12 @@ const onSubmit = async () => {
 						</UButton>
 
 						<template #content>
-							<UCalendar v-model="data.date" class="p-2" />
+							<UCalendar v-model="data.date" class="p-2" id="date" />
 						</template>
 					</UPopover>
 				</UFormField>
 				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
-					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" />
+					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" id="time" />
 				</UFormField>
 			</div>
 
@@ -180,6 +195,7 @@ const onSubmit = async () => {
 						description: 'text-primary/70',
 						label: 'text-white text-lg'
 					}"
+					id="check"
 				/>
 			</div>
 		</div>
