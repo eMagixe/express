@@ -1,16 +1,17 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-BNaesChK.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-WV1dIfTj.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, useTemplateRef, reactive, shallowRef, computed, watch, unref, withDirectives, isRef, createTextVNode, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, toDisplayString, openBlock, createBlock, createCommentVNode, useModel, toRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-CuXqrETn.mjs';
+import { _ as _sfc_main$9 } from './Input-BsTojA7d.mjs';
 import { y as defu, B as isEqual } from '../nitro/nitro.mjs';
 import { DateRangeField, DateField, HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
 import { CalendarDate } from '@internationalized/date';
 import { vMaska } from 'maska/vue';
 import * as v from 'valibot';
+import { minLength } from 'valibot';
 import 'tailwind-variants';
 import './index-B6dJa6dm.mjs';
 import '@iconify/vue';
@@ -5334,7 +5335,11 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     });
     const schema = v.object({
       name: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
-      phone: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
+      phone: v.pipe(
+        v.string(),
+        v.nonEmpty("Обязательное поле для заполнения"),
+        minLength(18, "Неверный формат номера телефона")
+      ),
       to: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
       from: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
       to_address: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
@@ -5939,4 +5944,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-y2aOI1-y.mjs.map
+//# sourceMappingURL=order-OhiymK6F.mjs.map

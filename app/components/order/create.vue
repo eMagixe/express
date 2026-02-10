@@ -3,6 +3,7 @@ import { CalendarDate } from '@internationalized/date'
 import type { Order } from '#shared/types/global'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
+import { minLength } from 'valibot'
 
 //Form data
 const check = ref(false)
@@ -24,7 +25,11 @@ const data = reactive<Order>({
 
 const schema = v.object({
 	name: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	phone: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
+	phone: v.pipe(
+		v.string(),
+		v.nonEmpty('Обязательное поле для заполнения'),
+		minLength(18, 'Неверный формат номера телефона')
+	),
 	to: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
 	from: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
 	to_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),

@@ -400,7 +400,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BNaesChK.mjs').then((n) => n.C)
+    component: () => import('./index-WV1dIfTj.mjs').then((n) => n.C)
   }
 ];
 const _wrapInTransition = (props, children) => {
