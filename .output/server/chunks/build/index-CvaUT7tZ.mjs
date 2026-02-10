@@ -1,12 +1,12 @@
-import { withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, defineComponent, Fragment, renderList, toDisplayString, createCommentVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, mergeModels, ref, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext } from 'vue';
+import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, Fragment, renderList, toDisplayString, createCommentVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, mergeModels, ref, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderVNode, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
 import { A as serialize, y as defu, p as publicAssetsURL, B as isEqual } from '../nitro/nitro.mjs';
-import { _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, a as useNuxtApp } from './server.mjs';
+import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, a as useNuxtApp } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import __nuxt_component_0$4 from './index-B6dJa6dm.mjs';
-import { _ as __nuxt_component_0$3 } from './nuxt-link-Cto9_xmT.mjs';
+import __nuxt_component_0$4 from './index-DtXW2O0m.mjs';
+import { _ as __nuxt_component_0$3 } from './nuxt-link-Ck9lQj5E.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import 'node:http';
 import 'node:https';
@@ -25,6 +25,7 @@ import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
+import 'unhead/plugins';
 import 'unhead/utils';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -5925,7 +5926,7 @@ _sfc_main$7.setup = (props, ctx) => {
 };
 const _imports_0$1 = publicAssetsURL("/images/svg/logo.svg");
 const _sfc_main$6 = {};
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
   _push(`<img${ssrRenderAttrs(mergeProps({
     src: _imports_0$1,
     alt: "Logo"
@@ -5937,9 +5938,9 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/logo.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$4]]), { __name: "Logo" });
+const __nuxt_component_0$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Logo" });
 const _sfc_main$5 = {};
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$m;
   const _component_NuxtLink = __nuxt_component_0$3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
@@ -5985,9 +5986,9 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/phones.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_3$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Phones" });
+const __nuxt_component_3$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]), { __name: "Phones" });
 const _sfc_main$4 = {};
-function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UHeader = _sfc_main$7;
   const _component_Logo = __nuxt_component_0$1;
@@ -6059,9 +6060,9 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]), { __name: "SectionHeader" });
+const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]), { __name: "SectionHeader" });
 const _sfc_main$3 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UIcon = _sfc_main$m;
   const _component_NuxtLink = __nuxt_component_0$3;
@@ -6197,7 +6198,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]), { __name: "SectionWelcome" });
+const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionWelcome" });
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "title",
   __ssrInlineRender: true,
@@ -6341,52 +6342,63 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-iMsGmnKt.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-OhiymK6F.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-CZCNNkqJ.mjs').then((c) => c.default || c));
-const _sfc_main = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_UApp = __nuxt_component_0$2;
-  const _component_SectionHeader = __nuxt_component_1;
-  const _component_SectionWelcome = __nuxt_component_2;
-  const _component_SectionAdvantages = __nuxt_component_3;
-  const _component_LazySectionReviews = __nuxt_component_4_lazy;
-  const _component_LazySectionOrder = __nuxt_component_5_lazy;
-  const _component_LazySectionFooter = __nuxt_component_6_lazy;
-  _push(ssrRenderComponent(_component_UApp, _attrs, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(ssrRenderComponent(_component_SectionHeader, null, null, _parent2, _scopeId));
-        _push2(ssrRenderComponent(_component_SectionWelcome, null, null, _parent2, _scopeId));
-        _push2(ssrRenderComponent(_component_SectionAdvantages, null, null, _parent2, _scopeId));
-        _push2(ssrRenderComponent(_component_LazySectionReviews, null, null, _parent2, _scopeId));
-        _push2(ssrRenderComponent(_component_LazySectionOrder, null, null, _parent2, _scopeId));
-        _push2(ssrRenderComponent(_component_LazySectionFooter, null, null, _parent2, _scopeId));
-      } else {
-        return [
-          createVNode(_component_SectionHeader),
-          createVNode(_component_SectionWelcome),
-          createVNode(_component_SectionAdvantages),
-          createVNode(_component_LazySectionReviews),
-          createVNode(_component_LazySectionOrder),
-          createVNode(_component_LazySectionFooter)
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-}
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DXEivd9v.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-CA7C6oie.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-BO68V2IR.mjs').then((c) => c.default || c));
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "index",
+  __ssrInlineRender: true,
+  setup(__props) {
+    useSeoMeta({
+      title: "Такси Экспресс | Межгороднее такси из Кумертау в Уфу",
+      ogTitle: "Такси Экспресс | Межгороднее такси из Кумертау в Уфу",
+      description: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+      ogDescription: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+      twitterCard: "summary_large_image"
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_UApp = __nuxt_component_0$2;
+      const _component_SectionHeader = __nuxt_component_1;
+      const _component_SectionWelcome = __nuxt_component_2;
+      const _component_SectionAdvantages = __nuxt_component_3;
+      const _component_LazySectionReviews = __nuxt_component_4_lazy;
+      const _component_LazySectionOrder = __nuxt_component_5_lazy;
+      const _component_LazySectionFooter = __nuxt_component_6_lazy;
+      _push(ssrRenderComponent(_component_UApp, _attrs, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(_component_SectionHeader, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_SectionWelcome, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_SectionAdvantages, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionReviews, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionOrder, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionFooter, null, null, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode(_component_SectionHeader),
+              createVNode(_component_SectionWelcome),
+              createVNode(_component_SectionAdvantages),
+              createVNode(_component_LazySectionReviews),
+              createVNode(_component_LazySectionOrder),
+              createVNode(_component_LazySectionFooter)
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+    };
+  }
+});
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
-const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: index
+  default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-WV1dIfTj.mjs.map
+export { getDisplayValue as A, __nuxt_component_0$1 as B, index as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
+//# sourceMappingURL=index-CvaUT7tZ.mjs.map

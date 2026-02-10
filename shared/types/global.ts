@@ -13,4 +13,5 @@ export type Order = {
 	to: string
 	to_address: string
 	date: any
+	time: any
 }

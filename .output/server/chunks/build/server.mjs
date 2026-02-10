@@ -4,7 +4,7 @@ import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, 
 import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
-import { u as useHead$1, h as headSymbol } from '../routes/renderer.mjs';
+import { u as useSeoMeta$1, a as useHead$1, h as headSymbol } from '../routes/renderer.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -18,6 +18,7 @@ import 'consola';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
+import 'unhead/plugins';
 import 'unhead/utils';
 
 if (!globalThis.$fetch) {
@@ -400,7 +401,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-WV1dIfTj.mjs').then((n) => n.C)
+    component: () => import('./index-CvaUT7tZ.mjs').then((n) => n.C)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -732,6 +733,10 @@ function useHead(input, options = {}) {
   const head = options.head || injectHead(options.nuxt);
   return useHead$1(input, { head, ...options });
 }
+function useSeoMeta(input, options = {}) {
+  const head = options.head || injectHead(options.nuxt);
+  return useSeoMeta$1(input, { head, ...options });
+}
 function definePayloadReducer(name, reduce) {
   {
     useNuxtApp().ssrContext["~payloadReducers"][name] = reduce;
@@ -754,7 +759,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-B6dJa6dm.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-DtXW2O0m.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -782,6 +787,11 @@ const cfg0 = defineAppConfig({
         base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]"
       }
     },
+    inputTime: {
+      slots: {
+        base: "h-12 !text-white !bg-gray-600 rounded-[26px] inline-flex items-center justify-center"
+      }
+    },
     inputMenu: {
       slots: {
         viewport: "bg-gray-600",
@@ -789,9 +799,13 @@ const cfg0 = defineAppConfig({
         item: "text-primary bg-gray-600 hover:bg-primary/70 rounded-0"
       }
     },
-    inputDate: {
+    calendar: {
       slots: {
-        base: "h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px] flex justify-center items-center !gap-10"
+        root: "text-white bg-gray-600",
+        gridBody: "bg-gray-600",
+        gridCell: "text-white hover:bg-primary/70 rounded-0",
+        gridCellCurrent: "text-white bg-primary rounded-0",
+        gridCellSelected: "text-white bg-primary rounded-0"
       }
     },
     formField: {
@@ -1464,7 +1478,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-H_3sS4mG.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-Dkug9-Xr.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1546,5 +1560,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRouter as e, useRuntimeConfig as f, nuxtLinkDefaults as g, asyncDataDefaults as h, createError as i, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useSeoMeta as e, useRouter as f, useRuntimeConfig as g, nuxtLinkDefaults as h, asyncDataDefaults as i, createError as j, navigateTo as n, resolveRouteObject as r, useHead as u };
 //# sourceMappingURL=server.mjs.map

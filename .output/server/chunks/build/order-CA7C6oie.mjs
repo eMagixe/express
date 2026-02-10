@@ -1,19 +1,19 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-WV1dIfTj.mjs';
-import { mergeProps, withCtx, createVNode, defineComponent, ref, useTemplateRef, reactive, shallowRef, computed, watch, unref, withDirectives, isRef, createTextVNode, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, toDisplayString, openBlock, createBlock, createCommentVNode, useModel, toRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CvaUT7tZ.mjs';
+import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, createTextVNode, toDisplayString, isRef, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
-import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-BsTojA7d.mjs';
+import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
+import { _ as _sfc_main$9 } from './Input-iBi6p4_T.mjs';
 import { y as defu, B as isEqual } from '../nitro/nitro.mjs';
-import { DateRangeField, DateField, HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
+import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
 import { getWeekNumber } from 'reka-ui/date';
-import { CalendarDate } from '@internationalized/date';
+import { DateFormatter, Time, CalendarDate, getLocalTimeZone } from '@internationalized/date';
 import { vMaska } from 'maska/vue';
 import * as v from 'valibot';
 import { minLength } from 'valibot';
 import 'tailwind-variants';
-import './index-B6dJa6dm.mjs';
+import './index-DtXW2O0m.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -33,8 +33,9 @@ import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
+import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-Cto9_xmT.mjs';
+import './nuxt-link-Ck9lQj5E.mjs';
 import 'vaul-vue';
 
 function isSuperStructSchema(schema) {
@@ -2927,606 +2928,11 @@ _sfc_main$6.setup = (props, ctx) => {
 };
 const theme$3 = {
   "slots": {
-    "base": [
-      "group relative inline-flex items-center rounded-md select-none",
-      "transition-colors"
-    ],
-    "leading": "absolute inset-y-0 start-0 flex items-center",
-    "leadingIcon": "shrink-0 text-dimmed",
-    "leadingAvatar": "shrink-0",
-    "leadingAvatarSize": "",
-    "trailing": "absolute inset-y-0 end-0 flex items-center",
-    "trailingIcon": "shrink-0 text-dimmed",
-    "segment": [
-      "rounded text-center outline-hidden data-placeholder:text-dimmed data-[segment=literal]:text-muted data-invalid:text-error data-disabled:cursor-not-allowed data-disabled:opacity-75",
-      "transition-colors"
-    ],
-    "separatorIcon": "shrink-0 size-4 text-muted"
-  },
-  "variants": {
-    "fieldGroup": {
-      "horizontal": "not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]",
-      "vertical": "not-only:first:rounded-b-none not-only:last:rounded-t-none not-last:not-first:rounded-none focus-visible:z-[1]"
-    },
-    "size": {
-      "xs": {
-        "base": [
-          "px-2 py-1 text-xs gap-1",
-          "gap-0.25"
-        ],
-        "leading": "ps-2",
-        "trailing": "pe-2",
-        "leadingIcon": "size-4",
-        "leadingAvatarSize": "3xs",
-        "trailingIcon": "size-4",
-        "segment": "data-[segment=day]:w-6 data-[segment=month]:w-6 data-[segment=year]:w-9"
-      },
-      "sm": {
-        "base": [
-          "px-2.5 py-1.5 text-xs gap-1.5",
-          "gap-0.5"
-        ],
-        "leading": "ps-2.5",
-        "trailing": "pe-2.5",
-        "leadingIcon": "size-4",
-        "leadingAvatarSize": "3xs",
-        "trailingIcon": "size-4",
-        "segment": "data-[segment=day]:w-6 data-[segment=month]:w-6 data-[segment=year]:w-9"
-      },
-      "md": {
-        "base": [
-          "px-2.5 py-1.5 text-sm gap-1.5",
-          "gap-0.5"
-        ],
-        "leading": "ps-2.5",
-        "trailing": "pe-2.5",
-        "leadingIcon": "size-5",
-        "leadingAvatarSize": "2xs",
-        "trailingIcon": "size-5",
-        "segment": "data-[segment=day]:w-7 data-[segment=month]:w-7 data-[segment=year]:w-11"
-      },
-      "lg": {
-        "base": [
-          "px-3 py-2 text-sm gap-2",
-          "gap-0.75"
-        ],
-        "leading": "ps-3",
-        "trailing": "pe-3",
-        "leadingIcon": "size-5",
-        "leadingAvatarSize": "2xs",
-        "trailingIcon": "size-5",
-        "segment": "data-[segment=day]:w-7 data-[segment=month]:w-7 data-[segment=year]:w-11"
-      },
-      "xl": {
-        "base": [
-          "px-3 py-2 text-base gap-2",
-          "gap-0.75"
-        ],
-        "leading": "ps-3",
-        "trailing": "pe-3",
-        "leadingIcon": "size-6",
-        "leadingAvatarSize": "xs",
-        "trailingIcon": "size-6",
-        "segment": "data-[segment=day]:w-8 data-[segment=month]:w-8 data-[segment=year]:w-13"
-      }
-    },
-    "variant": {
-      "outline": "text-highlighted bg-default ring ring-inset ring-accented",
-      "soft": "text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50",
-      "subtle": "text-highlighted bg-elevated ring ring-inset ring-accented",
-      "ghost": "text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent",
-      "none": "text-highlighted bg-transparent"
-    },
-    "color": {
-      "primary": "",
-      "secondary": "",
-      "success": "",
-      "info": "",
-      "warning": "",
-      "error": "",
-      "neutral": ""
-    },
-    "leading": {
-      "true": ""
-    },
-    "trailing": {
-      "true": ""
-    },
-    "loading": {
-      "true": ""
-    },
-    "highlight": {
-      "true": ""
-    },
-    "type": {
-      "file": "file:me-1.5 file:font-medium file:text-muted file:outline-none"
-    }
-  },
-  "compoundVariants": [
-    {
-      "variant": "outline",
-      "class": {
-        "segment": "focus:bg-elevated"
-      }
-    },
-    {
-      "variant": "soft",
-      "class": {
-        "segment": "focus:bg-accented/50 group-hover:focus:bg-accented"
-      }
-    },
-    {
-      "variant": "subtle",
-      "class": {
-        "segment": "focus:bg-accented"
-      }
-    },
-    {
-      "variant": "ghost",
-      "class": {
-        "segment": "focus:bg-elevated group-hover:focus:bg-accented"
-      }
-    },
-    {
-      "variant": "none",
-      "class": {
-        "segment": "focus:bg-elevated"
-      }
-    },
-    {
-      "color": "primary",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
-    },
-    {
-      "color": "secondary",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary"
-    },
-    {
-      "color": "success",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-success"
-    },
-    {
-      "color": "info",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-info"
-    },
-    {
-      "color": "warning",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-warning"
-    },
-    {
-      "color": "error",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-error"
-    },
-    {
-      "color": "primary",
-      "highlight": true,
-      "class": "ring ring-inset ring-primary"
-    },
-    {
-      "color": "secondary",
-      "highlight": true,
-      "class": "ring ring-inset ring-secondary"
-    },
-    {
-      "color": "success",
-      "highlight": true,
-      "class": "ring ring-inset ring-success"
-    },
-    {
-      "color": "info",
-      "highlight": true,
-      "class": "ring ring-inset ring-info"
-    },
-    {
-      "color": "warning",
-      "highlight": true,
-      "class": "ring ring-inset ring-warning"
-    },
-    {
-      "color": "error",
-      "highlight": true,
-      "class": "ring ring-inset ring-error"
-    },
-    {
-      "color": "neutral",
-      "variant": [
-        "outline",
-        "subtle"
-      ],
-      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-inverted"
-    },
-    {
-      "color": "neutral",
-      "highlight": true,
-      "class": "ring ring-inset ring-inverted"
-    },
-    {
-      "leading": true,
-      "size": "xs",
-      "class": "ps-7"
-    },
-    {
-      "leading": true,
-      "size": "sm",
-      "class": "ps-8"
-    },
-    {
-      "leading": true,
-      "size": "md",
-      "class": "ps-9"
-    },
-    {
-      "leading": true,
-      "size": "lg",
-      "class": "ps-10"
-    },
-    {
-      "leading": true,
-      "size": "xl",
-      "class": "ps-11"
-    },
-    {
-      "trailing": true,
-      "size": "xs",
-      "class": "pe-7"
-    },
-    {
-      "trailing": true,
-      "size": "sm",
-      "class": "pe-8"
-    },
-    {
-      "trailing": true,
-      "size": "md",
-      "class": "pe-9"
-    },
-    {
-      "trailing": true,
-      "size": "lg",
-      "class": "pe-10"
-    },
-    {
-      "trailing": true,
-      "size": "xl",
-      "class": "pe-11"
-    },
-    {
-      "loading": true,
-      "leading": true,
-      "class": {
-        "leadingIcon": "animate-spin"
-      }
-    },
-    {
-      "loading": true,
-      "leading": false,
-      "trailing": true,
-      "class": {
-        "trailingIcon": "animate-spin"
-      }
-    }
-  ],
-  "defaultVariants": {
-    "size": "md",
-    "color": "primary",
-    "variant": "outline"
-  }
-};
-const _sfc_main$5 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
-  __name: "UInputDate",
-  __ssrInlineRender: true,
-  props: {
-    as: { type: null, required: false },
-    color: { type: null, required: false },
-    variant: { type: null, required: false },
-    size: { type: null, required: false },
-    highlight: { type: Boolean, required: false },
-    autofocus: { type: Boolean, required: false },
-    autofocusDelay: { type: Number, required: false, default: 0 },
-    separatorIcon: { type: null, required: false },
-    range: { type: Boolean, required: false },
-    defaultValue: { type: null, required: false },
-    modelValue: { type: null, required: false },
-    class: { type: null, required: false },
-    ui: { type: null, required: false },
-    icon: { type: null, required: false },
-    avatar: { type: Object, required: false },
-    leading: { type: Boolean, required: false },
-    leadingIcon: { type: null, required: false },
-    trailing: { type: Boolean, required: false },
-    trailingIcon: { type: null, required: false },
-    loading: { type: Boolean, required: false },
-    loadingIcon: { type: null, required: false },
-    defaultPlaceholder: { type: null, required: false },
-    placeholder: { type: null, required: false },
-    hourCycle: { type: null, required: false },
-    step: { type: Object, required: false },
-    granularity: { type: String, required: false },
-    hideTimeZone: { type: Boolean, required: false },
-    maxValue: { type: null, required: false },
-    minValue: { type: null, required: false },
-    disabled: { type: Boolean, required: false },
-    readonly: { type: Boolean, required: false },
-    isDateUnavailable: { type: Function, required: false },
-    id: { type: String, required: false },
-    name: { type: String, required: false },
-    required: { type: Boolean, required: false }
-  },
-  emits: ["update:modelValue", "change", "blur", "focus", "update:placeholder"],
-  setup(__props, { expose: __expose, emit: __emit }) {
-    const props = __props;
-    const emits = __emit;
-    const slots = useSlots();
-    const appConfig = useAppConfig();
-    const rootProps = useForwardPropsEmits(reactiveOmit(props, "id", "name", "range", "modelValue", "defaultValue", "color", "variant", "size", "highlight", "disabled", "autofocus", "autofocusDelay", "icon", "avatar", "leading", "leadingIcon", "trailing", "trailingIcon", "loading", "loadingIcon", "separatorIcon", "class", "ui"), emits);
-    const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, size: formGroupSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField(props);
-    const { orientation, size: fieldGroupSize } = useFieldGroup(props);
-    const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
-    const [DefineSegmentsTemplate, ReuseSegmentsTemplate] = createReusableTemplate();
-    const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
-    const ui = computed(() => tv({ extend: tv(theme$3), ...appConfig.ui?.inputDate || {} })({
-      color: color.value,
-      variant: props.variant,
-      size: inputSize.value,
-      highlight: highlight.value,
-      loading: props.loading,
-      leading: isLeading.value || !!props.avatar || !!slots.leading,
-      trailing: isTrailing.value || !!slots.trailing,
-      fieldGroup: orientation.value
-    }));
-    const inputsRef = ref([]);
-    function onUpdate(value) {
-      const event = new Event("change", { target: { value } });
-      emits("change", event);
-      emitFormChange();
-      emitFormInput();
-    }
-    function onBlur(event) {
-      emitFormBlur();
-      emits("blur", event);
-    }
-    function onFocus(event) {
-      emitFormFocus();
-      emits("focus", event);
-    }
-    const DateField$1 = computed(() => props.range ? DateRangeField : DateField);
-    __expose({
-      inputsRef
-    });
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[-->`);
-      _push(ssrRenderComponent(unref(DefineSegmentsTemplate), null, {
-        default: withCtx(({ segments, type }, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<!--[-->`);
-            ssrRenderList(segments, (segment, index) => {
-              _push2(ssrRenderComponent(unref(DateField$1).Input, {
-                key: `${segment.part}-${index}`,
-                ref_for: true,
-                ref: (el) => inputsRef.value[index] = el,
-                type,
-                part: segment.part,
-                "data-slot": "segment",
-                class: ui.value.segment({ class: props.ui?.segment }),
-                "data-segment": segment.part
-              }, {
-                default: withCtx((_, _push3, _parent3, _scopeId2) => {
-                  if (_push3) {
-                    _push3(`${ssrInterpolate(segment.value.trim())}`);
-                  } else {
-                    return [
-                      createTextVNode(toDisplayString(segment.value.trim()), 1)
-                    ];
-                  }
-                }),
-                _: 2
-              }, _parent2, _scopeId));
-            });
-            _push2(`<!--]-->`);
-          } else {
-            return [
-              (openBlock(true), createBlock(Fragment, null, renderList(segments, (segment, index) => {
-                return openBlock(), createBlock(unref(DateField$1).Input, {
-                  key: `${segment.part}-${index}`,
-                  ref_for: true,
-                  ref: (el) => inputsRef.value[index] = el,
-                  type,
-                  part: segment.part,
-                  "data-slot": "segment",
-                  class: ui.value.segment({ class: props.ui?.segment }),
-                  "data-segment": segment.part
-                }, {
-                  default: withCtx(() => [
-                    createTextVNode(toDisplayString(segment.value.trim()), 1)
-                  ]),
-                  _: 2
-                }, 1032, ["type", "part", "class", "data-segment"]);
-              }), 128))
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(unref(DateField$1).Root, mergeProps({ ...unref(rootProps), ..._ctx.$attrs, ...unref(ariaAttrs) }, {
-        id: unref(id),
-        "model-value": __props.modelValue,
-        "default-value": __props.defaultValue,
-        name: unref(name),
-        disabled: unref(disabled),
-        "data-slot": "base",
-        class: ui.value.base({ class: [props.ui?.base, props.class] }),
-        "onUpdate:modelValue": onUpdate,
-        onBlur,
-        onFocus
-      }), {
-        default: withCtx(({ segments }, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            if (Array.isArray(segments)) {
-              _push2(ssrRenderComponent(unref(ReuseSegmentsTemplate), { segments }, null, _parent2, _scopeId));
-            } else {
-              _push2(`<!--[-->`);
-              _push2(ssrRenderComponent(unref(ReuseSegmentsTemplate), {
-                segments: segments.start,
-                type: "start"
-              }, null, _parent2, _scopeId));
-              ssrRenderSlot(_ctx.$slots, "separator", { ui: ui.value }, () => {
-                _push2(ssrRenderComponent(_sfc_main$m, {
-                  name: __props.separatorIcon || unref(appConfig).ui.icons.minus,
-                  "data-slot": "separatorIcon",
-                  class: ui.value.separatorIcon({ class: props.ui?.separatorIcon })
-                }, null, _parent2, _scopeId));
-              }, _push2, _parent2, _scopeId);
-              _push2(ssrRenderComponent(unref(ReuseSegmentsTemplate), {
-                segments: segments.end,
-                type: "end"
-              }, null, _parent2, _scopeId));
-              _push2(`<!--]-->`);
-            }
-            ssrRenderSlot(_ctx.$slots, "default", { ui: ui.value }, null, _push2, _parent2, _scopeId);
-            if (unref(isLeading) || !!__props.avatar || !!slots.leading) {
-              _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
-              ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
-                if (unref(isLeading) && unref(leadingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$m, {
-                    name: unref(leadingIconName),
-                    "data-slot": "leadingIcon",
-                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                  }, null, _parent2, _scopeId));
-                } else if (!!__props.avatar) {
-                  _push2(ssrRenderComponent(_sfc_main$k, mergeProps({
-                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
-                  }, __props.avatar, {
-                    "data-slot": "leadingAvatar",
-                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
-                  }), null, _parent2, _scopeId));
-                } else {
-                  _push2(`<!---->`);
-                }
-              }, _push2, _parent2, _scopeId);
-              _push2(`</span>`);
-            } else {
-              _push2(`<!---->`);
-            }
-            if (unref(isTrailing) || !!slots.trailing) {
-              _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
-              ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
-                if (unref(trailingIconName)) {
-                  _push2(ssrRenderComponent(_sfc_main$m, {
-                    name: unref(trailingIconName),
-                    "data-slot": "trailingIcon",
-                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
-                  }, null, _parent2, _scopeId));
-                } else {
-                  _push2(`<!---->`);
-                }
-              }, _push2, _parent2, _scopeId);
-              _push2(`</span>`);
-            } else {
-              _push2(`<!---->`);
-            }
-          } else {
-            return [
-              Array.isArray(segments) ? (openBlock(), createBlock(unref(ReuseSegmentsTemplate), {
-                key: 0,
-                segments
-              }, null, 8, ["segments"])) : (openBlock(), createBlock(Fragment, { key: 1 }, [
-                createVNode(unref(ReuseSegmentsTemplate), {
-                  segments: segments.start,
-                  type: "start"
-                }, null, 8, ["segments"]),
-                renderSlot(_ctx.$slots, "separator", { ui: ui.value }, () => [
-                  createVNode(_sfc_main$m, {
-                    name: __props.separatorIcon || unref(appConfig).ui.icons.minus,
-                    "data-slot": "separatorIcon",
-                    class: ui.value.separatorIcon({ class: props.ui?.separatorIcon })
-                  }, null, 8, ["name", "class"])
-                ]),
-                createVNode(unref(ReuseSegmentsTemplate), {
-                  segments: segments.end,
-                  type: "end"
-                }, null, 8, ["segments"])
-              ], 64)),
-              renderSlot(_ctx.$slots, "default", { ui: ui.value }),
-              unref(isLeading) || !!__props.avatar || !!slots.leading ? (openBlock(), createBlock("span", {
-                key: 2,
-                "data-slot": "leading",
-                class: ui.value.leading({ class: props.ui?.leading })
-              }, [
-                renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
-                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
-                    key: 0,
-                    name: unref(leadingIconName),
-                    "data-slot": "leadingIcon",
-                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
-                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$k, mergeProps({
-                    key: 1,
-                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
-                  }, __props.avatar, {
-                    "data-slot": "leadingAvatar",
-                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
-                  }), null, 16, ["size", "class"])) : createCommentVNode("", true)
-                ])
-              ], 2)) : createCommentVNode("", true),
-              unref(isTrailing) || !!slots.trailing ? (openBlock(), createBlock("span", {
-                key: 3,
-                "data-slot": "trailing",
-                class: ui.value.trailing({ class: props.ui?.trailing })
-              }, [
-                renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
-                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
-                    key: 0,
-                    name: unref(trailingIconName),
-                    "data-slot": "trailingIcon",
-                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
-                  }, null, 8, ["name", "class"])) : createCommentVNode("", true)
-                ])
-              ], 2)) : createCommentVNode("", true)
-            ];
-          }
-        }),
-        _: 3
-      }, _parent));
-      _push(`<!--]-->`);
-    };
-  }
-});
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/InputDate.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
-};
-const theme$2 = {
-  "slots": {
     "content": "bg-default shadow-lg rounded-md ring ring-default data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-popover-content-transform-origin) focus:outline-none pointer-events-auto",
     "arrow": "fill-default"
   }
 };
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "UPopover",
   __ssrInlineRender: true,
   props: {
@@ -3568,7 +2974,7 @@ const _sfc_main$4 = {
       return {};
     });
     const arrowProps = toRef(() => props.arrow);
-    const ui = computed(() => tv({ extend: tv(theme$2), ...appConfig.ui?.popover || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$3), ...appConfig.ui?.popover || {} })({
       side: contentProps.value.side
     }));
     const Component = computed(() => props.mode === "hover" ? HoverCard : Popover);
@@ -3710,13 +3116,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Popover.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const theme$1 = {
+const theme$2 = {
   "slots": {
     "root": "",
     "header": "flex items-center justify-between",
@@ -4022,7 +3428,7 @@ const theme$1 = {
     "variant": "solid"
   }
 };
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "UCalendar",
   __ssrInlineRender: true,
   props: {
@@ -4081,7 +3487,7 @@ const _sfc_main$3 = {
     const nextMonthIcon = computed(() => props.nextMonthIcon || (dir.value === "rtl" ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight));
     const prevYearIcon = computed(() => props.prevYearIcon || (dir.value === "rtl" ? appConfig.ui.icons.chevronDoubleRight : appConfig.ui.icons.chevronDoubleLeft));
     const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === "rtl" ? appConfig.ui.icons.chevronRight : appConfig.ui.icons.chevronLeft));
-    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig.ui?.calendar || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$2), ...appConfig.ui?.calendar || {} })({
       color: props.color,
       size: props.size,
       variant: props.variant,
@@ -4850,10 +4256,540 @@ const _sfc_main$3 = {
     };
   }
 };
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Calendar.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const theme$1 = {
+  "slots": {
+    "base": [
+      "group relative inline-flex items-center rounded-md select-none",
+      "transition-colors"
+    ],
+    "leading": "absolute inset-y-0 start-0 flex items-center",
+    "leadingIcon": "shrink-0 text-dimmed",
+    "leadingAvatar": "shrink-0",
+    "leadingAvatarSize": "",
+    "trailing": "absolute inset-y-0 end-0 flex items-center",
+    "trailingIcon": "shrink-0 text-dimmed",
+    "segment": [
+      "rounded text-center outline-hidden data-placeholder:text-dimmed data-[segment=literal]:text-muted data-invalid:text-error data-disabled:cursor-not-allowed data-disabled:opacity-75",
+      "transition-colors"
+    ]
+  },
+  "variants": {
+    "fieldGroup": {
+      "horizontal": "not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]",
+      "vertical": "not-only:first:rounded-b-none not-only:last:rounded-t-none not-last:not-first:rounded-none focus-visible:z-[1]"
+    },
+    "size": {
+      "xs": {
+        "base": [
+          "px-2 py-1 text-xs gap-1",
+          "gap-0.25"
+        ],
+        "leading": "ps-2",
+        "trailing": "pe-2",
+        "leadingIcon": "size-4",
+        "leadingAvatarSize": "3xs",
+        "trailingIcon": "size-4",
+        "segment": "not-data-[segment=literal]:w-6"
+      },
+      "sm": {
+        "base": [
+          "px-2.5 py-1.5 text-xs gap-1.5",
+          "gap-0.5"
+        ],
+        "leading": "ps-2.5",
+        "trailing": "pe-2.5",
+        "leadingIcon": "size-4",
+        "leadingAvatarSize": "3xs",
+        "trailingIcon": "size-4",
+        "segment": "not-data-[segment=literal]:w-6"
+      },
+      "md": {
+        "base": [
+          "px-2.5 py-1.5 text-sm gap-1.5",
+          "gap-0.5"
+        ],
+        "leading": "ps-2.5",
+        "trailing": "pe-2.5",
+        "leadingIcon": "size-5",
+        "leadingAvatarSize": "2xs",
+        "trailingIcon": "size-5",
+        "segment": "not-data-[segment=literal]:w-7"
+      },
+      "lg": {
+        "base": [
+          "px-3 py-2 text-sm gap-2",
+          "gap-0.75"
+        ],
+        "leading": "ps-3",
+        "trailing": "pe-3",
+        "leadingIcon": "size-5",
+        "leadingAvatarSize": "2xs",
+        "trailingIcon": "size-5",
+        "segment": "not-data-[segment=literal]:w-7"
+      },
+      "xl": {
+        "base": [
+          "px-3 py-2 text-base gap-2",
+          "gap-0.75"
+        ],
+        "leading": "ps-3",
+        "trailing": "pe-3",
+        "leadingIcon": "size-6",
+        "leadingAvatarSize": "xs",
+        "trailingIcon": "size-6",
+        "segment": "not-data-[segment=literal]:w-8"
+      }
+    },
+    "variant": {
+      "outline": "text-highlighted bg-default ring ring-inset ring-accented",
+      "soft": "text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50",
+      "subtle": "text-highlighted bg-elevated ring ring-inset ring-accented",
+      "ghost": "text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent",
+      "none": "text-highlighted bg-transparent"
+    },
+    "color": {
+      "primary": "",
+      "secondary": "",
+      "success": "",
+      "info": "",
+      "warning": "",
+      "error": "",
+      "neutral": ""
+    },
+    "leading": {
+      "true": ""
+    },
+    "trailing": {
+      "true": ""
+    },
+    "loading": {
+      "true": ""
+    },
+    "highlight": {
+      "true": ""
+    },
+    "type": {
+      "file": "file:me-1.5 file:font-medium file:text-muted file:outline-none"
+    }
+  },
+  "compoundVariants": [
+    {
+      "variant": "outline",
+      "class": {
+        "segment": "focus:bg-elevated"
+      }
+    },
+    {
+      "variant": "soft",
+      "class": {
+        "segment": "focus:bg-accented/50 group-hover:focus:bg-accented"
+      }
+    },
+    {
+      "variant": "subtle",
+      "class": {
+        "segment": "focus:bg-accented"
+      }
+    },
+    {
+      "variant": "ghost",
+      "class": {
+        "segment": "focus:bg-elevated group-hover:focus:bg-accented"
+      }
+    },
+    {
+      "variant": "none",
+      "class": {
+        "segment": "focus:bg-elevated"
+      }
+    },
+    {
+      "color": "primary",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
+    },
+    {
+      "color": "secondary",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary"
+    },
+    {
+      "color": "success",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-success"
+    },
+    {
+      "color": "info",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-info"
+    },
+    {
+      "color": "warning",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-warning"
+    },
+    {
+      "color": "error",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-error"
+    },
+    {
+      "color": "primary",
+      "highlight": true,
+      "class": "ring ring-inset ring-primary"
+    },
+    {
+      "color": "secondary",
+      "highlight": true,
+      "class": "ring ring-inset ring-secondary"
+    },
+    {
+      "color": "success",
+      "highlight": true,
+      "class": "ring ring-inset ring-success"
+    },
+    {
+      "color": "info",
+      "highlight": true,
+      "class": "ring ring-inset ring-info"
+    },
+    {
+      "color": "warning",
+      "highlight": true,
+      "class": "ring ring-inset ring-warning"
+    },
+    {
+      "color": "error",
+      "highlight": true,
+      "class": "ring ring-inset ring-error"
+    },
+    {
+      "color": "neutral",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-inverted"
+    },
+    {
+      "color": "neutral",
+      "highlight": true,
+      "class": "ring ring-inset ring-inverted"
+    },
+    {
+      "leading": true,
+      "size": "xs",
+      "class": "ps-7"
+    },
+    {
+      "leading": true,
+      "size": "sm",
+      "class": "ps-8"
+    },
+    {
+      "leading": true,
+      "size": "md",
+      "class": "ps-9"
+    },
+    {
+      "leading": true,
+      "size": "lg",
+      "class": "ps-10"
+    },
+    {
+      "leading": true,
+      "size": "xl",
+      "class": "ps-11"
+    },
+    {
+      "trailing": true,
+      "size": "xs",
+      "class": "pe-7"
+    },
+    {
+      "trailing": true,
+      "size": "sm",
+      "class": "pe-8"
+    },
+    {
+      "trailing": true,
+      "size": "md",
+      "class": "pe-9"
+    },
+    {
+      "trailing": true,
+      "size": "lg",
+      "class": "pe-10"
+    },
+    {
+      "trailing": true,
+      "size": "xl",
+      "class": "pe-11"
+    },
+    {
+      "loading": true,
+      "leading": true,
+      "class": {
+        "leadingIcon": "animate-spin"
+      }
+    },
+    {
+      "loading": true,
+      "leading": false,
+      "trailing": true,
+      "class": {
+        "trailingIcon": "animate-spin"
+      }
+    }
+  ],
+  "defaultVariants": {
+    "size": "md",
+    "color": "primary",
+    "variant": "outline"
+  }
+};
+const _sfc_main$3 = {
+  __name: "UInputTime",
+  __ssrInlineRender: true,
+  props: {
+    as: { type: null, required: false },
+    color: { type: null, required: false },
+    variant: { type: null, required: false },
+    size: { type: null, required: false },
+    highlight: { type: Boolean, required: false },
+    autofocus: { type: Boolean, required: false },
+    autofocusDelay: { type: Number, required: false, default: 0 },
+    class: { type: null, required: false },
+    ui: { type: null, required: false },
+    defaultValue: { type: Object, required: false },
+    defaultPlaceholder: { type: Object, required: false },
+    placeholder: { type: Object, required: false },
+    modelValue: { type: [Object, null], required: false },
+    hourCycle: { type: null, required: false },
+    step: { type: Object, required: false },
+    granularity: { type: String, required: false },
+    hideTimeZone: { type: Boolean, required: false },
+    maxValue: { type: Object, required: false },
+    minValue: { type: Object, required: false },
+    disabled: { type: Boolean, required: false },
+    readonly: { type: Boolean, required: false },
+    id: { type: String, required: false },
+    name: { type: String, required: false },
+    required: { type: Boolean, required: false },
+    icon: { type: null, required: false },
+    avatar: { type: Object, required: false },
+    leading: { type: Boolean, required: false },
+    leadingIcon: { type: null, required: false },
+    trailing: { type: Boolean, required: false },
+    trailingIcon: { type: null, required: false },
+    loading: { type: Boolean, required: false },
+    loadingIcon: { type: null, required: false }
+  },
+  emits: ["change", "blur", "focus", "update:modelValue", "update:placeholder"],
+  setup(__props, { expose: __expose, emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const slots = useSlots();
+    const appConfig = useAppConfig();
+    const rootProps = useForwardPropsEmits(reactiveOmit(props, "id", "name", "color", "variant", "size", "highlight", "disabled", "autofocus", "autofocusDelay", "icon", "avatar", "leading", "leadingIcon", "trailing", "trailingIcon", "loading", "loadingIcon", "class", "ui"), emits);
+    const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, id, color, size: formGroupSize, name, highlight, disabled, ariaAttrs } = useFormField(props);
+    const { orientation, size: fieldGroupSize } = useFieldGroup(props);
+    const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
+    const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
+    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig.ui?.inputTime || {} })({
+      color: color.value,
+      variant: props.variant,
+      size: inputSize.value,
+      loading: props.loading,
+      highlight: highlight.value,
+      leading: isLeading.value || !!props.avatar || !!slots.leading,
+      trailing: isTrailing.value || !!slots.trailing,
+      fieldGroup: orientation.value
+    }));
+    const inputsRef = ref([]);
+    function onUpdate(value) {
+      const event = new Event("change", { target: { value } });
+      emits("change", event);
+      emitFormChange();
+      emitFormInput();
+    }
+    function onBlur(event) {
+      emitFormBlur();
+      emits("blur", event);
+    }
+    function onFocus(event) {
+      emitFormFocus();
+      emits("focus", event);
+    }
+    __expose({
+      inputsRef
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(ssrRenderComponent(unref(TimeFieldRoot), mergeProps({ ...unref(rootProps), ...unref(ariaAttrs) }, {
+        id: unref(id),
+        name: unref(name),
+        disabled: unref(disabled),
+        "data-slot": "base",
+        class: ui.value.base({ class: [props.ui?.base, props.class] }),
+        "onUpdate:modelValue": onUpdate,
+        onBlur,
+        onFocus
+      }, _attrs), {
+        default: withCtx(({ segments }, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<!--[-->`);
+            ssrRenderList(segments, (segment, index) => {
+              _push2(ssrRenderComponent(unref(TimeFieldInput), {
+                key: `${segment.part}-${index}`,
+                ref_for: true,
+                ref: (el) => inputsRef.value[index] = el,
+                part: segment.part,
+                "data-slot": "segment",
+                class: ui.value.segment({ class: props.ui?.segment })
+              }, {
+                default: withCtx((_, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`${ssrInterpolate(segment.value.trim())}`);
+                  } else {
+                    return [
+                      createTextVNode(toDisplayString(segment.value.trim()), 1)
+                    ];
+                  }
+                }),
+                _: 2
+              }, _parent2, _scopeId));
+            });
+            _push2(`<!--]-->`);
+            ssrRenderSlot(_ctx.$slots, "default", { ui: ui.value }, null, _push2, _parent2, _scopeId);
+            if (unref(isLeading) || !!__props.avatar || !!slots.leading) {
+              _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
+              ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
+                if (unref(isLeading) && unref(leadingIconName)) {
+                  _push2(ssrRenderComponent(_sfc_main$m, {
+                    name: unref(leadingIconName),
+                    "data-slot": "leadingIcon",
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                  }, null, _parent2, _scopeId));
+                } else if (!!__props.avatar) {
+                  _push2(ssrRenderComponent(_sfc_main$k, mergeProps({
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
+                  }, __props.avatar, {
+                    "data-slot": "leadingAvatar",
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
+                  }), null, _parent2, _scopeId));
+                } else {
+                  _push2(`<!---->`);
+                }
+              }, _push2, _parent2, _scopeId);
+              _push2(`</span>`);
+            } else {
+              _push2(`<!---->`);
+            }
+            if (unref(isTrailing) || !!slots.trailing) {
+              _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
+              ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
+                if (unref(trailingIconName)) {
+                  _push2(ssrRenderComponent(_sfc_main$m, {
+                    name: unref(trailingIconName),
+                    "data-slot": "trailingIcon",
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
+                  }, null, _parent2, _scopeId));
+                } else {
+                  _push2(`<!---->`);
+                }
+              }, _push2, _parent2, _scopeId);
+              _push2(`</span>`);
+            } else {
+              _push2(`<!---->`);
+            }
+          } else {
+            return [
+              (openBlock(true), createBlock(Fragment, null, renderList(segments, (segment, index) => {
+                return openBlock(), createBlock(unref(TimeFieldInput), {
+                  key: `${segment.part}-${index}`,
+                  ref_for: true,
+                  ref: (el) => inputsRef.value[index] = el,
+                  part: segment.part,
+                  "data-slot": "segment",
+                  class: ui.value.segment({ class: props.ui?.segment })
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString(segment.value.trim()), 1)
+                  ]),
+                  _: 2
+                }, 1032, ["part", "class"]);
+              }), 128)),
+              renderSlot(_ctx.$slots, "default", { ui: ui.value }),
+              unref(isLeading) || !!__props.avatar || !!slots.leading ? (openBlock(), createBlock("span", {
+                key: 0,
+                "data-slot": "leading",
+                class: ui.value.leading({ class: props.ui?.leading })
+              }, [
+                renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
+                    key: 0,
+                    name: unref(leadingIconName),
+                    "data-slot": "leadingIcon",
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$k, mergeProps({
+                    key: 1,
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
+                  }, __props.avatar, {
+                    "data-slot": "leadingAvatar",
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
+                  }), null, 16, ["size", "class"])) : createCommentVNode("", true)
+                ])
+              ], 2)) : createCommentVNode("", true),
+              unref(isTrailing) || !!slots.trailing ? (openBlock(), createBlock("span", {
+                key: 1,
+                "data-slot": "trailing",
+                class: ui.value.trailing({ class: props.ui?.trailing })
+              }, [
+                renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
+                    key: 0,
+                    name: unref(trailingIconName),
+                    "data-slot": "trailingIcon",
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
+                  }, null, 8, ["name", "class"])) : createCommentVNode("", true)
+                ])
+              ], 2)) : createCommentVNode("", true)
+            ];
+          }
+        }),
+        _: 3
+      }, _parent));
+    };
+  }
+};
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Calendar.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/InputTime.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const theme = {
@@ -5319,10 +5255,13 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "create",
   __ssrInlineRender: true,
   setup(__props) {
+    const df = new DateFormatter("ru-RU", {
+      dateStyle: "medium"
+    });
     const check = ref(false);
-    const inputDate = useTemplateRef("inputDate");
-    const dateNow = new Date(Date.now());
-    const currentDate = new CalendarDate(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDay());
+    const [month, day, year] = new Date(Date.now()).toLocaleDateString("ru-RU").split(".");
+    const defaultTime = new Time(16, 30, 0);
+    const currentDate = new CalendarDate(Number(year), Number(month), Number(day));
     const toast = useToast();
     const data = reactive({
       name: "",
@@ -5331,8 +5270,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       from_address: "",
       to: "Уфа",
       to_address: "",
-      date: shallowRef(currentDate)
+      date: shallowRef(currentDate),
+      time: shallowRef(defaultTime)
     });
+    const orderCreated = ref(false);
     const schema = v.object({
       name: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
       phone: v.pipe(
@@ -5344,7 +5285,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       from: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
       to_address: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
       from_address: v.pipe(v.string(), v.nonEmpty("Обязательное поле для заполнения")),
-      date: v.pipe(v.any(), v.nonEmpty("Обязательное поле для заполнения"))
+      date: v.pipe(v.any(), v.nonEmpty("Обязательное поле для заполнения")),
+      time: v.pipe(v.any(), v.nonEmpty("Обязательное поле для заполнения"))
     });
     const cities = ref(["Кумертау", "Мелеуз", "Салават", "Уфа"]);
     const from_cities = computed(() => {
@@ -5371,6 +5313,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       data.name = "";
       data.phone = "";
       data.date = currentDate;
+      data.time = defaultTime;
     };
     const createOrder = async () => {
       await $fetch("/api/order/create", {
@@ -5383,6 +5326,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     const onSubmit = async () => {
       createOrder().then(() => {
         toast.add({ title: "Ответ", description: "Заявка была успешно создана", color: "success" });
+        orderCreated.value = true;
       }).catch((response) => {
         console.log(response);
         toast.add({ title: "Ответ", description: "Произошла ошибка при создании заявки", color: "error" });
@@ -5394,87 +5338,81 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UFormField = _sfc_main$7;
       const _component_UInput = _sfc_main$9;
       const _component_UInputMenu = _sfc_main$6;
-      const _component_UInputDate = _sfc_main$5;
-      const _component_UPopover = _sfc_main$4;
+      const _component_UPopover = _sfc_main$5;
       const _component_UButton = _sfc_main$h;
-      const _component_UCalendar = _sfc_main$3;
+      const _component_UCalendar = _sfc_main$4;
+      const _component_UInputTime = _sfc_main$3;
       const _component_UCheckbox = _sfc_main$2;
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(_component_SectionTitle, { title: "Оставить заявку" }, null, _parent));
-      _push(ssrRenderComponent(_component_UForm, {
-        class: "w-full flex flex-col justify-start items-center pt-5 gap-5",
-        schema: unref(schema),
-        state: unref(data),
-        onSubmit
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UFormField, { name: "name" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInput, {
-                    modelValue: unref(data).name,
-                    "onUpdate:modelValue": ($event) => unref(data).name = $event,
-                    color: "primary",
-                    placeholder: "Ф.И.О",
-                    size: "xl"
-                  }, null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInput, {
+      if (!unref(orderCreated)) {
+        _push(ssrRenderComponent(_component_SectionTitle, { title: "Оставить заявку" }, null, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      if (!unref(orderCreated)) {
+        _push(ssrRenderComponent(_component_UForm, {
+          class: "w-full flex flex-col justify-start items-center pt-5 gap-5",
+          schema: unref(schema),
+          state: unref(data),
+          onSubmit
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5"${_scopeId}>`);
+              _push2(ssrRenderComponent(_component_UFormField, { name: "name" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInput, {
                       modelValue: unref(data).name,
                       "onUpdate:modelValue": ($event) => unref(data).name = $event,
                       color: "primary",
                       placeholder: "Ф.И.О",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "phone" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInput, mergeProps({
-                    modelValue: unref(data).phone,
-                    "onUpdate:modelValue": ($event) => unref(data).phone = $event,
-                    placeholder: "+7-(000)-000-00-00",
-                    icon: "i-lucide-phone",
-                    size: "xl"
-                  }, ssrGetDirectiveProps(_ctx, unref(vMaska), "+7-(###)-###-##-##")), null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    withDirectives(createVNode(_component_UInput, {
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).name,
+                        "onUpdate:modelValue": ($event) => unref(data).name = $event,
+                        color: "primary",
+                        placeholder: "Ф.И.О",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, { name: "phone" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInput, mergeProps({
                       modelValue: unref(data).phone,
                       "onUpdate:modelValue": ($event) => unref(data).phone = $event,
                       placeholder: "+7-(000)-000-00-00",
                       icon: "i-lucide-phone",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
-                      [unref(vMaska), "+7-(###)-###-##-##"]
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "from" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInputMenu, {
-                    type: "button",
-                    modelValue: unref(data).from,
-                    "onUpdate:modelValue": ($event) => unref(data).from = $event,
-                    items: unref(from_cities),
-                    color: "primary",
-                    placeholder: "Город отправления",
-                    size: "xl"
-                  }, null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInputMenu, {
+                    }, ssrGetDirectiveProps(_ctx, unref(vMaska), "+7-(###)-###-##-##")), null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      withDirectives(createVNode(_component_UInput, {
+                        modelValue: unref(data).phone,
+                        "onUpdate:modelValue": ($event) => unref(data).phone = $event,
+                        placeholder: "+7-(000)-000-00-00",
+                        icon: "i-lucide-phone",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
+                        [unref(vMaska), "+7-(###)-###-##-##"]
+                      ])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, { name: "from" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInputMenu, {
                       type: "button",
                       modelValue: unref(data).from,
                       "onUpdate:modelValue": ($event) => unref(data).from = $event,
@@ -5482,51 +5420,51 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       color: "primary",
                       placeholder: "Город отправления",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "from_address" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInput, {
-                    modelValue: unref(data).from_address,
-                    "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
-                    color: "primary",
-                    placeholder: "Адрес отправления",
-                    size: "xl"
-                  }, null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInput, {
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInputMenu, {
+                        type: "button",
+                        modelValue: unref(data).from,
+                        "onUpdate:modelValue": ($event) => unref(data).from = $event,
+                        items: unref(from_cities),
+                        color: "primary",
+                        placeholder: "Город отправления",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, { name: "from_address" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInput, {
                       modelValue: unref(data).from_address,
                       "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
                       color: "primary",
                       placeholder: "Адрес отправления",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "to" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInputMenu, {
-                    type: "button",
-                    modelValue: unref(data).to,
-                    "onUpdate:modelValue": ($event) => unref(data).to = $event,
-                    items: unref(to_cities),
-                    color: "primary",
-                    placeholder: "Город прибытия",
-                    size: "xl"
-                  }, null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInputMenu, {
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).from_address,
+                        "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
+                        color: "primary",
+                        placeholder: "Адрес отправления",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, { name: "to" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInputMenu, {
                       type: "button",
                       modelValue: unref(data).to,
                       "onUpdate:modelValue": ($event) => unref(data).to = $event,
@@ -5534,142 +5472,290 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       color: "primary",
                       placeholder: "Город прибытия",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "to_address" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInput, {
-                    modelValue: unref(data).to_address,
-                    "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
-                    color: "primary",
-                    placeholder: "Адрес прибытия",
-                    size: "xl"
-                  }, null, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInput, {
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInputMenu, {
+                        type: "button",
+                        modelValue: unref(data).to,
+                        "onUpdate:modelValue": ($event) => unref(data).to = $event,
+                        items: unref(to_cities),
+                        color: "primary",
+                        placeholder: "Город прибытия",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, { name: "to_address" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInput, {
                       modelValue: unref(data).to_address,
                       "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
                       color: "primary",
                       placeholder: "Адрес прибытия",
                       size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UFormField, { name: "date" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(ssrRenderComponent(_component_UInputDate, {
-                    ref_key: "inputDate",
-                    ref: inputDate,
-                    modelValue: unref(data).date,
-                    "onUpdate:modelValue": ($event) => unref(data).date = $event
-                  }, {
-                    trailing: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(ssrRenderComponent(_component_UPopover, {
-                          reference: unref(inputDate)?.inputsRef[3]?.$el,
-                          ui: {
-                            content: "text-white bg-gray-600 w-[320px] sm:w-[440px] rounded-[26px]"
-                          }
-                        }, {
-                          content: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(ssrRenderComponent(_component_UCalendar, {
-                                modelValue: unref(data).date,
-                                "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                                class: "p-2"
-                              }, null, _parent5, _scopeId4));
-                            } else {
-                              return [
-                                createVNode(_component_UCalendar, {
-                                  modelValue: unref(data).date,
-                                  "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                                  class: "p-2"
-                                }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                              ];
-                            }
-                          }),
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(ssrRenderComponent(_component_UButton, {
-                                color: "neutral",
-                                variant: "link",
-                                size: "md",
-                                icon: "i-lucide-calendar",
-                                "aria-label": "Выберите дату",
-                                class: "px-0"
-                              }, null, _parent5, _scopeId4));
-                            } else {
-                              return [
-                                createVNode(_component_UButton, {
-                                  color: "neutral",
-                                  variant: "link",
-                                  size: "md",
-                                  icon: "i-lucide-calendar",
-                                  "aria-label": "Выберите дату",
-                                  class: "px-0"
-                                })
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                      } else {
-                        return [
-                          createVNode(_component_UPopover, {
-                            reference: unref(inputDate)?.inputsRef[3]?.$el,
-                            ui: {
-                              content: "text-white bg-gray-600 w-[320px] sm:w-[440px] rounded-[26px]"
-                            }
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).to_address,
+                        "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
+                        color: "primary",
+                        placeholder: "Адрес прибытия",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(`<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5"${_scopeId}>`);
+              _push2(ssrRenderComponent(_component_UFormField, {
+                name: "date",
+                class: "w-[50%] not-sm:w-[320px]"
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UPopover, null, {
+                      content: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(ssrRenderComponent(_component_UCalendar, {
+                            modelValue: unref(data).date,
+                            "onUpdate:modelValue": ($event) => unref(data).date = $event,
+                            class: "p-2"
+                          }, null, _parent4, _scopeId3));
+                        } else {
+                          return [
+                            createVNode(_component_UCalendar, {
+                              modelValue: unref(data).date,
+                              "onUpdate:modelValue": ($event) => unref(data).date = $event,
+                              class: "p-2"
+                            }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                          ];
+                        }
+                      }),
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(ssrRenderComponent(_component_UButton, {
+                            icon: "i-lucide-calendar",
+                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
                           }, {
-                            content: withCtx(() => [
-                              createVNode(_component_UCalendar, {
-                                modelValue: unref(data).date,
-                                "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                                class: "p-2"
-                              }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                            ]),
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`${ssrInterpolate(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату")}`);
+                              } else {
+                                return [
+                                  createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                        } else {
+                          return [
+                            createVNode(_component_UButton, {
+                              icon: "i-lucide-calendar",
+                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                              ]),
+                              _: 1
+                            })
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UPopover, null, {
+                        content: withCtx(() => [
+                          createVNode(_component_UCalendar, {
+                            modelValue: unref(data).date,
+                            "onUpdate:modelValue": ($event) => unref(data).date = $event,
+                            class: "p-2"
+                          }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                        ]),
+                        default: withCtx(() => [
+                          createVNode(_component_UButton, {
+                            icon: "i-lucide-calendar",
+                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                          }, {
                             default: withCtx(() => [
-                              createVNode(_component_UButton, {
-                                color: "neutral",
-                                variant: "link",
-                                size: "md",
-                                icon: "i-lucide-calendar",
-                                "aria-label": "Выберите дату",
-                                class: "px-0"
-                              })
+                              createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
                             ]),
                             _: 1
-                          }, 8, ["reference"])
-                        ];
-                      }
-                    }),
+                          })
+                        ]),
+                        _: 1
+                      })
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UFormField, {
+                name: "time",
+                class: "w-[50%] not-sm:w-[320px]"
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(ssrRenderComponent(_component_UInputTime, {
+                      class: "w-full",
+                      "hour-cycle": 24,
+                      "default-value": unref(data).time
+                    }, null, _parent3, _scopeId2));
+                  } else {
+                    return [
+                      createVNode(_component_UInputTime, {
+                        class: "w-full",
+                        "hour-cycle": 24,
+                        "default-value": unref(data).time
+                      }, null, 8, ["default-value"])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(`</div><div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center"${_scopeId}>`);
+              _push2(ssrRenderComponent(_component_UCheckbox, {
+                modelValue: unref(check),
+                "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
+                label: "Подтверждение",
+                description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
+                ui: {
+                  base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
+                  description: "text-primary/70",
+                  label: "text-white text-lg"
+                }
+              }, null, _parent2, _scopeId));
+              _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5"${_scopeId}>`);
+              _push2(ssrRenderComponent(_component_UButton, {
+                type: "submit",
+                class: "button-gradient uppercase h-16",
+                icon: "i-lucide-send",
+                disabled: !unref(check)
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(` Отправить `);
+                  } else {
+                    return [
+                      createTextVNode(" Отправить ")
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UButton, {
+                class: "button-gradient uppercase h-16",
+                onClick: reset
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(` Очистить `);
+                  } else {
+                    return [
+                      createTextVNode(" Очистить ")
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(`</div>`);
+            } else {
+              return [
+                createVNode("div", { class: "flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5" }, [
+                  createVNode(_component_UFormField, { name: "name" }, {
+                    default: withCtx(() => [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).name,
+                        "onUpdate:modelValue": ($event) => unref(data).name = $event,
+                        color: "primary",
+                        placeholder: "Ф.И.О",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ]),
                     _: 1
-                  }, _parent3, _scopeId2));
-                } else {
-                  return [
-                    createVNode(_component_UInputDate, {
-                      ref_key: "inputDate",
-                      ref: inputDate,
-                      modelValue: unref(data).date,
-                      "onUpdate:modelValue": ($event) => unref(data).date = $event
+                  }),
+                  createVNode(_component_UFormField, { name: "phone" }, {
+                    default: withCtx(() => [
+                      withDirectives(createVNode(_component_UInput, {
+                        modelValue: unref(data).phone,
+                        "onUpdate:modelValue": ($event) => unref(data).phone = $event,
+                        placeholder: "+7-(000)-000-00-00",
+                        icon: "i-lucide-phone",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
+                        [unref(vMaska), "+7-(###)-###-##-##"]
+                      ])
+                    ]),
+                    _: 1
+                  }),
+                  createVNode(_component_UFormField, { name: "from" }, {
+                    default: withCtx(() => [
+                      createVNode(_component_UInputMenu, {
+                        type: "button",
+                        modelValue: unref(data).from,
+                        "onUpdate:modelValue": ($event) => unref(data).from = $event,
+                        items: unref(from_cities),
+                        color: "primary",
+                        placeholder: "Город отправления",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
+                    ]),
+                    _: 1
+                  }),
+                  createVNode(_component_UFormField, { name: "from_address" }, {
+                    default: withCtx(() => [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).from_address,
+                        "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
+                        color: "primary",
+                        placeholder: "Адрес отправления",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ]),
+                    _: 1
+                  }),
+                  createVNode(_component_UFormField, { name: "to" }, {
+                    default: withCtx(() => [
+                      createVNode(_component_UInputMenu, {
+                        type: "button",
+                        modelValue: unref(data).to,
+                        "onUpdate:modelValue": ($event) => unref(data).to = $event,
+                        items: unref(to_cities),
+                        color: "primary",
+                        placeholder: "Город прибытия",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
+                    ]),
+                    _: 1
+                  }),
+                  createVNode(_component_UFormField, { name: "to_address" }, {
+                    default: withCtx(() => [
+                      createVNode(_component_UInput, {
+                        modelValue: unref(data).to_address,
+                        "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
+                        color: "primary",
+                        placeholder: "Адрес прибытия",
+                        size: "xl"
+                      }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                    ]),
+                    _: 1
+                  }),
+                  createVNode("div", { class: "date-time w-full flex not-sm:flex-col justify-start items-center gap-5" }, [
+                    createVNode(_component_UFormField, {
+                      name: "date",
+                      class: "w-[50%] not-sm:w-[320px]"
                     }, {
-                      trailing: withCtx(() => [
-                        createVNode(_component_UPopover, {
-                          reference: unref(inputDate)?.inputsRef[3]?.$el,
-                          ui: {
-                            content: "text-white bg-gray-600 w-[320px] sm:w-[440px] rounded-[26px]"
-                          }
-                        }, {
+                      default: withCtx(() => [
+                        createVNode(_component_UPopover, null, {
                           content: withCtx(() => [
                             createVNode(_component_UCalendar, {
                               modelValue: unref(data).date,
@@ -5679,232 +5765,78 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           ]),
                           default: withCtx(() => [
                             createVNode(_component_UButton, {
-                              color: "neutral",
-                              variant: "link",
-                              size: "md",
                               icon: "i-lucide-calendar",
-                              "aria-label": "Выберите дату",
-                              class: "px-0"
+                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                              ]),
+                              _: 1
                             })
                           ]),
                           _: 1
-                        }, 8, ["reference"])
+                        })
                       ]),
                       _: 1
-                    }, 8, ["modelValue", "onUpdate:modelValue"])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(`<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UCheckbox, {
-              modelValue: unref(check),
-              "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
-              label: "Подтверждение",
-              description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
-              ui: {
-                base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
-                description: "text-primary/70",
-                label: "text-white text-lg"
-              }
-            }, null, _parent2, _scopeId));
-            _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5"${_scopeId}>`);
-            _push2(ssrRenderComponent(_component_UButton, {
-              type: "submit",
-              class: "button-gradient uppercase h-16",
-              icon: "i-lucide-send",
-              disabled: !unref(check)
-            }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(` Отправить `);
-                } else {
-                  return [
-                    createTextVNode(" Отправить ")
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_UButton, {
-              class: "button-gradient uppercase h-16",
-              onClick: reset
-            }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(` Очистить `);
-                } else {
-                  return [
-                    createTextVNode(" Очистить ")
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(`</div>`);
-          } else {
-            return [
-              createVNode("div", { class: "flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5" }, [
-                createVNode(_component_UFormField, { name: "name" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInput, {
-                      modelValue: unref(data).name,
-                      "onUpdate:modelValue": ($event) => unref(data).name = $event,
-                      color: "primary",
-                      placeholder: "Ф.И.О",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "phone" }, {
-                  default: withCtx(() => [
-                    withDirectives(createVNode(_component_UInput, {
-                      modelValue: unref(data).phone,
-                      "onUpdate:modelValue": ($event) => unref(data).phone = $event,
-                      placeholder: "+7-(000)-000-00-00",
-                      icon: "i-lucide-phone",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]), [
-                      [unref(vMaska), "+7-(###)-###-##-##"]
-                    ])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "from" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInputMenu, {
-                      type: "button",
-                      modelValue: unref(data).from,
-                      "onUpdate:modelValue": ($event) => unref(data).from = $event,
-                      items: unref(from_cities),
-                      color: "primary",
-                      placeholder: "Город отправления",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "from_address" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInput, {
-                      modelValue: unref(data).from_address,
-                      "onUpdate:modelValue": ($event) => unref(data).from_address = $event,
-                      color: "primary",
-                      placeholder: "Адрес отправления",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "to" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInputMenu, {
-                      type: "button",
-                      modelValue: unref(data).to,
-                      "onUpdate:modelValue": ($event) => unref(data).to = $event,
-                      items: unref(to_cities),
-                      color: "primary",
-                      placeholder: "Город прибытия",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue", "items"])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "to_address" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInput, {
-                      modelValue: unref(data).to_address,
-                      "onUpdate:modelValue": ($event) => unref(data).to_address = $event,
-                      color: "primary",
-                      placeholder: "Адрес прибытия",
-                      size: "xl"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                  ]),
-                  _: 1
-                }),
-                createVNode(_component_UFormField, { name: "date" }, {
-                  default: withCtx(() => [
-                    createVNode(_component_UInputDate, {
-                      ref_key: "inputDate",
-                      ref: inputDate,
-                      modelValue: unref(data).date,
-                      "onUpdate:modelValue": ($event) => unref(data).date = $event
+                    }),
+                    createVNode(_component_UFormField, {
+                      name: "time",
+                      class: "w-[50%] not-sm:w-[320px]"
                     }, {
-                      trailing: withCtx(() => [
-                        createVNode(_component_UPopover, {
-                          reference: unref(inputDate)?.inputsRef[3]?.$el,
-                          ui: {
-                            content: "text-white bg-gray-600 w-[320px] sm:w-[440px] rounded-[26px]"
-                          }
-                        }, {
-                          content: withCtx(() => [
-                            createVNode(_component_UCalendar, {
-                              modelValue: unref(data).date,
-                              "onUpdate:modelValue": ($event) => unref(data).date = $event,
-                              class: "p-2"
-                            }, null, 8, ["modelValue", "onUpdate:modelValue"])
-                          ]),
-                          default: withCtx(() => [
-                            createVNode(_component_UButton, {
-                              color: "neutral",
-                              variant: "link",
-                              size: "md",
-                              icon: "i-lucide-calendar",
-                              "aria-label": "Выберите дату",
-                              class: "px-0"
-                            })
-                          ]),
-                          _: 1
-                        }, 8, ["reference"])
+                      default: withCtx(() => [
+                        createVNode(_component_UInputTime, {
+                          class: "w-full",
+                          "hour-cycle": 24,
+                          "default-value": unref(data).time
+                        }, null, 8, ["default-value"])
                       ]),
                       _: 1
-                    }, 8, ["modelValue", "onUpdate:modelValue"])
+                    })
                   ]),
-                  _: 1
-                }),
-                createVNode("div", { class: "min-w-[320px] max-w-110 flex flex-col justify-center items-center" }, [
-                  createVNode(_component_UCheckbox, {
-                    modelValue: unref(check),
-                    "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
-                    label: "Подтверждение",
-                    description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
-                    ui: {
-                      base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
-                      description: "text-primary/70",
-                      label: "text-white text-lg"
-                    }
-                  }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                  createVNode("div", { class: "min-w-[320px] max-w-110 flex flex-col justify-center items-center" }, [
+                    createVNode(_component_UCheckbox, {
+                      modelValue: unref(check),
+                      "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
+                      label: "Подтверждение",
+                      description: "Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных",
+                      ui: {
+                        base: "h-5 w-5 text-white bg-gray-600 mt-10 m-2",
+                        description: "text-primary/70",
+                        label: "text-white text-lg"
+                      }
+                    }, null, 8, ["modelValue", "onUpdate:modelValue"])
+                  ])
+                ]),
+                createVNode("div", { class: "w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" }, [
+                  createVNode(_component_UButton, {
+                    type: "submit",
+                    class: "button-gradient uppercase h-16",
+                    icon: "i-lucide-send",
+                    disabled: !unref(check)
+                  }, {
+                    default: withCtx(() => [
+                      createTextVNode(" Отправить ")
+                    ]),
+                    _: 1
+                  }, 8, ["disabled"]),
+                  createVNode(_component_UButton, {
+                    class: "button-gradient uppercase h-16",
+                    onClick: reset
+                  }, {
+                    default: withCtx(() => [
+                      createTextVNode(" Очистить ")
+                    ]),
+                    _: 1
+                  })
                 ])
-              ]),
-              createVNode("div", { class: "w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" }, [
-                createVNode(_component_UButton, {
-                  type: "submit",
-                  class: "button-gradient uppercase h-16",
-                  icon: "i-lucide-send",
-                  disabled: !unref(check)
-                }, {
-                  default: withCtx(() => [
-                    createTextVNode(" Отправить ")
-                  ]),
-                  _: 1
-                }, 8, ["disabled"]),
-                createVNode(_component_UButton, {
-                  class: "button-gradient uppercase h-16",
-                  onClick: reset
-                }, {
-                  default: withCtx(() => [
-                    createTextVNode(" Очистить ")
-                  ]),
-                  _: 1
-                })
-              ])
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<div><div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5"><h3 class="text-2xl font-bold">Заявка была успешно создана</h3><p> Имя: <b>${ssrInterpolate(unref(data).name)}</b></p><p>Телефон: ${ssrInterpolate(unref(data).phone)}</p><p>Из: ${ssrInterpolate(unref(data).from)}, ${ssrInterpolate(unref(data).from_address)}</p><p>До: ${ssrInterpolate(unref(data).to)}, ${ssrInterpolate(unref(data).to_address)}</p><p>Дата: ${ssrInterpolate(unref(data).date)}, время: ${ssrInterpolate(unref(data).time)}</p><p class="w-full text-center">Спасибо, вскоре мы свяжеться с вами.</p></div></div>`);
+      }
       _push(`<!--]-->`);
     };
   }
@@ -5944,4 +5876,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-OhiymK6F.mjs.map
+//# sourceMappingURL=order-CA7C6oie.mjs.map

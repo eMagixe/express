@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { CalendarDate } from '@internationalized/date'
+import { CalendarDate, DateFormatter, getLocalTimeZone, Time } from '@internationalized/date'
 import type { Order } from '#shared/types/global'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
 
+const df = new DateFormatter('ru-RU', {
+	dateStyle: 'medium'
+})
+
 //Form data
 const check = ref(false)
-const inputDate = useTemplateRef('inputDate')
 
-const dateNow = new Date(Date.now())
-const currentDate = new CalendarDate(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDay())
+const [month, day, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
+
+const defaultTime = new Time(16, 30, 0)
+const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
 const toast = useToast()
 
 const data = reactive<Order>({
@@ -20,8 +25,11 @@ const data = reactive<Order>({
 	from_address: '',
 	to: 'Уфа',
 	to_address: '',
-	date: shallowRef(currentDate)
+	date: shallowRef(currentDate),
+	time: shallowRef(defaultTime)
 })
+
+const orderCreated = ref(false)
 
 const schema = v.object({
 	name: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
@@ -34,7 +42,8 @@ const schema = v.object({
 	from: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
 	to_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
 	from_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	date: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения'))
+	date: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения')),
+	time: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения'))
 })
 
 //Cities
@@ -68,6 +77,7 @@ const reset = (): void => {
 	data.name = ''
 	data.phone = ''
 	data.date = currentDate
+	data.time = defaultTime
 }
 
 const createOrder = async () => {
@@ -83,6 +93,7 @@ const onSubmit = async () => {
 	createOrder()
 		.then(() => {
 			toast.add({ title: 'Ответ', description: 'Заявка была успешно создана', color: 'success' })
+			orderCreated.value = true
 		})
 		.catch((response) => {
 			console.log(response)
@@ -92,8 +103,9 @@ const onSubmit = async () => {
 </script>
 
 <template>
-	<SectionTitle title="Оставить заявку" />
+	<SectionTitle v-if="!orderCreated" title="Оставить заявку" />
 	<UForm
+		v-if="!orderCreated"
 		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
 		:schema="schema"
 		:state="data"
@@ -138,31 +150,26 @@ const onSubmit = async () => {
 			<UFormField name="to_address">
 				<UInput v-model="data.to_address" color="primary" placeholder="Адрес прибытия" size="xl" />
 			</UFormField>
-			<UFormField name="date">
-				<UInputDate ref="inputDate" v-model="data.date">
-					<template #trailing>
-						<UPopover
-							:reference="inputDate?.inputsRef[3]?.$el"
-							:ui="{
-								content: 'text-white bg-gray-600 w-[320px] sm:w-[440px] rounded-[26px]'
-							}"
+			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
+				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
+					<UPopover>
+						<UButton
+							icon="i-lucide-calendar"
+							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
 						>
-							<UButton
-								color="neutral"
-								variant="link"
-								size="md"
-								icon="i-lucide-calendar"
-								aria-label="Выберите дату"
-								class="px-0"
-							/>
+							{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
+						</UButton>
 
-							<template #content>
-								<UCalendar v-model="data.date" class="p-2" />
-							</template>
-						</UPopover>
-					</template>
-				</UInputDate>
-			</UFormField>
+						<template #content>
+							<UCalendar v-model="data.date" class="p-2" />
+						</template>
+					</UPopover>
+				</UFormField>
+				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
+					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" />
+				</UFormField>
+			</div>
+
 			<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
 				<UCheckbox
 					v-model="check"
@@ -183,6 +190,19 @@ const onSubmit = async () => {
 			<UButton class="button-gradient uppercase h-16" @click="reset"> Очистить </UButton>
 		</div>
 	</UForm>
+	<div v-else>
+		<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
+			<h3 class="text-2xl font-bold">Заявка была успешно создана</h3>
+			<p>
+				Имя: <b>{{ data.name }}</b>
+			</p>
+			<p>Телефон: {{ data.phone }}</p>
+			<p>Из: {{ data.from }}, {{ data.from_address }}</p>
+			<p>До: {{ data.to }}, {{ data.to_address }}</p>
+			<p>Дата: {{ data.date }}, время: {{ data.time }}</p>
+			<p class="w-full text-center">Спасибо, вскоре мы свяжеться с вами.</p>
+		</div>
+	</div>
 </template>
 
 <style scoped></style>

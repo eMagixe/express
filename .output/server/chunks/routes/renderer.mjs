@@ -3,6 +3,7 @@ import { b as buildAssetsURL, u as useRuntimeConfig, g as getResponseStatusText,
 import { renderToString } from 'vue/server-renderer';
 import { createHead as createHead$1, propsToString, renderSSRHead } from 'unhead/server';
 import { stringify, uneval } from 'devalue';
+import { FlatMetaPlugin } from 'unhead/plugins';
 import { walkResolver } from 'unhead/utils';
 import { isRef, toValue, hasInjectionContext, inject, ref, watchEffect, getCurrentInstance, onBeforeUnmount, onDeactivated, onActivated } from 'vue';
 
@@ -61,6 +62,16 @@ function clientUseHead(head, input, options = {}) {
     });
   }
   return entry;
+}
+function useSeoMeta(input = {}, options = {}) {
+  const head = options.head || /* @__PURE__ */ injectHead();
+  head.use(FlatMetaPlugin);
+  const { title, titleTemplate, ...meta } = input;
+  return useHead({
+    title,
+    titleTemplate,
+    _flatMeta: meta
+  }, options);
 }
 
 // @__NO_SIDE_EFFECTS__
@@ -477,5 +488,5 @@ const renderer$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty
   default: renderer
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { headSymbol as h, renderer$1 as r, useHead as u };
+export { useHead as a, headSymbol as h, renderer$1 as r, useSeoMeta as u };
 //# sourceMappingURL=renderer.mjs.map

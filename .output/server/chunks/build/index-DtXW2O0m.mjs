@@ -1,7 +1,7 @@
 import { defineComponent, computed, h, onServerPrefetch, toValue, getCurrentInstance, ref, shallowRef, nextTick, unref, toRef, provide, cloneVNode, createElementBlock } from 'vue';
 import { Icon, getIcon, loadIcon as loadIcon$1 } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
-import { a as useNuxtApp, c as useAppConfig, f as useRuntimeConfig, u as useHead, h as asyncDataDefaults, i as createError } from './server.mjs';
+import { a as useNuxtApp, c as useAppConfig, g as useRuntimeConfig, u as useHead, i as asyncDataDefaults, j as createError } from './server.mjs';
 import { debounce } from 'perfect-debounce';
 import '../nitro/nitro.mjs';
 import 'node:http';
@@ -21,6 +21,7 @@ import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
+import 'unhead/plugins';
 import 'unhead/utils';
 
 async function loadIcon(name, timeout) {
@@ -540,4 +541,4 @@ const __nuxt_component_0 = defineComponent({
 });
 
 export { __nuxt_component_0 as default };
-//# sourceMappingURL=index-B6dJa6dm.mjs.map
+//# sourceMappingURL=index-DtXW2O0m.mjs.map

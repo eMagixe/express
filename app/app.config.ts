@@ -13,6 +13,11 @@ export default defineAppConfig({
 				base: 'h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px]'
 			}
 		},
+		inputTime: {
+			slots: {
+				base: 'h-12 !text-white !bg-gray-600 rounded-[26px] inline-flex items-center justify-center'
+			}
+		},
 		inputMenu: {
 			slots: {
 				viewport: 'bg-gray-600',
@@ -20,9 +25,13 @@ export default defineAppConfig({
 				item: 'text-primary bg-gray-600 hover:bg-primary/70 rounded-0'
 			}
 		},
-		inputDate: {
+		calendar: {
 			slots: {
-				base: 'h-12 !text-white !bg-gray-600 rounded-[26px] min-w-[320px] sm:w-[440px] flex justify-center items-center !gap-10'
+				root: 'text-white bg-gray-600',
+				gridBody: 'bg-gray-600',
+				gridCell: 'text-white hover:bg-primary/70 rounded-0',
+				gridCellCurrent: 'text-white bg-primary rounded-0',
+				gridCellSelected: 'text-white bg-primary rounded-0'
 			}
 		},
 		formField: {
