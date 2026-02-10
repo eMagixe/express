@@ -1,10 +1,10 @@
-import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-D0Q3X4-_.mjs';
+import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-WFCrE7WK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive } from 'reka-ui';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$6 } from './Input-CAPeXM_z.mjs';
+import { _ as _sfc_main$6 } from './Input-CitaE8q8.mjs';
 import { useVModel } from '@vueuse/core';
 import 'tailwind-variants';
 import './index-B6dJa6dm.mjs';
@@ -1115,7 +1115,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_PreviewViewer = __nuxt_component_2;
   const _component_PreviewAll = __nuxt_component_3;
   const _component_PreviewAdd = __nuxt_component_4;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto h-auto py-5 border-b border-b-primary/70" }, _attrs))}>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -1152,4 +1152,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-ADx9hSdN.mjs.map
+//# sourceMappingURL=reviews-DauUNBLu.mjs.map

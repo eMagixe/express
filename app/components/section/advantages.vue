@@ -66,7 +66,7 @@ const advantages = <Advantage[]>[
 </script>
 
 <template>
-	<div class="section-advantages w-full mx-auto h-auto py-5 border-b border-b-primary/70">
+	<div class="section-advantages w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70">
 		<UContainer class="flex flex-col justify-start items-center gap-5">
 			<SectionTitle title="Наши преимущества" />
 			<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5">
