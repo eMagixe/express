@@ -15,9 +15,9 @@ const toast = useToast()
 const data = reactive<Order>({
 	name: '',
 	phone: '',
-	from: '',
+	from: 'Кумертау',
 	from_address: '',
-	to: '',
+	to: 'Уфа',
 	to_address: '',
 	date: shallowRef(currentDate)
 })
@@ -36,12 +36,15 @@ const schema = v.object({
 const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
 
 const from_cities = computed(() => {
-	if (data.to === 'Уфа') {
-		return cities.value.filter((i) => i !== 'Уфа')
-	} else {
-		return cities.value
-	}
+	return cities.value
 })
+
+watch(
+	() => data.from,
+	(value) => {
+		if (value === 'Уфа') data.to = ''
+	}
+)
 
 const to_cities = computed(() => {
 	if (data.from === 'Уфа') {
