@@ -1,16 +1,15 @@
-import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-CR0fB-CE.mjs';
+import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-CZG5DDzR.mjs';
+import { a as __nuxt_component_6 } from './index-DectbQ06.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive } from 'reka-ui';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$6 } from './Input-BH-E7Dqa.mjs';
+import { _ as _sfc_main$6 } from './Input-DgGozPZO.mjs';
 import { useVModel } from '@vueuse/core';
 import 'tailwind-variants';
-import './index-DtXW2O0m.mjs';
-import '@iconify/vue';
-import '@iconify/utils/lib/css/icon';
-import 'perfect-debounce';
+import './nuxt-link-Ck9lQj5E.mjs';
+import 'vaul-vue';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -23,14 +22,15 @@ import '@iconify/utils';
 import 'consola';
 import 'vue-router';
 import 'tailwindcss/colors';
+import '@iconify/vue';
 import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-Ck9lQj5E.mjs';
-import 'vaul-vue';
+import '@iconify/utils/lib/css/icon';
+import 'perfect-debounce';
 
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
 const _sfc_main$5 = /* @__PURE__ */ defineComponent({
@@ -58,6 +58,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     [__temp, __restore] = withAsyncContext(() => fetchReviews()), await __temp, __restore();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$m;
+      const _component_ClientOnly = __nuxt_component_6;
       _push(`<!--[-->`);
       ssrRenderList(unref(reviewsViews), (item, index) => {
         _push(`<div class="item flex flex-col justify-start items-start gap-1 w-full"><div class="flex flex-row justify-between items-start gap-2 w-full"><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">`);
@@ -71,7 +72,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
           name: "i-lucide-calendar",
           size: "14"
         }, null, _parent));
-        _push(`<p>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]">${ssrInterpolate(item.text)}</div></div>`);
+        _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
+        _push(`</div></div><div class="text-gray-600 text-[1rem]">${ssrInterpolate(item.text)}</div></div>`);
       });
       _push(`<!--]-->`);
     };
@@ -1153,4 +1155,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-BHAhc322.mjs.map
+//# sourceMappingURL=reviews-CXYNdVEE.mjs.map

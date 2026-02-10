@@ -169,14 +169,15 @@ const onSubmit = async () => {
 			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
 				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
 					<UPopover>
-						<UButton
-							icon="i-lucide-calendar"
-							id="date-button"
-							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-						>
-							{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
-						</UButton>
-
+						<ClientOnly>
+							<UButton
+								icon="i-lucide-calendar"
+								id="date-button"
+								class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+							>
+								{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
+							</UButton>
+						</ClientOnly>
 						<template #content>
 							<UCalendar v-model="data.date" class="p-2" id="date" />
 						</template>

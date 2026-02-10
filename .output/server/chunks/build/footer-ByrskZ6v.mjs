@@ -1,4 +1,4 @@
-import { B as __nuxt_component_0$1, _ as _sfc_main$m } from './index-CR0fB-CE.mjs';
+import { B as __nuxt_component_0$1, _ as _sfc_main$m } from './index-CZG5DDzR.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
@@ -16,7 +16,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-DtXW2O0m.mjs';
+import './index-DectbQ06.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -58,4 +58,4 @@ _sfc_main.setup = (props, ctx) => {
 const footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionFooter" });
 
 export { footer as default };
-//# sourceMappingURL=footer-DcsQ8eeE.mjs.map
+//# sourceMappingURL=footer-ByrskZ6v.mjs.map

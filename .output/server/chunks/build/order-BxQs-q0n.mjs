@@ -1,22 +1,21 @@
-import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CR0fB-CE.mjs';
+import { g as _sfc_main$b, e as useToast, h as __nuxt_component_0, b as _sfc_main$h, t as tv, i as formBusInjectionKey, j as formStateInjectionKey, k as formErrorsInjectionKey, m as formInputsInjectionKey, n as formLoadingInjectionKey, o as formOptionsInjectionKey, p as inputIdInjectionKey, q as formFieldInjectionKey, s as useLocale, v as usePortal, u as useFormField, w as useFieldGroup, c as useComponentIcons, x as isArrayOfArray, r as get, y as compare, _ as _sfc_main$m, d as _sfc_main$k, z as _sfc_main$l, l as looseToNumber, A as getDisplayValue } from './index-CZG5DDzR.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, createTextVNode, toDisplayString, isRef, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$9 } from './Input-BH-E7Dqa.mjs';
+import { _ as _sfc_main$9 } from './Input-DgGozPZO.mjs';
 import { y as defu, C as isEqual } from '../nitro/nitro.mjs';
 import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
+import { a as __nuxt_component_6 } from './index-DectbQ06.mjs';
 import { getWeekNumber } from 'reka-ui/date';
 import { DateFormatter, Time, CalendarDate, getLocalTimeZone } from '@internationalized/date';
 import { vMaska } from 'maska/vue';
 import * as v from 'valibot';
 import { minLength } from 'valibot';
 import 'tailwind-variants';
-import './index-DtXW2O0m.mjs';
-import '@iconify/vue';
-import '@iconify/utils/lib/css/icon';
-import 'perfect-debounce';
+import './nuxt-link-Ck9lQj5E.mjs';
+import 'vaul-vue';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -29,14 +28,15 @@ import '@iconify/utils';
 import 'consola';
 import 'vue-router';
 import 'tailwindcss/colors';
+import '@iconify/vue';
 import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-Ck9lQj5E.mjs';
-import 'vaul-vue';
+import '@iconify/utils/lib/css/icon';
+import 'perfect-debounce';
 
 function isSuperStructSchema(schema) {
   return "schema" in schema && typeof schema.coercer === "function" && typeof schema.validator === "function" && typeof schema.refiner === "function";
@@ -5339,6 +5339,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UInput = _sfc_main$9;
       const _component_UInputMenu = _sfc_main$6;
       const _component_UPopover = _sfc_main$5;
+      const _component_ClientOnly = __nuxt_component_6;
       const _component_UButton = _sfc_main$h;
       const _component_UCalendar = _sfc_main$4;
       const _component_UInputTime = _sfc_main$3;
@@ -5555,31 +5556,21 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       }),
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_component_UButton, {
-                            icon: "i-lucide-calendar",
-                            id: "date-button",
-                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                          }, {
-                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                              if (_push5) {
-                                _push5(`${ssrInterpolate(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату")}`);
-                              } else {
-                                return [
-                                  createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
-                                ];
-                              }
-                            }),
-                            _: 1
-                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(_component_ClientOnly, null, {}, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_component_UButton, {
-                              icon: "i-lucide-calendar",
-                              id: "date-button",
-                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                            }, {
+                            createVNode(_component_ClientOnly, null, {
                               default: withCtx(() => [
-                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                createVNode(_component_UButton, {
+                                  icon: "i-lucide-calendar",
+                                  id: "date-button",
+                                  class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                  ]),
+                                  _: 1
+                                })
                               ]),
                               _: 1
                             })
@@ -5600,13 +5591,18 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           }, null, 8, ["modelValue", "onUpdate:modelValue"])
                         ]),
                         default: withCtx(() => [
-                          createVNode(_component_UButton, {
-                            icon: "i-lucide-calendar",
-                            id: "date-button",
-                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                          }, {
+                          createVNode(_component_ClientOnly, null, {
                             default: withCtx(() => [
-                              createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                              createVNode(_component_UButton, {
+                                icon: "i-lucide-calendar",
+                                id: "date-button",
+                                class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                ]),
+                                _: 1
+                              })
                             ]),
                             _: 1
                           })
@@ -5793,13 +5789,18 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                             }, null, 8, ["modelValue", "onUpdate:modelValue"])
                           ]),
                           default: withCtx(() => [
-                            createVNode(_component_UButton, {
-                              icon: "i-lucide-calendar",
-                              id: "date-button",
-                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                            }, {
+                            createVNode(_component_ClientOnly, null, {
                               default: withCtx(() => [
-                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                createVNode(_component_UButton, {
+                                  icon: "i-lucide-calendar",
+                                  id: "date-button",
+                                  class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                  ]),
+                                  _: 1
+                                })
                               ]),
                               _: 1
                             })
@@ -5908,4 +5909,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-BCRvqLJC.mjs.map
+//# sourceMappingURL=order-BxQs-q0n.mjs.map
