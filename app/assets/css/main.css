@@ -22,14 +22,14 @@ header {
 }
 
 .welcome-section {
-    background: linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%), url("/images/png/header.png");
+    background: linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%), url("/images/webp/header.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .section-advantages {
-    background: linear-gradient(rgba(10, 11, 8, 1) 10%, rgba(10, 11, 8, 0) 50%, rgba(153, 89, 0, 1) 100%), url("/images/png/two-section.png");
+    background: linear-gradient(rgba(10, 11, 8, 1) 10%, rgba(10, 11, 8, 0) 50%, rgba(153, 89, 0, 1) 100%), url("/images/webp/two-section.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

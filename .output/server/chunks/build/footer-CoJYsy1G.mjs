@@ -1,4 +1,4 @@
-import { j as __nuxt_component_0, _ as _sfc_main$m } from './index-dROiNWu7.mjs';
+import { j as __nuxt_component_0, _ as _sfc_main$m } from './index-OMqDVgGZ.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
@@ -58,4 +58,4 @@ _sfc_main.setup = (props, ctx) => {
 const footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionFooter" });
 
 export { footer as default };
-//# sourceMappingURL=footer-D63gcPF8.mjs.map
+//# sourceMappingURL=footer-CoJYsy1G.mjs.map

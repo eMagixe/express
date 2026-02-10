@@ -5,5 +5,5 @@ const { title } = defineProps<{
 </script>
 
 <template>
-	<h2 class="w-full text-[22px] md:text-[36px] lg:text-[48px] text-center">{{ title }}</h2>
+	<h2 class="w-full text-[clamp(1.25rem,3vw,3rem)] text-center">{{ title }}</h2>
 </template>

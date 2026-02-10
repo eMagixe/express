@@ -5996,10 +5996,10 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$m;
   const _component_NuxtLink = __nuxt_component_0$2;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-start gap-10" }, {
+  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-start gap-20" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
+        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
         _push2(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
@@ -6009,7 +6009,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` КУМЕРТАУ </div><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
+        _push2(` КУМЕРТАУ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
         _push2(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
@@ -6019,7 +6019,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` МЕЛЕУЗ </div><div class="flex not-sm:text-[18px] justify-center items-center gap-1"${_scopeId}> САЛАВАТ `);
+        _push2(` МЕЛЕУЗ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> САЛАВАТ `);
         _push2(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
@@ -6029,7 +6029,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
+        _push2(` САЛАВАТ </div></div><div class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
         _push2(ssrRenderComponent(_component_NuxtLink, {
           class: "lg:hidden button-gradient w-80 h-20 mx-auto my-10 uppercase flex items-center justify-center gap-3",
           icon: "i-lucide-phone-call",
@@ -6054,11 +6054,11 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           }),
           _: 1
         }, _parent2, _scopeId));
-        _push2(`<div class="font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
+        _push2(`<div class="font-thin text-[clamp(1rem,3vw,2rem)] text-white text-center lg:text-left underline decoration-1 underline-offset-5"${_scopeId}> быстро и с комфортом </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
-            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
               createTextVNode(" КУМЕРТАУ "),
               createVNode(_component_UIcon, {
                 name: "i-lucide-arrow-right",
@@ -6071,7 +6071,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
               }),
               createTextVNode(" КУМЕРТАУ ")
             ]),
-            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
               createTextVNode(" МЕЛЕУЗ "),
               createVNode(_component_UIcon, {
                 name: "i-lucide-arrow-right",
@@ -6084,7 +6084,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
               }),
               createTextVNode(" МЕЛЕУЗ ")
             ]),
-            createVNode("div", { class: "flex not-sm:text-[18px] justify-center items-center gap-1" }, [
+            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
               createTextVNode(" САЛАВАТ "),
               createVNode(_component_UIcon, {
                 name: "i-lucide-arrow-right",
@@ -6098,7 +6098,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
               createTextVNode(" САЛАВАТ ")
             ])
           ]),
-          createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
+          createVNode("div", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode(_component_NuxtLink, {
             class: "lg:hidden button-gradient w-80 h-20 mx-auto my-10 uppercase flex items-center justify-center gap-3",
             icon: "i-lucide-phone-call",
@@ -6113,7 +6113,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
             ]),
             _: 1
           }),
-          createVNode("div", { class: "font-thin text-[32px] text-white text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
+          createVNode("div", { class: "font-thin text-[clamp(1rem,3vw,2rem)] text-white text-center lg:text-left underline decoration-1 underline-offset-5" }, " быстро и с комфортом ")
         ];
       }
     }),
@@ -6136,7 +6136,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<h2${ssrRenderAttrs(mergeProps({ class: "w-full text-[22px] md:text-[36px] lg:text-[48px] text-center" }, _attrs))}>${ssrInterpolate(__props.title)}</h2>`);
+      _push(`<h2${ssrRenderAttrs(mergeProps({ class: "w-full text-[clamp(1.25rem,3vw,3rem)] text-center" }, _attrs))}>${ssrInterpolate(__props.title)}</h2>`);
     };
   }
 });
@@ -6271,9 +6271,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Bba6k5ia.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BlcyvUjM.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-D63gcPF8.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BlhuXyic.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-CBiB-eOu.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-CoJYsy1G.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6330,4 +6330,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useFieldGroup as c, useComponentIcons as d, _sfc_main$k as e, useToast as f, _sfc_main$9 as g, _sfc_main$b as h, __nuxt_component_1 as i, __nuxt_component_0 as j, index as k, looseToNumber as l, tv as t, useFormField as u };
-//# sourceMappingURL=index-dROiNWu7.mjs.map
+//# sourceMappingURL=index-OMqDVgGZ.mjs.map
