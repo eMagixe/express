@@ -6342,9 +6342,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-nLQ5FRJ6.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-u0VpOdlW.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-DesqpWA6.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BHAhc322.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BCRvqLJC.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-DcsQ8eeE.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6401,4 +6401,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { getDisplayValue as A, __nuxt_component_0$1 as B, index as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-DDpPljLL.mjs.map
+//# sourceMappingURL=index-CR0fB-CE.mjs.map

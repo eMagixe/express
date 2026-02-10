@@ -110,6 +110,7 @@ const onSubmit = async () => {
 		:schema="schema"
 		:state="data"
 		@submit="onSubmit"
+		id="form-create-order"
 	>
 		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5">
 			<UFormField name="name">
