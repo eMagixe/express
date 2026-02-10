@@ -5,8 +5,8 @@ import { reactivePick, createReusableTemplate, createSharedComposable, reactiveO
 import { B as serialize, y as defu, p as publicAssetsURL, C as isEqual } from '../nitro/nitro.mjs';
 import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, a as useNuxtApp } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import { _ as __nuxt_component_0$4 } from './index-DectbQ06.mjs';
-import { _ as __nuxt_component_0$3 } from './nuxt-link-Ck9lQj5E.mjs';
+import { _ as __nuxt_component_0$3 } from './index-Cxpc46zU.mjs';
+import { _ as __nuxt_component_0$2 } from './nuxt-link-Ck9lQj5E.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import 'node:http';
 import 'node:https';
@@ -144,74 +144,6 @@ function get(object, path, defaultValue) {
 function looseToNumber(val) {
   const n = Number.parseFloat(val);
   return Number.isNaN(n) ? val : n;
-}
-function compare(value, currentValue, comparator) {
-  if (value === void 0 || currentValue === void 0) {
-    return false;
-  }
-  if (typeof value === "string") {
-    return value === currentValue;
-  }
-  if (typeof comparator === "function") {
-    return comparator(value, currentValue);
-  }
-  if (typeof comparator === "string") {
-    return get(value, comparator) === get(currentValue, comparator);
-  }
-  return isEqual(value, currentValue);
-}
-function isEmpty(value) {
-  if (value == null) {
-    return true;
-  }
-  if (typeof value === "boolean" || typeof value === "number") {
-    return false;
-  }
-  if (typeof value === "string") {
-    return value.trim().length === 0;
-  }
-  if (Array.isArray(value)) {
-    return value.length === 0;
-  }
-  if (value instanceof Map || value instanceof Set) {
-    return value.size === 0;
-  }
-  if (value instanceof Date || value instanceof RegExp || typeof value === "function") {
-    return false;
-  }
-  if (typeof value === "object") {
-    for (const _ in value) {
-      if (Object.prototype.hasOwnProperty.call(value, _)) {
-        return false;
-      }
-    }
-    return true;
-  }
-  return false;
-}
-function getDisplayValue(items, value, options = {}) {
-  const { valueKey, labelKey, by } = options;
-  const foundItem = items.find((item) => {
-    const itemValue = typeof item === "object" && item !== null && valueKey ? get(item, valueKey) : item;
-    return compare(itemValue, value, by);
-  });
-  if (isEmpty(value) && foundItem) {
-    return labelKey ? get(foundItem, labelKey) : void 0;
-  }
-  if (isEmpty(value)) {
-    return void 0;
-  }
-  const source = foundItem ?? value;
-  if (source === null || source === void 0) {
-    return void 0;
-  }
-  if (typeof source === "object") {
-    return labelKey ? get(source, labelKey) : void 0;
-  }
-  return String(source);
-}
-function isArrayOfArray(item) {
-  return Array.isArray(item[0]);
 }
 function mergeClasses(appConfigClass, propClass) {
   if (!appConfigClass && !propClass) {
@@ -503,7 +435,7 @@ const _sfc_main$m = {
     const props = __props;
     const iconProps = useForwardProps(reactivePick(props, "name", "mode", "size", "customize"));
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_Icon = __nuxt_component_0$4;
+      const _component_Icon = __nuxt_component_0$3;
       if (typeof __props.name === "string") {
         _push(ssrRenderComponent(_component_Icon, mergeProps(unref(iconProps), _attrs), null, _parent));
       } else {
@@ -909,12 +841,9 @@ function useFieldGroup(props) {
 }
 const formOptionsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-options");
 const formBusInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-events");
-const formStateInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-state");
 const formFieldInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-field");
 const inputIdInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.input-id");
-const formInputsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-inputs");
 const formLoadingInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-loading");
-const formErrorsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-errors");
 function useFormField(props, opts) {
   const formOptions = inject(formOptionsInjectionKey, void 0);
   const formBus = inject(formBusInjectionKey, void 0);
@@ -1202,7 +1131,7 @@ const _sfc_main$i = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       return ui.value({ class: props.class, active, disabled: props.disabled });
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$3;
+      const _component_NuxtLink = __nuxt_component_0$2;
       _push(ssrRenderComponent(_component_NuxtLink, mergeProps(unref(nuxtLinkProps), {
         to: to.value,
         custom: ""
@@ -3328,7 +3257,7 @@ _sfc_main$c.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/App.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const __nuxt_component_0$2 = Object.assign(_sfc_main$c, { __name: "UApp" });
+const __nuxt_component_0$1 = Object.assign(_sfc_main$c, { __name: "UApp" });
 const theme$4 = {
   "base": "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8"
 };
@@ -5938,11 +5867,11 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/logo.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Logo" });
+const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Logo" });
 const _sfc_main$5 = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_UIcon = _sfc_main$m;
-  const _component_NuxtLink = __nuxt_component_0$3;
+  const _component_NuxtLink = __nuxt_component_0$2;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
   _push(ssrRenderComponent(_component_UIcon, {
     name: "i-lucide-phone",
@@ -5991,7 +5920,7 @@ const _sfc_main$4 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UHeader = _sfc_main$7;
-  const _component_Logo = __nuxt_component_0$1;
+  const _component_Logo = __nuxt_component_0;
   const _component_Phones = __nuxt_component_3$1;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "border-b border-b-primary/70" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, null, {
@@ -6060,12 +5989,12 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]), { __name: "SectionHeader" });
+const __nuxt_component_1$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]), { __name: "SectionHeader" });
 const _sfc_main$3 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
   const _component_UIcon = _sfc_main$m;
-  const _component_NuxtLink = __nuxt_component_0$3;
+  const _component_NuxtLink = __nuxt_component_0$2;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] flex flex-col justify-start gap-10" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -6217,7 +6146,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/title.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_0 = Object.assign(_sfc_main$2, { __name: "SectionTitle" });
+const __nuxt_component_1 = Object.assign(_sfc_main$2, { __name: "SectionTitle" });
 const _imports_0 = publicAssetsURL("/images/svg/arrow-b.svg");
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "advantages",
@@ -6280,7 +6209,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     ];
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$b;
-      const _component_SectionTitle = __nuxt_component_0;
+      const _component_SectionTitle = __nuxt_component_1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -6342,9 +6271,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CXYNdVEE.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BxQs-q0n.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-ByrskZ6v.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Bba6k5ia.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-BlcyvUjM.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-D63gcPF8.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6357,8 +6286,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       twitterCard: "summary_large_image"
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UApp = __nuxt_component_0$2;
-      const _component_SectionHeader = __nuxt_component_1;
+      const _component_UApp = __nuxt_component_0$1;
+      const _component_SectionHeader = __nuxt_component_1$1;
       const _component_SectionWelcome = __nuxt_component_2;
       const _component_SectionAdvantages = __nuxt_component_3;
       const _component_LazySectionReviews = __nuxt_component_4_lazy;
@@ -6400,5 +6329,5 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { getDisplayValue as A, __nuxt_component_0$1 as B, index as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-CZG5DDzR.mjs.map
+export { _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useFieldGroup as c, useComponentIcons as d, _sfc_main$k as e, useToast as f, _sfc_main$9 as g, _sfc_main$b as h, __nuxt_component_1 as i, __nuxt_component_0 as j, index as k, looseToNumber as l, tv as t, useFormField as u };
+//# sourceMappingURL=index-dROiNWu7.mjs.map

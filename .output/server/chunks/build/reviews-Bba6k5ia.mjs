@@ -1,11 +1,10 @@
-import { g as _sfc_main$b, h as __nuxt_component_0, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, e as useToast, f as _sfc_main$9, t as tv, u as useFormField, c as useComponentIcons, d as _sfc_main$k, l as looseToNumber } from './index-CZG5DDzR.mjs';
-import { a as __nuxt_component_6 } from './index-DectbQ06.mjs';
-import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, watch, nextTick, createCommentVNode, useSSRContext } from 'vue';
+import { h as _sfc_main$b, i as __nuxt_component_1, _ as _sfc_main$m, a as _sfc_main$8, b as _sfc_main$h, f as useToast, g as _sfc_main$9, t as tv, u as useFormField, c as useFieldGroup, d as useComponentIcons, e as _sfc_main$k, l as looseToNumber } from './index-dROiNWu7.mjs';
+import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
+import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, createCommentVNode, watch, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive } from 'reka-ui';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
-import { _ as _sfc_main$6 } from './Input-DgGozPZO.mjs';
 import { useVModel } from '@vueuse/core';
 import 'tailwind-variants';
 import './nuxt-link-Ck9lQj5E.mjs';
@@ -33,7 +32,7 @@ import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
 
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "viewer",
   __ssrInlineRender: true,
   async setup(__props) {
@@ -58,7 +57,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     [__temp, __restore] = withAsyncContext(() => fetchReviews()), await __temp, __restore();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$m;
-      const _component_ClientOnly = __nuxt_component_6;
+      const _component_ClientOnly = __nuxt_component_0$1;
       _push(`<!--[-->`);
       ssrRenderList(unref(reviewsViews), (item, index) => {
         _push(`<div class="item flex flex-col justify-start items-start gap-1 w-full"><div class="flex flex-row justify-between items-start gap-2 w-full"><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">`);
@@ -79,14 +78,14 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/viewer.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __nuxt_component_2 = Object.assign(_sfc_main$5, { __name: "PreviewViewer" });
-const theme$1 = {
+const __nuxt_component_2 = Object.assign(_sfc_main$6, { __name: "PreviewViewer" });
+const theme$2 = {
   "slots": {
     "root": "group relative flex items-center overflow-hidden gap-(--gap) [--gap:--spacing(16)] [--duration:20s]",
     "content": "flex items-center shrink-0 justify-around gap-(--gap) min-w-max"
@@ -147,7 +146,7 @@ const theme$1 = {
     }
   ]
 };
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "UMarquee",
   __ssrInlineRender: true,
   props: {
@@ -163,7 +162,7 @@ const _sfc_main$4 = {
   setup(__props) {
     const props = __props;
     const appConfig = useAppConfig();
-    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig.ui?.marquee || {} })({
+    const ui = computed(() => tv({ extend: tv(theme$2), ...appConfig.ui?.marquee || {} })({
       pauseOnHover: props.pauseOnHover,
       orientation: props.orientation,
       reverse: props.reverse,
@@ -204,13 +203,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Marquee.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "all",
   __ssrInlineRender: true,
   async setup(__props) {
@@ -236,7 +235,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UDrawer = _sfc_main$8;
       const _component_UButton = _sfc_main$h;
-      const _component_UMarquee = _sfc_main$4;
+      const _component_UMarquee = _sfc_main$5;
       const _component_UIcon = _sfc_main$m;
       _push(ssrRenderComponent(_component_UDrawer, mergeProps({
         title: "Отзывы",
@@ -396,13 +395,504 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/all.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const __nuxt_component_3 = Object.assign(_sfc_main$4, { __name: "PreviewAll" });
+const theme$1 = {
+  "slots": {
+    "root": "relative inline-flex items-center",
+    "base": [
+      "w-full rounded-md border-0 appearance-none placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "transition-colors"
+    ],
+    "leading": "absolute inset-y-0 start-0 flex items-center",
+    "leadingIcon": "shrink-0 text-dimmed",
+    "leadingAvatar": "shrink-0",
+    "leadingAvatarSize": "",
+    "trailing": "absolute inset-y-0 end-0 flex items-center",
+    "trailingIcon": "shrink-0 text-dimmed"
+  },
+  "variants": {
+    "fieldGroup": {
+      "horizontal": {
+        "root": "group has-focus-visible:z-[1]",
+        "base": "group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none"
+      },
+      "vertical": {
+        "root": "group has-focus-visible:z-[1]",
+        "base": "group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none"
+      }
+    },
+    "size": {
+      "xs": {
+        "base": "px-2 py-1 text-xs gap-1",
+        "leading": "ps-2",
+        "trailing": "pe-2",
+        "leadingIcon": "size-4",
+        "leadingAvatarSize": "3xs",
+        "trailingIcon": "size-4"
+      },
+      "sm": {
+        "base": "px-2.5 py-1.5 text-xs gap-1.5",
+        "leading": "ps-2.5",
+        "trailing": "pe-2.5",
+        "leadingIcon": "size-4",
+        "leadingAvatarSize": "3xs",
+        "trailingIcon": "size-4"
+      },
+      "md": {
+        "base": "px-2.5 py-1.5 text-sm gap-1.5",
+        "leading": "ps-2.5",
+        "trailing": "pe-2.5",
+        "leadingIcon": "size-5",
+        "leadingAvatarSize": "2xs",
+        "trailingIcon": "size-5"
+      },
+      "lg": {
+        "base": "px-3 py-2 text-sm gap-2",
+        "leading": "ps-3",
+        "trailing": "pe-3",
+        "leadingIcon": "size-5",
+        "leadingAvatarSize": "2xs",
+        "trailingIcon": "size-5"
+      },
+      "xl": {
+        "base": "px-3 py-2 text-base gap-2",
+        "leading": "ps-3",
+        "trailing": "pe-3",
+        "leadingIcon": "size-6",
+        "leadingAvatarSize": "xs",
+        "trailingIcon": "size-6"
+      }
+    },
+    "variant": {
+      "outline": "text-highlighted bg-default ring ring-inset ring-accented",
+      "soft": "text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50",
+      "subtle": "text-highlighted bg-elevated ring ring-inset ring-accented",
+      "ghost": "text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent",
+      "none": "text-highlighted bg-transparent"
+    },
+    "color": {
+      "primary": "",
+      "secondary": "",
+      "success": "",
+      "info": "",
+      "warning": "",
+      "error": "",
+      "neutral": ""
+    },
+    "leading": {
+      "true": ""
+    },
+    "trailing": {
+      "true": ""
+    },
+    "loading": {
+      "true": ""
+    },
+    "highlight": {
+      "true": ""
+    },
+    "type": {
+      "file": "file:me-1.5 file:font-medium file:text-muted file:outline-none"
+    }
+  },
+  "compoundVariants": [
+    {
+      "color": "primary",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
+    },
+    {
+      "color": "secondary",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary"
+    },
+    {
+      "color": "success",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-success"
+    },
+    {
+      "color": "info",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-info"
+    },
+    {
+      "color": "warning",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-warning"
+    },
+    {
+      "color": "error",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-error"
+    },
+    {
+      "color": "primary",
+      "highlight": true,
+      "class": "ring ring-inset ring-primary"
+    },
+    {
+      "color": "secondary",
+      "highlight": true,
+      "class": "ring ring-inset ring-secondary"
+    },
+    {
+      "color": "success",
+      "highlight": true,
+      "class": "ring ring-inset ring-success"
+    },
+    {
+      "color": "info",
+      "highlight": true,
+      "class": "ring ring-inset ring-info"
+    },
+    {
+      "color": "warning",
+      "highlight": true,
+      "class": "ring ring-inset ring-warning"
+    },
+    {
+      "color": "error",
+      "highlight": true,
+      "class": "ring ring-inset ring-error"
+    },
+    {
+      "color": "neutral",
+      "variant": [
+        "outline",
+        "subtle"
+      ],
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-inverted"
+    },
+    {
+      "color": "neutral",
+      "highlight": true,
+      "class": "ring ring-inset ring-inverted"
+    },
+    {
+      "leading": true,
+      "size": "xs",
+      "class": "ps-7"
+    },
+    {
+      "leading": true,
+      "size": "sm",
+      "class": "ps-8"
+    },
+    {
+      "leading": true,
+      "size": "md",
+      "class": "ps-9"
+    },
+    {
+      "leading": true,
+      "size": "lg",
+      "class": "ps-10"
+    },
+    {
+      "leading": true,
+      "size": "xl",
+      "class": "ps-11"
+    },
+    {
+      "trailing": true,
+      "size": "xs",
+      "class": "pe-7"
+    },
+    {
+      "trailing": true,
+      "size": "sm",
+      "class": "pe-8"
+    },
+    {
+      "trailing": true,
+      "size": "md",
+      "class": "pe-9"
+    },
+    {
+      "trailing": true,
+      "size": "lg",
+      "class": "pe-10"
+    },
+    {
+      "trailing": true,
+      "size": "xl",
+      "class": "pe-11"
+    },
+    {
+      "loading": true,
+      "leading": true,
+      "class": {
+        "leadingIcon": "animate-spin"
+      }
+    },
+    {
+      "loading": true,
+      "leading": false,
+      "trailing": true,
+      "class": {
+        "trailingIcon": "animate-spin"
+      }
+    }
+  ],
+  "defaultVariants": {
+    "size": "md",
+    "color": "primary",
+    "variant": "outline"
+  }
+};
+const _sfc_main$3 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
+  __name: "UInput",
+  __ssrInlineRender: true,
+  props: {
+    as: { type: null, required: false },
+    id: { type: String, required: false },
+    name: { type: String, required: false },
+    type: { type: null, required: false, default: "text" },
+    placeholder: { type: String, required: false },
+    color: { type: null, required: false },
+    variant: { type: null, required: false },
+    size: { type: null, required: false },
+    required: { type: Boolean, required: false },
+    autocomplete: { type: null, required: false, default: "off" },
+    autofocus: { type: Boolean, required: false },
+    autofocusDelay: { type: Number, required: false, default: 0 },
+    disabled: { type: Boolean, required: false },
+    highlight: { type: Boolean, required: false },
+    modelValue: { type: null, required: false },
+    defaultValue: { type: null, required: false },
+    modelModifiers: { type: Object, required: false },
+    class: { type: null, required: false },
+    ui: { type: null, required: false },
+    icon: { type: null, required: false },
+    avatar: { type: Object, required: false },
+    leading: { type: Boolean, required: false },
+    leadingIcon: { type: null, required: false },
+    trailing: { type: Boolean, required: false },
+    trailingIcon: { type: null, required: false },
+    loading: { type: Boolean, required: false },
+    loadingIcon: { type: null, required: false }
+  },
+  emits: ["update:modelValue", "blur", "change"],
+  setup(__props, { expose: __expose, emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const slots = useSlots();
+    const modelValue = useVModel(props, "modelValue", emits, { defaultValue: props.defaultValue });
+    const appConfig = useAppConfig();
+    const { emitFormBlur, emitFormInput, emitFormChange, size: formGroupSize, color, id, name, highlight, disabled, emitFormFocus, ariaAttrs } = useFormField(props, { deferInputValidation: true });
+    const { orientation, size: fieldGroupSize } = useFieldGroup(props);
+    const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
+    const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
+    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig.ui?.input || {} })({
+      type: props.type,
+      color: color.value,
+      variant: props.variant,
+      size: inputSize?.value,
+      loading: props.loading,
+      highlight: highlight.value,
+      leading: isLeading.value || !!props.avatar || !!slots.leading,
+      trailing: isTrailing.value || !!slots.trailing,
+      fieldGroup: orientation.value
+    }));
+    const inputRef = useTemplateRef("inputRef");
+    function updateInput(value) {
+      if (props.modelModifiers?.trim) {
+        value = value?.trim() ?? null;
+      }
+      if (props.modelModifiers?.number || props.type === "number") {
+        value = looseToNumber(value);
+      }
+      if (props.modelModifiers?.nullable) {
+        value ||= null;
+      }
+      if (props.modelModifiers?.optional) {
+        value ||= void 0;
+      }
+      modelValue.value = value;
+      emitFormInput();
+    }
+    function onInput(event) {
+      if (!props.modelModifiers?.lazy) {
+        updateInput(event.target.value);
+      }
+    }
+    function onChange(event) {
+      const value = event.target.value;
+      if (props.modelModifiers?.lazy) {
+        updateInput(value);
+      }
+      if (props.modelModifiers?.trim) {
+        event.target.value = value.trim();
+      }
+      emitFormChange();
+      emits("change", event);
+    }
+    function onBlur(event) {
+      emitFormBlur();
+      emits("blur", event);
+    }
+    __expose({
+      inputRef
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(ssrRenderComponent(unref(Primitive), mergeProps({
+        as: __props.as,
+        "data-slot": "root",
+        class: ui.value.root({ class: [props.ui?.root, props.class] })
+      }, _attrs), {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<input${ssrRenderAttrs(mergeProps({
+              id: unref(id),
+              ref_key: "inputRef",
+              ref: inputRef,
+              type: __props.type,
+              value: unref(modelValue),
+              name: unref(name),
+              placeholder: __props.placeholder,
+              "data-slot": "base",
+              class: ui.value.base({ class: props.ui?.base }),
+              disabled: unref(disabled),
+              required: __props.required,
+              autocomplete: __props.autocomplete
+            }, { ..._ctx.$attrs, ...unref(ariaAttrs) }))}${_scopeId}>`);
+            ssrRenderSlot(_ctx.$slots, "default", { ui: ui.value }, null, _push2, _parent2, _scopeId);
+            if (unref(isLeading) || !!__props.avatar || !!slots.leading) {
+              _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
+              ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
+                if (unref(isLeading) && unref(leadingIconName)) {
+                  _push2(ssrRenderComponent(_sfc_main$m, {
+                    name: unref(leadingIconName),
+                    "data-slot": "leadingIcon",
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                  }, null, _parent2, _scopeId));
+                } else if (!!__props.avatar) {
+                  _push2(ssrRenderComponent(_sfc_main$k, mergeProps({
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
+                  }, __props.avatar, {
+                    "data-slot": "leadingAvatar",
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
+                  }), null, _parent2, _scopeId));
+                } else {
+                  _push2(`<!---->`);
+                }
+              }, _push2, _parent2, _scopeId);
+              _push2(`</span>`);
+            } else {
+              _push2(`<!---->`);
+            }
+            if (unref(isTrailing) || !!slots.trailing) {
+              _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
+              ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
+                if (unref(trailingIconName)) {
+                  _push2(ssrRenderComponent(_sfc_main$m, {
+                    name: unref(trailingIconName),
+                    "data-slot": "trailingIcon",
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
+                  }, null, _parent2, _scopeId));
+                } else {
+                  _push2(`<!---->`);
+                }
+              }, _push2, _parent2, _scopeId);
+              _push2(`</span>`);
+            } else {
+              _push2(`<!---->`);
+            }
+          } else {
+            return [
+              createVNode("input", mergeProps({
+                id: unref(id),
+                ref_key: "inputRef",
+                ref: inputRef,
+                type: __props.type,
+                value: unref(modelValue),
+                name: unref(name),
+                placeholder: __props.placeholder,
+                "data-slot": "base",
+                class: ui.value.base({ class: props.ui?.base }),
+                disabled: unref(disabled),
+                required: __props.required,
+                autocomplete: __props.autocomplete
+              }, { ..._ctx.$attrs, ...unref(ariaAttrs) }, {
+                onInput,
+                onBlur,
+                onChange,
+                onFocus: unref(emitFormFocus)
+              }), null, 16, ["id", "type", "value", "name", "placeholder", "disabled", "required", "autocomplete", "onFocus"]),
+              renderSlot(_ctx.$slots, "default", { ui: ui.value }),
+              unref(isLeading) || !!__props.avatar || !!slots.leading ? (openBlock(), createBlock("span", {
+                key: 0,
+                "data-slot": "leading",
+                class: ui.value.leading({ class: props.ui?.leading })
+              }, [
+                renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
+                    key: 0,
+                    name: unref(leadingIconName),
+                    "data-slot": "leadingIcon",
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$k, mergeProps({
+                    key: 1,
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
+                  }, __props.avatar, {
+                    "data-slot": "leadingAvatar",
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
+                  }), null, 16, ["size", "class"])) : createCommentVNode("", true)
+                ])
+              ], 2)) : createCommentVNode("", true),
+              unref(isTrailing) || !!slots.trailing ? (openBlock(), createBlock("span", {
+                key: 1,
+                "data-slot": "trailing",
+                class: ui.value.trailing({ class: props.ui?.trailing })
+              }, [
+                renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$m, {
+                    key: 0,
+                    name: unref(trailingIconName),
+                    "data-slot": "trailingIcon",
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
+                  }, null, 8, ["name", "class"])) : createCommentVNode("", true)
+                ])
+              ], 2)) : createCommentVNode("", true)
+            ];
+          }
+        }),
+        _: 3
+      }, _parent));
+    };
+  }
+});
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/all.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Input.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_3 = Object.assign(_sfc_main$3, { __name: "PreviewAll" });
 const theme = {
   "slots": {
     "root": "relative inline-flex items-center",
@@ -954,7 +1444,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UModal = _sfc_main$9;
       const _component_UButton = _sfc_main$h;
-      const _component_UInput = _sfc_main$6;
+      const _component_UInput = _sfc_main$3;
       const _component_UTextarea = _sfc_main$2;
       _push(ssrRenderComponent(_component_UModal, mergeProps({
         title: "Оставить отзыв",
@@ -1114,7 +1604,7 @@ const __nuxt_component_4 = Object.assign(_sfc_main$1, { __name: "PreviewAdd" });
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$b;
-  const _component_SectionTitle = __nuxt_component_0;
+  const _component_SectionTitle = __nuxt_component_1;
   const _component_PreviewViewer = __nuxt_component_2;
   const _component_PreviewAll = __nuxt_component_3;
   const _component_PreviewAdd = __nuxt_component_4;
@@ -1155,4 +1645,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-CXYNdVEE.mjs.map
+//# sourceMappingURL=reviews-Bba6k5ia.mjs.map

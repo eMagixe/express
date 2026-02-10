@@ -1,4 +1,4 @@
-import { B as __nuxt_component_0$1, _ as _sfc_main$m } from './index-CZG5DDzR.mjs';
+import { j as __nuxt_component_0, _ as _sfc_main$m } from './index-dROiNWu7.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
@@ -16,7 +16,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-DectbQ06.mjs';
+import './index-Cxpc46zU.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -33,7 +33,7 @@ import 'vaul-vue';
 
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_Logo = __nuxt_component_0$1;
+  const _component_Logo = __nuxt_component_0;
   const _component_UIcon = _sfc_main$m;
   _push(`<footer${ssrRenderAttrs(mergeProps({ class: "flex flex-col w-full justify-end gap-5 sm:gap-2 pt-5" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_Logo, { class: "h-14" }, null, _parent));
@@ -58,4 +58,4 @@ _sfc_main.setup = (props, ctx) => {
 const footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionFooter" });
 
 export { footer as default };
-//# sourceMappingURL=footer-ByrskZ6v.mjs.map
+//# sourceMappingURL=footer-D63gcPF8.mjs.map

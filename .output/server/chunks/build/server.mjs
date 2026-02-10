@@ -401,7 +401,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CZG5DDzR.mjs').then((n) => n.C)
+    component: () => import('./index-dROiNWu7.mjs').then((n) => n.k)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -766,7 +766,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-DectbQ06.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-Cxpc46zU.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
