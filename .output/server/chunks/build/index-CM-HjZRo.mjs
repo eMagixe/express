@@ -6101,7 +6101,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
         }, null, _parent2, _scopeId));
         _push2(` САЛАВАТ </div></div><div class="font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </div>`);
         _push2(ssrRenderComponent(_component_NuxtLink, {
-          class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
+          class: "lg:hidden button-gradient w-80 h-20 mx-auto my-10 uppercase flex items-center justify-center gap-3",
           icon: "i-lucide-phone-call",
           to: "tel:+79177666833"
         }, {
@@ -6170,7 +6170,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
           ]),
           createVNode("div", { class: "font-medium text-[32px] lg:text-[64px] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode(_component_NuxtLink, {
-            class: "sm:hidden button-gradient h-20 mx-5 uppercase flex items-center justify-center gap-3",
+            class: "lg:hidden button-gradient w-80 h-20 mx-auto my-10 uppercase flex items-center justify-center gap-3",
             icon: "i-lucide-phone-call",
             to: "tel:+79177666833"
           }, {
@@ -6341,9 +6341,9 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_3 = Object.assign(_sfc_main$1, { __name: "SectionAdvantages" });
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BkuOzmBA.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-DUeFwzVc.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-WnnbYsDF.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-C-Q4l3No.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./order-B2zzRCpn.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./footer-BmmxOwDa.mjs').then((c) => c.default || c));
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UApp = __nuxt_component_0$2;
@@ -6389,4 +6389,4 @@ const index$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { getDisplayValue as A, __nuxt_component_0$1 as B, index$1 as C, _sfc_main$m as _, _sfc_main$8 as a, _sfc_main$h as b, useComponentIcons as c, _sfc_main$k as d, useToast as e, _sfc_main$9 as f, _sfc_main$b as g, __nuxt_component_0 as h, formBusInjectionKey as i, formStateInjectionKey as j, formErrorsInjectionKey as k, looseToNumber as l, formInputsInjectionKey as m, formLoadingInjectionKey as n, formOptionsInjectionKey as o, inputIdInjectionKey as p, formFieldInjectionKey as q, get as r, useLocale as s, tv as t, useFormField as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$l as z };
-//# sourceMappingURL=index-DQtM_t6s.mjs.map
+//# sourceMappingURL=index-CM-HjZRo.mjs.map
