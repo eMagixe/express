@@ -2,7 +2,7 @@
 
 <template>
 	<div class="welcome-section w-full pt-10 mx-auto">
-		<UContainer class="h-[calc(100vh-100px)] flex flex-col justify-start gap-20">
+		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-20">
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
 				<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
 					КУМЕРТАУ
