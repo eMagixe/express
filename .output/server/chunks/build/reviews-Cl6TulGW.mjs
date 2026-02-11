@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-xFanQrI0.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-B9U4Zacb.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, createCommentVNode, watch, nextTick, useSSRContext } from 'vue';
@@ -1482,8 +1482,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               modelValue: unref(review).text,
               "onUpdate:modelValue": ($event) => unref(review).text = $event,
               placeholder: "Текст",
-              maxlength: "30",
-              rows: 3,
+              maxlength: "90",
+              rows: 5,
               ui: {
                 root: "w-full",
                 base: "p-3 text-white bg-gray-600 rounded-[26px] min-w-full"
@@ -1537,8 +1537,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 modelValue: unref(review).text,
                 "onUpdate:modelValue": ($event) => unref(review).text = $event,
                 placeholder: "Текст",
-                maxlength: "30",
-                rows: 3,
+                maxlength: "90",
+                rows: 5,
                 ui: {
                   root: "w-full",
                   base: "p-3 text-white bg-gray-600 rounded-[26px] min-w-full"
@@ -1646,4 +1646,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-Bp_AUn4h.mjs.map
+//# sourceMappingURL=reviews-Cl6TulGW.mjs.map

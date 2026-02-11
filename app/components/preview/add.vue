@@ -75,8 +75,8 @@ const addReview = async () => {
 			<UTextarea
 				v-model="review.text"
 				placeholder="Текст"
-				maxlength="30"
-				:rows="3"
+				maxlength="90"
+				:rows="5"
 				:ui="{
 					root: 'w-full',
 					base: 'p-3 text-white bg-gray-600 rounded-[26px] min-w-full'

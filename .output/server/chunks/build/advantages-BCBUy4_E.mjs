@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9 } from './index-xFanQrI0.mjs';
+import { _ as _sfc_main$9 } from './index-B9U4Zacb.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -158,4 +158,4 @@ _sfc_main.setup = (props, ctx) => {
 const advantages = Object.assign(_sfc_main, { __name: "SectionAdvantages" });
 
 export { advantages as default };
-//# sourceMappingURL=advantages-BRrUKVU9.mjs.map
+//# sourceMappingURL=advantages-BCBUy4_E.mjs.map
