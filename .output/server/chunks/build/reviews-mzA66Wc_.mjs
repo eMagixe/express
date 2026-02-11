@@ -1,11 +1,11 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-Ck_xv-Mu.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-pXBgG6Q0.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, createCommentVNode, watch, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { Primitive } from 'reka-ui';
-import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
+import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs';
 import { useVModel } from '@vueuse/core';
 import 'tailwind-variants';
 import './nuxt-link-Ck9lQj5E.mjs';
@@ -1422,6 +1422,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     });
     const toast = useToast();
     const modalAddReviewOpen = ref(false);
+    const route = useRoute();
+    if (route.query.review === "open") {
+      modalAddReviewOpen.value = true;
+    }
     const addReview = async () => {
       if (review.value.name && review.value.text && review.value.rating) {
         await $fetch("/api/review/add", {
@@ -1646,4 +1650,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-DV1wGOIA.mjs.map
+//# sourceMappingURL=reviews-mzA66Wc_.mjs.map

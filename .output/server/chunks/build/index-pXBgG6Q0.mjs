@@ -1,4 +1,4 @@
-import { defineComponent, withCtx, createVNode, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, defineAsyncComponent, h, ref, Fragment, renderList, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
+import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, h, ref, Fragment, renderList, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
@@ -6163,11 +6163,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-obVTJvqj.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/reviews.vue", () => import('./reviews-DV1wGOIA.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-9_09MqOV.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-DuoN7PF_.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-CoS4Ps40.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-Bdj3paFg.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-mzA66Wc_.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-BZ58dW0Q.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-C-JeMMzM.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-byr1T9hD.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6184,7 +6184,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_SectionHeader = __nuxt_component_1;
       const _component_SectionWelcome = __nuxt_component_2;
       const _component_LazyVisibleSectionAdvantages = __nuxt_component_3_lazy_visible;
-      const _component_LazyVisibleSectionReviews = __nuxt_component_4_lazy_visible;
+      const _component_LazySectionReviews = __nuxt_component_4_lazy;
       const _component_LazyVisibleSectionQuestions = __nuxt_component_5_lazy_visible;
       const _component_LazyVisibleSectionOrder = __nuxt_component_6_lazy_visible;
       const _component_LazyVisibleSectionFooter = __nuxt_component_7_lazy_visible;
@@ -6194,7 +6194,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(_component_SectionHeader, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_SectionWelcome, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazyVisibleSectionAdvantages, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_LazyVisibleSectionReviews, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionReviews, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazyVisibleSectionQuestions, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazyVisibleSectionOrder, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazyVisibleSectionFooter, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
@@ -6203,7 +6203,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               createVNode(_component_SectionHeader),
               createVNode(_component_SectionWelcome),
               createVNode(_component_LazyVisibleSectionAdvantages, { "hydrate-on-visible": "" }),
-              createVNode(_component_LazyVisibleSectionReviews, { "hydrate-on-visible": "" }),
+              createVNode(_component_LazySectionReviews),
               createVNode(_component_LazyVisibleSectionQuestions, { "hydrate-on-visible": "" }),
               createVNode(_component_LazyVisibleSectionOrder, { "hydrate-on-visible": "" }),
               createVNode(_component_LazyVisibleSectionFooter, { "hydrate-on-visible": "" })
@@ -6227,4 +6227,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$9 as _, _sfc_main$k as a, _sfc_main$6 as b, _sfc_main$f as c, useFieldGroup as d, useComponentIcons as e, _sfc_main$i as f, useToast as g, _sfc_main$7 as h, get as i, __nuxt_component_0 as j, index as k, looseToNumber as l, tv as t, useFormField as u };
-//# sourceMappingURL=index-Ck_xv-Mu.mjs.map
+//# sourceMappingURL=index-pXBgG6Q0.mjs.map

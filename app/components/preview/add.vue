@@ -11,6 +11,12 @@ const review = ref<Review>({
 const toast = useToast()
 const modalAddReviewOpen = ref(false)
 
+const route = useRoute()
+
+if (route.query.review === 'open') {
+	modalAddReviewOpen.value = true
+}
+
 const addReview = async () => {
 	if (review.value.name && review.value.text && review.value.rating) {
 		await $fetch('/api/review/add', {
