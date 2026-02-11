@@ -38,6 +38,11 @@ export default defineAppConfig({
 			slots: {
 				error: 'text-red-200 pl-4 text-sm'
 			}
+		},
+		accordion: {
+			slots: {
+				item: 'border-b border-b-gray-400 text-gray-700'
+			}
 		}
 	}
 })
