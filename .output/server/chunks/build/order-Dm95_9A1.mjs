@@ -1,0 +1,40 @@
+import { h as $e, f as Ka } from './index-UQlHrZvW.mjs';
+import { a as he } from './index-NPZ-ilWx.mjs';
+import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
+import { DateFormatter, Time, CalendarDate } from '@internationalized/date';
+import * as e from 'valibot';
+import { minLength } from 'valibot';
+import { _ as fo } from './server.mjs';
+import 'reka-ui';
+import '@vueuse/core';
+import '../nitro/nitro.mjs';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:path';
+import 'node:crypto';
+import 'node:url';
+import '@iconify/utils';
+import 'consola';
+import 'tailwind-variants';
+import './nuxt-link-xfm6sc6S.mjs';
+import 'vaul-vue';
+import 'vue-router';
+import 'tailwindcss/colors';
+import '@iconify/vue';
+import '../routes/renderer.mjs';
+import 'vue-bundle-renderer/runtime';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/plugins';
+import 'unhead/utils';
+import '@iconify/utils/lib/css/icon';
+import 'perfect-debounce';
+
+const u=defineComponent({__name:"create",__ssrInlineRender:true,setup(s){new DateFormatter("ru-RU",{dateStyle:"medium"}),ref(false);const[t,o,p]=new Date(Date.now()).toLocaleDateString("ru-RU").split("."),a=new Time(16,30,0),m=new CalendarDate(Number(p),Number(o),Number(t));Ka();const i=reactive({name:"",phone:"",from:"Кумертау",from_address:"",to:"Уфа",to_address:"",date:shallowRef(m),time:shallowRef(a)});ref(false),e.object({name:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения")),phone:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения"),minLength(18,"Неверный формат номера телефона")),to:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения")),from:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения")),to_address:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения")),from_address:e.pipe(e.string(),e.nonEmpty("Обязательное поле для заполнения")),date:e.pipe(e.any(),e.nonEmpty("Обязательное поле для заполнения")),time:e.pipe(e.any(),e.nonEmpty("Обязательное поле для заполнения"))});const n=ref(["Кумертау","Мелеуз","Салават","Уфа"]);return computed(()=>n.value),watch(()=>i.from,r=>{r==="Уфа"&&(i.to="");}),computed(()=>i.from==="Уфа"?n.value.filter(r=>r!=="Уфа"):n.value.filter(r=>r==="Уфа")),(r,c,w,b)=>{c(ssrRenderComponent(he,b,{},w));}}}),x=u.setup;u.setup=(s,t)=>{const o=useSSRContext();return (o.modules||(o.modules=new Set)).add("components/order/create.vue"),x?x(s,t):void 0};const F=Object.assign(u,{__name:"OrderCreate"}),f={};function I(s,t,o,p){const a=$e,m=F;t(`<div${ssrRenderAttrs(mergeProps({class:"section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]"},p))}>`),t(ssrRenderComponent(a,{class:"flex flex-col justify-center items-center gap-5"},{default:withCtx((i,n,r,c)=>{if(n)n(ssrRenderComponent(m,null,null,r,c));else return [createVNode(m)]}),_:1},o)),t("</div>");}const g=f.setup;f.setup=(s,t)=>{const o=useSSRContext();return (o.modules||(o.modules=new Set)).add("components/section/order.vue"),g?g(s,t):void 0};const fe=Object.assign(fo(f,[["ssrRender",I]]),{__name:"SectionOrder"});
+
+export { fe as default };
+//# sourceMappingURL=order-Dm95_9A1.mjs.map

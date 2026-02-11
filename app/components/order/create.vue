@@ -202,10 +202,10 @@ const onSubmit = async () => {
 				</div>
 			</div>
 			<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
-				<UButton type="submit" class="button-gradient uppercase h-16" icon="i-lucide-send" :disabled="!check">
+				<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!check">
 					Отправить
 				</UButton>
-				<UButton class="button-gradient uppercase h-16" @click="reset"> Очистить </UButton>
+				<UButton class="button-gradient h-16" @click="reset">Очистить</UButton>
 			</div>
 		</UForm>
 		<div v-else>

@@ -33,7 +33,7 @@ await fetchAllReviews()
 			content: 'min-h-[400px] bg-gray-600 border-gray-600'
 		}"
 	>
-		<UButton class="button-gradient uppercase" icon="i-lucide-ellipsis"> все отзывы </UButton>
+		<UButton class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
 		<template #content>
 			<div class="modal-reviews">
 				<UMarquee class="m-10" :overlay="false">

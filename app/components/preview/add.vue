@@ -48,7 +48,7 @@ const addReview = async () => {
 			title: 'text-gray-200'
 		}"
 	>
-		<UButton class="button-gradient uppercase" icon="i-lucide-plus"> оставить отзыв </UButton>
+		<UButton class="button-gradient" icon="i-lucide-plus">Оставить отзыв</UButton>
 		<template #body>
 			<UInput
 				v-model="review.name"

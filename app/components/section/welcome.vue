@@ -32,7 +32,7 @@
 				Круглосуточные перевозки
 			</div>
 			<NuxtLink
-				class="lg:hidden button-gradient w-80 h-20 mx-auto my-10 uppercase flex items-center justify-center gap-3"
+				class="lg:hidden button-gradient w-80 h-20 mx-auto my-10 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				to="tel:+79177666833"
 			>
