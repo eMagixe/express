@@ -6163,11 +6163,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-BCBUy4_E.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/reviews.vue", () => import('./reviews-Cl6TulGW.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-DxQBS-U9.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-BOF2Gefl.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-DCsWkA-y.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-obVTJvqj.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy_visible = createLazyVisibleComponent("components/section/reviews.vue", () => import('./reviews-DV1wGOIA.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-9_09MqOV.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-DuoN7PF_.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-CoS4Ps40.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6227,4 +6227,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$9 as _, _sfc_main$k as a, _sfc_main$6 as b, _sfc_main$f as c, useFieldGroup as d, useComponentIcons as e, _sfc_main$i as f, useToast as g, _sfc_main$7 as h, get as i, __nuxt_component_0 as j, index as k, looseToNumber as l, tv as t, useFormField as u };
-//# sourceMappingURL=index-B9U4Zacb.mjs.map
+//# sourceMappingURL=index-Ck_xv-Mu.mjs.map
