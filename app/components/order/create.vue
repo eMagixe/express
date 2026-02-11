@@ -210,7 +210,7 @@ const onSubmit = async () => {
 		</UForm>
 		<div v-else>
 			<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
-				<h3 class="text-2xl font-bold text-center">Заявка была принята.</h3>
+				<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
 				<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
 				<p>
 					Имя: <b>{{ data.name }}</b>
