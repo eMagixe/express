@@ -83,9 +83,7 @@ const addReview = async () => {
 				}"
 			/>
 			<div class="w-full flex justify-center items-center">
-				<UButton @click="addReview" class="button-gradient uppercase" icon="i-lucide-plus">
-					оставить отзыв
-				</UButton>
+				<UButton @click="addReview" class="button-gradient" icon="i-lucide-plus"> Оставить отзыв </UButton>
 			</div>
 		</template>
 	</UModal>
