@@ -8,7 +8,7 @@ const fetchReviews = async () => {
 		method: 'GET'
 	}).then((data: any) => {
 		if (data) {
-			reviewsViews.value = data.slice(0, 3).map((review: any) => {
+			reviewsViews.value = data.slice(data.length - 3, data.length).map((review: any) => {
 				return {
 					name: review.name,
 					text: review.text,
