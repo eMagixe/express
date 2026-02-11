@@ -2,7 +2,7 @@
 
 <template>
 	<div class="welcome-section w-full pt-10 mx-auto">
-		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-20">
+		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10">
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
 				<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
 					КУМЕРТАУ
@@ -26,13 +26,13 @@
 					САЛАВАТ
 				</div>
 			</div>
-			<div
+			<h1
 				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
 				Круглосуточные перевозки
-			</div>
+			</h1>
 			<NuxtLink
-				class="lg:hidden button-gradient w-80 h-20 mx-auto my-10 flex items-center justify-center gap-3"
+				class="lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				to="tel:+79177666833"
 			>
@@ -40,9 +40,9 @@
 				Вызвать
 			</NuxtLink>
 			<div
-				class="font-thin text-[clamp(1rem,3vw,2rem)] text-white text-center lg:text-left underline decoration-1 underline-offset-5"
+				class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"
 			>
-				быстро и с комфортом
+				Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи
 			</div>
 		</UContainer>
 	</div>

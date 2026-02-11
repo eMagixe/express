@@ -1,4 +1,4 @@
-import { i as yl, a as ae } from './index-Cl72qAB1.mjs';
+import { i as yl, a as ae } from './index-DTL7ndVt.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as fo } from './server.mjs';
@@ -34,4 +34,4 @@ import 'vaul-vue';
 const r={};function u(i,o,t,s){const p=yl,m=ae;o(`<footer${ssrRenderAttrs(mergeProps({class:"flex flex-col w-full justify-end gap-5 sm:gap-2 pt-5"},s))}>`),o(ssrRenderComponent(p,{class:"h-14"},null,t)),o('<div class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"><a href="tel:+7 (917) 766-68-33">'),o(ssrRenderComponent(m,{name:"i-lucide-phone",size:"18"},null,t)),o(' +7 (917) 766-68-33 </a><a href="tel:+7 (927) 324-25-82">'),o(ssrRenderComponent(m,{name:"i-lucide-phone",size:"18"},null,t)),o(" +7 (927) 324-25-82 </a></div></footer>");}const n=r.setup;r.setup=(i,o)=>{const t=useSSRContext();return (t.modules||(t.modules=new Set)).add("components/section/footer.vue"),n?n(i,o):void 0};const H=Object.assign(fo(r,[["ssrRender",u]]),{__name:"SectionFooter"});
 
 export { H as default };
-//# sourceMappingURL=footer-SI3OzImL.mjs.map
+//# sourceMappingURL=footer-D5fGo_K5.mjs.map
