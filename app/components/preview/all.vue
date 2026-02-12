@@ -36,7 +36,7 @@ await fetchAllReviews()
 		<UButton class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
 		<template #content>
 			<div class="modal-reviews">
-				<UMarquee class="m-10" :overlay="false">
+				<UMarquee class="m-10" :overlay="false" :pauseOnHover="true">
 					<template v-for="(item, index) in reviews as Review[]" :key="index">
 						<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]">
 							<div class="flex w-full flex-row justify-between items-start gap-2">

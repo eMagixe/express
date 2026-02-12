@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-BPTqupWI.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, b as _sfc_main$6$1, c as _sfc_main$f, g as useToast, h as _sfc_main$7, t as tv, u as useFormField, d as useFieldGroup, e as useComponentIcons, f as _sfc_main$i, l as looseToNumber } from './index-DOCoREXl.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, computed, renderSlot, useSlots, useTemplateRef, createCommentVNode, watch, nextTick, useSSRContext } from 'vue';
@@ -251,7 +251,8 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
             _push2(`<div class="modal-reviews"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UMarquee, {
               class: "m-10",
-              overlay: false
+              overlay: false,
+              pauseOnHover: true
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
@@ -317,7 +318,8 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               createVNode("div", { class: "modal-reviews" }, [
                 createVNode(_component_UMarquee, {
                   class: "m-10",
-                  overlay: false
+                  overlay: false,
+                  pauseOnHover: true
                 }, {
                   default: withCtx(() => [
                     (openBlock(true), createBlock(Fragment, null, renderList(unref(reviews2), (item, index) => {
@@ -1650,4 +1652,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-BmszEX8H.mjs.map
+//# sourceMappingURL=reviews-nJ29_ExO.mjs.map
