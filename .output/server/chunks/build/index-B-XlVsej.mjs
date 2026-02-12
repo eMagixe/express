@@ -5999,7 +5999,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
+        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
         _push2(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
@@ -6009,7 +6009,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` КУМЕРТАУ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
+        _push2(` КУМЕРТАУ </h1><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
         _push2(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
@@ -6029,7 +6029,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           name: "i-lucide-arrow-right",
           class: "h-6 w-6"
         }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><h1 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </h1>`);
+        _push2(` САЛАВАТ </div></div><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </h2>`);
         _push2(ssrRenderComponent(_component_NuxtLink, {
           class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
           icon: "i-lucide-phone-call",
@@ -6058,7 +6058,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
-            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
+            createVNode("h1", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
               createTextVNode(" КУМЕРТАУ "),
               createVNode(_component_UIcon, {
                 name: "i-lucide-arrow-right",
@@ -6098,7 +6098,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
               createTextVNode(" САЛАВАТ ")
             ])
           ]),
-          createVNode("h1", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
+          createVNode("h2", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode(_component_NuxtLink, {
             class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
             icon: "i-lucide-phone-call",
@@ -6163,11 +6163,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-D5yWwgJU.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CM2TNsit.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-NHH7NDO-.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-Bxkz1zzB.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-Bjk3aYl8.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-MRvg5N_t.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BMb0rB5g.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-DSCE7wG9.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-t2pb5evR.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-ejrlOfRB.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6227,4 +6227,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$9 as _, _sfc_main$k as a, _sfc_main$f as b, _sfc_main$6 as c, useFormField as d, useFieldGroup as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, __nuxt_component_0 as k, looseToNumber as l, index as m, tv as t, useLocale as u };
-//# sourceMappingURL=index-Dl49qD1C.mjs.map
+//# sourceMappingURL=index-B-XlVsej.mjs.map

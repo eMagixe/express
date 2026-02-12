@@ -4,13 +4,13 @@
 	<div class="welcome-section w-full pt-10 mx-auto">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10">
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
-				<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
+				<h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
 					КУМЕРТАУ
 					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					УФА
 					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
 					КУМЕРТАУ
-				</div>
+				</h1>
 				<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
 					МЕЛЕУЗ
 					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
@@ -26,11 +26,11 @@
 					САЛАВАТ
 				</div>
 			</div>
-			<h1
+			<h2
 				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
 				Круглосуточные перевозки
-			</h1>
+			</h2>
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
