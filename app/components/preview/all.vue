@@ -36,36 +36,41 @@ await fetchAllReviews()
 		<UButton class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
 		<template #content>
 			<div class="modal-reviews">
-				<UMarquee class="m-10" :overlay="false" :pauseOnHover="true">
-					<template v-for="(item, index) in reviews as Review[]" :key="index">
-						<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]">
-							<div class="flex w-full flex-row justify-between items-start gap-2">
-								<div
-									class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"
-								>
-									<div class="uppercase text-[14px] not-lg:text-[30px]">
-										<UIcon name="i-lucide-circle-user-round" />
-										{{ item.name }}
-									</div>
-									<div class="flex flex-row justify-start items-start gap-1 mb-5">
-										<img
-											height="20"
-											width="20"
-											v-for="n in item.rating"
-											src="/images/svg/star.svg"
-											:alt="`star +${n}`"
-										/>
-									</div>
+				<UCarousel
+					v-slot="{ item }"
+					loop
+					:autoplay="{ delay: 2200 }"
+					:items="reviews"
+					:ui="{ item: 'basis-1/3' }"
+					class="m-10"
+				>
+					<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]">
+						<div class="flex w-full flex-row justify-between items-start gap-2">
+							<div
+								class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"
+							>
+								<div class="uppercase text-[14px] not-lg:text-[30px]">
+									<UIcon name="i-lucide-circle-user-round" />
+									{{ item.name }}
 								</div>
-								<div class="flex flex-row justify-center items-center gap-1 text-gray-600">
-									<UIcon name="i-lucide-calendar" size="14" />
-									<p>{{ item.date }}</p>
+								<div class="flex flex-row justify-start items-start gap-1 mb-5">
+									<img
+										height="20"
+										width="20"
+										v-for="n in item.rating"
+										src="/images/svg/star.svg"
+										:alt="`star +${n}`"
+									/>
 								</div>
 							</div>
-							<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>
+							<div class="flex flex-row justify-center items-center gap-1 text-gray-600">
+								<UIcon name="i-lucide-calendar" size="14" />
+								<p>{{ item.date }}</p>
+							</div>
 						</div>
-					</template>
-				</UMarquee>
+						<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>
+					</div>
+				</UCarousel>
 			</div>
 		</template>
 	</UDrawer>
