@@ -6163,11 +6163,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-Dwe4cw3y.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-gIZb2UJC.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-Cl_rSzXS.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-C0dK55gL.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-v1pK1o5d.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-D5yWwgJU.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CM2TNsit.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-NHH7NDO-.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy_visible = createLazyVisibleComponent("components/section/order.vue", () => import('./order-Bxkz1zzB.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-Bjk3aYl8.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6227,4 +6227,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { _sfc_main$9 as _, _sfc_main$k as a, _sfc_main$f as b, _sfc_main$6 as c, useFormField as d, useFieldGroup as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, __nuxt_component_0 as k, looseToNumber as l, index as m, tv as t, useLocale as u };
-//# sourceMappingURL=index-CfC4A21R.mjs.map
+//# sourceMappingURL=index-Dl49qD1C.mjs.map

@@ -41,13 +41,13 @@ await fetchAllReviews()
 					loop
 					:autoplay="{ delay: 2200 }"
 					:items="reviews"
-					:ui="{ item: 'basis-1/3' }"
+					:ui="{ item: 'not-lg:basis-1/1 md:basis-1/2 lg:basis-1/3' }"
 					class="m-10"
 				>
-					<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]">
+					<div class="item flex flex-col justify-start items-start gap-1">
 						<div class="flex w-full flex-row justify-between items-start gap-2">
 							<div
-								class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"
+								class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600"
 							>
 								<div class="uppercase text-[14px] not-lg:text-[30px]">
 									<UIcon name="i-lucide-circle-user-round" />
@@ -65,7 +65,7 @@ await fetchAllReviews()
 							</div>
 							<div class="flex flex-row justify-center items-center gap-1 text-gray-600">
 								<UIcon name="i-lucide-calendar" size="14" />
-								<p>{{ item.date }}</p>
+								<p class="text-[clamp(.8rem,1vw,1rem)]">{{ item.date }}</p>
 							</div>
 						</div>
 						<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>

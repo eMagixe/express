@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-CfC4A21R.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-Dl49qD1C.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
@@ -485,12 +485,12 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               loop: "",
               autoplay: { delay: 2200 },
               items: unref(reviews2),
-              ui: { item: "basis-1/3" },
+              ui: { item: "not-lg:basis-1/1 md:basis-1/2 lg:basis-1/3" },
               class: "m-10"
             }, {
               default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]"${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId2}><div class="flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600"${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]"${_scopeId2}>`);
+                  _push3(`<div class="item flex flex-col justify-start items-start gap-1"${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2"${_scopeId2}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600"${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]"${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent3, _scopeId2));
                   _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"${_scopeId2}><!--[-->`);
                   ssrRenderList(item.rating, (n) => {
@@ -501,12 +501,12 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                     name: "i-lucide-calendar",
                     size: "14"
                   }, null, _parent3, _scopeId2));
-                  _push3(`<p${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]"${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
+                  _push3(`<p class="text-[clamp(.8rem,1vw,1rem)]"${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]"${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
                 } else {
                   return [
-                    createVNode("div", { class: "item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]" }, [
+                    createVNode("div", { class: "item flex flex-col justify-start items-start gap-1" }, [
                       createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
-                        createVNode("div", { class: "flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
+                        createVNode("div", { class: "flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
                           createVNode("div", { class: "uppercase text-[14px] not-lg:text-[30px]" }, [
                             createVNode(_component_UIcon, { name: "i-lucide-circle-user-round" }),
                             createTextVNode(" " + toDisplayString(item.name), 1)
@@ -527,7 +527,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                             name: "i-lucide-calendar",
                             size: "14"
                           }),
-                          createVNode("p", null, toDisplayString(item.date), 1)
+                          createVNode("p", { class: "text-[clamp(.8rem,1vw,1rem)]" }, toDisplayString(item.date), 1)
                         ])
                       ]),
                       createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
@@ -545,13 +545,13 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                   loop: "",
                   autoplay: { delay: 2200 },
                   items: unref(reviews2),
-                  ui: { item: "basis-1/3" },
+                  ui: { item: "not-lg:basis-1/1 md:basis-1/2 lg:basis-1/3" },
                   class: "m-10"
                 }, {
                   default: withCtx(({ item }) => [
-                    createVNode("div", { class: "item flex flex-col justify-start items-start gap-1 not-lg:w-[90vw] w-[25vw]" }, [
+                    createVNode("div", { class: "item flex flex-col justify-start items-start gap-1" }, [
                       createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [
-                        createVNode("div", { class: "flex flex-row not-lg:flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
+                        createVNode("div", { class: "flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [
                           createVNode("div", { class: "uppercase text-[14px] not-lg:text-[30px]" }, [
                             createVNode(_component_UIcon, { name: "i-lucide-circle-user-round" }),
                             createTextVNode(" " + toDisplayString(item.name), 1)
@@ -572,7 +572,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                             name: "i-lucide-calendar",
                             size: "14"
                           }),
-                          createVNode("p", null, toDisplayString(item.date), 1)
+                          createVNode("p", { class: "text-[clamp(.8rem,1vw,1rem)]" }, toDisplayString(item.date), 1)
                         ])
                       ]),
                       createVNode("div", { class: "text-gray-600 text-[1rem]" }, toDisplayString(item.text), 1)
@@ -1874,4 +1874,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-gIZb2UJC.mjs.map
+//# sourceMappingURL=reviews-CM2TNsit.mjs.map
