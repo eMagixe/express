@@ -16,6 +16,15 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
+			meta: [
+				{
+					name: 'yandex-verification',
+					content: 'a20d3bdc1ac81b9a'
+				}
+			],
+			htmlAttrs: {
+				lang: 'ru'
+			},
 			link: [
 				{
 					rel: 'icon',
