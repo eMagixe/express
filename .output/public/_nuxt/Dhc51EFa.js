@@ -1,0 +1,1 @@
+import{f as e,o as n,c as o,t as c}from"./CYZd9BHT.js";const s={class:"w-full text-[clamp(1.25rem,3vw,3rem)] text-center"},_=e({__name:"title",props:{title:{}},setup(t){return(a,r)=>(n(),o("h2",s,c(t.title),1))}}),l=Object.assign(_,{__name:"SectionTitle"});export{l as _};
