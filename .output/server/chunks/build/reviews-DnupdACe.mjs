@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-B-XlVsej.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-BZR0vHIZ.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
@@ -45,7 +45,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
         method: "GET"
       }).then((data) => {
         if (data) {
-          reviewsViews.value = data.slice(data.length - 3, data.length).map((review) => {
+          reviewsViews.value = data.slice(0, 3).map((review) => {
             return {
               name: review.name,
               text: review.text,
@@ -1874,4 +1874,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-BMb0rB5g.mjs.map
+//# sourceMappingURL=reviews-DnupdACe.mjs.map
