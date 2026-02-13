@@ -9,7 +9,9 @@ await fetchAllReviews()
 
 <template>
 	<template v-for="(item, index) in reviews.slice(0, 3) as Review[]" :key="index">
-		<div class="item flex flex-col justify-start items-start gap-1 w-full">
+		<div
+			class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full"
+		>
 			<div class="flex flex-row justify-between items-start gap-2 w-full">
 				<div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600">
 					<div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">
@@ -38,4 +40,4 @@ await fetchAllReviews()
 	</template>
 </template>
 
-<style scoped></style>
+<style></style>

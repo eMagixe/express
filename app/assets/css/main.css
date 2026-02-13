@@ -169,3 +169,18 @@ header {
         color: white;
     }
 }
+
+.animation-box {
+    opacity: .9;
+    scale: .9;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 700px;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

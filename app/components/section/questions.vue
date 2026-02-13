@@ -31,7 +31,7 @@ const items = ref<AccordionItem[]>([
 	<div class="section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
 			<SectionTitle title="Популярные вопросы" />
-			<div class="w-full flex flex-col justify-start items-center pt-10 gap-10">
+			<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10">
 				<UAccordion :items="items" class="accordion-questions" />
 			</div>
 		</UContainer>
