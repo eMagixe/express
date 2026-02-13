@@ -391,7 +391,10 @@ const matcher = /* @__PURE__ */ (() => {
     if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
     let s = p.split("/");
     s.length - 1;
-    if (s[1] === "img") {
+    if (s[1] === "images") {
+      r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+    }
+    if (s[1] === "js") {
       r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
     }
     return r;

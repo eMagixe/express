@@ -18,13 +18,16 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		routeRules: {
-			// Apply long-lived cache headers to all static images
-			'/img/**': {
+			'/images/**': {
 				headers: {
 					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
 				}
 			},
-			// Apply long-lived cache headers to all generated Nuxt assets (CSS, JS, etc.)
+			'/js/**': {
+				headers: {
+					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
+				}
+			},
 			'/_nuxt/**': {
 				headers: {
 					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
