@@ -22,3 +22,4 @@ _sfc_main.setup = (props, ctx) => {
 const __nuxt_component_1 = Object.assign(_sfc_main, { __name: "SectionTitle" });
 
 export { __nuxt_component_1 as _ };
+//# sourceMappingURL=title-Bvxv237P.mjs.map

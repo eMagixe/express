@@ -545,3 +545,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 
 export { __nuxt_component_0 as _, __nuxt_component_0$1 as a, index as i, useAsyncData as u };
+//# sourceMappingURL=index-jLf-p73s.mjs.map

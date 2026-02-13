@@ -158,3 +158,4 @@ _sfc_main.setup = (props, ctx) => {
 const advantages = Object.assign(_sfc_main, { __name: "SectionAdvantages" });
 
 export { advantages as default };
+//# sourceMappingURL=advantages-B3Y16zzw.mjs.map

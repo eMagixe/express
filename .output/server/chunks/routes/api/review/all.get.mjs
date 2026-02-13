@@ -24,3 +24,4 @@ const all_get = defineEventHandler(async (event) => {
 });
 
 export { all_get as default };
+//# sourceMappingURL=all.get.mjs.map

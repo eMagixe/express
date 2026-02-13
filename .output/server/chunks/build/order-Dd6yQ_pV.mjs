@@ -129,3 +129,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
+//# sourceMappingURL=order-Dd6yQ_pV.mjs.map
