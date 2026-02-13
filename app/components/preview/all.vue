@@ -1,27 +1,13 @@
 <script setup lang="ts">
-import type { Review } from '#shared/types/global'
+import { useReview } from '~/composibles/useReview'
 
 const modalAllReviewsOpen = ref(false)
 
-const reviews = ref<Review[]>([])
+const { reviews, fetchAllReviews } = useReview()
 
-const fetchAllReviews = async () => {
-	await $fetch('/api/review/all', {
-		method: 'GET'
-	}).then((data: any) => {
-		reviews.value = data.map((review: any) => {
-			return {
-				name: review.name,
-				text: review.text,
-				rating: Number(review.rating),
-				date: new Date(review.createdAt).toLocaleDateString('ru-RU')
-			}
-		}) as Review[]
-		modalAllReviewsOpen.value = false
-	})
-}
-
-await fetchAllReviews()
+fetchAllReviews().then(() => {
+	modalAllReviewsOpen.value = false
+})
 </script>
 
 <template>

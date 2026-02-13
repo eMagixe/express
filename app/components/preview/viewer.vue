@@ -1,30 +1,14 @@
 <script setup lang="ts">
 import type { Review } from '#shared/types/global'
+import { useReview } from '~/composibles/useReview'
 
-const reviewsViews = ref<Review[]>([])
+const { reviews, fetchAllReviews } = useReview()
 
-const fetchReviews = async () => {
-	await $fetch('/api/review/all', {
-		method: 'GET'
-	}).then((data: any) => {
-		if (data) {
-			reviewsViews.value = data.slice(0, 3).map((review: any) => {
-				return {
-					name: review.name,
-					text: review.text,
-					rating: Number(review.rating),
-					date: new Date(review.createdAt).toLocaleDateString('ru-RU')
-				}
-			}) as Review[]
-		}
-	})
-}
-
-await fetchReviews()
+await fetchAllReviews()
 </script>
 
 <template>
-	<template v-for="(item, index) in reviewsViews as Review[]" :key="index">
+	<template v-for="(item, index) in reviews.slice(0, 3) as Review[]" :key="index">
 		<div class="item flex flex-col justify-start items-start gap-1 w-full">
 			<div class="flex flex-row justify-between items-start gap-2 w-full">
 				<div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600">
