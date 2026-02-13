@@ -113,7 +113,7 @@ const onSubmit = async () => {
 			@submit="onSubmit"
 			id="form-create-order"
 		>
-			<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center gap-5">
+			<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-start gap-5">
 				<UFormField name="name">
 					<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
 				</UFormField>
