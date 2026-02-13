@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9 } from './index-BZR0vHIZ.mjs';
+import { _ as _sfc_main$9 } from './index-DyTXDJ1h.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -26,7 +26,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-Cxpc46zU.mjs';
+import './index-jLf-p73s.mjs';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
 import './nuxt-link-Ck9lQj5E.mjs';
@@ -158,4 +158,4 @@ _sfc_main.setup = (props, ctx) => {
 const advantages = Object.assign(_sfc_main, { __name: "SectionAdvantages" });
 
 export { advantages as default };
-//# sourceMappingURL=advantages-DdTVUqDM.mjs.map
+//# sourceMappingURL=advantages-C4xUGoiL.mjs.map

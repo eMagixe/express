@@ -1,13 +1,14 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-BZR0vHIZ.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-DyTXDJ1h.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
-import { a as __nuxt_component_0$1 } from './index-Cxpc46zU.mjs';
-import { mergeProps, withCtx, createVNode, defineComponent, ref, withAsyncContext, unref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
+import { a as __nuxt_component_0$1, u as useAsyncData } from './index-jLf-p73s.mjs';
+import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, toValue, reactive, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
-import { p as publicAssetsURL } from '../nitro/nitro.mjs';
+import { p as publicAssetsURL, F as hash } from '../nitro/nitro.mjs';
+import { isPlainObject } from '@vue/shared';
+import { _ as _export_sfc, d as useRoute, c as useAppConfig, k as fetchDefaults, a as useNuxtApp } from './server.mjs';
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick, useVModel } from '@vueuse/core';
-import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs';
 import 'tailwind-variants';
 import './nuxt-link-Ck9lQj5E.mjs';
 import 'vaul-vue';
@@ -34,34 +35,145 @@ import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
 
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
+function useRequestEvent(nuxtApp) {
+  nuxtApp ||= useNuxtApp();
+  return nuxtApp.ssrContext?.event;
+}
+function useRequestFetch() {
+  return useRequestEvent()?.$fetch || globalThis.$fetch;
+}
+function useFetch(request, arg1, arg2) {
+  const [opts = {}, autoKey] = typeof arg1 === "string" ? [{}, arg1] : [arg1, arg2];
+  const _request = computed(() => toValue(request));
+  const key = computed(() => toValue(opts.key) || "$f" + hash([autoKey, typeof _request.value === "string" ? _request.value : "", ...generateOptionSegments(opts)]));
+  if (!opts.baseURL && typeof _request.value === "string" && (_request.value[0] === "/" && _request.value[1] === "/")) {
+    throw new Error('[nuxt] [useFetch] the request URL must not start with "//".');
+  }
+  const {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick,
+    watch: watchSources,
+    immediate,
+    getCachedData,
+    deep,
+    dedupe,
+    timeout,
+    ...fetchOptions
+  } = opts;
+  const _fetchOptions = reactive({
+    ...fetchDefaults,
+    ...fetchOptions,
+    cache: typeof opts.cache === "boolean" ? void 0 : opts.cache
+  });
+  const _asyncDataOptions = {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick,
+    immediate,
+    getCachedData,
+    deep,
+    dedupe,
+    timeout,
+    watch: watchSources === false ? [] : [...watchSources || [], _fetchOptions]
+  };
+  const asyncData = useAsyncData(watchSources === false ? key.value : key, (_, { signal }) => {
+    let _$fetch = opts.$fetch || globalThis.$fetch;
+    if (!opts.$fetch) {
+      const isLocalFetch = typeof _request.value === "string" && _request.value[0] === "/" && (!toValue(opts.baseURL) || toValue(opts.baseURL)[0] === "/");
+      if (isLocalFetch) {
+        _$fetch = useRequestFetch();
+      }
+    }
+    return _$fetch(_request.value, { signal, ..._fetchOptions });
+  }, _asyncDataOptions);
+  return asyncData;
+}
+function generateOptionSegments(opts) {
+  const segments = [
+    toValue(opts.method)?.toUpperCase() || "GET",
+    toValue(opts.baseURL)
+  ];
+  for (const _obj of [opts.query || opts.params]) {
+    const obj = toValue(_obj);
+    if (!obj) {
+      continue;
+    }
+    const unwrapped = {};
+    for (const [key, value] of Object.entries(obj)) {
+      unwrapped[toValue(key)] = toValue(value);
+    }
+    segments.push(unwrapped);
+  }
+  if (opts.body) {
+    const value = toValue(opts.body);
+    if (!value) {
+      segments.push(hash(value));
+    } else if (value instanceof ArrayBuffer) {
+      segments.push(hash(Object.fromEntries([...new Uint8Array(value).entries()].map(([k, v]) => [k, v.toString()]))));
+    } else if (value instanceof FormData) {
+      const obj = {};
+      for (const entry of value.entries()) {
+        const [key, val] = entry;
+        obj[key] = val instanceof File ? val.name : val;
+      }
+      segments.push(hash(obj));
+    } else if (isPlainObject(value)) {
+      segments.push(hash(reactive(value)));
+    } else {
+      try {
+        segments.push(hash(value));
+      } catch {
+        console.warn("[useFetch] Failed to hash body", value);
+      }
+    }
+  }
+  return segments;
+}
+const useReview = () => {
+  const reviews2 = ref([]);
+  const fetchAllReviews = async () => {
+    return useFetch(
+      "/api/review/all",
+      {
+        method: "GET"
+      },
+      "$I2AEvpjrqM"
+      /* nuxt-injected */
+    ).then(({ data }) => {
+      if (data?.value && Array.isArray(data.value)) {
+        reviews2.value = data.value.map((review) => {
+          return {
+            name: review.name,
+            text: review.text,
+            rating: Number(review.rating),
+            date: new Date(review.createdAt).toLocaleDateString("ru-RU")
+          };
+        });
+      }
+    });
+  };
+  return {
+    fetchAllReviews,
+    reviews: reviews2
+  };
+};
 const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "viewer",
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const reviewsViews = ref([]);
-    const fetchReviews = async () => {
-      await $fetch("/api/review/all", {
-        method: "GET"
-      }).then((data) => {
-        if (data) {
-          reviewsViews.value = data.slice(0, 3).map((review) => {
-            return {
-              name: review.name,
-              text: review.text,
-              rating: Number(review.rating),
-              date: new Date(review.createdAt).toLocaleDateString("ru-RU")
-            };
-          });
-        }
-      });
-    };
-    [__temp, __restore] = withAsyncContext(() => fetchReviews()), await __temp, __restore();
+    const { reviews: reviews2, fetchAllReviews } = useReview();
+    [__temp, __restore] = withAsyncContext(() => fetchAllReviews()), await __temp, __restore();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$k;
       const _component_ClientOnly = __nuxt_component_0$1;
       _push(`<!--[-->`);
-      ssrRenderList(unref(reviewsViews), (item, index) => {
+      ssrRenderList(unref(reviews2).slice(0, 3), (item, index) => {
         _push(`<div class="item flex flex-col justify-start items-start gap-1 w-full"><div class="flex flex-row justify-between items-start gap-2 w-full"><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">`);
         _push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
         _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"><!--[-->`);
@@ -445,26 +557,12 @@ _sfc_main$5.setup = (props, ctx) => {
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "all",
   __ssrInlineRender: true,
-  async setup(__props) {
-    let __temp, __restore;
+  setup(__props) {
     const modalAllReviewsOpen = ref(false);
-    const reviews2 = ref([]);
-    const fetchAllReviews = async () => {
-      await $fetch("/api/review/all", {
-        method: "GET"
-      }).then((data) => {
-        reviews2.value = data.map((review) => {
-          return {
-            name: review.name,
-            text: review.text,
-            rating: Number(review.rating),
-            date: new Date(review.createdAt).toLocaleDateString("ru-RU")
-          };
-        });
-        modalAllReviewsOpen.value = false;
-      });
-    };
-    [__temp, __restore] = withAsyncContext(() => fetchAllReviews()), await __temp, __restore();
+    const { reviews: reviews2, fetchAllReviews } = useReview();
+    fetchAllReviews().then(() => {
+      modalAllReviewsOpen.value = false;
+    });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UDrawer = _sfc_main$6$1;
       const _component_UButton = _sfc_main$f;
@@ -1874,4 +1972,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-DnupdACe.mjs.map
+//# sourceMappingURL=reviews-Ch20uDEA.mjs.map
