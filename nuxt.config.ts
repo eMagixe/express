@@ -41,32 +41,20 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
+			htmlAttrs: {
+				lang: 'ru'
+			},
 			meta: [
 				{
 					name: 'yandex-verification',
 					content: 'a20d3bdc1ac81b9a'
 				}
 			],
-			htmlAttrs: {
-				lang: 'ru'
-			},
 			link: [
 				{
 					rel: 'icon',
 					type: 'image/x-icon',
 					href: '/favicon.png'
-				},
-				{
-					rel: 'preconnect',
-					href: 'https://fonts.googleapis.com'
-				},
-				{
-					rel: 'preconnect',
-					href: 'https://fonts.gstatic.com'
-				},
-				{
-					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'
 				}
 			],
 			script: [

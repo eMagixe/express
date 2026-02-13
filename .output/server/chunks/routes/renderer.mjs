@@ -86,7 +86,7 @@ function createHead(options = {}) {
 
 const NUXT_RUNTIME_PAYLOAD_EXTRACTION = false;
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"yandex-verification","content":"a20d3bdc1ac81b9a"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.png"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"}],"style":[],"script":[{"src":"/js/yandex-metrika.js"}],"noscript":[],"htmlAttrs":{"lang":"ru"}};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"yandex-verification","content":"a20d3bdc1ac81b9a"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.png"}],"style":[],"script":[{"src":"/js/yandex-metrika.js"}],"noscript":[],"htmlAttrs":{"lang":"ru"}};
 
 const appRootTag = "div";
 
