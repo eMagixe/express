@@ -384,10 +384,20 @@ const unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU = /* @__PURE__ */ defin
 function toArray(value) {
   return Array.isArray(value) ? value : [value];
 }
-const matcher = (m, p) => {
-  return [];
-};
-const _routeRulesMatcher = (path) => defu({}, ...matcher().map((r) => r.data).reverse());
+const matcher = /* @__PURE__ */ (() => {
+  const $0 = {};
+  return (m, p) => {
+    let r = [];
+    if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
+    let s = p.split("/");
+    s.length - 1;
+    if (s[1] === "img") {
+      r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+    }
+    return r;
+  };
+})();
+const _routeRulesMatcher = (path) => defu({}, ...matcher("", path).map((r) => r.data).reverse());
 const routeRulesMatcher$1 = _routeRulesMatcher;
 function getRouteRules(arg) {
   const path = typeof arg === "string" ? arg : arg.path;

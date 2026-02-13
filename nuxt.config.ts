@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const year = 31536000
+
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: false },
@@ -12,6 +14,22 @@ export default defineNuxtConfig({
 		colorMode: false,
 		experimental: {
 			componentDetection: true
+		}
+	},
+	nitro: {
+		routeRules: {
+			// Apply long-lived cache headers to all static images
+			'/img/**': {
+				headers: {
+					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
+				}
+			},
+			// Apply long-lived cache headers to all generated Nuxt assets (CSS, JS, etc.)
+			'/_nuxt/**': {
+				headers: {
+					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
+				}
+			}
 		}
 	},
 	app: {
