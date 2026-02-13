@@ -1580,4 +1580,3 @@ let entry;
 const entry_default = ((ssrContext) => entry(ssrContext));
 
 export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useSeoMeta as e, useRouter as f, useRuntimeConfig as g, nuxtLinkDefaults as h, asyncDataDefaults as i, createError as j, fetchDefaults as k, navigateTo as n, resolveRouteObject as r, useHead as u };
-//# sourceMappingURL=server.mjs.map

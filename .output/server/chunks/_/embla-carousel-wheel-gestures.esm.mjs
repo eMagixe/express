@@ -731,4 +731,3 @@ function WheelGesturesPlugin(userOptions) {
 }
 
 export { WheelGesturesPlugin };
-//# sourceMappingURL=embla-carousel-wheel-gestures.esm.mjs.map

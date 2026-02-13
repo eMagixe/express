@@ -5,4 +5,3 @@ const error404Styles_DuDrfV0 = [
 ];
 
 export { error404Styles_DuDrfV0 as default };
-//# sourceMappingURL=error-404-styles.DuDrf-v0.mjs.map

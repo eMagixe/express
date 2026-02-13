@@ -26,4 +26,3 @@ const add_post = defineEventHandler(async (event) => {
 });
 
 export { add_post as default };
-//# sourceMappingURL=add.post.mjs.map
