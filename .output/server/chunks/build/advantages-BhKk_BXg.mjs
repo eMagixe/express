@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9 } from './index-BIzWQ-oY.mjs';
+import { _ as _sfc_main$9 } from './index-K7tXzWfD.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -108,7 +108,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               });
               _push2(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] w-full text-center uppercase"${_scopeId}>${ssrInterpolate(item.description)}</div></div>`);
               if (!item.lost) {
-                _push2(`<img${ssrRenderAttr("src", _imports_0)} alt="arrow-b" class="h-7"${_scopeId}>`);
+                _push2(`<img height="28"${ssrRenderAttr("src", _imports_0)} alt="arrow-b"${_scopeId}>`);
               } else {
                 _push2(`<!---->`);
               }
@@ -133,9 +133,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     ]),
                     !item.lost ? (openBlock(), createBlock("img", {
                       key: 0,
+                      height: "28",
                       src: _imports_0,
-                      alt: "arrow-b",
-                      class: "h-7"
+                      alt: "arrow-b"
                     })) : createCommentVNode("", true)
                   ], 64);
                 }), 128))

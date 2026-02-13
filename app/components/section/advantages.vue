@@ -85,7 +85,7 @@ const advantages = <Advantage[]>[
 							{{ item.description }}
 						</div>
 					</div>
-					<img v-if="!item.lost" src="/images/svg/arrow-b.svg" alt="arrow-b" class="h-7" />
+					<img height="28" v-if="!item.lost" src="/images/svg/arrow-b.svg" alt="arrow-b" />
 				</template>
 			</div>
 		</UContainer>
