@@ -1,8 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-	<footer class="flex flex-col w-full justify-end gap-5 sm:gap-2 pt-5">
-		<Logo class="h-14" />
+	<footer class="flex flex-col w-full justify-end items-center gap-5 sm:gap-2 pt-5">
+		<div class="h-14">
+			<Logo />
+		</div>
 		<div
 			class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"
 		>
