@@ -5,4 +5,3 @@ const error500Styles_8IYEHzz6 = [
 ];
 
 export { error500Styles_8IYEHzz6 as default };
-//# sourceMappingURL=error-500-styles.8IYEHzz6.mjs.map
