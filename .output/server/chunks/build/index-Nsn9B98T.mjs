@@ -1,5 +1,5 @@
 import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, h, ref, Fragment, renderList, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
-import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderStyle } from 'vue/server-renderer';
+import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
 import { A as serialize, y as defu, B as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
@@ -5854,12 +5854,10 @@ _sfc_main$5.setup = (props, ctx) => {
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const _imports_0 = publicAssetsURL("/images/svg/logo.svg");
+const _imports_1 = publicAssetsURL("/images/svg/sm-logo.svg");
 const _sfc_main$4 = {};
 function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
-  _push(`<img${ssrRenderAttrs(mergeProps({
-    src: _imports_0,
-    alt: "Logo"
-  }, _attrs))}>`);
+  _push(`<picture${ssrRenderAttrs(_attrs)}><source media="(min-width: 573px)"${ssrRenderAttr("srcset", _imports_0)}><source media="(max-width: 573px)"${ssrRenderAttr("srcset", _imports_1)}><img height="72" width="240"${ssrRenderAttr("src", _imports_0)} alt="logo" style="${ssrRenderStyle({ "width": "auto" })}"></picture>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
@@ -6163,11 +6161,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-B3Y16zzw.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-8PPxeBp8.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-CGB2poIt.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-Dd6yQ_pV.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-C8f8M8CH.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-C27dZ7Cs.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CqwrVcu6.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-IGoKFrVF.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-By5x5V6q.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-B_YKh86l.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
