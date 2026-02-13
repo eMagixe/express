@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, h as useToast } from './index-DyTXDJ1h.mjs';
+import { _ as _sfc_main$9, h as useToast } from './index-32JKAvq6.mjs';
 import { a as __nuxt_component_0$1 } from './index-jLf-p73s.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
@@ -106,7 +106,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$9;
   const _component_OrderCreate = __nuxt_component_1;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
+  _push(ssrRenderComponent(_component_UContainer, { class: "flex animation-box flex-col justify-center items-center gap-5" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_OrderCreate, null, null, _parent2, _scopeId));
@@ -129,4 +129,4 @@ _sfc_main.setup = (props, ctx) => {
 const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionOrder" });
 
 export { order as default };
-//# sourceMappingURL=order-B5Kp0sU6.mjs.map
+//# sourceMappingURL=order-B9P_KimJ.mjs.map

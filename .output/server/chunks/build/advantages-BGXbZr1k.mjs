@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9 } from './index-DyTXDJ1h.mjs';
+import { _ as _sfc_main$9 } from './index-32JKAvq6.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -102,7 +102,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent2, _scopeId));
             _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5"${_scopeId}><!--[-->`);
             ssrRenderList(advantages2, (item, index) => {
-              _push2(`<!--[--><div class="item flex flex-col justify-center items-center gap-1 w-full"${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white"${_scopeId}><!--[-->`);
+              _push2(`<!--[--><div class="item animation-box flex flex-col justify-center items-center gap-1 w-full"${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white"${_scopeId}><!--[-->`);
               ssrRenderList(item.message, (i) => {
                 _push2(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}"${_scopeId}>${ssrInterpolate(i.text)}</span>`);
               });
@@ -121,7 +121,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [
                 (openBlock(true), createBlock(Fragment, null, renderList(advantages2, (item, index) => {
                   return openBlock(), createBlock(Fragment, { key: index }, [
-                    createVNode("div", { class: "item flex flex-col justify-center items-center gap-1 w-full" }, [
+                    createVNode("div", { class: "item animation-box flex flex-col justify-center items-center gap-1 w-full" }, [
                       createVNode("div", { class: "flex flex-row justify-center items-center gap-2 w-full text-white" }, [
                         (openBlock(true), createBlock(Fragment, null, renderList(item.message, (i) => {
                           return openBlock(), createBlock("span", {
@@ -158,4 +158,4 @@ _sfc_main.setup = (props, ctx) => {
 const advantages = Object.assign(_sfc_main, { __name: "SectionAdvantages" });
 
 export { advantages as default };
-//# sourceMappingURL=advantages-C4xUGoiL.mjs.map
+//# sourceMappingURL=advantages-BGXbZr1k.mjs.map

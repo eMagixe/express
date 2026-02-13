@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, t as tv, j as get, a as _sfc_main$k } from './index-DyTXDJ1h.mjs';
+import { _ as _sfc_main$9, t as tv, j as get, a as _sfc_main$k } from './index-32JKAvq6.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createVNode, useSlots, computed, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderClass, ssrInterpolate } from 'vue/server-renderer';
@@ -546,7 +546,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Популярные вопросы" }, null, _parent2, _scopeId));
-            _push2(`<div class="w-full flex flex-col justify-start items-center pt-10 gap-10"${_scopeId}>`);
+            _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UAccordion, {
               items: unref(items),
               class: "accordion-questions"
@@ -555,7 +555,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createVNode(_component_SectionTitle, { title: "Популярные вопросы" }),
-              createVNode("div", { class: "w-full flex flex-col justify-start items-center pt-10 gap-10" }, [
+              createVNode("div", { class: "w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" }, [
                 createVNode(_component_UAccordion, {
                   items: unref(items),
                   class: "accordion-questions"
@@ -579,4 +579,4 @@ _sfc_main.setup = (props, ctx) => {
 const questions = Object.assign(_sfc_main, { __name: "SectionQuestions" });
 
 export { questions as default };
-//# sourceMappingURL=questions-DfaV85_M.mjs.map
+//# sourceMappingURL=questions-V_PhHVVH.mjs.map

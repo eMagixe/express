@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-DyTXDJ1h.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-32JKAvq6.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { a as __nuxt_component_0$1, u as useAsyncData } from './index-jLf-p73s.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, toValue, reactive, useSSRContext } from 'vue';
@@ -174,7 +174,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       const _component_ClientOnly = __nuxt_component_0$1;
       _push(`<!--[-->`);
       ssrRenderList(unref(reviews2).slice(0, 3), (item, index) => {
-        _push(`<div class="item flex flex-col justify-start items-start gap-1 w-full"><div class="flex flex-row justify-between items-start gap-2 w-full"><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">`);
+        _push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full"><div class="flex flex-row justify-between items-start gap-2 w-full"><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600"><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]">`);
         _push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
         _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5"><!--[-->`);
         ssrRenderList(item.rating, (n) => {
@@ -1972,4 +1972,4 @@ _sfc_main.setup = (props, ctx) => {
 const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionReviews" });
 
 export { reviews as default };
-//# sourceMappingURL=reviews-Ch20uDEA.mjs.map
+//# sourceMappingURL=reviews-mr2Y8dHp.mjs.map
