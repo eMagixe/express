@@ -16,7 +16,7 @@ useSeoMeta({
 		<LazySectionAdvantages hydrate-on-visible />
 		<LazySectionReviews />
 		<LazySectionQuestions hydrate-on-visible />
-		<LazySectionOrder hydrate-on-visible />
+		<LazySectionOrder />
 		<LazySectionFooter hydrate-on-visible />
 	</UApp>
 </template>
