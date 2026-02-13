@@ -18,6 +18,11 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		routeRules: {
+			'/fonts/**': {
+				headers: {
+					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
+				}
+			},
 			'/images/**': {
 				headers: {
 					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`
