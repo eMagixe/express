@@ -1,17 +1,17 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, c as _sfc_main$6$1, b as _sfc_main$f, h as useToast, i as _sfc_main$7, u as useLocale, t as tv, d as useFormField, e as useFieldGroup, f as useComponentIcons, g as _sfc_main$i, l as looseToNumber } from './index-BtrWB-HX.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6$1, c as _sfc_main$f, i as useToast, j as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useFieldGroup, g as useComponentIcons, h as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-BVRgHjmO.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
-import { a as __nuxt_component_0$1, u as useAsyncData } from './index-jLf-p73s.mjs';
-import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, toValue, reactive, useSSRContext } from 'vue';
+import { a as __nuxt_component_0$1 } from './index-DDDZ6YAJ.mjs';
+import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
-import { p as publicAssetsURL, F as hash } from '../nitro/nitro.mjs';
-import { isPlainObject } from '@vue/shared';
-import { _ as _export_sfc, d as useRoute, c as useAppConfig, k as fetchDefaults, a as useNuxtApp } from './server.mjs';
+import { p as publicAssetsURL } from '../nitro/nitro.mjs';
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick, useVModel } from '@vueuse/core';
+import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs';
 import 'tailwind-variants';
-import './nuxt-link-Ck9lQj5E.mjs';
+import './nuxt-link-AZZXNs-c.mjs';
 import 'vaul-vue';
+import '@vue/shared';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -35,105 +35,6 @@ import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
 
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
-function useRequestEvent(nuxtApp) {
-  nuxtApp ||= useNuxtApp();
-  return nuxtApp.ssrContext?.event;
-}
-function useRequestFetch() {
-  return useRequestEvent()?.$fetch || globalThis.$fetch;
-}
-function useFetch(request, arg1, arg2) {
-  const [opts = {}, autoKey] = typeof arg1 === "string" ? [{}, arg1] : [arg1, arg2];
-  const _request = computed(() => toValue(request));
-  const key = computed(() => toValue(opts.key) || "$f" + hash([autoKey, typeof _request.value === "string" ? _request.value : "", ...generateOptionSegments(opts)]));
-  if (!opts.baseURL && typeof _request.value === "string" && (_request.value[0] === "/" && _request.value[1] === "/")) {
-    throw new Error('[nuxt] [useFetch] the request URL must not start with "//".');
-  }
-  const {
-    server,
-    lazy,
-    default: defaultFn,
-    transform,
-    pick,
-    watch: watchSources,
-    immediate,
-    getCachedData,
-    deep,
-    dedupe,
-    timeout,
-    ...fetchOptions
-  } = opts;
-  const _fetchOptions = reactive({
-    ...fetchDefaults,
-    ...fetchOptions,
-    cache: typeof opts.cache === "boolean" ? void 0 : opts.cache
-  });
-  const _asyncDataOptions = {
-    server,
-    lazy,
-    default: defaultFn,
-    transform,
-    pick,
-    immediate,
-    getCachedData,
-    deep,
-    dedupe,
-    timeout,
-    watch: watchSources === false ? [] : [...watchSources || [], _fetchOptions]
-  };
-  const asyncData = useAsyncData(watchSources === false ? key.value : key, (_, { signal }) => {
-    let _$fetch = opts.$fetch || globalThis.$fetch;
-    if (!opts.$fetch) {
-      const isLocalFetch = typeof _request.value === "string" && _request.value[0] === "/" && (!toValue(opts.baseURL) || toValue(opts.baseURL)[0] === "/");
-      if (isLocalFetch) {
-        _$fetch = useRequestFetch();
-      }
-    }
-    return _$fetch(_request.value, { signal, ..._fetchOptions });
-  }, _asyncDataOptions);
-  return asyncData;
-}
-function generateOptionSegments(opts) {
-  const segments = [
-    toValue(opts.method)?.toUpperCase() || "GET",
-    toValue(opts.baseURL)
-  ];
-  for (const _obj of [opts.query || opts.params]) {
-    const obj = toValue(_obj);
-    if (!obj) {
-      continue;
-    }
-    const unwrapped = {};
-    for (const [key, value] of Object.entries(obj)) {
-      unwrapped[toValue(key)] = toValue(value);
-    }
-    segments.push(unwrapped);
-  }
-  if (opts.body) {
-    const value = toValue(opts.body);
-    if (!value) {
-      segments.push(hash(value));
-    } else if (value instanceof ArrayBuffer) {
-      segments.push(hash(Object.fromEntries([...new Uint8Array(value).entries()].map(([k, v]) => [k, v.toString()]))));
-    } else if (value instanceof FormData) {
-      const obj = {};
-      for (const entry of value.entries()) {
-        const [key, val] = entry;
-        obj[key] = val instanceof File ? val.name : val;
-      }
-      segments.push(hash(obj));
-    } else if (isPlainObject(value)) {
-      segments.push(hash(reactive(value)));
-    } else {
-      try {
-        segments.push(hash(value));
-      } catch {
-        console.warn("[useFetch] Failed to hash body", value);
-      }
-    }
-  }
-  return segments;
-}
 const useReview = () => {
   const reviews2 = ref([]);
   const fetchAllReviews = async () => {
@@ -157,8 +58,22 @@ const useReview = () => {
       }
     });
   };
+  const addReview = async (review) => {
+    return useFetch(
+      "/api/review/add",
+      {
+        method: "POST",
+        body: {
+          ...review.value
+        }
+      },
+      "$9lI52c1n4T"
+      /* nuxt-injected */
+    );
+  };
   return {
     fetchAllReviews,
+    addReview,
     reviews: reviews2
   };
 };
@@ -1748,14 +1663,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     if (route.query.review === "open") {
       modalAddReviewOpen.value = true;
     }
-    const addReview = async () => {
+    const { addReview } = useReview();
+    const onAddReview = async () => {
       if (review.value.name && review.value.text && review.value.rating) {
-        await $fetch("/api/review/add", {
-          method: "POST",
-          body: {
-            ...review.value
-          }
-        }).then(() => {
+        addReview(review).then(() => {
           toast.add({ title: "Ответ", description: "Отзыв был отправлен", color: "success" });
           review.value.name = "";
           review.value.text = "";
@@ -1817,7 +1728,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
             }, null, _parent2, _scopeId));
             _push2(`<div class="w-full flex justify-center items-center"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UButton, {
-              onClick: addReview,
+              onClick: onAddReview,
               class: "button-gradient",
               icon: "i-lucide-plus"
             }, {
@@ -1872,7 +1783,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               }, null, 8, ["modelValue", "onUpdate:modelValue"]),
               createVNode("div", { class: "w-full flex justify-center items-center" }, [
                 createVNode(_component_UButton, {
-                  onClick: addReview,
+                  onClick: onAddReview,
                   class: "button-gradient",
                   icon: "i-lucide-plus"
                 }, {

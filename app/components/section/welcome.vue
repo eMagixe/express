@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { sendCall } from '~/utils'
+</script>
 
 <template>
 	<div class="welcome-section w-full pt-10 mx-auto">
@@ -35,6 +37,7 @@
 				class="lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				to="tel:+79177666833"
+				@click="sendCall('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать

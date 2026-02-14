@@ -1,13 +1,14 @@
-import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, h, ref, Fragment, renderList, toHandlers, inject, useTemplateRef, withModifiers, shallowReactive, toValue, isRef, reactive, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
+import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, h, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, useTemplateRef, withModifiers, shallowReactive, isRef, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
-import { A as serialize, y as defu, B as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
-import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, a as useNuxtApp, b as appConfig } from './server.mjs';
+import { A as serialize, y as defu, B as hash, C as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
+import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, a as useNuxtApp, b as appConfig, f as fetchDefaults } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import { _ as __nuxt_component_0$3 } from './index-jLf-p73s.mjs';
-import { _ as __nuxt_component_0$2 } from './nuxt-link-Ck9lQj5E.mjs';
+import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-DDDZ6YAJ.mjs';
+import { _ as __nuxt_component_0$2 } from './nuxt-link-AZZXNs-c.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
+import { isPlainObject } from '@vue/shared';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -5856,7 +5857,7 @@ _sfc_main$5.setup = (props, ctx) => {
 const _imports_0 = publicAssetsURL("/images/svg/logo.svg");
 const _imports_1 = publicAssetsURL("/images/svg/sm-logo.svg");
 const _sfc_main$4 = {};
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(`<picture${ssrRenderAttrs(_attrs)}><source media="(min-width: 573px)"${ssrRenderAttr("srcset", _imports_0)}><source media="(max-width: 573px)"${ssrRenderAttr("srcset", _imports_1)}><img height="72" width="240"${ssrRenderAttr("src", _imports_0)} alt="logo" style="${ssrRenderStyle({ "width": "auto" })}"></picture>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
@@ -5865,57 +5866,176 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/logo.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Logo" });
-const _sfc_main$3 = {};
-function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
-  const _component_UIcon = _sfc_main$k;
-  const _component_NuxtLink = __nuxt_component_0$2;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
-  _push(ssrRenderComponent(_component_UIcon, {
-    name: "i-lucide-phone",
-    size: "18"
-  }, null, _parent));
-  _push(` +7 (917) 766-68-33 </a><a href="tel:+79273242582">`);
-  _push(ssrRenderComponent(_component_UIcon, {
-    name: "i-lucide-phone",
-    size: "18"
-  }, null, _parent));
-  _push(` +7 (927) 324-25-82 </a></div>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    class: "button-gradient h-16 flex items-center justify-center gap-3",
-    icon: "i-lucide-phone-call",
-    to: "tel:+79177666833"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-phone-call",
-          size: "18"
-        }, null, _parent2, _scopeId));
-        _push2(` Вызвать `);
-      } else {
-        return [
-          createVNode(_component_UIcon, {
-            name: "i-lucide-phone-call",
-            size: "18"
-          }),
-          createTextVNode(" Вызвать ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</div>`);
+const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]), { __name: "Logo" });
+function useRequestEvent(nuxtApp) {
+  nuxtApp ||= useNuxtApp();
+  return nuxtApp.ssrContext?.event;
 }
+function useRequestFetch() {
+  return useRequestEvent()?.$fetch || globalThis.$fetch;
+}
+function useFetch(request, arg1, arg2) {
+  const [opts = {}, autoKey] = typeof arg1 === "string" ? [{}, arg1] : [arg1, arg2];
+  const _request = computed(() => toValue(request));
+  const key = computed(() => toValue(opts.key) || "$f" + hash([autoKey, typeof _request.value === "string" ? _request.value : "", ...generateOptionSegments(opts)]));
+  if (!opts.baseURL && typeof _request.value === "string" && (_request.value[0] === "/" && _request.value[1] === "/")) {
+    throw new Error('[nuxt] [useFetch] the request URL must not start with "//".');
+  }
+  const {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick,
+    watch: watchSources,
+    immediate,
+    getCachedData,
+    deep,
+    dedupe,
+    timeout,
+    ...fetchOptions
+  } = opts;
+  const _fetchOptions = reactive({
+    ...fetchDefaults,
+    ...fetchOptions,
+    cache: typeof opts.cache === "boolean" ? void 0 : opts.cache
+  });
+  const _asyncDataOptions = {
+    server,
+    lazy,
+    default: defaultFn,
+    transform,
+    pick,
+    immediate,
+    getCachedData,
+    deep,
+    dedupe,
+    timeout,
+    watch: watchSources === false ? [] : [...watchSources || [], _fetchOptions]
+  };
+  const asyncData = useAsyncData(watchSources === false ? key.value : key, (_, { signal }) => {
+    let _$fetch = opts.$fetch || globalThis.$fetch;
+    if (!opts.$fetch) {
+      const isLocalFetch = typeof _request.value === "string" && _request.value[0] === "/" && (!toValue(opts.baseURL) || toValue(opts.baseURL)[0] === "/");
+      if (isLocalFetch) {
+        _$fetch = useRequestFetch();
+      }
+    }
+    return _$fetch(_request.value, { signal, ..._fetchOptions });
+  }, _asyncDataOptions);
+  return asyncData;
+}
+function generateOptionSegments(opts) {
+  const segments = [
+    toValue(opts.method)?.toUpperCase() || "GET",
+    toValue(opts.baseURL)
+  ];
+  for (const _obj of [opts.query || opts.params]) {
+    const obj = toValue(_obj);
+    if (!obj) {
+      continue;
+    }
+    const unwrapped = {};
+    for (const [key, value] of Object.entries(obj)) {
+      unwrapped[toValue(key)] = toValue(value);
+    }
+    segments.push(unwrapped);
+  }
+  if (opts.body) {
+    const value = toValue(opts.body);
+    if (!value) {
+      segments.push(hash(value));
+    } else if (value instanceof ArrayBuffer) {
+      segments.push(hash(Object.fromEntries([...new Uint8Array(value).entries()].map(([k, v]) => [k, v.toString()]))));
+    } else if (value instanceof FormData) {
+      const obj = {};
+      for (const entry of value.entries()) {
+        const [key, val] = entry;
+        obj[key] = val instanceof File ? val.name : val;
+      }
+      segments.push(hash(obj));
+    } else if (isPlainObject(value)) {
+      segments.push(hash(reactive(value)));
+    } else {
+      try {
+        segments.push(hash(value));
+      } catch {
+        console.warn("[useFetch] Failed to hash body", value);
+      }
+    }
+  }
+  return segments;
+}
+const sendCall = async (phone) => {
+  await useFetch(
+    "/api/call/send",
+    {
+      method: "POST",
+      body: {
+        phone,
+        date: (/* @__PURE__ */ new Date()).toLocaleDateString("ru-RU")
+      }
+    },
+    "$2V5nqLhHgs"
+    /* nuxt-injected */
+  );
+};
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "phones",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_UIcon = _sfc_main$k;
+      const _component_NuxtLink = __nuxt_component_0$2;
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:flex-row justify-center items-center gap-4" }, _attrs))}><div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] italic"><a href="tel:+79177666833">`);
+      _push(ssrRenderComponent(_component_UIcon, {
+        name: "i-lucide-phone",
+        size: "18"
+      }, null, _parent));
+      _push(` +7 (917) 766-68-33 </a><a href="tel:+79273242582">`);
+      _push(ssrRenderComponent(_component_UIcon, {
+        name: "i-lucide-phone",
+        size: "18"
+      }, null, _parent));
+      _push(` +7 (927) 324-25-82 </a></div>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        class: "button-gradient h-16 flex items-center justify-center gap-3",
+        icon: "i-lucide-phone-call",
+        to: "tel:+79177666833",
+        onClick: ($event) => unref(sendCall)("+79177666833")
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-phone-call",
+              size: "18"
+            }, null, _parent2, _scopeId));
+            _push2(` Вызвать `);
+          } else {
+            return [
+              createVNode(_component_UIcon, {
+                name: "i-lucide-phone-call",
+                size: "18"
+              }),
+              createTextVNode(" Вызвать ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div>`);
+    };
+  }
+});
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/phones.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$2]]), { __name: "Phones" });
+const __nuxt_component_3 = Object.assign(_sfc_main$3, { __name: "Phones" });
 const _sfc_main$2 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$9;
   const _component_UHeader = _sfc_main$5;
   const _component_Logo = __nuxt_component_0;
@@ -5987,145 +6107,152 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/header.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$1]]), { __name: "SectionHeader" });
-const _sfc_main$1 = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_UContainer = _sfc_main$9;
-  const _component_UIcon = _sfc_main$k;
-  const _component_NuxtLink = __nuxt_component_0$2;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))}>`);
-  _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10" }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` УФА `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` КУМЕРТАУ </h1><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` УФА `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` МЕЛЕУЗ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> САЛАВАТ `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` УФА `);
-        _push2(ssrRenderComponent(_component_UIcon, {
-          name: "i-lucide-arrow-right",
-          class: "h-6 w-6"
-        }, null, _parent2, _scopeId));
-        _push2(` САЛАВАТ </div></div><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </h2>`);
-        _push2(ssrRenderComponent(_component_NuxtLink, {
-          class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
-          icon: "i-lucide-phone-call",
-          to: "tel:+79177666833"
-        }, {
-          default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-            if (_push3) {
-              _push3(ssrRenderComponent(_component_UIcon, {
-                name: "i-lucide-phone-call",
-                size: "18"
-              }, null, _parent3, _scopeId2));
-              _push3(` Вызвать `);
-            } else {
-              return [
-                createVNode(_component_UIcon, {
-                  name: "i-lucide-phone-call",
-                  size: "18"
-                }),
-                createTextVNode(" Вызвать ")
-              ];
-            }
-          }),
-          _: 1
-        }, _parent2, _scopeId));
-        _push2(`<div class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
-      } else {
-        return [
-          createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
-            createVNode("h1", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
-              createTextVNode(" КУМЕРТАУ "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
+const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionHeader" });
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "welcome",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_UContainer = _sfc_main$9;
+      const _component_UIcon = _sfc_main$k;
+      const _component_NuxtLink = __nuxt_component_0$2;
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))}>`);
+      _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2"${_scopeId}><h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> КУМЕРТАУ `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` УФА `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` КУМЕРТАУ </h1><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> МЕЛЕУЗ `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` УФА `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` МЕЛЕУЗ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1"${_scopeId}> САЛАВАТ `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` УФА `);
+            _push2(ssrRenderComponent(_component_UIcon, {
+              name: "i-lucide-arrow-right",
+              class: "h-6 w-6"
+            }, null, _parent2, _scopeId));
+            _push2(` САЛАВАТ </div></div><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"${_scopeId}> Круглосуточные перевозки </h2>`);
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
+              icon: "i-lucide-phone-call",
+              to: "tel:+79177666833",
+              onClick: ($event) => unref(sendCall)("+79177666833")
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(ssrRenderComponent(_component_UIcon, {
+                    name: "i-lucide-phone-call",
+                    size: "18"
+                  }, null, _parent3, _scopeId2));
+                  _push3(` Вызвать `);
+                } else {
+                  return [
+                    createVNode(_component_UIcon, {
+                      name: "i-lucide-phone-call",
+                      size: "18"
+                    }),
+                    createTextVNode(" Вызвать ")
+                  ];
+                }
               }),
-              createTextVNode(" УФА "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
-              }),
-              createTextVNode(" КУМЕРТАУ ")
-            ]),
-            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
-              createTextVNode(" МЕЛЕУЗ "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
-              }),
-              createTextVNode(" УФА "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
-              }),
-              createTextVNode(" МЕЛЕУЗ ")
-            ]),
-            createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
-              createTextVNode(" САЛАВАТ "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
-              }),
-              createTextVNode(" УФА "),
-              createVNode(_component_UIcon, {
-                name: "i-lucide-arrow-right",
-                class: "h-6 w-6"
-              }),
-              createTextVNode(" САЛАВАТ ")
-            ])
-          ]),
-          createVNode("h2", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
-          createVNode(_component_NuxtLink, {
-            class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
-            icon: "i-lucide-phone-call",
-            to: "tel:+79177666833"
-          }, {
-            default: withCtx(() => [
-              createVNode(_component_UIcon, {
-                name: "i-lucide-phone-call",
-                size: "18"
-              }),
-              createTextVNode(" Вызвать ")
-            ]),
-            _: 1
-          }),
-          createVNode("div", { class: "text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" }, " Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</div>`);
-}
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`<div class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+          } else {
+            return [
+              createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
+                createVNode("h1", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
+                  createTextVNode(" КУМЕРТАУ "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" УФА "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" КУМЕРТАУ ")
+                ]),
+                createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
+                  createTextVNode(" МЕЛЕУЗ "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" УФА "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" МЕЛЕУЗ ")
+                ]),
+                createVNode("div", { class: "flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" }, [
+                  createTextVNode(" САЛАВАТ "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" УФА "),
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-arrow-right",
+                    class: "h-6 w-6"
+                  }),
+                  createTextVNode(" САЛАВАТ ")
+                ])
+              ]),
+              createVNode("h2", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
+              createVNode(_component_NuxtLink, {
+                class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
+                icon: "i-lucide-phone-call",
+                to: "tel:+79177666833",
+                onClick: ($event) => unref(sendCall)("+79177666833")
+              }, {
+                default: withCtx(() => [
+                  createVNode(_component_UIcon, {
+                    name: "i-lucide-phone-call",
+                    size: "18"
+                  }),
+                  createTextVNode(" Вызвать ")
+                ]),
+                _: 1
+              }, 8, ["onClick"]),
+              createVNode("div", { class: "text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" }, " Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div>`);
+    };
+  }
+});
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender]]), { __name: "SectionWelcome" });
+const __nuxt_component_2 = Object.assign(_sfc_main$1, { __name: "SectionWelcome" });
 function defineLazyComponent(props, defineStrategy) {
   return (id, loader) => defineComponent({
     inheritAttrs: false,
@@ -6161,11 +6288,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-BY2Dyyf6.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DmpyX8AY.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-CIm5Wpu6.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-DJP3pqQM.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-BG6Od0Qn.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-CXfzRtxw.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-dxZwrQDz.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-DOhrKin3.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-CaYh4TMd.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-D4E6P-Pj.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6224,4 +6351,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { _sfc_main$9 as _, _sfc_main$k as a, _sfc_main$f as b, _sfc_main$6 as c, useFormField as d, useFieldGroup as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, __nuxt_component_0 as k, looseToNumber as l, index as m, tv as t, useLocale as u };
+export { _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useFieldGroup as f, useComponentIcons as g, _sfc_main$i as h, useToast as i, _sfc_main$7 as j, get as k, looseToNumber as l, __nuxt_component_0 as m, index as n, tv as t, useFetch as u };

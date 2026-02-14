@@ -418,7 +418,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BtrWB-HX.mjs').then((n) => n.m)
+    component: () => import('./index-BVRgHjmO.mjs').then((n) => n.n)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -776,7 +776,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-jLf-p73s.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-DDDZ6YAJ.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1500,7 +1500,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-Dkug9-Xr.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-DRQakLSS.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1582,4 +1582,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useSeoMeta as e, useRouter as f, useRuntimeConfig as g, nuxtLinkDefaults as h, asyncDataDefaults as i, createError as j, fetchDefaults as k, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useSeoMeta as e, fetchDefaults as f, useRouter as g, useRuntimeConfig as h, nuxtLinkDefaults as i, asyncDataDefaults as j, createError as k, navigateTo as n, resolveRouteObject as r, useHead as u };

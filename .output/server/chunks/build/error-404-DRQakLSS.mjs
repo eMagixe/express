@@ -1,4 +1,4 @@
-import { _ as __nuxt_component_0 } from './nuxt-link-Ck9lQj5E.mjs';
+import { _ as __nuxt_component_0 } from './nuxt-link-AZZXNs-c.mjs';
 import { mergeProps, withCtx, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc, u as useHead } from './server.mjs';

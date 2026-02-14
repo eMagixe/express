@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Review } from '#shared/types/global'
+import { useReview } from '~/composibles/useReview'
 
 const review = ref<Review>({
 	name: '',
@@ -17,14 +18,11 @@ if (route.query.review === 'open') {
 	modalAddReviewOpen.value = true
 }
 
-const addReview = async () => {
+const { addReview } = useReview()
+
+const onAddReview = async () => {
 	if (review.value.name && review.value.text && review.value.rating) {
-		await $fetch('/api/review/add', {
-			method: 'POST',
-			body: {
-				...review.value
-			}
-		})
+		addReview(review)
 			.then(() => {
 				toast.add({ title: 'Ответ', description: 'Отзыв был отправлен', color: 'success' })
 				review.value.name = ''
@@ -89,7 +87,7 @@ const addReview = async () => {
 				}"
 			/>
 			<div class="w-full flex justify-center items-center">
-				<UButton @click="addReview" class="button-gradient" icon="i-lucide-plus"> Оставить отзыв </UButton>
+				<UButton @click="onAddReview" class="button-gradient" icon="i-lucide-plus"> Оставить отзыв </UButton>
 			</div>
 		</template>
 	</UModal>

@@ -1,7 +1,7 @@
 import { defineComponent, computed, h, onServerPrefetch, toValue, getCurrentInstance, ref, shallowRef, nextTick, unref, toRef, provide, cloneVNode, createElementBlock } from 'vue';
 import { Icon, getIcon, loadIcon as loadIcon$1 } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
-import { a as useNuxtApp, c as useAppConfig, g as useRuntimeConfig, u as useHead, i as asyncDataDefaults, j as createError } from './server.mjs';
+import { a as useNuxtApp, c as useAppConfig, h as useRuntimeConfig, u as useHead, j as asyncDataDefaults, k as createError } from './server.mjs';
 import { debounce } from 'perfect-debounce';
 import '../nitro/nitro.mjs';
 import 'node:http';

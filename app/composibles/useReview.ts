@@ -20,8 +20,18 @@ export const useReview = () => {
 		})
 	}
 
+	const addReview = async (review: Ref<Review>) => {
+		return useFetch('/api/review/add', {
+			method: 'POST',
+			body: {
+				...review.value
+			}
+		})
+	}
+
 	return {
 		fetchAllReviews,
+		addReview,
 		reviews
 	}
 }
