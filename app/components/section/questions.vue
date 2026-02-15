@@ -38,4 +38,25 @@ const items = ref<AccordionItem[]>([
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section-questions {
+	background: rgba(255, 146, 0, 0.7);
+
+	.accordion-questions {
+		background: linear-gradient(white 0%, #bdbdbd 100%);
+		box-shadow:
+			0 4px 4px 0 rgba(0, 0, 0, 0.2),
+			0 6px 6px 0 rgba(0, 0, 0, 0.19);
+		padding: 16px;
+		border-bottom-right-radius: 16px;
+		border-top-left-radius: 16px;
+		backdrop-filter: blur(5px);
+	}
+
+	h2 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+</style>

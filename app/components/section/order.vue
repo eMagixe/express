@@ -8,4 +8,17 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section-order {
+	background: linear-gradient(rgba(255, 146, 0, 0.7) 0%, rgba(10, 11, 8, 1) 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	h2 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+</style>

@@ -1,20 +1,16 @@
-import { _ as _sfc_main$9 } from './index-BVRgHjmO.mjs';
+import { _ as _sfc_main$9 } from './index-IfpIDND_.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
+import { _ as _export_sfc } from './server.mjs';
 import 'reka-ui';
 import '@vueuse/core';
-import './server.mjs';
-import 'vue-router';
-import 'tailwindcss/colors';
+import 'tailwind-variants';
+import './index-DDDZ6YAJ.mjs';
 import '@iconify/vue';
-import '../routes/renderer.mjs';
-import 'vue-bundle-renderer/runtime';
-import 'unhead/server';
-import 'devalue';
-import 'unhead/plugins';
-import 'unhead/utils';
+import '@iconify/utils/lib/css/icon';
+import 'perfect-debounce';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -25,10 +21,14 @@ import 'node:crypto';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
-import 'tailwind-variants';
-import './index-DDDZ6YAJ.mjs';
-import '@iconify/utils/lib/css/icon';
-import 'perfect-debounce';
+import 'vue-router';
+import 'tailwindcss/colors';
+import '../routes/renderer.mjs';
+import 'vue-bundle-renderer/runtime';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/plugins';
+import 'unhead/utils';
 import './nuxt-link-AZZXNs-c.mjs';
 import 'vaul-vue';
 import '@vue/shared';
@@ -96,20 +96,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$9;
       const _component_SectionTitle = __nuxt_component_1;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))}>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-7ed9c976>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent2, _scopeId));
-            _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5"${_scopeId}><!--[-->`);
+            _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-7ed9c976${_scopeId}><!--[-->`);
             ssrRenderList(advantages2, (item, index) => {
-              _push2(`<!--[--><div class="item animation-box flex flex-col justify-center items-center gap-1 w-full"${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white"${_scopeId}><!--[-->`);
+              _push2(`<!--[--><div class="item animation-box flex flex-col justify-center items-center gap-1 w-full" data-v-7ed9c976${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white" data-v-7ed9c976${_scopeId}><!--[-->`);
               ssrRenderList(item.message, (i) => {
-                _push2(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}"${_scopeId}>${ssrInterpolate(i.text)}</span>`);
+                _push2(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-7ed9c976${_scopeId}>${ssrInterpolate(i.text)}</span>`);
               });
-              _push2(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] w-full text-center uppercase"${_scopeId}>${ssrInterpolate(item.description)}</div></div>`);
+              _push2(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] w-full text-center uppercase" data-v-7ed9c976${_scopeId}>${ssrInterpolate(item.description)}</div></div>`);
               if (!item.lost) {
-                _push2(`<img height="52" width="12" class="h-7"${ssrRenderAttr("src", _imports_0)} alt="arrow-b"${_scopeId}>`);
+                _push2(`<img height="52" width="12" class="h-7"${ssrRenderAttr("src", _imports_0)} alt="arrow-b" data-v-7ed9c976${_scopeId}>`);
               } else {
                 _push2(`<!---->`);
               }
@@ -158,6 +158,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const advantages = Object.assign(_sfc_main, { __name: "SectionAdvantages" });
+const advantages = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["__scopeId", "data-v-7ed9c976"]]), { __name: "SectionAdvantages" });
 
 export { advantages as default };

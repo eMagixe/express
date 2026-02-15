@@ -1,10 +1,10 @@
-import { _ as _sfc_main$9, t as tv, k as get, a as _sfc_main$k } from './index-BVRgHjmO.mjs';
+import { _ as _sfc_main$9, t as tv, k as get, a as _sfc_main$k } from './index-IfpIDND_.mjs';
 import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createVNode, useSlots, computed, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderClass, ssrInterpolate } from 'vue/server-renderer';
 import { useForwardPropsEmits, AccordionRoot, AccordionItem, AccordionHeader, AccordionTrigger, AccordionContent } from 'reka-ui';
 import { reactivePick } from '@vueuse/core';
-import { c as useAppConfig } from './server.mjs';
+import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -542,12 +542,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UContainer = _sfc_main$9;
       const _component_SectionTitle = __nuxt_component_1;
       const _component_UAccordion = _sfc_main$1;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))}>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-471c91b8>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Популярные вопросы" }, null, _parent2, _scopeId));
-            _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10"${_scopeId}>`);
+            _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" data-v-471c91b8${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UAccordion, {
               items: unref(items),
               class: "accordion-questions"
@@ -577,6 +577,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/questions.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const questions = Object.assign(_sfc_main, { __name: "SectionQuestions" });
+const questions = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["__scopeId", "data-v-471c91b8"]]), { __name: "SectionQuestions" });
 
 export { questions as default };

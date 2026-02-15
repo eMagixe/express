@@ -93,4 +93,5 @@ const onAddReview = async () => {
 	</UModal>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

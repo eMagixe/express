@@ -99,4 +99,26 @@ const advantages = <Advantage[]>[
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section-advantages {
+	background:
+		linear-gradient(rgba(10, 11, 8, 1) 10%, rgba(10, 11, 8, 0) 50%, rgba(153, 89, 0, 1) 100%),
+		url('/images/webp/two-section.webp');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	h2 {
+		color: var(--ui-bg-muted);
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	.item {
+		background: linear-gradient(rgba(86, 86, 86, 0.8) 10%, rgba(145, 145, 145, 0.2) 50%);
+		padding: 16px;
+		border-radius: 16px;
+		backdrop-filter: blur(5px);
+	}
+}
+</style>

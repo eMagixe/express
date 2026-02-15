@@ -224,4 +224,14 @@ const onSubmit = async () => {
 	</ClientOnly>
 </template>
 
-<style scoped></style>
+<style scoped>
+.order-created {
+	background: linear-gradient(white 0%, #bdbdbd 100%);
+	box-shadow:
+		0 4px 4px 0 rgba(0, 0, 0, 0.2),
+		0 6px 6px 0 rgba(0, 0, 0, 0.19);
+	padding: 26px;
+	border-radius: 16px;
+	backdrop-filter: blur(5px);
+}
+</style>

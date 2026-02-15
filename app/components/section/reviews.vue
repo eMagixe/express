@@ -15,4 +15,14 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section-reviews {
+	background: linear-gradient(rgba(153, 89, 0, 1) 0%, rgba(255, 146, 0, 0.7) 100%);
+
+	h2 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+</style>

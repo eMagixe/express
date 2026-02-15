@@ -51,4 +51,44 @@ import { sendCall } from '~/utils'
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.welcome-section {
+	@media (min-width: 1122px) {
+		background:
+			linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%),
+			url('/images/webp/resize/16-9.webp');
+	}
+
+	@media (max-width: 1122px) and (min-width: 783px) {
+		background:
+			linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%),
+			url('/images/webp/resize/5-4.webp');
+	}
+
+	@media (max-width: 783px) and (min-width: 573px) {
+		background:
+			linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%),
+			url('/images/webp/resize/4-5.webp');
+	}
+
+	@media (max-width: 573px) {
+		background:
+			linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%),
+			url('/images/webp/resize/9-16.webp');
+	}
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.cities-list {
+	font-style: italic;
+	font-size: 32px;
+	color: #ffc400;
+
+	span {
+		color: white;
+	}
+}
+</style>
