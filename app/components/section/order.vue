@@ -14,11 +14,5 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-
-	h2 {
-		color: white;
-		text-transform: uppercase;
-		font-weight: 500;
-	}
 }
 </style>

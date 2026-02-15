@@ -234,4 +234,10 @@ const onSubmit = async () => {
 	border-radius: 16px;
 	backdrop-filter: blur(5px);
 }
+
+h2 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
 </style>
