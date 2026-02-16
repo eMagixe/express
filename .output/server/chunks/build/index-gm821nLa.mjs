@@ -6359,11 +6359,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-DZhTCXuw.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Cq2jMTLL.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-vLb8l3iD.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-HGqfIBUB.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-BrxlsZtF.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-BW9RwNxP.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Ds9BlfzD.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-BGkrSIzr.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-D7WDGI6_.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-Bu3thNTR.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,

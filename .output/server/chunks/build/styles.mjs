@@ -11,15 +11,15 @@ const styles = {
   "components/section/advantages.vue": () => import('./advantages-styles.DS0ZcxyY.mjs').then(interopDefault),
   "components/section/welcome.vue": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/questions.vue": () => import('./questions-styles.BeoYe0kn.mjs').then(interopDefault),
-  "components/section/welcome.vue?vue&type=style&index=0&scoped=6f3e854a&lang.css": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/advantages.vue?vue&type=style&index=0&scoped=7ed9c976&lang.css": () => import('./advantages-styles.DS0ZcxyY.mjs').then(interopDefault),
+  "components/section/welcome.vue?vue&type=style&index=0&scoped=6f3e854a&lang.css": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/questions.vue?vue&type=style&index=0&scoped=471c91b8&lang.css": () => import('./questions-styles.BeoYe0kn.mjs').then(interopDefault),
   "components/preview/viewer.vue": () => import('./viewer-styles.JGhSRz9a.mjs').then(interopDefault),
   "components/preview/all.vue": () => import('./all-styles.Cagbs5mO.mjs').then(interopDefault),
-  "components/order/create.vue": () => import('./create-styles.k1n5guWB.mjs').then(interopDefault),
-  "components/preview/viewer.vue?vue&type=style&index=0&scoped=08bf91da&lang.css": () => import('./viewer-styles.JGhSRz9a.mjs').then(interopDefault),
+  "components/order/create.vue": () => import('./create-styles.Ddpb2AWP.mjs').then(interopDefault),
   "components/preview/all.vue?vue&type=style&index=0&scoped=787d178a&lang.css": () => import('./all-styles.Cagbs5mO.mjs').then(interopDefault),
-  "components/order/create.vue?vue&type=style&index=0&scoped=0d8b1da8&lang.css": () => import('./create-styles.k1n5guWB.mjs').then(interopDefault)
+  "components/preview/viewer.vue?vue&type=style&index=0&scoped=08bf91da&lang.css": () => import('./viewer-styles.JGhSRz9a.mjs').then(interopDefault),
+  "components/order/create.vue?vue&type=style&index=0&scoped=f7ba33e3&lang.css": () => import('./create-styles.Ddpb2AWP.mjs').then(interopDefault)
 };
 
 export { styles as default };
