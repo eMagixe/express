@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-gm821nLa.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-CGjCVFMt.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
@@ -7,7 +7,7 @@ import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick, useVModel } from '@vueuse/core';
-import { _ as _sfc_main$8 } from './Input-0D9SWrbO.mjs';
+import { _ as _sfc_main$8 } from './Input-CWPWOqGk.mjs';
 import 'tailwind-variants';
 import './index-RsQii6NS.mjs';
 import '@iconify/vue';
@@ -83,24 +83,28 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const { reviews: reviews2, fetchAllReviews } = useReview();
-    [__temp, __restore] = withAsyncContext(() => fetchAllReviews()), await __temp, __restore();
+    const preload = async () => {
+      const { reviews: reviews22, fetchAllReviews } = useReview();
+      await fetchAllReviews();
+      return reviews22;
+    };
+    const reviews2 = ([__temp, __restore] = withAsyncContext(() => preload()), __temp = await __temp, __restore(), __temp);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$k;
       _push(`<!--[-->`);
-      ssrRenderList(unref(reviews2).slice(0, 3), (item, index) => {
-        _push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-08bf91da><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-08bf91da><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-08bf91da><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-08bf91da>`);
+      ssrRenderList(unref(reviews2).slice(0, 3), (item) => {
+        _push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-316fe5cc><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-316fe5cc><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-316fe5cc><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-316fe5cc>`);
         _push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
-        _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-08bf91da><!--[-->`);
+        _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-316fe5cc><!--[-->`);
         ssrRenderList(item.rating, (n) => {
-          _push(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-08bf91da>`);
+          _push(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-316fe5cc>`);
         });
-        _push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-08bf91da>`);
+        _push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-316fe5cc>`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-calendar",
           size: "14"
         }, null, _parent));
-        _push(`<p data-v-08bf91da>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-08bf91da>${ssrInterpolate(item.text)}</div></div>`);
+        _push(`<p data-v-316fe5cc>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-316fe5cc>${ssrInterpolate(item.text)}</div></div>`);
       });
       _push(`<!--]-->`);
     };
@@ -112,7 +116,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/viewer.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-08bf91da"]]), { __name: "PreviewViewer" });
+const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-316fe5cc"]]), { __name: "PreviewViewer" });
 const theme$1 = {
   "slots": {
     "root": "relative focus:outline-none",
@@ -473,10 +477,14 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   setup(__props) {
     const modalAllReviewsOpen = ref(false);
-    const { reviews: reviews2, fetchAllReviews } = useReview();
-    fetchAllReviews().then(() => {
-      modalAllReviewsOpen.value = false;
-    });
+    const preload = () => {
+      const { reviews: reviews22, fetchAllReviews } = useReview();
+      fetchAllReviews().then(() => {
+        modalAllReviewsOpen.value = false;
+      });
+      return reviews22;
+    };
+    const reviews2 = preload();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UDrawer = _sfc_main$6;
       const _component_UButton = _sfc_main$f;
@@ -492,7 +500,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         content: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="modal-reviews" data-v-787d178a${_scopeId}>`);
+            _push2(`<div class="modal-reviews" data-v-fe4605e8${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UCarousel, {
               loop: "",
               autoplay: { delay: 2200 },
@@ -502,18 +510,18 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
             }, {
               default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="item flex flex-col justify-start items-start gap-1" data-v-787d178a${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-787d178a${_scopeId2}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-787d178a${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-787d178a${_scopeId2}>`);
+                  _push3(`<div class="item flex flex-col justify-start items-start gap-1" data-v-fe4605e8${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-fe4605e8${_scopeId2}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-fe4605e8${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-fe4605e8${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent3, _scopeId2));
-                  _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-787d178a${_scopeId2}><!--[-->`);
+                  _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-fe4605e8${_scopeId2}><!--[-->`);
                   ssrRenderList(item.rating, (n) => {
-                    _push3(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-787d178a${_scopeId2}>`);
+                    _push3(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-fe4605e8${_scopeId2}>`);
                   });
-                  _push3(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-787d178a${_scopeId2}>`);
+                  _push3(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-fe4605e8${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_UIcon, {
                     name: "i-lucide-calendar",
                     size: "14"
                   }, null, _parent3, _scopeId2));
-                  _push3(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-787d178a${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-787d178a${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
+                  _push3(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-fe4605e8${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-fe4605e8${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "item flex flex-col justify-start items-start gap-1" }, [
@@ -638,7 +646,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/all.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-787d178a"]]), { __name: "PreviewAll" });
+const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-fe4605e8"]]), { __name: "PreviewAll" });
 const theme = {
   "slots": {
     "root": "relative inline-flex items-center",
