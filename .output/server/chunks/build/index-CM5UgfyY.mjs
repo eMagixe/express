@@ -1,9 +1,9 @@
-import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, h, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, useTemplateRef, withModifiers, shallowReactive, isRef, markRaw, nextTick, useSSRContext, hydrateOnVisible } from 'vue';
+import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, useTemplateRef, withModifiers, shallowReactive, isRef, markRaw, nextTick, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
 import { A as serialize, y as defu, B as hash, C as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
-import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, a as useNuxtApp, b as appConfig, f as fetchDefaults } from './server.mjs';
+import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, f as fetchDefaults, a as useNuxtApp } from './server.mjs';
 import { createTV } from 'tailwind-variants';
 import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-RsQii6NS.mjs';
 import { _ as __nuxt_component_0$2 } from './nuxt-link-AZZXNs-c.mjs';
@@ -6037,7 +6037,7 @@ function generateOptionSegments(opts) {
   }
   return segments;
 }
-const sendCall = async (phone) => {
+const sendCallToTelegram = async (phone) => {
   await useFetch(
     "/api/call/send",
     {
@@ -6073,7 +6073,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         class: "button-gradient h-16 flex items-center justify-center gap-3",
         icon: "i-lucide-phone-call",
         to: "tel:+79177666833",
-        onClick: ($event) => unref(sendCall)("+79177666833")
+        onClick: ($event) => unref(sendCallToTelegram)("+79177666833")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -6187,11 +6187,11 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UContainer = _sfc_main$9;
       const _component_UIcon = _sfc_main$k;
       const _component_NuxtLink = __nuxt_component_0$2;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))} data-v-6f3e854a>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full pt-10 mx-auto" }, _attrs))} data-v-6175f213>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2" data-v-6f3e854a${_scopeId}><h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6f3e854a${_scopeId}> КУМЕРТАУ `);
+            _push2(`<div class="cities-list w-full flex flex-col justify-center items-center gap-2" data-v-6175f213${_scopeId}><h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6175f213${_scopeId}> КУМЕРТАУ `);
             _push2(ssrRenderComponent(_component_UIcon, {
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
@@ -6201,7 +6201,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
             }, null, _parent2, _scopeId));
-            _push2(` КУМЕРТАУ </h1><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6f3e854a${_scopeId}> МЕЛЕУЗ `);
+            _push2(` КУМЕРТАУ </h1><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6175f213${_scopeId}> МЕЛЕУЗ `);
             _push2(ssrRenderComponent(_component_UIcon, {
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
@@ -6211,7 +6211,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
             }, null, _parent2, _scopeId));
-            _push2(` МЕЛЕУЗ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6f3e854a${_scopeId}> САЛАВАТ `);
+            _push2(` МЕЛЕУЗ </div><div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1" data-v-6175f213${_scopeId}> САЛАВАТ `);
             _push2(ssrRenderComponent(_component_UIcon, {
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
@@ -6221,12 +6221,12 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               name: "i-lucide-arrow-right",
               class: "h-6 w-6"
             }, null, _parent2, _scopeId));
-            _push2(` САЛАВАТ </div></div><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" data-v-6f3e854a${_scopeId}> Круглосуточные перевозки </h2>`);
+            _push2(` САЛАВАТ </div></div><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" data-v-6175f213${_scopeId}> Круглосуточные перевозки </h2>`);
             _push2(ssrRenderComponent(_component_NuxtLink, {
               class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
               icon: "i-lucide-phone-call",
               to: "tel:+79177666833",
-              onClick: ($event) => unref(sendCall)("+79177666833")
+              onClick: ($event) => unref(sendCallToTelegram)("+79177666833")
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
@@ -6247,7 +6247,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
               }),
               _: 1
             }, _parent2, _scopeId));
-            _push2(`<div class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" data-v-6f3e854a${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+            _push2(`<div class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" data-v-6175f213${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
           } else {
             return [
               createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-2" }, [
@@ -6296,7 +6296,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 class: "lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3",
                 icon: "i-lucide-phone-call",
                 to: "tel:+79177666833",
-                onClick: ($event) => unref(sendCall)("+79177666833")
+                onClick: ($event) => unref(sendCallToTelegram)("+79177666833")
               }, {
                 default: withCtx(() => [
                   createVNode(_component_UIcon, {
@@ -6323,47 +6323,12 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6f3e854a"]]), { __name: "SectionWelcome" });
-function defineLazyComponent(props, defineStrategy) {
-  return (id, loader) => defineComponent({
-    inheritAttrs: false,
-    props,
-    emits: ["hydrated"],
-    setup(props2, ctx) {
-      {
-        const nuxtApp = useNuxtApp();
-        nuxtApp.hook("app:rendered", ({ ssrContext }) => {
-          ssrContext["~lazyHydratedModules"] ||= /* @__PURE__ */ new Set();
-          ssrContext["~lazyHydratedModules"].add(id);
-        });
-      }
-      const child = defineAsyncComponent({ loader });
-      const comp = defineAsyncComponent({
-        hydrate: defineStrategy(props2),
-        loader: () => Promise.resolve(child)
-      });
-      const onVnodeMounted = () => {
-        ctx.emit("hydrated");
-      };
-      return () => h(comp, mergeProps(ctx.attrs, { onVnodeMounted }), ctx.slots);
-    }
-  });
-}
-const createLazyVisibleComponent = defineLazyComponent(
-  {
-    hydrateOnVisible: {
-      type: [Object, Boolean],
-      required: false,
-      default: true
-    }
-  },
-  (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
-);
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-DTnqmj7p.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-pz3wH65h.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-GWFn-sJH.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BDDCfILu.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-DcfEULmW.mjs').then((c) => c.default || c));
+const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6175f213"]]), { __name: "SectionWelcome" });
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-Rye1JGn5.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Cw44mkXe.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-DFmvKw0q.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-CERAWUKN.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-BioZvfBv.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6379,30 +6344,30 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UApp = __nuxt_component_0$1;
       const _component_SectionHeader = __nuxt_component_1;
       const _component_SectionWelcome = __nuxt_component_2;
-      const _component_LazyVisibleSectionAdvantages = __nuxt_component_3_lazy_visible;
+      const _component_LazySectionAdvantages = __nuxt_component_3_lazy;
       const _component_LazySectionReviews = __nuxt_component_4_lazy;
-      const _component_LazyVisibleSectionQuestions = __nuxt_component_5_lazy_visible;
+      const _component_LazySectionQuestions = __nuxt_component_5_lazy;
       const _component_LazySectionOrder = __nuxt_component_6_lazy;
-      const _component_LazyVisibleSectionFooter = __nuxt_component_7_lazy_visible;
+      const _component_LazySectionFooter = __nuxt_component_7_lazy;
       _push(ssrRenderComponent(_component_UApp, _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionHeader, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_SectionWelcome, null, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_LazyVisibleSectionAdvantages, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionAdvantages, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionReviews, null, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_LazyVisibleSectionQuestions, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionQuestions, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionOrder, null, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_component_LazyVisibleSectionFooter, { "hydrate-on-visible": "" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_LazySectionFooter, null, null, _parent2, _scopeId));
           } else {
             return [
               createVNode(_component_SectionHeader),
               createVNode(_component_SectionWelcome),
-              createVNode(_component_LazyVisibleSectionAdvantages, { "hydrate-on-visible": "" }),
+              createVNode(_component_LazySectionAdvantages),
               createVNode(_component_LazySectionReviews),
-              createVNode(_component_LazyVisibleSectionQuestions, { "hydrate-on-visible": "" }),
+              createVNode(_component_LazySectionQuestions),
               createVNode(_component_LazySectionOrder),
-              createVNode(_component_LazyVisibleSectionFooter, { "hydrate-on-visible": "" })
+              createVNode(_component_LazySectionFooter)
             ];
           }
         }),
