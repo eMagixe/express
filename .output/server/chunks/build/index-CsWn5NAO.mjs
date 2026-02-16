@@ -6324,11 +6324,11 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6175f213"]]), { __name: "SectionWelcome" });
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-G7bJ44bG.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CBeWmds-.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-VmRec2wr.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BXVXgMyG.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-suZ3FDC9.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-coiKJe_-.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Dr7ueOU9.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-BR9b4f5I.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BqfteRLh.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-CcJTdHBH.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6387,4 +6387,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { _sfc_main$j as A, getDisplayValue as B, __nuxt_component_0 as C, index as D, _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, useState as k, looseToNumber as l, formBusInjectionKey as m, formStateInjectionKey as n, formErrorsInjectionKey as o, formInputsInjectionKey as p, formLoadingInjectionKey as q, formOptionsInjectionKey as r, inputIdInjectionKey as s, tv as t, useFetch as u, formFieldInjectionKey as v, usePortal as w, useFieldGroup as x, isArrayOfArray as y, compare as z };
+export { isArrayOfArray as A, compare as B, _sfc_main$j as C, getDisplayValue as D, __nuxt_component_0 as E, index as F, _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, getSlotChildrenText as j, _sfc_main$g as k, looseToNumber as l, useState as m, formBusInjectionKey as n, formStateInjectionKey as o, formErrorsInjectionKey as p, formInputsInjectionKey as q, formLoadingInjectionKey as r, formOptionsInjectionKey as s, tv as t, useFetch as u, inputIdInjectionKey as v, formFieldInjectionKey as w, get as x, usePortal as y, useFieldGroup as z };

@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { AccordionItem } from '@nuxt/ui'
+type Question = {
+	label: string
+	content: string
+}
 
 const items = useState('questions', () => {
 	return [
@@ -25,7 +28,7 @@ const items = useState('questions', () => {
 			label: 'Перевозите ли Вы посылки?',
 			content: 'Да, мы перевозим посылки до определенных габаритов которые можно уточнить у диспетчера.'
 		}
-	] as AccordionItem[]
+	] as Question[]
 })
 </script>
 
@@ -34,7 +37,22 @@ const items = useState('questions', () => {
 		<UContainer class="flex flex-col justify-center items-center gap-5">
 			<SectionTitle title="Популярные вопросы" />
 			<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10">
-				<UAccordion :items="items" class="accordion-questions" />
+				<UPageList class="accordion-questions">
+					<UPageCard
+						v-for="(item, index) in items"
+						:key="useId()"
+						variant="ghost"
+						class="rounded-none"
+						:class="{
+							'border-b border-b-gray-200': index !== items.length - 1
+						}"
+					>
+						<template #body>
+							<h3 class="text-xl mb-5">{{ item.label }}</h3>
+							<p class="text-sm">{{ item.content }}</p>
+						</template>
+					</UPageCard>
+				</UPageList>
 			</div>
 		</UContainer>
 	</div>
@@ -45,11 +63,10 @@ const items = useState('questions', () => {
 	background: rgba(255, 146, 0, 0.7);
 
 	.accordion-questions {
-		background: linear-gradient(white 0%, #bdbdbd 100%);
+		background: linear-gradient(white 0%, #f3f3f3 100%);
 		box-shadow:
 			0 4px 4px 0 rgba(0, 0, 0, 0.2),
 			0 6px 6px 0 rgba(0, 0, 0, 0.19);
-		padding: 16px;
 		border-bottom-right-radius: 16px;
 		border-top-left-radius: 16px;
 		backdrop-filter: blur(5px);
