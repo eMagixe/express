@@ -18,11 +18,11 @@ if (route.query.review === 'open') {
 	modalAddReviewOpen.value = true
 }
 
-const { addReview } = useReview()
+const { create } = useReview()
 
 const onAddReview = async () => {
 	if (review.value.name && review.value.text && review.value.rating) {
-		addReview(review)
+		create(review)
 			.then(() => {
 				toast.add({ title: 'Ответ', description: 'Отзыв был отправлен', color: 'success' })
 				review.value.name = ''
@@ -93,5 +93,4 @@ const onAddReview = async () => {
 	</UModal>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

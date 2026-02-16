@@ -3,8 +3,8 @@ import type { Review } from '#shared/types/global'
 import { useReview } from '~/composibles/useReview'
 
 const preload = async () => {
-	const { reviews, fetchAllReviews } = useReview()
-	await fetchAllReviews()
+	const { reviews, getAll } = useReview()
+	await getAll()
 	return reviews
 }
 

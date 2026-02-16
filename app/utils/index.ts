@@ -1,4 +1,5 @@
-export const sendCall = async (phone: string) => {
+// To track calls from the website, we send them to Telegram
+export const sendCallToTelegram = async (phone: string) => {
 	await useFetch('/api/call/send', {
 		method: 'POST',
 		body: {

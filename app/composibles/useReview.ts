@@ -3,7 +3,7 @@ import type { Review } from '#shared/types/global'
 export const useReview = () => {
 	const reviews = ref<Review[]>([])
 
-	const fetchAllReviews = async () => {
+	const getAll = async () => {
 		return useFetch('/api/review/all', {
 			method: 'GET'
 		}).then(({ data }) => {
@@ -20,7 +20,7 @@ export const useReview = () => {
 		})
 	}
 
-	const addReview = async (review: Ref<Review>) => {
+	const create = async (review: Ref<Review>) => {
 		return useFetch('/api/review/add', {
 			method: 'POST',
 			body: {
@@ -30,8 +30,8 @@ export const useReview = () => {
 	}
 
 	return {
-		fetchAllReviews,
-		addReview,
+		getAll,
+		create,
 		reviews
 	}
 }

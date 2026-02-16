@@ -4,9 +4,9 @@ import { useReview } from '~/composibles/useReview'
 const modalAllReviewsOpen = ref(false)
 
 const preload = () => {
-	const { reviews, fetchAllReviews } = useReview()
+	const { reviews, getAll } = useReview()
 
-	fetchAllReviews().then(() => {
+	getAll().then(() => {
 		modalAllReviewsOpen.value = false
 	})
 

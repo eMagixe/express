@@ -13,10 +13,10 @@ useSeoMeta({
 	<UApp>
 		<SectionHeader />
 		<SectionWelcome />
-		<LazySectionAdvantages hydrate-on-visible />
+		<LazySectionAdvantages />
 		<LazySectionReviews />
-		<LazySectionQuestions hydrate-on-visible />
+		<LazySectionQuestions />
 		<LazySectionOrder />
-		<LazySectionFooter hydrate-on-visible />
+		<LazySectionFooter />
 	</UApp>
 </template>
