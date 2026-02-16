@@ -5,7 +5,7 @@ import { reactivePick, createReusableTemplate, createSharedComposable, reactiveO
 import { B as serialize, y as defu, C as hash, D as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, f as fetchDefaults, a as useNuxtApp } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-RsQii6NS.mjs';
+import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-nKiwMrRX.mjs';
 import { _ as __nuxt_component_0$2 } from './nuxt-link-AZZXNs-c.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import { isPlainObject } from '@vue/shared';
@@ -6324,11 +6324,11 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6175f213"]]), { __name: "SectionWelcome" });
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-coiKJe_-.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Dr7ueOU9.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-BR9b4f5I.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BqfteRLh.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-CcJTdHBH.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-CGKyh0Us.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DDnpuD3y.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-Bs5WI0Dd.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-Cld7rTRe.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-CnERztPN.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,

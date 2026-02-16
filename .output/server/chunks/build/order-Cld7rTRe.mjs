@@ -1,23 +1,23 @@
-import { _ as _sfc_main$9, h as useToast, c as _sfc_main$f, t as tv, n as formBusInjectionKey, o as formStateInjectionKey, p as formErrorsInjectionKey, q as formInputsInjectionKey, r as formLoadingInjectionKey, s as formOptionsInjectionKey, v as inputIdInjectionKey, w as formFieldInjectionKey, b as useLocale, y as usePortal, e as useFormField, z as useFieldGroup, f as useComponentIcons, A as isArrayOfArray, x as get, B as compare, a as _sfc_main$k, g as _sfc_main$i, C as _sfc_main$j, l as looseToNumber, D as getDisplayValue } from './index-CsWn5NAO.mjs';
+import { _ as _sfc_main$9, h as useToast, c as _sfc_main$f, t as tv, n as formBusInjectionKey, o as formStateInjectionKey, p as formErrorsInjectionKey, q as formInputsInjectionKey, r as formLoadingInjectionKey, s as formOptionsInjectionKey, v as inputIdInjectionKey, w as formFieldInjectionKey, b as useLocale, y as usePortal, e as useFormField, z as useFieldGroup, f as useComponentIcons, A as isArrayOfArray, x as get, B as compare, a as _sfc_main$k, g as _sfc_main$i, C as _sfc_main$j, l as looseToNumber, D as getDisplayValue } from './index-BX5iiAHW.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, createTextVNode, toDisplayString, isRef, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$a } from './Input-B4d1UjHU.mjs';
+import { _ as _sfc_main$a } from './Input-ClmB3m_j.mjs';
 import { y as defu, D as isEqual } from '../nitro/nitro.mjs';
 import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
+import { a as __nuxt_component_6 } from './index-nKiwMrRX.mjs';
 import { getWeekNumber } from 'reka-ui/date';
 import { DateFormatter, Time, CalendarDate, getLocalTimeZone } from '@internationalized/date';
 import { vMaska } from 'maska/vue';
 import * as v from 'valibot';
 import { minLength } from 'valibot';
 import 'tailwind-variants';
-import './index-RsQii6NS.mjs';
-import '@iconify/vue';
-import '@iconify/utils/lib/css/icon';
-import 'perfect-debounce';
+import './nuxt-link-AZZXNs-c.mjs';
+import 'vaul-vue';
+import '@vue/shared';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -30,15 +30,15 @@ import '@iconify/utils';
 import 'consola';
 import 'vue-router';
 import 'tailwindcss/colors';
+import '@iconify/vue';
 import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-AZZXNs-c.mjs';
-import 'vaul-vue';
-import '@vue/shared';
+import '@iconify/utils/lib/css/icon';
+import 'perfect-debounce';
 
 function isSuperStructSchema(schema) {
   return "schema" in schema && typeof schema.coercer === "function" && typeof schema.validator === "function" && typeof schema.refiner === "function";
@@ -5341,6 +5341,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UInput = _sfc_main$a;
       const _component_UInputMenu = _sfc_main$6;
       const _component_UPopover = _sfc_main$5;
+      const _component_ClientOnly = __nuxt_component_6;
       const _component_UButton = _sfc_main$f;
       const _component_UCalendar = _sfc_main$4;
       const _component_UInputTime = _sfc_main$3;
@@ -5361,7 +5362,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5" data-v-f7ba33e3${_scopeId}>`);
+              _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5" data-v-64a71e92${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UFormField, { name: "name" }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
@@ -5528,7 +5529,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 }),
                 _: 1
               }, _parent2, _scopeId));
-              _push2(`<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5" data-v-f7ba33e3${_scopeId}>`);
+              _push2(`<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5" data-v-64a71e92${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UFormField, {
                 name: "date",
                 class: "w-[50%] not-sm:w-[320px]"
@@ -5557,31 +5558,21 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       }),
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_component_UButton, {
-                            icon: "i-lucide-calendar",
-                            id: "date-button",
-                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                          }, {
-                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                              if (_push5) {
-                                _push5(`${ssrInterpolate(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату")}`);
-                              } else {
-                                return [
-                                  createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
-                                ];
-                              }
-                            }),
-                            _: 1
-                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(_component_ClientOnly, null, {}, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_component_UButton, {
-                              icon: "i-lucide-calendar",
-                              id: "date-button",
-                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                            }, {
+                            createVNode(_component_ClientOnly, null, {
                               default: withCtx(() => [
-                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                createVNode(_component_UButton, {
+                                  icon: "i-lucide-calendar",
+                                  id: "date-button",
+                                  class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                  ]),
+                                  _: 1
+                                })
                               ]),
                               _: 1
                             })
@@ -5602,13 +5593,18 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                           }, null, 8, ["modelValue", "onUpdate:modelValue"])
                         ]),
                         default: withCtx(() => [
-                          createVNode(_component_UButton, {
-                            icon: "i-lucide-calendar",
-                            id: "date-button",
-                            class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                          }, {
+                          createVNode(_component_ClientOnly, null, {
                             default: withCtx(() => [
-                              createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                              createVNode(_component_UButton, {
+                                icon: "i-lucide-calendar",
+                                id: "date-button",
+                                class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                ]),
+                                _: 1
+                              })
                             ]),
                             _: 1
                           })
@@ -5645,7 +5641,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 }),
                 _: 1
               }, _parent2, _scopeId));
-              _push2(`</div><div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center" data-v-f7ba33e3${_scopeId}>`);
+              _push2(`</div><div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center" data-v-64a71e92${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UCheckbox, {
                 modelValue: unref(check),
                 "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
@@ -5658,7 +5654,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 },
                 id: "check"
               }, null, _parent2, _scopeId));
-              _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" data-v-f7ba33e3${_scopeId}>`);
+              _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" data-v-64a71e92${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UButton, {
                 type: "submit",
                 class: "button-gradient h-16",
@@ -5795,13 +5791,18 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                             }, null, 8, ["modelValue", "onUpdate:modelValue"])
                           ]),
                           default: withCtx(() => [
-                            createVNode(_component_UButton, {
-                              icon: "i-lucide-calendar",
-                              id: "date-button",
-                              class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-                            }, {
+                            createVNode(_component_ClientOnly, null, {
                               default: withCtx(() => [
-                                createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                createVNode(_component_UButton, {
+                                  icon: "i-lucide-calendar",
+                                  id: "date-button",
+                                  class: "w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(toDisplayString(unref(data).date ? unref(df).format(unref(data).date.toDate(unref(getLocalTimeZone)())) : "Выберете дату"), 1)
+                                  ]),
+                                  _: 1
+                                })
                               ]),
                               _: 1
                             })
@@ -5869,7 +5870,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           _: 1
         }, _parent));
       } else {
-        _push(`<div data-v-f7ba33e3><div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5" data-v-f7ba33e3><h3 class="text-2xl font-bold text-center" data-v-f7ba33e3>Ваша заявка принята.</h3><p class="w-full text-center" data-v-f7ba33e3>Спасибо, водитель свяжеться с вами.</p><p data-v-f7ba33e3> Имя: <b data-v-f7ba33e3>${ssrInterpolate(unref(data).name)}</b></p><p data-v-f7ba33e3>Телефон: ${ssrInterpolate(unref(data).phone)}</p><p data-v-f7ba33e3>Из: ${ssrInterpolate(unref(data).from)}, ${ssrInterpolate(unref(data).from_address)}</p><p data-v-f7ba33e3>До: ${ssrInterpolate(unref(data).to)}, ${ssrInterpolate(unref(data).to_address)}</p><p data-v-f7ba33e3>Дата: ${ssrInterpolate(unref(data).date)}, время: ${ssrInterpolate(unref(data).time)}</p></div></div>`);
+        _push(`<div data-v-64a71e92><div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5" data-v-64a71e92><h3 class="text-2xl font-bold text-center" data-v-64a71e92>Ваша заявка принята.</h3><p class="w-full text-center" data-v-64a71e92>Спасибо, водитель свяжеться с вами.</p><p data-v-64a71e92> Имя: <b data-v-64a71e92>${ssrInterpolate(unref(data).name)}</b></p><p data-v-64a71e92>Телефон: ${ssrInterpolate(unref(data).phone)}</p><p data-v-64a71e92>Из: ${ssrInterpolate(unref(data).from)}, ${ssrInterpolate(unref(data).from_address)}</p><p data-v-64a71e92>До: ${ssrInterpolate(unref(data).to)}, ${ssrInterpolate(unref(data).to_address)}</p><p data-v-64a71e92>Дата: ${ssrInterpolate(unref(data).date)}, время: ${ssrInterpolate(unref(data).time)}</p></div></div>`);
       }
       _push(`<!--]-->`);
     };
@@ -5881,7 +5882,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/order/create.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-f7ba33e3"]]), { __name: "OrderCreate" });
+const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-64a71e92"]]), { __name: "OrderCreate" });
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$9;

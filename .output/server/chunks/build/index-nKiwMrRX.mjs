@@ -144,7 +144,7 @@ const NuxtIconCss = /* @__PURE__ */ defineComponent({
   }
 });
 const clientOnlySymbol = /* @__PURE__ */ Symbol.for("nuxt:client-only");
-defineComponent({
+const __nuxt_component_6 = defineComponent({
   name: "ClientOnly",
   inheritAttrs: false,
   props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
@@ -544,4 +544,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: __nuxt_component_0
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { __nuxt_component_0 as _, index as i, useAsyncData as u };
+export { __nuxt_component_0 as _, __nuxt_component_6 as a, index as i, useAsyncData as u };
