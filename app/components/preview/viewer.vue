@@ -30,9 +30,7 @@ await fetchAllReviews()
 				</div>
 				<div class="flex flex-row justify-center items-center gap-1 text-gray-600">
 					<UIcon name="i-lucide-calendar" size="14" />
-					<ClientOnly>
-						<p>{{ item.date }}</p>
-					</ClientOnly>
+					<p>{{ item.date }}</p>
 				</div>
 			</div>
 			<div class="text-gray-600 text-[1rem]">{{ item.text }}</div>

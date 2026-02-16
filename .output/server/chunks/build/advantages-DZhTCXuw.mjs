@@ -1,5 +1,5 @@
-import { _ as _sfc_main$9 } from './index-B196UXBP.mjs';
-import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
+import { _ as _sfc_main$9 } from './index-Bp4O9dhn.mjs';
+import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../nitro/nitro.mjs';
@@ -7,7 +7,7 @@ import { _ as _export_sfc } from './server.mjs';
 import 'reka-ui';
 import '@vueuse/core';
 import 'tailwind-variants';
-import './index-DDDZ6YAJ.mjs';
+import './index-RsQii6NS.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -95,7 +95,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ];
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$9;
-      const _component_SectionTitle = __nuxt_component_1;
+      const _component_SectionTitle = __nuxt_component_0;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-7ed9c976>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {

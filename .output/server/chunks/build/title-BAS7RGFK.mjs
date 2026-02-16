@@ -19,6 +19,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/title.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __nuxt_component_1 = Object.assign(_sfc_main, { __name: "SectionTitle" });
+const __nuxt_component_0 = Object.assign(_sfc_main, { __name: "SectionTitle" });
 
-export { __nuxt_component_1 as _ };
+export { __nuxt_component_0 as _ };

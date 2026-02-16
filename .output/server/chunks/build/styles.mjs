@@ -8,18 +8,18 @@ const styles = {
   "components/section/order.vue": () => import('./order-styles.DrkderI4.mjs').then(interopDefault),
   "components/section/reviews.vue?vue&type=style&index=0&scoped=4c4b4508&lang.css": () => import('./reviews-styles.Dg6dj4uf.mjs').then(interopDefault),
   "components/section/order.vue?vue&type=style&index=0&scoped=4709c301&lang.css": () => import('./order-styles.DrkderI4.mjs').then(interopDefault),
-  "components/section/welcome.vue": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/advantages.vue": () => import('./advantages-styles.DS0ZcxyY.mjs').then(interopDefault),
+  "components/section/welcome.vue": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/questions.vue": () => import('./questions-styles.BeoYe0kn.mjs').then(interopDefault),
   "components/section/welcome.vue?vue&type=style&index=0&scoped=6f3e854a&lang.css": () => import('./welcome-styles.CJj0tWR2.mjs').then(interopDefault),
   "components/section/advantages.vue?vue&type=style&index=0&scoped=7ed9c976&lang.css": () => import('./advantages-styles.DS0ZcxyY.mjs').then(interopDefault),
   "components/section/questions.vue?vue&type=style&index=0&scoped=471c91b8&lang.css": () => import('./questions-styles.BeoYe0kn.mjs').then(interopDefault),
-  "components/preview/viewer.vue": () => import('./viewer-styles.3esukxu9.mjs').then(interopDefault),
+  "components/preview/viewer.vue": () => import('./viewer-styles.JGhSRz9a.mjs').then(interopDefault),
   "components/preview/all.vue": () => import('./all-styles.Cagbs5mO.mjs').then(interopDefault),
-  "components/order/create.vue": () => import('./create-styles.BAAgFxrk.mjs').then(interopDefault),
-  "components/preview/viewer.vue?vue&type=style&index=0&scoped=230261df&lang.css": () => import('./viewer-styles.3esukxu9.mjs').then(interopDefault),
+  "components/order/create.vue": () => import('./create-styles.k1n5guWB.mjs').then(interopDefault),
+  "components/preview/viewer.vue?vue&type=style&index=0&scoped=08bf91da&lang.css": () => import('./viewer-styles.JGhSRz9a.mjs').then(interopDefault),
   "components/preview/all.vue?vue&type=style&index=0&scoped=787d178a&lang.css": () => import('./all-styles.Cagbs5mO.mjs').then(interopDefault),
-  "components/order/create.vue?vue&type=style&index=0&scoped=46636264&lang.css": () => import('./create-styles.BAAgFxrk.mjs').then(interopDefault)
+  "components/order/create.vue?vue&type=style&index=0&scoped=0d8b1da8&lang.css": () => import('./create-styles.k1n5guWB.mjs').then(interopDefault)
 };
 
 export { styles as default };

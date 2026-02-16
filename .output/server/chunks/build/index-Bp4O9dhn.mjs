@@ -5,7 +5,7 @@ import { reactivePick, createReusableTemplate, createSharedComposable, reactiveO
 import { A as serialize, y as defu, B as hash, C as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, a as useNuxtApp, b as appConfig, f as fetchDefaults } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-DDDZ6YAJ.mjs';
+import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-RsQii6NS.mjs';
 import { _ as __nuxt_component_0$2 } from './nuxt-link-AZZXNs-c.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import { isPlainObject } from '@vue/shared';
@@ -145,6 +145,74 @@ function get(object, path, defaultValue) {
 function looseToNumber(val) {
   const n = Number.parseFloat(val);
   return Number.isNaN(n) ? val : n;
+}
+function compare(value, currentValue, comparator) {
+  if (value === void 0 || currentValue === void 0) {
+    return false;
+  }
+  if (typeof value === "string") {
+    return value === currentValue;
+  }
+  if (typeof comparator === "function") {
+    return comparator(value, currentValue);
+  }
+  if (typeof comparator === "string") {
+    return get(value, comparator) === get(currentValue, comparator);
+  }
+  return isEqual(value, currentValue);
+}
+function isEmpty(value) {
+  if (value == null) {
+    return true;
+  }
+  if (typeof value === "boolean" || typeof value === "number") {
+    return false;
+  }
+  if (typeof value === "string") {
+    return value.trim().length === 0;
+  }
+  if (Array.isArray(value)) {
+    return value.length === 0;
+  }
+  if (value instanceof Map || value instanceof Set) {
+    return value.size === 0;
+  }
+  if (value instanceof Date || value instanceof RegExp || typeof value === "function") {
+    return false;
+  }
+  if (typeof value === "object") {
+    for (const _ in value) {
+      if (Object.prototype.hasOwnProperty.call(value, _)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
+}
+function getDisplayValue(items, value, options = {}) {
+  const { valueKey, labelKey, by } = options;
+  const foundItem = items.find((item) => {
+    const itemValue = typeof item === "object" && item !== null && valueKey ? get(item, valueKey) : item;
+    return compare(itemValue, value, by);
+  });
+  if (isEmpty(value) && foundItem) {
+    return labelKey ? get(foundItem, labelKey) : void 0;
+  }
+  if (isEmpty(value)) {
+    return void 0;
+  }
+  const source = foundItem ?? value;
+  if (source === null || source === void 0) {
+    return void 0;
+  }
+  if (typeof source === "object") {
+    return labelKey ? get(source, labelKey) : void 0;
+  }
+  return String(source);
+}
+function isArrayOfArray(item) {
+  return Array.isArray(item[0]);
 }
 function mergeClasses(appConfigClass, propClass) {
   if (!appConfigClass && !propClass) {
@@ -842,9 +910,12 @@ function useFieldGroup(props) {
 }
 const formOptionsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-options");
 const formBusInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-events");
+const formStateInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-state");
 const formFieldInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-field");
 const inputIdInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.input-id");
+const formInputsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-inputs");
 const formLoadingInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-loading");
+const formErrorsInjectionKey = /* @__PURE__ */ Symbol("nuxt-ui.form-errors");
 function useFormField(props, opts) {
   const formOptions = inject(formOptionsInjectionKey, void 0);
   const formBus = inject(formBusInjectionKey, void 0);
@@ -6288,11 +6359,11 @@ const createLazyVisibleComponent = defineLazyComponent(
   },
   (props) => hydrateOnVisible(props.hydrateOnVisible === true ? void 0 : props.hydrateOnVisible)
 );
-const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-NTQ2jmV8.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DjsL-Fj9.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-DaoNDLHQ.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-4MhDNWp-.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-nZQYx8LR.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy_visible = createLazyVisibleComponent("components/section/advantages.vue", () => import('./advantages-DZhTCXuw.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Cq2jMTLL.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy_visible = createLazyVisibleComponent("components/section/questions.vue", () => import('./questions-vLb8l3iD.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-HGqfIBUB.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy_visible = createLazyVisibleComponent("components/section/footer.vue", () => import('./footer-BrxlsZtF.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6351,4 +6422,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useFieldGroup as f, useComponentIcons as g, _sfc_main$i as h, useToast as i, _sfc_main$7 as j, get as k, looseToNumber as l, __nuxt_component_0 as m, index as n, tv as t, useFetch as u };
+export { getDisplayValue as A, __nuxt_component_0 as B, index as C, _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, formBusInjectionKey as k, looseToNumber as l, formStateInjectionKey as m, formErrorsInjectionKey as n, formInputsInjectionKey as o, formLoadingInjectionKey as p, formOptionsInjectionKey as q, inputIdInjectionKey as r, formFieldInjectionKey as s, tv as t, useFetch as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$j as z };

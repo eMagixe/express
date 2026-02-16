@@ -103,125 +103,123 @@ const onSubmit = async () => {
 </script>
 
 <template>
-	<ClientOnly>
-		<SectionTitle v-if="!orderCreated" title="Оставить заявку" />
-		<UForm
-			v-if="!orderCreated"
-			class="w-full flex flex-col justify-start items-center pt-5 gap-5"
-			:schema="schema"
-			:state="data"
-			@submit="onSubmit"
-			id="form-create-order"
-		>
-			<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
-				<UFormField name="name">
-					<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
+	<SectionTitle v-if="!orderCreated" title="Оставить заявку" />
+	<UForm
+		v-if="!orderCreated"
+		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
+		:schema="schema"
+		:state="data"
+		@submit="onSubmit"
+		id="form-create-order"
+	>
+		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
+			<UFormField name="name">
+				<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
+			</UFormField>
+			<UFormField name="phone">
+				<UInput
+					v-maska="'+7-(###)-###-##-##'"
+					v-model="data.phone"
+					placeholder="+7-(000)-000-00-00"
+					icon="i-lucide-phone"
+					size="xl"
+					id="phone"
+				/>
+			</UFormField>
+			<UFormField name="from">
+				<UInputMenu
+					type="button"
+					v-model="data.from"
+					:items="from_cities"
+					color="primary"
+					placeholder="Город отправления"
+					size="xl"
+					id="from"
+				/>
+			</UFormField>
+			<UFormField name="from_address">
+				<UInput
+					v-model="data.from_address"
+					color="primary"
+					placeholder="Адрес отправления"
+					size="xl"
+					id="from_address"
+				/>
+			</UFormField>
+			<UFormField name="to">
+				<UInputMenu
+					type="button"
+					v-model="data.to"
+					:items="to_cities"
+					color="primary"
+					placeholder="Город прибытия"
+					size="xl"
+					id="to"
+				/>
+			</UFormField>
+			<UFormField name="to_address">
+				<UInput
+					v-model="data.to_address"
+					color="primary"
+					placeholder="Адрес прибытия"
+					size="xl"
+					id="to_address"
+				/>
+			</UFormField>
+			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
+				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
+					<UPopover>
+						<UButton
+							icon="i-lucide-calendar"
+							id="date-button"
+							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+						>
+							{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
+						</UButton>
+						<template #content>
+							<UCalendar v-model="data.date" class="p-2" id="date" />
+						</template>
+					</UPopover>
 				</UFormField>
-				<UFormField name="phone">
-					<UInput
-						v-maska="'+7-(###)-###-##-##'"
-						v-model="data.phone"
-						placeholder="+7-(000)-000-00-00"
-						icon="i-lucide-phone"
-						size="xl"
-						id="phone"
-					/>
+				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
+					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" id="time" />
 				</UFormField>
-				<UFormField name="from">
-					<UInputMenu
-						type="button"
-						v-model="data.from"
-						:items="from_cities"
-						color="primary"
-						placeholder="Город отправления"
-						size="xl"
-						id="from"
-					/>
-				</UFormField>
-				<UFormField name="from_address">
-					<UInput
-						v-model="data.from_address"
-						color="primary"
-						placeholder="Адрес отправления"
-						size="xl"
-						id="from_address"
-					/>
-				</UFormField>
-				<UFormField name="to">
-					<UInputMenu
-						type="button"
-						v-model="data.to"
-						:items="to_cities"
-						color="primary"
-						placeholder="Город прибытия"
-						size="xl"
-						id="to"
-					/>
-				</UFormField>
-				<UFormField name="to_address">
-					<UInput
-						v-model="data.to_address"
-						color="primary"
-						placeholder="Адрес прибытия"
-						size="xl"
-						id="to_address"
-					/>
-				</UFormField>
-				<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
-					<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
-						<UPopover>
-							<UButton
-								icon="i-lucide-calendar"
-								id="date-button"
-								class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-							>
-								{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
-							</UButton>
-							<template #content>
-								<UCalendar v-model="data.date" class="p-2" id="date" />
-							</template>
-						</UPopover>
-					</UFormField>
-					<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
-						<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" id="time" />
-					</UFormField>
-				</div>
+			</div>
 
-				<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
-					<UCheckbox
-						v-model="check"
-						label="Подтверждение"
-						description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
-						:ui="{
-							base: 'h-5 w-5 text-white bg-gray-600 mt-10 m-2',
-							description: 'text-primary/70',
-							label: 'text-white text-lg'
-						}"
-						id="check"
-					/>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
-				<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!check">
-					Отправить
-				</UButton>
-				<UButton class="button-gradient h-16" @click="reset">Очистить</UButton>
-			</div>
-		</UForm>
-		<div v-else>
-			<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
-				<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
-				<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
-				<p>
-					Имя: <b>{{ data.name }}</b>
-				</p>
-				<p>Телефон: {{ data.phone }}</p>
-				<p>Из: {{ data.from }}, {{ data.from_address }}</p>
-				<p>До: {{ data.to }}, {{ data.to_address }}</p>
-				<p>Дата: {{ data.date }}, время: {{ data.time }}</p>
+			<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
+				<UCheckbox
+					v-model="check"
+					label="Подтверждение"
+					description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
+					:ui="{
+						base: 'h-5 w-5 text-white bg-gray-600 mt-10 m-2',
+						description: 'text-primary/70',
+						label: 'text-white text-lg'
+					}"
+					id="check"
+				/>
 			</div>
 		</div>
-	</ClientOnly>
+		<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
+			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!check">
+				Отправить
+			</UButton>
+			<UButton class="button-gradient h-16" @click="reset">Очистить</UButton>
+		</div>
+	</UForm>
+	<div v-else>
+		<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
+			<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
+			<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
+			<p>
+				Имя: <b>{{ data.name }}</b>
+			</p>
+			<p>Телефон: {{ data.phone }}</p>
+			<p>Из: {{ data.from }}, {{ data.from_address }}</p>
+			<p>До: {{ data.to }}, {{ data.to_address }}</p>
+			<p>Дата: {{ data.date }}, время: {{ data.time }}</p>
+		</div>
+	</div>
 </template>
 
 <style scoped>

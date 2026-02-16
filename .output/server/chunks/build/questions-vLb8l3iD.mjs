@@ -1,5 +1,5 @@
-import { _ as _sfc_main$9, t as tv, k as get, a as _sfc_main$k } from './index-B196UXBP.mjs';
-import { _ as __nuxt_component_1 } from './title-Bvxv237P.mjs';
+import { _ as _sfc_main$9, t as tv, j as get, a as _sfc_main$k } from './index-Bp4O9dhn.mjs';
+import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, createVNode, useSlots, computed, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderClass, ssrInterpolate } from 'vue/server-renderer';
 import { useForwardPropsEmits, AccordionRoot, AccordionItem, AccordionHeader, AccordionTrigger, AccordionContent } from 'reka-ui';
@@ -17,7 +17,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-DDDZ6YAJ.mjs';
+import './index-RsQii6NS.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -540,7 +540,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$9;
-      const _component_SectionTitle = __nuxt_component_1;
+      const _component_SectionTitle = __nuxt_component_0;
       const _component_UAccordion = _sfc_main$1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-471c91b8>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {

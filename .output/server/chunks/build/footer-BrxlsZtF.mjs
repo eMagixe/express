@@ -1,4 +1,4 @@
-import { m as __nuxt_component_0, a as _sfc_main$k } from './index-B196UXBP.mjs';
+import { B as __nuxt_component_0, a as _sfc_main$k } from './index-Bp4O9dhn.mjs';
 import { defineComponent, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import 'reka-ui';
@@ -25,7 +25,7 @@ import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
 import 'tailwind-variants';
-import './index-DDDZ6YAJ.mjs';
+import './index-RsQii6NS.mjs';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
 import './nuxt-link-AZZXNs-c.mjs';
