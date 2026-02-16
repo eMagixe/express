@@ -128,9 +128,9 @@ const onSubmit = async () => {
 			</UFormField>
 			<UFormField name="from">
 				<UInputMenu
-					type="button"
 					v-model="data.from"
 					:items="from_cities"
+					open-on-focus
 					color="primary"
 					placeholder="Город отправления"
 					size="xl"
@@ -148,9 +148,9 @@ const onSubmit = async () => {
 			</UFormField>
 			<UFormField name="to">
 				<UInputMenu
-					type="button"
 					v-model="data.to"
 					:items="to_cities"
+					open-on-focus
 					color="primary"
 					placeholder="Город прибытия"
 					size="xl"
