@@ -167,9 +167,9 @@ const onSubmit = async () => {
 				/>
 			</UFormField>
 			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
-				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
-					<UPopover>
-						<ClientOnly>
+				<ClientOnly>
+					<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
+						<UPopover>
 							<UButton
 								icon="i-lucide-calendar"
 								id="date-button"
@@ -177,12 +177,13 @@ const onSubmit = async () => {
 							>
 								{{ data.date ? df.format(data.date.toDate(getLocalTimeZone())) : 'Выберете дату' }}
 							</UButton>
-						</ClientOnly>
-						<template #content>
-							<UCalendar v-model="data.date" class="p-2" id="date" />
-						</template>
-					</UPopover>
-				</UFormField>
+
+							<template #content>
+								<UCalendar v-model="data.date" class="p-2" id="date" />
+							</template>
+						</UPopover>
+					</UFormField>
+				</ClientOnly>
 				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
 					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" id="time" />
 				</UFormField>

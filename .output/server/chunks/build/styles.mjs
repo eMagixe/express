@@ -12,13 +12,13 @@ const styles = {
   "components/section/advantages.vue": () => import('./advantages-styles.KG2QAbIa.mjs').then(interopDefault),
   "components/section/questions.vue": () => import('./questions-styles.CRebXE4I.mjs').then(interopDefault),
   "components/section/welcome.vue?vue&type=style&index=0&scoped=6175f213&lang.css": () => import('./welcome-styles.DIKt0t1a.mjs').then(interopDefault),
-  "components/section/advantages.vue?vue&type=style&index=0&scoped=926f166e&lang.css": () => import('./advantages-styles.KG2QAbIa.mjs').then(interopDefault),
   "components/section/questions.vue?vue&type=style&index=0&scoped=365457e5&lang.css": () => import('./questions-styles.CRebXE4I.mjs').then(interopDefault),
-  "components/preview/all.vue": () => import('./all-styles.DEnkcQPh.mjs').then(interopDefault),
+  "components/section/advantages.vue?vue&type=style&index=0&scoped=926f166e&lang.css": () => import('./advantages-styles.KG2QAbIa.mjs').then(interopDefault),
   "components/preview/viewer.vue": () => import('./viewer-styles.DIO4r6pF.mjs').then(interopDefault),
-  "components/order/create.vue": () => import('./create-styles.CtZV5Bzi.mjs').then(interopDefault),
+  "components/preview/all.vue": () => import('./all-styles.DEnkcQPh.mjs').then(interopDefault),
+  "components/order/create.vue": () => import('./create-styles.Bc7XiCCe.mjs').then(interopDefault),
   "components/preview/all.vue?vue&type=style&index=0&scoped=efe59295&lang.css": () => import('./all-styles.DEnkcQPh.mjs').then(interopDefault),
-  "components/order/create.vue?vue&type=style&index=0&scoped=64a71e92&lang.css": () => import('./create-styles.CtZV5Bzi.mjs').then(interopDefault),
+  "components/order/create.vue?vue&type=style&index=0&scoped=f8f41233&lang.css": () => import('./create-styles.Bc7XiCCe.mjs').then(interopDefault),
   "components/preview/viewer.vue?vue&type=style&index=0&scoped=bd84828f&lang.css": () => import('./viewer-styles.DIO4r6pF.mjs').then(interopDefault)
 };
 
