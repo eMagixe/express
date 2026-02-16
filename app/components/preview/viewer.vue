@@ -2,13 +2,17 @@
 import type { Review } from '#shared/types/global'
 import { useReview } from '~/composibles/useReview'
 
-const { reviews, fetchAllReviews } = useReview()
+const preload = async () => {
+	const { reviews, fetchAllReviews } = useReview()
+	await fetchAllReviews()
+	return reviews
+}
 
-await fetchAllReviews()
+const reviews = await preload()
 </script>
 
 <template>
-	<template v-for="(item, index) in reviews.slice(0, 3) as Review[]" :key="index">
+	<template v-for="item in reviews.slice(0, 3) as Review[]" :key="useId()">
 		<div
 			class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full"
 		>

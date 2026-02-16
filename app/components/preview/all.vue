@@ -3,11 +3,16 @@ import { useReview } from '~/composibles/useReview'
 
 const modalAllReviewsOpen = ref(false)
 
-const { reviews, fetchAllReviews } = useReview()
+const preload = () => {
+	const { reviews, fetchAllReviews } = useReview()
 
-fetchAllReviews().then(() => {
-	modalAllReviewsOpen.value = false
-})
+	fetchAllReviews().then(() => {
+		modalAllReviewsOpen.value = false
+	})
+
+	return reviews
+}
+const reviews = preload()
 </script>
 
 <template>

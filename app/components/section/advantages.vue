@@ -103,9 +103,7 @@ const advantages = <Advantage[]>[
 .section-advantages {
 	background:
 		linear-gradient(rgba(10, 11, 8, 1) 10%, rgba(10, 11, 8, 0) 50%, rgba(153, 89, 0, 1) 100%),
-		url('/images/webp/two-section.webp');
-	background-repeat: no-repeat;
-	background-position: center;
+		url('/images/webp/two-section.webp') no-repeat center;
 	background-size: cover;
 
 	h2 {
