@@ -1,4 +1,4 @@
-import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, useTemplateRef, withModifiers, shallowReactive, isRef, markRaw, nextTick, useSSRContext } from 'vue';
+import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, isRef, useTemplateRef, withModifiers, shallowReactive, markRaw, nextTick, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
@@ -6324,11 +6324,11 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6175f213"]]), { __name: "SectionWelcome" });
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-Rye1JGn5.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-Cw44mkXe.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-DFmvKw0q.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-CERAWUKN.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-BioZvfBv.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-G7bJ44bG.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-CBeWmds-.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-VmRec2wr.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BXVXgMyG.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-suZ3FDC9.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6387,4 +6387,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { getDisplayValue as A, __nuxt_component_0 as B, index as C, _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, formBusInjectionKey as k, looseToNumber as l, formStateInjectionKey as m, formErrorsInjectionKey as n, formInputsInjectionKey as o, formLoadingInjectionKey as p, formOptionsInjectionKey as q, inputIdInjectionKey as r, formFieldInjectionKey as s, tv as t, useFetch as u, usePortal as v, useFieldGroup as w, isArrayOfArray as x, compare as y, _sfc_main$j as z };
+export { _sfc_main$j as A, getDisplayValue as B, __nuxt_component_0 as C, index as D, _sfc_main$9 as _, _sfc_main$k as a, useLocale as b, _sfc_main$f as c, _sfc_main$6 as d, useFormField as e, useComponentIcons as f, _sfc_main$i as g, useToast as h, _sfc_main$7 as i, get as j, useState as k, looseToNumber as l, formBusInjectionKey as m, formStateInjectionKey as n, formErrorsInjectionKey as o, formInputsInjectionKey as p, formLoadingInjectionKey as q, formOptionsInjectionKey as r, inputIdInjectionKey as s, tv as t, useFetch as u, formFieldInjectionKey as v, usePortal as w, useFieldGroup as x, isArrayOfArray as y, compare as z };

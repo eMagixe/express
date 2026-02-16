@@ -1,6 +1,6 @@
-import { _ as _sfc_main$9, t as tv, j as get, a as _sfc_main$k } from './index-CM5UgfyY.mjs';
+import { k as useState, _ as _sfc_main$9, t as tv, j as get, a as _sfc_main$k } from './index-Cpn9uj7s.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
-import { defineComponent, ref, mergeProps, withCtx, unref, createVNode, useSlots, computed, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, useSSRContext } from 'vue';
+import { defineComponent, mergeProps, withCtx, unref, createVNode, useSlots, computed, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderClass, ssrInterpolate } from 'vue/server-renderer';
 import { useForwardPropsEmits, AccordionRoot, AccordionItem, AccordionHeader, AccordionTrigger, AccordionContent } from 'reka-ui';
 import { reactivePick } from '@vueuse/core';
@@ -516,38 +516,40 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "questions",
   __ssrInlineRender: true,
   setup(__props) {
-    const items = ref([
-      {
-        label: "Забираете ли Вы пассажиров из поселков и деревень?",
-        content: "Да, конечно. Мы так же работаем по таким населенным пунктам как Ермолаево, Алексеевка, Бальза, Бахмут, Шабагиш, Старая и Новая Отрада и другие пункты Куюргазинского района."
-      },
-      {
-        label: "В какое время работает диспетчер?",
-        content: "Диспетчер принимает заявки круглосуточно. И предоставляет полную и актуальную информацию."
-      },
-      {
-        label: "Какие конечные пункты поездок?",
-        content: "Мы довозим до вокзалов, центров, больниц, а так же до конкретных адресов в крупных городах Республики Башкортостан."
-      },
-      {
-        label: "Как оплачивается багаж?",
-        content: "Первая сумка - бесплатно. За остальные взимается плата которую всегда можно узнать у диспетчера."
-      },
-      {
-        label: "Перевозите ли Вы посылки?",
-        content: "Да, мы перевозим посылки до определенных габаритов которые можно уточнить у диспетчера."
-      }
-    ]);
+    const items = useState("questions", () => {
+      return [
+        {
+          label: "Забираете ли Вы пассажиров из поселков и деревень?",
+          content: "Да, конечно. Мы так же работаем по таким населенным пунктам как Ермолаево, Алексеевка, Бальза, Бахмут, Шабагиш, Старая и Новая Отрада и другие пункты Куюргазинского района."
+        },
+        {
+          label: "В какое время работает диспетчер?",
+          content: "Диспетчер принимает заявки круглосуточно. И предоставляет полную и актуальную информацию."
+        },
+        {
+          label: "Какие конечные пункты поездок?",
+          content: "Мы довозим до вокзалов, центров, больниц, а так же до конкретных адресов в крупных городах Республики Башкортостан."
+        },
+        {
+          label: "Как оплачивается багаж?",
+          content: "Первая сумка - бесплатно. За остальные взимается плата которую всегда можно узнать у диспетчера."
+        },
+        {
+          label: "Перевозите ли Вы посылки?",
+          content: "Да, мы перевозим посылки до определенных габаритов которые можно уточнить у диспетчера."
+        }
+      ];
+    });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UContainer = _sfc_main$9;
       const _component_SectionTitle = __nuxt_component_0;
       const _component_UAccordion = _sfc_main$1;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-471c91b8>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-8102f920>`);
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionTitle, { title: "Популярные вопросы" }, null, _parent2, _scopeId));
-            _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" data-v-471c91b8${_scopeId}>`);
+            _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" data-v-8102f920${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UAccordion, {
               items: unref(items),
               class: "accordion-questions"
@@ -577,6 +579,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/questions.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const questions = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["__scopeId", "data-v-471c91b8"]]), { __name: "SectionQuestions" });
+const questions = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["__scopeId", "data-v-8102f920"]]), { __name: "SectionQuestions" });
 
 export { questions as default };
