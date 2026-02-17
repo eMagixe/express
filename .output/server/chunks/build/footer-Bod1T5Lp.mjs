@@ -1,4 +1,4 @@
-import { E as __nuxt_component_0, a as _sfc_main$k } from './index-D1MFwbxo.mjs';
+import { E as __nuxt_component_0, a as _sfc_main$k } from './index-Bs4gohG-.mjs';
 import { defineComponent, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import 'reka-ui';

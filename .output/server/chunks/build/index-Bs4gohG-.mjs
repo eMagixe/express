@@ -6455,20 +6455,21 @@ function useScript(input, options) {
   nuxtApp.$scripts[id] = instance;
   return instance;
 }
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-BE-a1KSK.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DamQ51cl.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-n7N18y5E.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BXyo7R49.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-D3FTbDJK.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-DDbce9-N.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BuqYllZG.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-DT2Lmlje.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-D8UTJIMy.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-Bod1T5Lp.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
   setup(__props) {
     useSeoMeta({
       title: "Такси Экспресс | Межгороднее такси из Кумертау Уфа",
-      ogTitle: "Такси Экспресс | Межгороднее такси из Кумертау Уфа",
       description: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+      ogTitle: "Такси Экспресс | Межгороднее такси из Кумертау Уфа",
       ogDescription: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+      ogImage: "https://taxi-express.su/images/preview.png",
       twitterCard: "summary_large_image"
     });
     useScript("/js/yandex-metrika.js", {
