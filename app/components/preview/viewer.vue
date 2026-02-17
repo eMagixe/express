@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { Review } from '#shared/types/global'
-import { useReview } from '~/composibles/useReview'
-
 const preload = async () => {
 	const { reviews, getAll } = useReview()
 	await getAll()

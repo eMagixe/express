@@ -1,12 +1,10 @@
-import type { Review } from '#shared/types/global'
-
 export const useReview = () => {
 	const reviews = ref<Review[]>([])
 
 	const getAll = async () => {
 		return useFetch('/api/review/all', {
 			method: 'GET'
-		}).then(({ data }) => {
+		}).then(({ data }: any): void => {
 			if (data?.value && Array.isArray(data.value)) {
 				reviews.value = data.value.map((review: any) => {
 					return {
@@ -14,7 +12,7 @@ export const useReview = () => {
 						text: review.text,
 						rating: Number(review.rating),
 						date: new Date(review.createdAt).toLocaleDateString('ru-RU')
-					}
+					} as Review
 				}) as Review[]
 			}
 		})

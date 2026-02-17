@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
 	<div class="section-reviews w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70">
 		<UContainer class="flex flex-col justify-center items-center gap-5">

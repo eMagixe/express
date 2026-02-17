@@ -1,11 +1,11 @@
-import { _ as _sfc_main$9, h as useToast, c as _sfc_main$f, t as tv, n as formBusInjectionKey, o as formStateInjectionKey, p as formErrorsInjectionKey, q as formInputsInjectionKey, r as formLoadingInjectionKey, s as formOptionsInjectionKey, v as inputIdInjectionKey, w as formFieldInjectionKey, b as useLocale, y as usePortal, e as useFormField, z as useFieldGroup, f as useComponentIcons, A as isArrayOfArray, x as get, B as compare, a as _sfc_main$k, g as _sfc_main$i, C as _sfc_main$j, l as looseToNumber, D as getDisplayValue } from './index-Bn9z9S2e.mjs';
+import { _ as _sfc_main$9, h as useToast, c as _sfc_main$f, t as tv, n as formBusInjectionKey, o as formStateInjectionKey, p as formErrorsInjectionKey, q as formInputsInjectionKey, r as formLoadingInjectionKey, s as formOptionsInjectionKey, v as inputIdInjectionKey, w as formFieldInjectionKey, b as useLocale, y as usePortal, e as useFormField, z as useFieldGroup, f as useComponentIcons, A as isArrayOfArray, x as get, B as compare, a as _sfc_main$k, g as _sfc_main$i, C as _sfc_main$j, l as looseToNumber, D as getDisplayValue } from './index-3GFx0lfd.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, ref, reactive, shallowRef, computed, watch, unref, withDirectives, isRef, createTextVNode, toDisplayString, useId, inject, provide, readonly, resolveDynamicComponent, renderSlot, useSlots, openBlock, createBlock, createCommentVNode, useModel, toRef, useTemplateRef, withModifiers, Fragment, renderList, mergeModels, toHandlers, toRaw, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrGetDirectiveProps, ssrInterpolate, ssrRenderVNode, ssrRenderSlot, ssrRenderClass, ssrRenderAttr, ssrRenderList } from 'vue/server-renderer';
 import { useEventBus, reactivePick, createReusableTemplate, reactiveOmit } from '@vueuse/core';
 import { _ as _export_sfc, c as useAppConfig } from './server.mjs';
 import { Primitive, Label, useFilter, useForwardPropsEmits, ComboboxItem, ComboboxLabel, ComboboxSeparator, ComboboxItemIndicator, ComboboxRoot, ComboboxAnchor, TagsInputRoot, TagsInputItem, TagsInputItemText, TagsInputItemDelete, ComboboxInput, TagsInputInput, ComboboxTrigger, ComboboxCancel, ComboboxPortal, ComboboxContent, ComboboxEmpty, ComboboxVirtualizer, ComboboxGroup, ComboboxArrow, TimeFieldRoot, TimeFieldInput, useForwardProps, CheckboxRoot, CheckboxIndicator } from 'reka-ui';
-import { _ as _sfc_main$a } from './Input-BoWXS2es.mjs';
+import { _ as _sfc_main$a } from './Input-Ba1wA4h5.mjs';
 import { y as defu, C as isEqual } from '../nitro/nitro.mjs';
 import { a as __nuxt_component_5 } from './index-C6iqQa3I.mjs';
 import { HoverCard, Popover, RangeCalendar, Calendar } from 'reka-ui/namespaced';
@@ -5262,10 +5262,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       dateStyle: "medium"
     });
     const check = ref(false);
+    const toast = useToast();
     const [day, month, year] = new Date(Date.now()).toLocaleDateString("ru-RU").split(".");
     const defaultTime = new Time(16, 30, 0);
     const currentDate = new CalendarDate(Number(year), Number(month), Number(day));
-    const toast = useToast();
     const data = reactive({
       name: "",
       phone: "",
@@ -5363,7 +5363,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5" data-v-f8f41233${_scopeId}>`);
+              _push2(`<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5" data-v-7ed6d4b3${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UFormField, { name: "name" }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
@@ -5530,7 +5530,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 }),
                 _: 1
               }, _parent2, _scopeId));
-              _push2(`<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5" data-v-f8f41233${_scopeId}>`);
+              _push2(`<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5" data-v-7ed6d4b3${_scopeId}>`);
               _push2(ssrRenderComponent(_component_ClientOnly, null, {}, _parent2, _scopeId));
               _push2(ssrRenderComponent(_component_UFormField, {
                 name: "time",
@@ -5557,7 +5557,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 }),
                 _: 1
               }, _parent2, _scopeId));
-              _push2(`</div><div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center" data-v-f8f41233${_scopeId}>`);
+              _push2(`</div><div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center" data-v-7ed6d4b3${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UCheckbox, {
                 modelValue: unref(check),
                 "onUpdate:modelValue": ($event) => isRef(check) ? check.value = $event : null,
@@ -5570,7 +5570,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                 },
                 id: "check"
               }, null, _parent2, _scopeId));
-              _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" data-v-f8f41233${_scopeId}>`);
+              _push2(`</div></div><div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5" data-v-7ed6d4b3${_scopeId}>`);
               _push2(ssrRenderComponent(_component_UButton, {
                 type: "submit",
                 class: "button-gradient h-16",
@@ -5786,7 +5786,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           _: 1
         }, _parent));
       } else {
-        _push(`<div data-v-f8f41233><div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5" data-v-f8f41233><h3 class="text-2xl font-bold text-center" data-v-f8f41233>Ваша заявка принята.</h3><p class="w-full text-center" data-v-f8f41233>Спасибо, водитель свяжеться с вами.</p><p data-v-f8f41233> Имя: <b data-v-f8f41233>${ssrInterpolate(unref(data).name)}</b></p><p data-v-f8f41233>Телефон: ${ssrInterpolate(unref(data).phone)}</p><p data-v-f8f41233>Из: ${ssrInterpolate(unref(data).from)}, ${ssrInterpolate(unref(data).from_address)}</p><p data-v-f8f41233>До: ${ssrInterpolate(unref(data).to)}, ${ssrInterpolate(unref(data).to_address)}</p><p data-v-f8f41233>Дата: ${ssrInterpolate(unref(data).date)}, время: ${ssrInterpolate(unref(data).time)}</p></div></div>`);
+        _push(`<div data-v-7ed6d4b3><div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5" data-v-7ed6d4b3><h3 class="text-2xl font-bold text-center" data-v-7ed6d4b3>Ваша заявка принята.</h3><p class="w-full text-center" data-v-7ed6d4b3>Спасибо, водитель свяжеться с вами.</p><p data-v-7ed6d4b3> Имя: <b data-v-7ed6d4b3>${ssrInterpolate(unref(data).name)}</b></p><p data-v-7ed6d4b3>Телефон: ${ssrInterpolate(unref(data).phone)}</p><p data-v-7ed6d4b3>Из: ${ssrInterpolate(unref(data).from)}, ${ssrInterpolate(unref(data).from_address)}</p><p data-v-7ed6d4b3>До: ${ssrInterpolate(unref(data).to)}, ${ssrInterpolate(unref(data).to_address)}</p><p data-v-7ed6d4b3>Дата: ${ssrInterpolate(unref(data).date)}, время: ${ssrInterpolate(unref(data).time)}</p></div></div>`);
       }
       _push(`<!--]-->`);
     };
@@ -5798,12 +5798,12 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/order/create.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-f8f41233"]]), { __name: "OrderCreate" });
+const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-7ed6d4b3"]]), { __name: "OrderCreate" });
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UContainer = _sfc_main$9;
   const _component_OrderCreate = __nuxt_component_1;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]" }, _attrs))} data-v-4709c301>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]" }, _attrs))} data-v-0bf01efe>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "flex animation-box flex-col justify-center items-center gap-5" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -5824,6 +5824,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/order.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-4709c301"]]), { __name: "SectionOrder" });
+const order = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-0bf01efe"]]), { __name: "SectionOrder" });
 
 export { order as default };

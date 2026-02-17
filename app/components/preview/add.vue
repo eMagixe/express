@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { Review } from '#shared/types/global'
-import { useReview } from '~/composibles/useReview'
-
 const review = ref<Review>({
 	name: '',
 	text: '',
@@ -92,5 +89,3 @@ const onAddReview = async () => {
 		</template>
 	</UModal>
 </template>
-
-<style scoped></style>

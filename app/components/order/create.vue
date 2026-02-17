@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { CalendarDate, DateFormatter, getLocalTimeZone, Time } from '@internationalized/date'
-import type { Order } from '#shared/types/global'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
@@ -9,14 +8,11 @@ const df = new DateFormatter('ru-RU', {
 	dateStyle: 'medium'
 })
 
-//Form data
 const check = ref(false)
-
+const toast = useToast()
 const [day, month, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
-
 const defaultTime = new Time(16, 30, 0)
 const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
-const toast = useToast()
 
 const data = reactive<Order>({
 	name: '',
@@ -46,7 +42,6 @@ const schema = v.object({
 	time: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения'))
 })
 
-//Cities
 const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
 
 const from_cities = computed(() => {
@@ -68,7 +63,6 @@ const to_cities = computed(() => {
 	}
 })
 
-//Actions
 const reset = (): void => {
 	data.to_address = ''
 	data.from_address = ''

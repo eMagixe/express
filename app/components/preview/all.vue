@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useReview } from '~/composibles/useReview'
-
 const modalAllReviewsOpen = ref(false)
 
 const preload = () => {

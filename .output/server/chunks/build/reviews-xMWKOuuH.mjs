@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-Bn9z9S2e.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-3GFx0lfd.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
@@ -7,7 +7,7 @@ import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick, useVModel } from '@vueuse/core';
-import { _ as _sfc_main$8 } from './Input-BoWXS2es.mjs';
+import { _ as _sfc_main$8 } from './Input-Ba1wA4h5.mjs';
 import 'tailwind-variants';
 import './index-C6iqQa3I.mjs';
 import '@iconify/vue';
@@ -45,7 +45,7 @@ const useReview = () => {
       {
         method: "GET"
       },
-      "$I2AEvpjrqM"
+      "$9RxkCj8pEZ"
       /* nuxt-injected */
     ).then(({ data }) => {
       if (data?.value && Array.isArray(data.value)) {
@@ -69,7 +69,7 @@ const useReview = () => {
           ...review.value
         }
       },
-      "$9lI52c1n4T"
+      "$GMk1CtyGrk"
       /* nuxt-injected */
     );
   };
@@ -94,18 +94,18 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
       const _component_UIcon = _sfc_main$k;
       _push(`<!--[-->`);
       ssrRenderList(unref(reviews2).slice(0, 3), (item) => {
-        _push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-bd84828f><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-bd84828f><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-bd84828f><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-bd84828f>`);
+        _push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-ffd67f70><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-ffd67f70><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-ffd67f70><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-ffd67f70>`);
         _push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
-        _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-bd84828f><!--[-->`);
+        _push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-ffd67f70><!--[-->`);
         ssrRenderList(item.rating, (n) => {
-          _push(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-bd84828f>`);
+          _push(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-ffd67f70>`);
         });
-        _push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-bd84828f>`);
+        _push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-ffd67f70>`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "i-lucide-calendar",
           size: "14"
         }, null, _parent));
-        _push(`<p data-v-bd84828f>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-bd84828f>${ssrInterpolate(item.text)}</div></div>`);
+        _push(`<p data-v-ffd67f70>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-ffd67f70>${ssrInterpolate(item.text)}</div></div>`);
       });
       _push(`<!--]-->`);
     };
@@ -117,7 +117,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/viewer.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-bd84828f"]]), { __name: "PreviewViewer" });
+const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-ffd67f70"]]), { __name: "PreviewViewer" });
 const theme$1 = {
   "slots": {
     "root": "relative focus:outline-none",
@@ -501,7 +501,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         content: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="modal-reviews" data-v-efe59295${_scopeId}>`);
+            _push2(`<div class="modal-reviews" data-v-b178ddd3${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UCarousel, {
               loop: "",
               autoplay: { delay: 2200 },
@@ -511,18 +511,18 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
             }, {
               default: withCtx(({ item }, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="item flex flex-col justify-start items-start gap-1" data-v-efe59295${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-efe59295${_scopeId2}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-efe59295${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-efe59295${_scopeId2}>`);
+                  _push3(`<div class="item flex flex-col justify-start items-start gap-1" data-v-b178ddd3${_scopeId2}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-b178ddd3${_scopeId2}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-b178ddd3${_scopeId2}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-b178ddd3${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent3, _scopeId2));
-                  _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-efe59295${_scopeId2}><!--[-->`);
+                  _push3(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-b178ddd3${_scopeId2}><!--[-->`);
                   ssrRenderList(item.rating, (n) => {
-                    _push3(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-efe59295${_scopeId2}>`);
+                    _push3(`<img height="20" width="20"${ssrRenderAttr("src", _imports_0)}${ssrRenderAttr("alt", `star +${n}`)} data-v-b178ddd3${_scopeId2}>`);
                   });
-                  _push3(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-efe59295${_scopeId2}>`);
+                  _push3(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-b178ddd3${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_UIcon, {
                     name: "i-lucide-calendar",
                     size: "14"
                   }, null, _parent3, _scopeId2));
-                  _push3(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-efe59295${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-efe59295${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
+                  _push3(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-b178ddd3${_scopeId2}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-b178ddd3${_scopeId2}>${ssrInterpolate(item.text)}</div></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "item flex flex-col justify-start items-start gap-1" }, [
@@ -647,7 +647,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/all.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-efe59295"]]), { __name: "PreviewAll" });
+const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-b178ddd3"]]), { __name: "PreviewAll" });
 const theme = {
   "slots": {
     "root": "relative inline-flex items-center",
@@ -1363,14 +1363,14 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_PreviewViewer = __nuxt_component_2;
   const _component_PreviewAll = __nuxt_component_3;
   const _component_PreviewAdd = __nuxt_component_4;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-4c4b4508>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "section-reviews w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70" }, _attrs))} data-v-a563bc95>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_SectionTitle, { title: "Отзывы" }, null, _parent2, _scopeId));
-        _push2(`<div class="w-full flex flex-col justify-start items-center pt-10 gap-10" data-v-4c4b4508${_scopeId}>`);
+        _push2(`<div class="w-full flex flex-col justify-start items-center pt-10 gap-10" data-v-a563bc95${_scopeId}>`);
         _push2(ssrRenderComponent(_component_PreviewViewer, null, null, _parent2, _scopeId));
-        _push2(`<div class="w-full flex flex-row justify-between items-center pt-10 gap-5" data-v-4c4b4508${_scopeId}>`);
+        _push2(`<div class="w-full flex flex-row justify-between items-center pt-10 gap-5" data-v-a563bc95${_scopeId}>`);
         _push2(ssrRenderComponent(_component_PreviewAll, null, null, _parent2, _scopeId));
         _push2(ssrRenderComponent(_component_PreviewAdd, null, null, _parent2, _scopeId));
         _push2(`</div></div>`);
@@ -1397,6 +1397,6 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/reviews.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-4c4b4508"]]), { __name: "SectionReviews" });
+const reviews = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-a563bc95"]]), { __name: "SectionReviews" });
 
 export { reviews as default };

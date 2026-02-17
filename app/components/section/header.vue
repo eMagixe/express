@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
 	<div class="border-b border-b-primary/70">
 		<UContainer>
@@ -19,5 +17,3 @@
 		</UContainer>
 	</div>
 </template>
-
-<style scoped></style>
