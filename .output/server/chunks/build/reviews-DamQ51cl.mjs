@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-D68lH4Pj.mjs';
+import { _ as _sfc_main$9, a as _sfc_main$k, d as _sfc_main$6, c as _sfc_main$f, h as useToast, i as _sfc_main$7, b as useLocale, t as tv, e as useFormField, f as useComponentIcons, g as _sfc_main$i, u as useFetch, l as looseToNumber } from './index-D1MFwbxo.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { mergeProps, withCtx, createVNode, defineComponent, withAsyncContext, unref, ref, createTextVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, watch, renderSlot, createCommentVNode, useSlots, useTemplateRef, nextTick, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
@@ -7,9 +7,9 @@ import { _ as _export_sfc, d as useRoute, c as useAppConfig } from './server.mjs
 import useEmblaCarousel from 'embla-carousel-vue';
 import { useForwardProps, Primitive } from 'reka-ui';
 import { reactivePick, useVModel } from '@vueuse/core';
-import { _ as _sfc_main$8 } from './Input-CJVsJ_er.mjs';
+import { _ as _sfc_main$8 } from './Input-B9YcNvuL.mjs';
 import 'tailwind-variants';
-import './index-MO1XoZjO.mjs';
+import './index-C6iqQa3I.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -31,9 +31,10 @@ import 'unhead/server';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-AZZXNs-c.mjs';
+import './nuxt-link-KTm-8YBI.mjs';
 import 'vaul-vue';
 import '@vue/shared';
+import 'unhead/scripts';
 
 const _imports_0 = publicAssetsURL("/images/svg/star.svg");
 const useReview = () => {

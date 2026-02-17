@@ -4,7 +4,7 @@ const year = 31536000
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: false },
-	modules: ['@nuxt/ui'],
+	modules: ['@nuxt/ui', '@nuxt/scripts'],
 	css: ['/assets/css/main.css'],
 	debug: false,
 	runtimeConfig: {
@@ -60,11 +60,10 @@ export default defineNuxtConfig({
 					rel: 'icon',
 					type: 'image/x-icon',
 					href: '/favicon.png'
-				}
-			],
-			script: [
+				},
 				{
-					src: '/js/yandex-metrika.js'
+					rel: 'canonical',
+					href: 'https://taxi-express.su'
 				}
 			]
 		}

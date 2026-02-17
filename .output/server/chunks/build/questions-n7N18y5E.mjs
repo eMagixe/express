@@ -1,4 +1,4 @@
-import { m as useState, _ as _sfc_main$9, t as tv, j as getSlotChildrenText, a as _sfc_main$k, k as _sfc_main$g } from './index-D68lH4Pj.mjs';
+import { m as useState, _ as _sfc_main$9, t as tv, j as getSlotChildrenText, a as _sfc_main$k, k as _sfc_main$g } from './index-D1MFwbxo.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { defineComponent, mergeProps, withCtx, unref, useId, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, renderSlot, useSlots, ref, watch, createCommentVNode, createTextVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderSlot, ssrRenderClass } from 'vue/server-renderer';
@@ -17,7 +17,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-MO1XoZjO.mjs';
+import './index-C6iqQa3I.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -29,9 +29,10 @@ import 'unhead/server';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import './nuxt-link-AZZXNs-c.mjs';
+import './nuxt-link-KTm-8YBI.mjs';
 import 'vaul-vue';
 import '@vue/shared';
+import 'unhead/scripts';
 
 const theme$1 = {
   "base": "relative flex flex-col",

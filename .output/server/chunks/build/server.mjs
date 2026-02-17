@@ -4,7 +4,7 @@ import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, 
 import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
-import { u as useSeoMeta$1, a as useHead$1, h as headSymbol } from '../routes/renderer.mjs';
+import { u as useSeoMeta$1, h as headSymbol, a as useHead$1 } from '../routes/renderer.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -418,7 +418,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-D68lH4Pj.mjs').then((n) => n.F)
+    component: () => import('./index-D1MFwbxo.mjs').then((n) => n.F)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -776,7 +776,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-MO1XoZjO.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-C6iqQa3I.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1500,7 +1500,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-DRQakLSS.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-PsVM9rT4.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1582,4 +1582,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useSeoMeta as e, fetchDefaults as f, useRouter as g, useRuntimeConfig as h, nuxtLinkDefaults as i, asyncDataDefaults as j, createError as k, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRuntimeConfig as e, fetchDefaults as f, useSeoMeta as g, useRouter as h, injectHead as i, nuxtLinkDefaults as j, asyncDataDefaults as k, createError as l, navigateTo as n, resolveRouteObject as r, useHead as u };

@@ -1,4 +1,4 @@
-import { E as __nuxt_component_0, a as _sfc_main$k } from './index-D68lH4Pj.mjs';
+import { E as __nuxt_component_0, a as _sfc_main$k } from './index-D1MFwbxo.mjs';
 import { defineComponent, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import 'reka-ui';
@@ -25,12 +25,13 @@ import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
 import 'tailwind-variants';
-import './index-MO1XoZjO.mjs';
+import './index-C6iqQa3I.mjs';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
-import './nuxt-link-AZZXNs-c.mjs';
+import './nuxt-link-KTm-8YBI.mjs';
 import 'vaul-vue';
 import '@vue/shared';
+import 'unhead/scripts';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "footer",

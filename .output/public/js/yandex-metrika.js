@@ -1,4 +1,4 @@
-;(function (m, e, t, r, i, k, a) {
+const load = (m, e, t, r, i, k, a) => {
 	m[i] =
 		m[i] ||
 		function () {
@@ -15,7 +15,9 @@
 		(k.async = 1),
 		(k.src = r),
 		a.parentNode.insertBefore(k, a))
-})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106766232', 'ym')
+}
+
+load(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106766232', 'ym')
 
 ym(106766232, 'init', {
 	ssr: true,

@@ -1,14 +1,15 @@
-import { defineComponent, withCtx, createVNode, defineAsyncComponent, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, computed, resolveDynamicComponent, useSlots, useModel, watch, createCommentVNode, toDisplayString, mergeModels, ref, Fragment, renderList, toHandlers, inject, toValue, reactive, isRef, useTemplateRef, withModifiers, shallowReactive, markRaw, nextTick, useSSRContext } from 'vue';
+import { defineComponent, withCtx, createVNode, reactive, defineAsyncComponent, getCurrentInstance, onMounted, isRef, watch, onScopeDispose, ref, toRef, provide, unref, mergeProps, useId, renderSlot, openBlock, createBlock, createTextVNode, hasInjectionContext, inject, computed, resolveDynamicComponent, useSlots, useModel, createCommentVNode, toDisplayString, mergeModels, Fragment, renderList, toHandlers, toValue, useTemplateRef, withModifiers, shallowReactive, markRaw, nextTick, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderList, ssrRenderVNode, ssrRenderClass, ssrInterpolate, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { useForwardProps, ConfigProvider, TooltipProvider, Primitive, ToastProvider, ToastPortal, ToastViewport, useForwardPropsEmits, VisuallyHidden, DialogRoot, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger, DialogPortal, DialogOverlay, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose, Slot, ProgressRoot, ProgressIndicator } from 'reka-ui';
 import { reactivePick, createReusableTemplate, createSharedComposable, reactiveOmit, useDebounceFn } from '@vueuse/core';
 import { A as serialize, y as defu, B as hash, C as isEqual, p as publicAssetsURL } from '../nitro/nitro.mjs';
-import { e as useSeoMeta, _ as _export_sfc, c as useAppConfig, d as useRoute, b as appConfig, f as fetchDefaults, a as useNuxtApp } from './server.mjs';
+import { g as useSeoMeta, a as useNuxtApp, i as injectHead$1, _ as _export_sfc, e as useRuntimeConfig, c as useAppConfig, d as useRoute, b as appConfig, f as fetchDefaults } from './server.mjs';
 import { createTV } from 'tailwind-variants';
-import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-MO1XoZjO.mjs';
-import { _ as __nuxt_component_0$2 } from './nuxt-link-AZZXNs-c.mjs';
+import { _ as __nuxt_component_0$3, u as useAsyncData } from './index-C6iqQa3I.mjs';
+import { _ as __nuxt_component_0$2 } from './nuxt-link-KTm-8YBI.mjs';
 import { DrawerRootNested, DrawerRoot, DrawerTrigger, DrawerPortal, DrawerOverlay, DrawerContent, DrawerHandle, DrawerTitle, DrawerDescription } from 'vaul-vue';
 import { isPlainObject } from '@vue/shared';
+import { useScript as useScript$2 } from 'unhead/scripts';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -119,6 +120,17 @@ class DiffHashedObject {
   }
 }
 
+const headSymbol = "usehead";
+// @__NO_SIDE_EFFECTS__
+function injectHead() {
+  if (hasInjectionContext()) {
+    const instance = inject(headSymbol);
+    if (instance) {
+      return instance;
+    }
+  }
+  throw new Error("useHead() was called without provide context, ensure you call it through the setup() function.");
+}
 function omit(data, keys) {
   const result = { ...data };
   for (const key of keys) {
@@ -491,6 +503,11 @@ function useToast() {
 }
 const appConfigTv = appConfig;
 const tv = /* @__PURE__ */ createTV(appConfigTv.ui?.tv);
+const onNuxtReady = (callback) => {
+  {
+    return;
+  }
+};
 const _sfc_main$k = {
   __name: "UIcon",
   __ssrInlineRender: true,
@@ -6324,11 +6341,125 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-6175f213"]]), { __name: "SectionWelcome" });
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-DchSc5n6.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-B_WW3zz9.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-BcbncfSc.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-gy_BvBC1.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-C22wss1t.mjs').then((c) => c.default || c));
+function registerVueScopeHandlers(script, scope) {
+  if (!scope) {
+    return;
+  }
+  const _registerCb = (key, cb) => {
+    if (!script._cbs[key]) {
+      cb(script.instance);
+      return () => {
+      };
+    }
+    let i = script._cbs[key].push(cb);
+    const destroy = () => {
+      if (i) {
+        script._cbs[key]?.splice(i - 1, 1);
+        i = null;
+      }
+    };
+    onScopeDispose(destroy);
+    return destroy;
+  };
+  script.onLoaded = (cb) => _registerCb("loaded", cb);
+  script.onError = (cb) => _registerCb("error", cb);
+  onScopeDispose(() => {
+    script._triggerAbortController?.abort();
+  });
+}
+function useScript$1(_input, _options) {
+  const input = typeof _input === "string" ? { src: _input } : _input;
+  const options = _options || {};
+  const head = options?.head || /* @__PURE__ */ injectHead();
+  options.head = head;
+  const scope = getCurrentInstance();
+  options.eventContext = scope;
+  if (scope && typeof options.trigger === "undefined") {
+    options.trigger = onMounted;
+  } else if (isRef(options.trigger) || typeof options.trigger === "function" && options.trigger.length === 0) {
+    const trigger = options.trigger;
+    let off;
+    options.trigger = new Promise((resolve) => {
+      off = watch(trigger, (val) => {
+        if (val) {
+          resolve(true);
+        }
+      }, {
+        immediate: true
+      });
+      onScopeDispose(() => resolve(false), true);
+    }).then((val) => {
+      off?.();
+      return val;
+    });
+  }
+  head._scriptStatusWatcher = head._scriptStatusWatcher || head.hooks.hook("script:updated", ({ script: s }) => {
+    if (s._statusRef) {
+      s._statusRef.value = s.status;
+    }
+  });
+  const script = useScript$2(head, input, options);
+  script._statusRef = script._statusRef || ref(script.status);
+  registerVueScopeHandlers(script, scope);
+  return new Proxy(script, {
+    get(_, key, a) {
+      return Reflect.get(_, key === "status" ? "_statusRef" : key, a);
+    }
+  });
+}
+function resolveTrigger(trigger) {
+  return null;
+}
+function useNuxtScriptRuntimeConfig() {
+  return useRuntimeConfig().public["nuxt-scripts"];
+}
+function resolveScriptKey(input) {
+  return input.key || input.src || (typeof input.innerHTML === "string" ? input.innerHTML : "");
+}
+function useScript(input, options) {
+  input = typeof input === "string" ? { src: input } : input;
+  options = defu(options, useNuxtScriptRuntimeConfig()?.defaultScriptOptions);
+  if (options.trigger && typeof options.trigger === "object" && !("then" in options.trigger)) {
+    resolveTrigger(options.trigger);
+  }
+  const id = String(resolveScriptKey(input));
+  const nuxtApp = useNuxtApp();
+  options.head = options.head || injectHead$1();
+  if (!options.head) {
+    throw new Error("useScript() has been called without Nuxt context.");
+  }
+  nuxtApp.$scripts = nuxtApp.$scripts || reactive({});
+  !!nuxtApp.$scripts?.[id];
+  const err = options._validate?.();
+  if (options.trigger === "onNuxtReady" || options.trigger === "client") {
+    if (!options.warmupStrategy) {
+      options.warmupStrategy = "preload";
+    }
+    if (options.trigger === "onNuxtReady") {
+      options.trigger = onNuxtReady;
+    }
+  }
+  const instance = useScript$1(input, options);
+  const _remove = instance.remove;
+  instance.remove = () => {
+    nuxtApp.$scripts[id] = void 0;
+    return _remove();
+  };
+  const _load = instance.load;
+  instance.load = async () => {
+    if (err) {
+      return Promise.reject(err);
+    }
+    return _load();
+  };
+  nuxtApp.$scripts[id] = instance;
+  return instance;
+}
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-BE-a1KSK.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DamQ51cl.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-n7N18y5E.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-BXyo7R49.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-D3FTbDJK.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6339,6 +6470,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       description: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
       ogDescription: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
       twitterCard: "summary_large_image"
+    });
+    useScript("/js/yandex-metrika.js", {
+      tagPosition: "bodyClose"
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UApp = __nuxt_component_0$1;
@@ -6353,20 +6487,24 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_SectionHeader, null, null, _parent2, _scopeId));
+            _push2(`<main${_scopeId}>`);
             _push2(ssrRenderComponent(_component_SectionWelcome, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionAdvantages, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionReviews, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionQuestions, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LazySectionOrder, null, null, _parent2, _scopeId));
+            _push2(`</main>`);
             _push2(ssrRenderComponent(_component_LazySectionFooter, null, null, _parent2, _scopeId));
           } else {
             return [
               createVNode(_component_SectionHeader),
-              createVNode(_component_SectionWelcome),
-              createVNode(_component_LazySectionAdvantages),
-              createVNode(_component_LazySectionReviews),
-              createVNode(_component_LazySectionQuestions),
-              createVNode(_component_LazySectionOrder),
+              createVNode("main", null, [
+                createVNode(_component_SectionWelcome),
+                createVNode(_component_LazySectionAdvantages),
+                createVNode(_component_LazySectionReviews),
+                createVNode(_component_LazySectionQuestions),
+                createVNode(_component_LazySectionOrder)
+              ]),
               createVNode(_component_LazySectionFooter)
             ];
           }
