@@ -6455,11 +6455,11 @@ function useScript(input, options) {
   nuxtApp.$scripts[id] = instance;
   return instance;
 }
-const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-DDbce9-N.mjs').then((c) => c.default || c));
-const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-BuqYllZG.mjs').then((c) => c.default || c));
-const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-DT2Lmlje.mjs').then((c) => c.default || c));
-const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-D8UTJIMy.mjs').then((c) => c.default || c));
-const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-Bod1T5Lp.mjs').then((c) => c.default || c));
+const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./advantages-Bm1_cNkf.mjs').then((c) => c.default || c));
+const __nuxt_component_4_lazy = defineAsyncComponent(() => import('./reviews-DmR1QbrB.mjs').then((c) => c.default || c));
+const __nuxt_component_5_lazy = defineAsyncComponent(() => import('./questions-BJVX0SAw.mjs').then((c) => c.default || c));
+const __nuxt_component_6_lazy = defineAsyncComponent(() => import('./order-CMGUBIS9.mjs').then((c) => c.default || c));
+const __nuxt_component_7_lazy = defineAsyncComponent(() => import('./footer-CrQPolj1.mjs').then((c) => c.default || c));
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6470,6 +6470,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       ogTitle: "Такси Экспресс | Межгороднее такси из Кумертау Уфа",
       ogDescription: "Такси Кумертау - Уфа, Мелеуз - Уфа, Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
       ogImage: "https://taxi-express.su/images/preview.png",
+      ogUrl: "https://taxi-express.su/",
+      ogType: "website",
+      ogLocale: "ru_RU",
       twitterCard: "summary_large_image"
     });
     useScript("/js/yandex-metrika.js", {

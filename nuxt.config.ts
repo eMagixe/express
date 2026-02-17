@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'canonical',
-					href: 'https://taxi-express.su'
+					href: 'https://taxi-express.su/'
 				}
 			]
 		}
