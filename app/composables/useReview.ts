@@ -1,18 +1,26 @@
+import { utils } from '~/utils'
+
 export const useReview = () => {
 	const reviews = ref<Review[]>([])
+
+	const remakeReview = (review: Review) => {
+		return {
+			name: review.name,
+			text: review.text,
+			rating: Number(review.rating),
+			date: review.createdAt
+				? new Date(review.createdAt).toLocaleDateString('ru-RU')
+				: Date.now().toLocaleString('ru-RU')
+		}
+	}
 
 	const getAll = async () => {
 		return useFetch('/api/review/all', {
 			method: 'GET'
 		}).then(({ data }: any): void => {
-			if (data?.value && Array.isArray(data.value)) {
+			if (utils.isArray(data.value)) {
 				reviews.value = data.value.map((review: any) => {
-					return {
-						name: review.name,
-						text: review.text,
-						rating: Number(review.rating),
-						date: new Date(review.createdAt).toLocaleDateString('ru-RU')
-					} as Review
+					return remakeReview(review) as Review
 				}) as Review[]
 			}
 		})

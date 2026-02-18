@@ -1,4 +1,4 @@
-import { E as __nuxt_component_0, a as _sfc_main$k } from './index-3GFx0lfd.mjs';
+import { E as __nuxt_component_0, a as _sfc_main$k } from './index-BGZzggxM.mjs';
 import { defineComponent, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import 'reka-ui';
@@ -25,12 +25,11 @@ import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
 import 'tailwind-variants';
-import './index-C6iqQa3I.mjs';
+import './index-CZ0fzO44.mjs';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
-import './nuxt-link-KTm-8YBI.mjs';
+import './nuxt-link-DZAxAXO9.mjs';
 import 'vaul-vue';
-import '@vue/shared';
 import 'unhead/scripts';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({

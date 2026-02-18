@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { sendCallToTelegram } from '~/utils'
-</script>
-
 <template>
 	<div class="welcome-section w-full pt-10 mx-auto">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10">
@@ -37,7 +33,7 @@ import { sendCallToTelegram } from '~/utils'
 				class="lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				to="tel:+79177666833"
-				@click="sendCallToTelegram('+79177666833')"
+				@click="utils.sendCallToTelegram('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать

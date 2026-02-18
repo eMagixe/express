@@ -418,7 +418,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-3GFx0lfd.mjs').then((n) => n.F)
+    component: () => import('./index-BGZzggxM.mjs').then((n) => n.F)
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -776,11 +776,11 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-C6iqQa3I.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-CZ0fzO44.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
-const components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8 = /* @__PURE__ */ defineNuxtPlugin({
+const components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4 = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:global-components",
   setup(nuxtApp) {
     for (const [name, component] of lazyGlobalComponents) {
@@ -1229,7 +1229,7 @@ const plugins = [
   unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU,
   plugin,
   revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms,
-  components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8,
+  components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4,
   colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo,
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
 ];
@@ -1500,7 +1500,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-PsVM9rT4.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-DTffzJCG.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1582,4 +1582,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRuntimeConfig as e, fetchDefaults as f, useSeoMeta as g, useRouter as h, injectHead as i, nuxtLinkDefaults as j, asyncDataDefaults as k, createError as l, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRuntimeConfig as e, useSeoMeta as f, useRouter as g, nuxtLinkDefaults as h, injectHead as i, asyncDataDefaults as j, createError as k, fetchDefaults as l, navigateTo as n, resolveRouteObject as r, useHead as u };

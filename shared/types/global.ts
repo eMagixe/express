@@ -3,6 +3,7 @@ export type Review = {
 	text: string
 	rating: number
 	date: string
+	createdAt?: string
 }
 
 export type Order = {
