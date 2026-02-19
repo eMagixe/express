@@ -53,10 +53,9 @@ function useResolvedName(getName) {
   const options = useAppConfig().icon;
   const collections = (options.collections || []).sort((a, b) => b.length - a.length);
   return computed(() => {
-    var _a;
     const name = getName();
     const bare = name.startsWith(options.cssSelectorPrefix) ? name.slice(options.cssSelectorPrefix.length) : name;
-    const resolved = ((_a = options.aliases) == null ? void 0 : _a[bare]) || bare;
+    const resolved = options.aliases?.[bare] || bare;
     if (!resolved.includes(":")) {
       const collection = collections.find((c) => resolved.startsWith(c + "-"));
       return collection ? collection + ":" + resolved.slice(collection.length + 1) : resolved;
@@ -107,10 +106,9 @@ const NuxtIconCss = /* @__PURE__ */ defineComponent({
       return css;
     }
     onServerPrefetch(async () => {
-      var _a;
       {
         const configs = useRuntimeConfig().icon || {};
-        if (!((_a = configs == null ? void 0 : configs.serverKnownCssClasses) == null ? void 0 : _a.includes(cssClass.value))) {
+        if (!configs?.serverKnownCssClasses?.includes(cssClass.value)) {
           const icon = await loadIcon(props.name, options.fetchTimeout).catch(() => null);
           if (!icon)
             return null;
@@ -146,7 +144,7 @@ const NuxtIconCss = /* @__PURE__ */ defineComponent({
   }
 });
 const clientOnlySymbol = /* @__PURE__ */ Symbol.for("nuxt:client-only");
-const __nuxt_component_5 = defineComponent({
+defineComponent({
   name: "ClientOnly",
   inheritAttrs: false,
   props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
@@ -159,9 +157,8 @@ const __nuxt_component_5 = defineComponent({
     }
     provide(clientOnlySymbol, true);
     return () => {
-      var _a;
       if (mounted.value) {
-        const vnodes = (_a = slots.default) == null ? void 0 : _a.call(slots);
+        const vnodes = slots.default?.();
         if (vnodes && vnodes.length === 1) {
           return [cloneVNode(vnodes[0], attrs)];
         }
@@ -178,7 +175,6 @@ const __nuxt_component_5 = defineComponent({
   }
 });
 function useAsyncData(...args) {
-  var _a, _b, _c, _d, _e, _f, _g;
   const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
   if (_isAutoKeyNeeded(args[0], args[1])) {
     args.unshift(autoKey);
@@ -192,19 +188,18 @@ function useAsyncData(...args) {
     throw new TypeError("[nuxt] [useAsyncData] handler must be a function.");
   }
   const nuxtApp = useNuxtApp();
-  (_a = options.server) != null ? _a : options.server = true;
-  (_b = options.default) != null ? _b : options.default = getDefault;
-  (_c = options.getCachedData) != null ? _c : options.getCachedData = getDefaultCachedData;
-  (_d = options.lazy) != null ? _d : options.lazy = false;
-  (_e = options.immediate) != null ? _e : options.immediate = true;
-  (_f = options.deep) != null ? _f : options.deep = asyncDataDefaults.deep;
-  (_g = options.dedupe) != null ? _g : options.dedupe = "cancel";
+  options.server ??= true;
+  options.default ??= getDefault;
+  options.getCachedData ??= getDefaultCachedData;
+  options.lazy ??= false;
+  options.immediate ??= true;
+  options.deep ??= asyncDataDefaults.deep;
+  options.dedupe ??= "cancel";
   options._functionName || "useAsyncData";
   nuxtApp._asyncData[key.value];
   function createInitialFetch() {
-    var _a2;
     const initialFetchOptions = { cause: "initial", dedupe: options.dedupe };
-    if (!((_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2._init)) {
+    if (!nuxtApp._asyncData[key.value]?._init) {
       initialFetchOptions.cachedData = options.getCachedData(key.value, nuxtApp, { cause: "initial" });
       nuxtApp._asyncData[key.value] = createAsyncData(nuxtApp, key.value, _handler, options, initialFetchOptions.cachedData);
     }
@@ -225,25 +220,12 @@ function useAsyncData(...args) {
     }
   }
   const asyncReturn = {
-    data: writableComputedRef(() => {
-      var _a2;
-      return (_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2.data;
-    }),
-    pending: writableComputedRef(() => {
-      var _a2;
-      return (_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2.pending;
-    }),
-    status: writableComputedRef(() => {
-      var _a2;
-      return (_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2.status;
-    }),
-    error: writableComputedRef(() => {
-      var _a2;
-      return (_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2.error;
-    }),
+    data: writableComputedRef(() => nuxtApp._asyncData[key.value]?.data),
+    pending: writableComputedRef(() => nuxtApp._asyncData[key.value]?.pending),
+    status: writableComputedRef(() => nuxtApp._asyncData[key.value]?.status),
+    error: writableComputedRef(() => nuxtApp._asyncData[key.value]?.error),
     refresh: (...args2) => {
-      var _a2;
-      if (!((_a2 = nuxtApp._asyncData[key.value]) == null ? void 0 : _a2._init)) {
+      if (!nuxtApp._asyncData[key.value]?._init) {
         const initialFetch2 = createInitialFetch();
         return initialFetch2();
       }
@@ -252,7 +234,7 @@ function useAsyncData(...args) {
     execute: (...args2) => asyncReturn.refresh(...args2),
     clear: () => {
       const entry = nuxtApp._asyncData[key.value];
-      if (entry == null ? void 0 : entry._abortController) {
+      if (entry?._abortController) {
         try {
           entry._abortController.abort(new DOMException("AsyncData aborted by user.", "AbortError"));
         } finally {
@@ -269,8 +251,7 @@ function useAsyncData(...args) {
 function writableComputedRef(getter) {
   return computed({
     get() {
-      var _a;
-      return (_a = getter()) == null ? void 0 : _a.value;
+      return getter()?.value;
     },
     set(value) {
       const ref2 = getter();
@@ -316,8 +297,7 @@ function pick(obj, keys) {
   return newObj;
 }
 function createAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
-  var _a, _b;
-  (_b = (_a = nuxtApp.payload._errors)[key]) != null ? _b : _a[key] = void 0;
+  nuxtApp.payload._errors[key] ??= void 0;
   const hasCustomGetCachedData = options.getCachedData !== getDefaultCachedData;
   const handler = _handler ;
   const _ref = options.deep ? ref : shallowRef;
@@ -333,16 +313,15 @@ function createAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
     error: toRef(nuxtApp.payload._errors, key),
     status: shallowRef("idle"),
     execute: (...args) => {
-      var _a2, _b2;
       const [_opts, newValue = void 0] = args;
       const opts = _opts && newValue === void 0 && typeof _opts === "object" ? _opts : {};
       if (nuxtApp._asyncDataPromises[key]) {
-        if (((_a2 = opts.dedupe) != null ? _a2 : options.dedupe) === "defer") {
+        if ((opts.dedupe ?? options.dedupe) === "defer") {
           return nuxtApp._asyncDataPromises[key];
         }
       }
       {
-        const cachedData = "cachedData" in opts ? opts.cachedData : options.getCachedData(key, nuxtApp, { cause: (_b2 = opts.cause) != null ? _b2 : "refresh:manual" });
+        const cachedData = "cachedData" in opts ? opts.cachedData : options.getCachedData(key, nuxtApp, { cause: opts.cause ?? "refresh:manual" });
         if (cachedData !== void 0) {
           nuxtApp.payload.data[key] = asyncData.data.value = cachedData;
           asyncData.error.value = void 0;
@@ -358,18 +337,17 @@ function createAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
       const cleanupController = new AbortController();
       const promise = new Promise(
         (resolve, reject) => {
-          var _a3, _b3;
           try {
-            const timeout = (_a3 = opts.timeout) != null ? _a3 : options.timeout;
-            const mergedSignal = mergeAbortSignals([(_b3 = asyncData._abortController) == null ? void 0 : _b3.signal, opts == null ? void 0 : opts.signal], cleanupController.signal, timeout);
+            const timeout = opts.timeout ?? options.timeout;
+            const mergedSignal = mergeAbortSignals([asyncData._abortController?.signal, opts?.signal], cleanupController.signal, timeout);
             if (mergedSignal.aborted) {
               const reason = mergedSignal.reason;
-              reject(reason instanceof Error ? reason : new DOMException(String(reason != null ? reason : "Aborted"), "AbortError"));
+              reject(reason instanceof Error ? reason : new DOMException(String(reason ?? "Aborted"), "AbortError"));
               return;
             }
             mergedSignal.addEventListener("abort", () => {
               const reason = mergedSignal.reason;
-              reject(reason instanceof Error ? reason : new DOMException(String(reason != null ? reason : "Aborted"), "AbortError"));
+              reject(reason instanceof Error ? reason : new DOMException(String(reason ?? "Aborted"), "AbortError"));
             }, { once: true, signal: cleanupController.signal });
             return Promise.resolve(handler(nuxtApp, { signal: mergedSignal })).then(resolve, reject);
           } catch (err) {
@@ -389,11 +367,10 @@ function createAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
         asyncData.error.value = void 0;
         asyncData.status.value = "success";
       }).catch((error) => {
-        var _a3;
         if (nuxtApp._asyncDataPromises[key] && nuxtApp._asyncDataPromises[key] !== promise) {
           return nuxtApp._asyncDataPromises[key];
         }
-        if ((_a3 = asyncData._abortController) == null ? void 0 : _a3.signal.aborted) {
+        if (asyncData._abortController?.signal.aborted) {
           return nuxtApp._asyncDataPromises[key];
         }
         if (typeof DOMException !== "undefined" && error instanceof DOMException && error.name === "AbortError") {
@@ -416,15 +393,13 @@ function createAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
     _init: true,
     _hash: void 0,
     _off: () => {
-      var _a2;
       unsubRefreshAsyncData();
-      if ((_a2 = nuxtApp._asyncData[key]) == null ? void 0 : _a2._init) {
+      if (nuxtApp._asyncData[key]?._init) {
         nuxtApp._asyncData[key]._init = false;
       }
       if (!hasCustomGetCachedData) {
         nextTick(() => {
-          var _a3;
-          if (!((_a3 = nuxtApp._asyncData[key]) == null ? void 0 : _a3._init)) {
+          if (!nuxtApp._asyncData[key]?._init) {
             clearNuxtDataByKey(nuxtApp, key);
             asyncData.execute = () => Promise.resolve();
           }
@@ -444,10 +419,9 @@ const getDefaultCachedData = (key, nuxtApp, ctx) => {
   }
 };
 function mergeAbortSignals(signals, cleanupSignal, timeout) {
-  var _a, _b, _c;
   const list = signals.filter((s) => !!s);
   if (typeof timeout === "number" && timeout >= 0) {
-    const timeoutSignal = (_a = AbortSignal.timeout) == null ? void 0 : _a.call(AbortSignal, timeout);
+    const timeoutSignal = AbortSignal.timeout?.(timeout);
     if (timeoutSignal) {
       list.push(timeoutSignal);
     }
@@ -458,7 +432,7 @@ function mergeAbortSignals(signals, cleanupSignal, timeout) {
   const controller = new AbortController();
   for (const sig of list) {
     if (sig.aborted) {
-      const reason = (_b = sig.reason) != null ? _b : new DOMException("Aborted", "AbortError");
+      const reason = sig.reason ?? new DOMException("Aborted", "AbortError");
       try {
         controller.abort(reason);
       } catch {
@@ -468,9 +442,8 @@ function mergeAbortSignals(signals, cleanupSignal, timeout) {
     }
   }
   const onAbort = () => {
-    var _a2;
     const abortedSignal = list.find((s) => s.aborted);
-    const reason = (_a2 = abortedSignal == null ? void 0 : abortedSignal.reason) != null ? _a2 : new DOMException("Aborted", "AbortError");
+    const reason = abortedSignal?.reason ?? new DOMException("Aborted", "AbortError");
     try {
       controller.abort(reason);
     } catch {
@@ -478,7 +451,7 @@ function mergeAbortSignals(signals, cleanupSignal, timeout) {
     }
   };
   for (const sig of list) {
-    (_c = sig.addEventListener) == null ? void 0 : _c.call(sig, "abort", onAbort, { once: true, signal: cleanupSignal });
+    sig.addEventListener?.("abort", onAbort, { once: true, signal: cleanupSignal });
   }
   return controller.signal;
 }
@@ -547,10 +520,7 @@ const __nuxt_component_0 = defineComponent({
     const runtimeOptions = useAppConfig().icon;
     const name = useResolvedName(() => props.name);
     const component = computed(
-      () => {
-        var _a;
-        return ((_a = nuxtApp.vueApp) == null ? void 0 : _a.component(name.value)) || ((props.mode || runtimeOptions.mode) === "svg" ? NuxtIconSvg : NuxtIconCss);
-      }
+      () => nuxtApp.vueApp?.component(name.value) || ((props.mode || runtimeOptions.mode) === "svg" ? NuxtIconSvg : NuxtIconCss)
     );
     const style = computed(() => {
       const size = props.size || runtimeOptions.size;
@@ -574,4 +544,4 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   default: __nuxt_component_0
 }, Symbol.toStringTag, { value: "Module" }));
 
-export { __nuxt_component_0 as _, __nuxt_component_5 as a, index as i, useAsyncData as u };
+export { __nuxt_component_0 as _, index as i, useAsyncData as u };

@@ -1,10 +1,38 @@
-import { useSlots, computed, useTemplateRef, unref, mergeProps, withCtx, createVNode, renderSlot, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
+import { useSlots, computed, useTemplateRef, unref, mergeProps, withCtx, createVNode, renderSlot, openBlock, createBlock, createCommentVNode, getCurrentInstance, useSSRContext } from 'vue';
+import { c as useAppConfig, u as useHead, a as useNuxtApp } from './server.mjs';
 import { ssrRenderComponent, ssrRenderAttrs, ssrRenderSlot, ssrRenderClass } from 'vue/server-renderer';
 import { Primitive } from 'reka-ui';
 import { useVModel } from '@vueuse/core';
-import { e as useFormField, z as useFieldGroup, f as useComponentIcons, t as tv, a as _sfc_main$k, g as _sfc_main$i, l as looseToNumber } from './index-BGZzggxM.mjs';
-import { c as useAppConfig } from './server.mjs';
+import { e as useFormField, z as useFieldGroup, f as useComponentIcons, t as tv, a as _sfc_main$k, g as _sfc_main$i, l as looseToNumber } from './index-CQ0qds5-.mjs';
 
+function useRequestEvent(nuxtApp) {
+  nuxtApp ||= useNuxtApp();
+  return nuxtApp.ssrContext?.event;
+}
+function useRequestFetch() {
+  return useRequestEvent()?.$fetch || globalThis.$fetch;
+}
+const PREHYDRATE_ATTR_KEY = "data-prehydrate-id";
+function onPrehydrate(callback, key) {
+  const vm = getCurrentInstance();
+  if (vm && key) {
+    vm.attrs[PREHYDRATE_ATTR_KEY] ||= "";
+    key = ":" + key + ":";
+    if (!vm.attrs[PREHYDRATE_ATTR_KEY].includes(key)) {
+      vm.attrs[PREHYDRATE_ATTR_KEY] += key;
+    }
+  }
+  const code = vm && key ? `document.querySelectorAll('[${PREHYDRATE_ATTR_KEY}*=${JSON.stringify(key)}]').forEach` + callback : callback + "()";
+  useHead({
+    script: [{
+      key: vm && key ? key : void 0,
+      tagPosition: "bodyClose",
+      tagPriority: "critical",
+      innerHTML: code
+    }]
+  });
+  return vm && key ? vm.attrs[PREHYDRATE_ATTR_KEY] : void 0;
+}
 const theme = {
   "slots": {
     "root": "relative inline-flex items-center",
@@ -311,51 +339,45 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
     const { orientation, size: fieldGroupSize } = useFieldGroup(props);
     const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
     const inputSize = computed(() => fieldGroupSize.value || formGroupSize.value);
-    const ui = computed(() => {
-      var _a;
-      return tv({ extend: tv(theme), ...((_a = appConfig.ui) == null ? void 0 : _a.input) || {} })({
-        type: props.type,
-        color: color.value,
-        variant: props.variant,
-        size: inputSize == null ? void 0 : inputSize.value,
-        loading: props.loading,
-        highlight: highlight.value,
-        leading: isLeading.value || !!props.avatar || !!slots.leading,
-        trailing: isTrailing.value || !!slots.trailing,
-        fieldGroup: orientation.value
-      });
-    });
+    const ui = computed(() => tv({ extend: tv(theme), ...appConfig.ui?.input || {} })({
+      type: props.type,
+      color: color.value,
+      variant: props.variant,
+      size: inputSize?.value,
+      loading: props.loading,
+      highlight: highlight.value,
+      leading: isLeading.value || !!props.avatar || !!slots.leading,
+      trailing: isTrailing.value || !!slots.trailing,
+      fieldGroup: orientation.value
+    }));
     const inputRef = useTemplateRef("inputRef");
     function updateInput(value) {
-      var _a, _b, _c, _d, _e;
-      if ((_a = props.modelModifiers) == null ? void 0 : _a.trim) {
-        value = (_b = value == null ? void 0 : value.trim()) != null ? _b : null;
+      if (props.modelModifiers?.trim) {
+        value = value?.trim() ?? null;
       }
-      if (((_c = props.modelModifiers) == null ? void 0 : _c.number) || props.type === "number") {
+      if (props.modelModifiers?.number || props.type === "number") {
         value = looseToNumber(value);
       }
-      if ((_d = props.modelModifiers) == null ? void 0 : _d.nullable) {
-        value || (value = null);
+      if (props.modelModifiers?.nullable) {
+        value ||= null;
       }
-      if ((_e = props.modelModifiers) == null ? void 0 : _e.optional) {
-        value || (value = void 0);
+      if (props.modelModifiers?.optional) {
+        value ||= void 0;
       }
       modelValue.value = value;
       emitFormInput();
     }
     function onInput(event) {
-      var _a;
-      if (!((_a = props.modelModifiers) == null ? void 0 : _a.lazy)) {
+      if (!props.modelModifiers?.lazy) {
         updateInput(event.target.value);
       }
     }
     function onChange(event) {
-      var _a, _b;
       const value = event.target.value;
-      if ((_a = props.modelModifiers) == null ? void 0 : _a.lazy) {
+      if (props.modelModifiers?.lazy) {
         updateInput(value);
       }
-      if ((_b = props.modelModifiers) == null ? void 0 : _b.trim) {
+      if (props.modelModifiers?.trim) {
         event.target.value = value.trim();
       }
       emitFormChange();
@@ -369,14 +391,12 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       inputRef
     });
     return (_ctx, _push, _parent, _attrs) => {
-      var _a;
       _push(ssrRenderComponent(unref(Primitive), mergeProps({
         as: __props.as,
         "data-slot": "root",
-        class: ui.value.root({ class: [(_a = props.ui) == null ? void 0 : _a.root, props.class] })
+        class: ui.value.root({ class: [props.ui?.root, props.class] })
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
-          var _a2, _b, _c, _d, _e, _f;
           if (_push2) {
             _push2(`<input${ssrRenderAttrs(mergeProps({
               id: unref(id),
@@ -387,28 +407,27 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               name: unref(name),
               placeholder: __props.placeholder,
               "data-slot": "base",
-              class: ui.value.base({ class: (_a2 = props.ui) == null ? void 0 : _a2.base }),
+              class: ui.value.base({ class: props.ui?.base }),
               disabled: unref(disabled),
               required: __props.required,
               autocomplete: __props.autocomplete
             }, { ..._ctx.$attrs, ...unref(ariaAttrs) }))}${_scopeId}>`);
             ssrRenderSlot(_ctx.$slots, "default", { ui: ui.value }, null, _push2, _parent2, _scopeId);
             if (unref(isLeading) || !!__props.avatar || !!slots.leading) {
-              _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: (_b = props.ui) == null ? void 0 : _b.leading }))}"${_scopeId}>`);
+              _push2(`<span data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
-                var _a3, _b2, _c2;
                 if (unref(isLeading) && unref(leadingIconName)) {
                   _push2(ssrRenderComponent(_sfc_main$k, {
                     name: unref(leadingIconName),
                     "data-slot": "leadingIcon",
-                    class: ui.value.leadingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.leadingIcon })
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                   }, null, _parent2, _scopeId));
                 } else if (!!__props.avatar) {
                   _push2(ssrRenderComponent(_sfc_main$i, mergeProps({
-                    size: ((_b2 = props.ui) == null ? void 0 : _b2.leadingAvatarSize) || ui.value.leadingAvatarSize()
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
                   }, __props.avatar, {
                     "data-slot": "leadingAvatar",
-                    class: ui.value.leadingAvatar({ class: (_c2 = props.ui) == null ? void 0 : _c2.leadingAvatar })
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
                   }), null, _parent2, _scopeId));
                 } else {
                   _push2(`<!---->`);
@@ -419,14 +438,13 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               _push2(`<!---->`);
             }
             if (unref(isTrailing) || !!slots.trailing) {
-              _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: (_c = props.ui) == null ? void 0 : _c.trailing }))}"${_scopeId}>`);
+              _push2(`<span data-slot="trailing" class="${ssrRenderClass(ui.value.trailing({ class: props.ui?.trailing }))}"${_scopeId}>`);
               ssrRenderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
-                var _a3;
                 if (unref(trailingIconName)) {
                   _push2(ssrRenderComponent(_sfc_main$k, {
                     name: unref(trailingIconName),
                     "data-slot": "trailingIcon",
-                    class: ui.value.trailingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.trailingIcon })
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
                   }, null, _parent2, _scopeId));
                 } else {
                   _push2(`<!---->`);
@@ -447,7 +465,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 name: unref(name),
                 placeholder: __props.placeholder,
                 "data-slot": "base",
-                class: ui.value.base({ class: (_d = props.ui) == null ? void 0 : _d.base }),
+                class: ui.value.base({ class: props.ui?.base }),
                 disabled: unref(disabled),
                 required: __props.required,
                 autocomplete: __props.autocomplete
@@ -461,42 +479,36 @@ const _sfc_main = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               unref(isLeading) || !!__props.avatar || !!slots.leading ? (openBlock(), createBlock("span", {
                 key: 0,
                 "data-slot": "leading",
-                class: ui.value.leading({ class: (_e = props.ui) == null ? void 0 : _e.leading })
+                class: ui.value.leading({ class: props.ui?.leading })
               }, [
-                renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
-                  var _a3, _b2, _c2;
-                  return [
-                    unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$k, {
-                      key: 0,
-                      name: unref(leadingIconName),
-                      "data-slot": "leadingIcon",
-                      class: ui.value.leadingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.leadingIcon })
-                    }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$i, mergeProps({
-                      key: 1,
-                      size: ((_b2 = props.ui) == null ? void 0 : _b2.leadingAvatarSize) || ui.value.leadingAvatarSize()
-                    }, __props.avatar, {
-                      "data-slot": "leadingAvatar",
-                      class: ui.value.leadingAvatar({ class: (_c2 = props.ui) == null ? void 0 : _c2.leadingAvatar })
-                    }), null, 16, ["size", "class"])) : createCommentVNode("", true)
-                  ];
-                })
+                renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
+                  unref(isLeading) && unref(leadingIconName) ? (openBlock(), createBlock(_sfc_main$k, {
+                    key: 0,
+                    name: unref(leadingIconName),
+                    "data-slot": "leadingIcon",
+                    class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                  }, null, 8, ["name", "class"])) : !!__props.avatar ? (openBlock(), createBlock(_sfc_main$i, mergeProps({
+                    key: 1,
+                    size: props.ui?.leadingAvatarSize || ui.value.leadingAvatarSize()
+                  }, __props.avatar, {
+                    "data-slot": "leadingAvatar",
+                    class: ui.value.leadingAvatar({ class: props.ui?.leadingAvatar })
+                  }), null, 16, ["size", "class"])) : createCommentVNode("", true)
+                ])
               ], 2)) : createCommentVNode("", true),
               unref(isTrailing) || !!slots.trailing ? (openBlock(), createBlock("span", {
                 key: 1,
                 "data-slot": "trailing",
-                class: ui.value.trailing({ class: (_f = props.ui) == null ? void 0 : _f.trailing })
+                class: ui.value.trailing({ class: props.ui?.trailing })
               }, [
-                renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => {
-                  var _a3;
-                  return [
-                    unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$k, {
-                      key: 0,
-                      name: unref(trailingIconName),
-                      "data-slot": "trailingIcon",
-                      class: ui.value.trailingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.trailingIcon })
-                    }, null, 8, ["name", "class"])) : createCommentVNode("", true)
-                  ];
-                })
+                renderSlot(_ctx.$slots, "trailing", { ui: ui.value }, () => [
+                  unref(trailingIconName) ? (openBlock(), createBlock(_sfc_main$k, {
+                    key: 0,
+                    name: unref(trailingIconName),
+                    "data-slot": "trailingIcon",
+                    class: ui.value.trailingIcon({ class: props.ui?.trailingIcon })
+                  }, null, 8, ["name", "class"])) : createCommentVNode("", true)
+                ])
               ], 2)) : createCommentVNode("", true)
             ];
           }
@@ -513,4 +525,4 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 
-export { _sfc_main as _ };
+export { _sfc_main as _, onPrehydrate as o, useRequestFetch as u };

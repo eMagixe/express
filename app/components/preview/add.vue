@@ -6,32 +6,56 @@ const review = ref<Review>({
 	date: ''
 })
 
-const toast = useToast()
-const modalAddReviewOpen = ref(false)
-
 const route = useRoute()
-
-if (route.query.review === 'open') {
-	modalAddReviewOpen.value = true
-}
+const toast = useToast()
 
 const { create } = useReview()
+
+const modalAddReviewIsOpen = ref(false)
+
+if (route.query.review === 'open') {
+	modalAddReviewIsOpen.value = true
+}
+
+const resetReview = (obj: Ref) => {
+	obj.value = {
+		name: '',
+		text: '',
+		rating: 0,
+		date: ''
+	}
+}
+
+watch(modalAddReviewIsOpen, (value) => {
+	if (value) resetReview(review)
+})
 
 const onAddReview = async () => {
 	if (review.value.name && review.value.text && review.value.rating) {
 		create(review)
 			.then(() => {
-				toast.add({ title: 'Ответ', description: 'Отзыв был отправлен', color: 'success' })
-				review.value.name = ''
-				review.value.text = ''
-				review.value.rating = 0
-				modalAddReviewOpen.value = false
+				resetReview(review)
+				toast.add({
+					title: 'Ответ',
+					description: 'Отзыв был отправлен',
+					color: 'success'
+				})
+				modalAddReviewIsOpen.value = false
 			})
 			.catch(() => {
-				toast.add({ title: 'Ответ', description: 'Произошла ошибка при отправке отзыва', color: 'error' })
+				toast.add({
+					title: 'Ответ',
+					description: 'Произошла ошибка при отправке отзыва',
+					color: 'error'
+				})
+
 			})
 	} else {
-		toast.add({ title: 'Отправка отзыва', description: 'Пожалуйста, заполните все поля', color: 'error' })
+		toast.add({
+			title: 'Отправка отзыва',
+			description: 'Пожалуйста, заполните все поля',
+			color: 'error'
+		})
 	}
 }
 </script>
@@ -41,8 +65,8 @@ const onAddReview = async () => {
 		title="Оставить отзыв"
 		description="Оставьте свой отзыв о поездке"
 		close-icon="i-lucide-circle-x"
-		:open="modalAddReviewOpen"
-		@update:open="modalAddReviewOpen = !modalAddReviewOpen"
+		:open="modalAddReviewIsOpen"
+		@update:open="modalAddReviewIsOpen = !modalAddReviewIsOpen"
 		:ui="{
 			body: 'bg-gray-600 text-gray-200 flex flex-col justify-center items-start gap-5',
 			header: 'bg-gray-600 border-gray-600',

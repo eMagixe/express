@@ -1,4 +1,4 @@
-import { m as useState, _ as _sfc_main$9, t as tv, j as getSlotChildrenText, a as _sfc_main$k, k as _sfc_main$g } from './index-BGZzggxM.mjs';
+import { m as useState, _ as _sfc_main$9, t as tv, j as getSlotChildrenText, a as _sfc_main$k, k as _sfc_main$g } from './index-CQ0qds5-.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { defineComponent, mergeProps, withCtx, unref, useId, createVNode, toDisplayString, openBlock, createBlock, Fragment, renderList, computed, renderSlot, useSlots, ref, watch, createCommentVNode, createTextVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderSlot, ssrRenderClass } from 'vue/server-renderer';
@@ -17,7 +17,7 @@ import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'tailwind-variants';
-import './index-CZ0fzO44.mjs';
+import './index-DzyKUT5r.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -52,10 +52,7 @@ const _sfc_main$2 = {
   setup(__props) {
     const props = __props;
     const appConfig = useAppConfig();
-    const ui = computed(() => {
-      var _a;
-      return tv({ extend: tv(theme$1), ...((_a = appConfig.ui) == null ? void 0 : _a.pageList) || {} });
-    });
+    const ui = computed(() => tv({ extend: tv(theme$1), ...appConfig.ui?.pageList || {} }));
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(Primitive), mergeProps({
         as: __props.as,
@@ -365,63 +362,57 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
         motionControl.pause();
       }
     }, { immediate: true });
-    const ui = computed(() => {
-      var _a;
-      return tv({ extend: tv(theme), ...((_a = appConfig.ui) == null ? void 0 : _a.pageCard) || {} })({
-        orientation: props.orientation,
-        reverse: props.reverse,
-        variant: props.variant,
-        to: !!props.to || !!props.onClick,
-        title: !!props.title || !!slots.title,
-        highlight: props.highlight,
-        highlightColor: props.highlightColor,
-        spotlight: spotlight.value,
-        spotlightColor: props.spotlightColor
-      });
-    });
+    const ui = computed(() => tv({ extend: tv(theme), ...appConfig.ui?.pageCard || {} })({
+      orientation: props.orientation,
+      reverse: props.reverse,
+      variant: props.variant,
+      to: !!props.to || !!props.onClick,
+      title: !!props.title || !!slots.title,
+      highlight: props.highlight,
+      highlightColor: props.highlightColor,
+      spotlight: spotlight.value,
+      spotlightColor: props.spotlightColor
+    }));
     const ariaLabel = computed(() => {
       const slotText = slots.title && getSlotChildrenText(slots.title());
       return (slotText || props.title || "Card link").trim();
     });
     return (_ctx, _push, _parent, _attrs) => {
-      var _a;
       _push(ssrRenderComponent(unref(Primitive), mergeProps({
         ref_key: "cardRef",
         ref: cardRef,
         as: __props.as,
         "data-orientation": __props.orientation,
         "data-slot": "root",
-        class: ui.value.root({ class: [(_a = props.ui) == null ? void 0 : _a.root, props.class] }),
+        class: ui.value.root({ class: [props.ui?.root, props.class] }),
         style: spotlight.value && { "--spotlight-x": `${unref(elementX)}px`, "--spotlight-y": `${unref(elementY)}px` },
         onClick: __props.onClick
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
-          var _a2, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
           if (_push2) {
             if (props.spotlight) {
-              _push2(`<div data-slot="spotlight" class="${ssrRenderClass(ui.value.spotlight({ class: (_a2 = props.ui) == null ? void 0 : _a2.spotlight }))}"${_scopeId}></div>`);
+              _push2(`<div data-slot="spotlight" class="${ssrRenderClass(ui.value.spotlight({ class: props.ui?.spotlight }))}"${_scopeId}></div>`);
             } else {
               _push2(`<!---->`);
             }
-            _push2(`<div data-slot="container" class="${ssrRenderClass(ui.value.container({ class: (_b = props.ui) == null ? void 0 : _b.container }))}"${_scopeId}>`);
+            _push2(`<div data-slot="container" class="${ssrRenderClass(ui.value.container({ class: props.ui?.container }))}"${_scopeId}>`);
             if (!!slots.header || (__props.icon || !!slots.leading) || !!slots.body || (__props.title || !!slots.title) || (__props.description || !!slots.description) || !!slots.footer) {
-              _push2(`<div data-slot="wrapper" class="${ssrRenderClass(ui.value.wrapper({ class: (_c = props.ui) == null ? void 0 : _c.wrapper }))}"${_scopeId}>`);
+              _push2(`<div data-slot="wrapper" class="${ssrRenderClass(ui.value.wrapper({ class: props.ui?.wrapper }))}"${_scopeId}>`);
               if (!!slots.header) {
-                _push2(`<div data-slot="header" class="${ssrRenderClass(ui.value.header({ class: (_d = props.ui) == null ? void 0 : _d.header }))}"${_scopeId}>`);
+                _push2(`<div data-slot="header" class="${ssrRenderClass(ui.value.header({ class: props.ui?.header }))}"${_scopeId}>`);
                 ssrRenderSlot(_ctx.$slots, "header", {}, null, _push2, _parent2, _scopeId);
                 _push2(`</div>`);
               } else {
                 _push2(`<!---->`);
               }
               if (__props.icon || !!slots.leading) {
-                _push2(`<div data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: (_e = props.ui) == null ? void 0 : _e.leading }))}"${_scopeId}>`);
+                _push2(`<div data-slot="leading" class="${ssrRenderClass(ui.value.leading({ class: props.ui?.leading }))}"${_scopeId}>`);
                 ssrRenderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
-                  var _a3;
                   if (__props.icon) {
                     _push2(ssrRenderComponent(_sfc_main$k, {
                       name: __props.icon,
                       "data-slot": "leadingIcon",
-                      class: ui.value.leadingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.leadingIcon })
+                      class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
                     }, null, _parent2, _scopeId));
                   } else {
                     _push2(`<!---->`);
@@ -432,11 +423,10 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 _push2(`<!---->`);
               }
               if (!!slots.body || (__props.title || !!slots.title) || (__props.description || !!slots.description)) {
-                _push2(`<div data-slot="body" class="${ssrRenderClass(ui.value.body({ class: (_f = props.ui) == null ? void 0 : _f.body }))}"${_scopeId}>`);
+                _push2(`<div data-slot="body" class="${ssrRenderClass(ui.value.body({ class: props.ui?.body }))}"${_scopeId}>`);
                 ssrRenderSlot(_ctx.$slots, "body", {}, () => {
-                  var _a3, _b2;
                   if (__props.title || !!slots.title) {
-                    _push2(`<div data-slot="title" class="${ssrRenderClass(ui.value.title({ class: (_a3 = props.ui) == null ? void 0 : _a3.title }))}"${_scopeId}>`);
+                    _push2(`<div data-slot="title" class="${ssrRenderClass(ui.value.title({ class: props.ui?.title }))}"${_scopeId}>`);
                     ssrRenderSlot(_ctx.$slots, "title", {}, () => {
                       _push2(`${ssrInterpolate(__props.title)}`);
                     }, _push2, _parent2, _scopeId);
@@ -445,7 +435,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                     _push2(`<!---->`);
                   }
                   if (__props.description || !!slots.description) {
-                    _push2(`<div data-slot="description" class="${ssrRenderClass(ui.value.description({ class: (_b2 = props.ui) == null ? void 0 : _b2.description }))}"${_scopeId}>`);
+                    _push2(`<div data-slot="description" class="${ssrRenderClass(ui.value.description({ class: props.ui?.description }))}"${_scopeId}>`);
                     ssrRenderSlot(_ctx.$slots, "description", {}, () => {
                       _push2(`${ssrInterpolate(__props.description)}`);
                     }, _push2, _parent2, _scopeId);
@@ -459,7 +449,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
                 _push2(`<!---->`);
               }
               if (!!slots.footer) {
-                _push2(`<div data-slot="footer" class="${ssrRenderClass(ui.value.footer({ class: (_g = props.ui) == null ? void 0 : _g.footer }))}"${_scopeId}>`);
+                _push2(`<div data-slot="footer" class="${ssrRenderClass(ui.value.footer({ class: props.ui?.footer }))}"${_scopeId}>`);
                 ssrRenderSlot(_ctx.$slots, "footer", {}, null, _push2, _parent2, _scopeId);
                 _push2(`</div>`);
               } else {
@@ -498,74 +488,68 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
               props.spotlight ? (openBlock(), createBlock("div", {
                 key: 0,
                 "data-slot": "spotlight",
-                class: ui.value.spotlight({ class: (_h = props.ui) == null ? void 0 : _h.spotlight })
+                class: ui.value.spotlight({ class: props.ui?.spotlight })
               }, null, 2)) : createCommentVNode("", true),
               createVNode("div", {
                 "data-slot": "container",
-                class: ui.value.container({ class: (_i = props.ui) == null ? void 0 : _i.container })
+                class: ui.value.container({ class: props.ui?.container })
               }, [
                 !!slots.header || (__props.icon || !!slots.leading) || !!slots.body || (__props.title || !!slots.title) || (__props.description || !!slots.description) || !!slots.footer ? (openBlock(), createBlock("div", {
                   key: 0,
                   "data-slot": "wrapper",
-                  class: ui.value.wrapper({ class: (_j = props.ui) == null ? void 0 : _j.wrapper })
+                  class: ui.value.wrapper({ class: props.ui?.wrapper })
                 }, [
                   !!slots.header ? (openBlock(), createBlock("div", {
                     key: 0,
                     "data-slot": "header",
-                    class: ui.value.header({ class: (_k = props.ui) == null ? void 0 : _k.header })
+                    class: ui.value.header({ class: props.ui?.header })
                   }, [
                     renderSlot(_ctx.$slots, "header")
                   ], 2)) : createCommentVNode("", true),
                   __props.icon || !!slots.leading ? (openBlock(), createBlock("div", {
                     key: 1,
                     "data-slot": "leading",
-                    class: ui.value.leading({ class: (_l = props.ui) == null ? void 0 : _l.leading })
+                    class: ui.value.leading({ class: props.ui?.leading })
                   }, [
-                    renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => {
-                      var _a3;
-                      return [
-                        __props.icon ? (openBlock(), createBlock(_sfc_main$k, {
-                          key: 0,
-                          name: __props.icon,
-                          "data-slot": "leadingIcon",
-                          class: ui.value.leadingIcon({ class: (_a3 = props.ui) == null ? void 0 : _a3.leadingIcon })
-                        }, null, 8, ["name", "class"])) : createCommentVNode("", true)
-                      ];
-                    })
+                    renderSlot(_ctx.$slots, "leading", { ui: ui.value }, () => [
+                      __props.icon ? (openBlock(), createBlock(_sfc_main$k, {
+                        key: 0,
+                        name: __props.icon,
+                        "data-slot": "leadingIcon",
+                        class: ui.value.leadingIcon({ class: props.ui?.leadingIcon })
+                      }, null, 8, ["name", "class"])) : createCommentVNode("", true)
+                    ])
                   ], 2)) : createCommentVNode("", true),
                   !!slots.body || (__props.title || !!slots.title) || (__props.description || !!slots.description) ? (openBlock(), createBlock("div", {
                     key: 2,
                     "data-slot": "body",
-                    class: ui.value.body({ class: (_m = props.ui) == null ? void 0 : _m.body })
+                    class: ui.value.body({ class: props.ui?.body })
                   }, [
-                    renderSlot(_ctx.$slots, "body", {}, () => {
-                      var _a3, _b2;
-                      return [
-                        __props.title || !!slots.title ? (openBlock(), createBlock("div", {
-                          key: 0,
-                          "data-slot": "title",
-                          class: ui.value.title({ class: (_a3 = props.ui) == null ? void 0 : _a3.title })
-                        }, [
-                          renderSlot(_ctx.$slots, "title", {}, () => [
-                            createTextVNode(toDisplayString(__props.title), 1)
-                          ])
-                        ], 2)) : createCommentVNode("", true),
-                        __props.description || !!slots.description ? (openBlock(), createBlock("div", {
-                          key: 1,
-                          "data-slot": "description",
-                          class: ui.value.description({ class: (_b2 = props.ui) == null ? void 0 : _b2.description })
-                        }, [
-                          renderSlot(_ctx.$slots, "description", {}, () => [
-                            createTextVNode(toDisplayString(__props.description), 1)
-                          ])
-                        ], 2)) : createCommentVNode("", true)
-                      ];
-                    })
+                    renderSlot(_ctx.$slots, "body", {}, () => [
+                      __props.title || !!slots.title ? (openBlock(), createBlock("div", {
+                        key: 0,
+                        "data-slot": "title",
+                        class: ui.value.title({ class: props.ui?.title })
+                      }, [
+                        renderSlot(_ctx.$slots, "title", {}, () => [
+                          createTextVNode(toDisplayString(__props.title), 1)
+                        ])
+                      ], 2)) : createCommentVNode("", true),
+                      __props.description || !!slots.description ? (openBlock(), createBlock("div", {
+                        key: 1,
+                        "data-slot": "description",
+                        class: ui.value.description({ class: props.ui?.description })
+                      }, [
+                        renderSlot(_ctx.$slots, "description", {}, () => [
+                          createTextVNode(toDisplayString(__props.description), 1)
+                        ])
+                      ], 2)) : createCommentVNode("", true)
+                    ])
                   ], 2)) : createCommentVNode("", true),
                   !!slots.footer ? (openBlock(), createBlock("div", {
                     key: 3,
                     "data-slot": "footer",
-                    class: ui.value.footer({ class: (_n = props.ui) == null ? void 0 : _n.footer })
+                    class: ui.value.footer({ class: props.ui?.footer })
                   }, [
                     renderSlot(_ctx.$slots, "footer")
                   ], 2)) : createCommentVNode("", true)
@@ -608,24 +592,24 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const items = useState("questions", () => {
       return [
         {
-          label: "\u0417\u0430\u0431\u0438\u0440\u0430\u0435\u0442\u0435 \u043B\u0438 \u0412\u044B \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u043E\u0432 \u0438\u0437 \u043F\u043E\u0441\u0435\u043B\u043A\u043E\u0432 \u0438 \u0434\u0435\u0440\u0435\u0432\u0435\u043D\u044C?",
-          content: "\u0414\u0430, \u043A\u043E\u043D\u0435\u0447\u043D\u043E. \u041C\u044B \u0442\u0430\u043A \u0436\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u043F\u043E \u0442\u0430\u043A\u0438\u043C \u043D\u0430\u0441\u0435\u043B\u0435\u043D\u043D\u044B\u043C \u043F\u0443\u043D\u043A\u0442\u0430\u043C \u043A\u0430\u043A \u0415\u0440\u043C\u043E\u043B\u0430\u0435\u0432\u043E, \u0410\u043B\u0435\u043A\u0441\u0435\u0435\u0432\u043A\u0430, \u0411\u0430\u043B\u044C\u0437\u0430, \u0411\u0430\u0445\u043C\u0443\u0442, \u0428\u0430\u0431\u0430\u0433\u0438\u0448, \u0421\u0442\u0430\u0440\u0430\u044F \u0438 \u041D\u043E\u0432\u0430\u044F \u041E\u0442\u0440\u0430\u0434\u0430 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u043F\u0443\u043D\u043A\u0442\u044B \u041A\u0443\u044E\u0440\u0433\u0430\u0437\u0438\u043D\u0441\u043A\u043E\u0433\u043E \u0440\u0430\u0439\u043E\u043D\u0430."
+          label: "Забираете ли Вы пассажиров из поселков и деревень?",
+          content: "Да, конечно. Мы так же работаем по таким населенным пунктам как Ермолаево, Алексеевка, Бальза, Бахмут, Шабагиш, Старая и Новая Отрада и другие пункты Куюргазинского района."
         },
         {
-          label: "\u0412 \u043A\u0430\u043A\u043E\u0435 \u0432\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0434\u0438\u0441\u043F\u0435\u0442\u0447\u0435\u0440?",
-          content: "\u0414\u0438\u0441\u043F\u0435\u0442\u0447\u0435\u0440 \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u0442 \u0437\u0430\u044F\u0432\u043A\u0438 \u043A\u0440\u0443\u0433\u043B\u043E\u0441\u0443\u0442\u043E\u0447\u043D\u043E. \u0418 \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u043F\u043E\u043B\u043D\u0443\u044E \u0438 \u0430\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E."
+          label: "В какое время работает диспетчер?",
+          content: "Диспетчер принимает заявки круглосуточно. И предоставляет полную и актуальную информацию."
         },
         {
-          label: "\u041A\u0430\u043A\u0438\u0435 \u043A\u043E\u043D\u0435\u0447\u043D\u044B\u0435 \u043F\u0443\u043D\u043A\u0442\u044B \u043F\u043E\u0435\u0437\u0434\u043E\u043A?",
-          content: "\u041C\u044B \u0434\u043E\u0432\u043E\u0437\u0438\u043C \u0434\u043E \u0432\u043E\u043A\u0437\u0430\u043B\u043E\u0432, \u0446\u0435\u043D\u0442\u0440\u043E\u0432, \u0431\u043E\u043B\u044C\u043D\u0438\u0446, \u0430 \u0442\u0430\u043A \u0436\u0435 \u0434\u043E \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u044B\u0445 \u0430\u0434\u0440\u0435\u0441\u043E\u0432 \u0432 \u043A\u0440\u0443\u043F\u043D\u044B\u0445 \u0433\u043E\u0440\u043E\u0434\u0430\u0445 \u0420\u0435\u0441\u043F\u0443\u0431\u043B\u0438\u043A\u0438 \u0411\u0430\u0448\u043A\u043E\u0440\u0442\u043E\u0441\u0442\u0430\u043D."
+          label: "Какие конечные пункты поездок?",
+          content: "Мы довозим до вокзалов, центров, больниц, а так же до конкретных адресов в крупных городах Республики Башкортостан."
         },
         {
-          label: "\u041A\u0430\u043A \u043E\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0431\u0430\u0433\u0430\u0436?",
-          content: "\u041F\u0435\u0440\u0432\u0430\u044F \u0441\u0443\u043C\u043A\u0430 - \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E. \u0417\u0430 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 \u0432\u0437\u0438\u043C\u0430\u0435\u0442\u0441\u044F \u043F\u043B\u0430\u0442\u0430 \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u0432\u0441\u0435\u0433\u0434\u0430 \u043C\u043E\u0436\u043D\u043E \u0443\u0437\u043D\u0430\u0442\u044C \u0443 \u0434\u0438\u0441\u043F\u0435\u0442\u0447\u0435\u0440\u0430."
+          label: "Как оплачивается багаж?",
+          content: "Первая сумка - бесплатно. За остальные взимается плата которую всегда можно узнать у диспетчера."
         },
         {
-          label: "\u041F\u0435\u0440\u0435\u0432\u043E\u0437\u0438\u0442\u0435 \u043B\u0438 \u0412\u044B \u043F\u043E\u0441\u044B\u043B\u043A\u0438?",
-          content: "\u0414\u0430, \u043C\u044B \u043F\u0435\u0440\u0435\u0432\u043E\u0437\u0438\u043C \u043F\u043E\u0441\u044B\u043B\u043A\u0438 \u0434\u043E \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u044B\u0445 \u0433\u0430\u0431\u0430\u0440\u0438\u0442\u043E\u0432 \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u043D\u043E \u0443\u0442\u043E\u0447\u043D\u0438\u0442\u044C \u0443 \u0434\u0438\u0441\u043F\u0435\u0442\u0447\u0435\u0440\u0430."
+          label: "Перевозите ли Вы посылки?",
+          content: "Да, мы перевозим посылки до определенных габаритов которые можно уточнить у диспетчера."
         }
       ];
     });
@@ -638,7 +622,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-center items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_component_SectionTitle, { title: "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_SectionTitle, { title: "Популярные вопросы" }, null, _parent2, _scopeId));
             _push2(`<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" data-v-365457e5${_scopeId}>`);
             _push2(ssrRenderComponent(_component_UPageList, { class: "accordion-questions" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -691,7 +675,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(`</div>`);
           } else {
             return [
-              createVNode(_component_SectionTitle, { title: "\u041F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B" }),
+              createVNode(_component_SectionTitle, { title: "Популярные вопросы" }),
               createVNode("div", { class: "w-full animation-box flex flex-col justify-start items-center pt-10 gap-10" }, [
                 createVNode(_component_UPageList, { class: "accordion-questions" }, {
                   default: withCtx(() => [

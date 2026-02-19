@@ -1,4 +1,4 @@
-import { _ as _sfc_main$9 } from './index-BGZzggxM.mjs';
+import { _ as _sfc_main$9 } from './index-CQ0qds5-.mjs';
 import { _ as __nuxt_component_0 } from './title-BAS7RGFK.mjs';
 import { defineComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -7,7 +7,7 @@ import { _ as _export_sfc } from './server.mjs';
 import 'reka-ui';
 import '@vueuse/core';
 import 'tailwind-variants';
-import './index-CZ0fzO44.mjs';
+import './index-DzyKUT5r.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';
@@ -43,53 +43,53 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         message: [
           {
             color: "#FFCC00",
-            text: "\u0412\u044B\u0441\u043E\u043A\u0438\u0439 \u0441\u0442\u0430\u0436"
+            text: "Высокий стаж"
           },
           {
             color: "#FFFFFF",
-            text: "\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439"
+            text: "водителей"
           }
         ],
-        description: "\u0441\u0442\u0430\u0436 \u043D\u0430\u0448\u0438\u0445 \u0432\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439 \u043E\u0442 7 - 10 \u043B\u0435\u0442 \u043E\u043F\u044B\u0442\u0430"
+        description: "стаж наших водителей от 7 - 10 лет опыта"
       },
       {
         message: [
           {
             color: "#FFFFFF",
-            text: "\u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0438"
+            text: "скорость и"
           },
           {
             color: "#FFCC00",
-            text: "\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E\u0441\u0442\u044C"
+            text: "доступность"
           }
         ],
-        description: "\u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u043A\u0440\u0443\u0433\u043B\u043E\u0441\u0443\u0442\u043E\u0447\u043D\u043E"
+        description: "работаем круглосуточно"
       },
       {
         message: [
           {
             color: "#FFFFFF",
-            text: "\u0411\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C \u0438"
+            text: "Безопасность и"
           },
           {
             color: "#FFCC00",
-            text: "\u0433\u0430\u0440\u0430\u043D\u0442\u0438\u044F"
+            text: "гарантия"
           }
         ],
-        description: "\u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u043C \u043E\u0442\u0447\u0435\u0442\u043D\u044B\u0435 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B"
+        description: "предоставляем отчетные документы"
       },
       {
         message: [
           {
             color: "#FFFFFF",
-            text: "\u041F\u0435\u0440\u0435\u0432\u043E\u0437\u043A\u0430 \u0438"
+            text: "Перевозка и"
           },
           {
             color: "#FFCC00",
-            text: "\u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430"
+            text: "доставка"
           }
         ],
-        description: "\u043E\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043B\u044F\u0435\u043C \u043F\u0435\u0440\u0435\u0432\u043E\u0437\u043A\u0438 \u0438 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0438 \u043F\u043E\u0441\u044B\u043B\u043E\u043A",
+        description: "осуществляем перевозки и доставки посылок",
         lost: true
       }
     ];
@@ -100,7 +100,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_component_SectionTitle, { title: "\u041D\u0430\u0448\u0438 \u043F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u0430" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent2, _scopeId));
             _push2(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-926f166e${_scopeId}><!--[-->`);
             ssrRenderList(advantages2, (item, index) => {
               _push2(`<!--[--><div class="item animation-box flex flex-col justify-center items-center gap-1 w-full" data-v-926f166e${_scopeId}><div class="flex flex-row justify-center items-center gap-2 w-full text-white" data-v-926f166e${_scopeId}><!--[-->`);
@@ -118,7 +118,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(`<!--]--></div>`);
           } else {
             return [
-              createVNode(_component_SectionTitle, { title: "\u041D\u0430\u0448\u0438 \u043F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u0430" }),
+              createVNode(_component_SectionTitle, { title: "Наши преимущества" }),
               createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [
                 (openBlock(true), createBlock(Fragment, null, renderList(advantages2, (item, index) => {
                   return openBlock(), createBlock(Fragment, { key: index }, [
