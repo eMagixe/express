@@ -1,16 +1,5 @@
 <script setup lang="ts">
-const modalAllReviewsOpen = ref(false)
-
-const preload = () => {
-	const { reviews, getAll } = useReview()
-
-	getAll().then(() => {
-		modalAllReviewsOpen.value = false
-	})
-
-	return reviews
-}
-const reviews = preload()
+const { reviews, preload } = useReview()
 </script>
 
 <template>
@@ -22,7 +11,7 @@ const reviews = preload()
 			content: 'min-h-[400px] bg-gray-600 border-gray-600'
 		}"
 	>
-		<UButton class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
+		<UButton @click="preload" class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
 		<template #content>
 			<div class="modal-reviews">
 				<UCarousel

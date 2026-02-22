@@ -1,63 +1,5 @@
 <script setup lang="ts">
-const review = ref<Review>({
-	name: '',
-	text: '',
-	rating: 0,
-	date: ''
-})
-
-const route = useRoute()
-const toast = useToast()
-
-const { create } = useReview()
-
-const modalAddReviewIsOpen = ref(false)
-
-if (route.query.review === 'open') {
-	modalAddReviewIsOpen.value = true
-}
-
-const resetReview = (obj: Ref) => {
-	obj.value = {
-		name: '',
-		text: '',
-		rating: 0,
-		date: ''
-	}
-}
-
-watch(modalAddReviewIsOpen, (value) => {
-	if (value) resetReview(review)
-})
-
-const onAddReview = async () => {
-	if (review.value.name && review.value.text && review.value.rating) {
-		create(review)
-			.then(() => {
-				resetReview(review)
-				toast.add({
-					title: 'Ответ',
-					description: 'Отзыв был отправлен',
-					color: 'success'
-				})
-				modalAddReviewIsOpen.value = false
-			})
-			.catch(() => {
-				toast.add({
-					title: 'Ответ',
-					description: 'Произошла ошибка при отправке отзыва',
-					color: 'error'
-				})
-
-			})
-	} else {
-		toast.add({
-			title: 'Отправка отзыва',
-			description: 'Пожалуйста, заполните все поля',
-			color: 'error'
-		})
-	}
-}
+const { add, modalAddReviewIsOpen, current } = useReview()
 </script>
 
 <template>
@@ -76,7 +18,7 @@ const onAddReview = async () => {
 		<UButton class="button-gradient" icon="i-lucide-plus">Оставить отзыв</UButton>
 		<template #body>
 			<UInput
-				v-model="review.name"
+				v-model="current.name"
 				color="primary"
 				placeholder="Имя"
 				:ui="{
@@ -91,14 +33,14 @@ const onAddReview = async () => {
 					v-for="n in 5"
 					src="/images/svg/star.svg"
 					:class="{
-						grayscale: n > review.rating
+						grayscale: n > current.rating
 					}"
-					@click="review.rating = n"
+					@click="current.rating = n"
 					:alt="`star +${n}`"
 				/>
 			</div>
 			<UTextarea
-				v-model="review.text"
+				v-model="current.text"
 				placeholder="Текст"
 				maxlength="180"
 				:rows="3"
@@ -108,7 +50,7 @@ const onAddReview = async () => {
 				}"
 			/>
 			<div class="w-full flex justify-center items-center">
-				<UButton @click="onAddReview" class="button-gradient" icon="i-lucide-plus"> Оставить отзыв </UButton>
+				<UButton @click="add" class="button-gradient" icon="i-lucide-plus"> Оставить отзыв </UButton>
 			</div>
 		</template>
 	</UModal>

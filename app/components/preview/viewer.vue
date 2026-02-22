@@ -1,11 +1,7 @@
 <script setup lang="ts">
-const preload = async () => {
-	const { reviews, getAll } = useReview()
-	await getAll()
-	return reviews
-}
+const { reviews, preload } = useReview()
 
-const reviews = await preload()
+await preload()
 </script>
 
 <template>
