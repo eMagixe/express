@@ -12,21 +12,11 @@ useSeoMeta({
 	ogLocale: 'ru_RU',
 	twitterCard: 'summary_large_image'
 })
-
-useScript('/js/yandex-metrika.js', {
-	tagPosition: 'bodyClose'
-})
 </script>
 <template>
-	<UApp>
-		<SectionHeader />
-		<main>
-			<SectionWelcome />
-			<LazySectionAdvantages />
-			<LazySectionReviews />
-			<LazySectionQuestions />
-			<LazySectionOrder />
-		</main>
-		<LazySectionFooter />
-	</UApp>
+	<SectionWelcome />
+	<LazySectionAdvantages />
+	<LazySectionReviews />
+	<LazySectionQuestions />
+	<LazySectionOrder />
 </template>
