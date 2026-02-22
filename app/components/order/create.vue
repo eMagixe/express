@@ -1,98 +1,102 @@
 <script setup lang="ts">
-import { CalendarDate, DateFormatter, Time } from '@internationalized/date'
+import { CalendarDate, Time } from '@internationalized/date'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
 
-const df = new DateFormatter('ru-RU', {
-	dateStyle: 'medium'
-})
+const { data, orderCreated, checkUserValidate, resetOrder, submitOrder } = useOrder()
+const { to_cities, from_cities } = useCities()
 
-const check = ref(false)
-const toast = useToast()
-const [day, month, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
-const defaultTime = new Time(16, 30, 0)
-const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
-
-const data = reactive<Order>({
-	name: '',
-	phone: '',
-	from: 'Кумертау',
-	from_address: '',
-	to: 'Уфа',
-	to_address: '',
-	date: shallowRef(currentDate),
-	time: shallowRef(defaultTime)
-})
-
-const orderCreated = ref(false)
+const ERROR_EMPTY = 'Обязательное поле для заполнения'
+const PHONE_FORMAT = 'Неверный формат номера телефона'
 
 const schema = v.object({
-	name: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	phone: v.pipe(
-		v.string(),
-		v.nonEmpty('Обязательное поле для заполнения'),
-		minLength(18, 'Неверный формат номера телефона')
-	),
-	to: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	from: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	to_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	from_address: v.pipe(v.string(), v.nonEmpty('Обязательное поле для заполнения')),
-	date: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения')),
-	time: v.pipe(v.any(), v.nonEmpty('Обязательное поле для заполнения'))
+	name: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY)),
+	phone: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY), minLength(18, PHONE_FORMAT)),
+	to: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY)),
+	from: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY)),
+	to_address: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY)),
+	from_address: v.pipe(v.string(), v.nonEmpty(ERROR_EMPTY)),
+	date: v.pipe(v.any(), v.nonEmpty(ERROR_EMPTY)),
+	time: v.pipe(v.any(), v.nonEmpty(ERROR_EMPTY))
 })
 
-const cities = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
+function useCities() {
+	const CITIES = ref(['Кумертау', 'Мелеуз', 'Салават', 'Уфа'])
 
-const from_cities = computed(() => {
-	return cities.value
-})
+	const from_cities = computed(() => {
+		return CITIES.value
+	})
 
-watch(
-	() => data.from,
-	(value) => {
-		if (value === 'Уфа') data.to = ''
-	}
-)
-
-const to_cities = computed(() => {
-	if (data.from === 'Уфа') {
-		return cities.value.filter((i) => i !== 'Уфа')
-	} else {
-		return cities.value.filter((i) => i === 'Уфа')
-	}
-})
-
-const reset = (): void => {
-	data.to_address = ''
-	data.from_address = ''
-	data.to = ''
-	data.from = ''
-	data.name = ''
-	data.phone = ''
-	data.date = currentDate
-	data.time = defaultTime
-}
-
-const createOrder = async () => {
-	await $fetch('/api/order/create', {
-		method: 'POST',
-		body: {
-			...data
+	const to_cities = computed(() => {
+		if (data.from === 'Уфа') {
+			return CITIES.value.filter((i) => i !== 'Уфа')
+		} else {
+			return CITIES.value.filter((i) => i === 'Уфа')
 		}
 	})
+
+	return { from_cities, to_cities }
 }
 
-const onSubmit = async () => {
-	createOrder()
-		.then(() => {
-			toast.add({ title: 'Ответ', description: 'Заявка была успешно создана', color: 'success' })
-			orderCreated.value = true
+function useOrder() {
+	const toast = useToast()
+	const orderCreated = ref(false)
+	const checkUserValidate = ref(false)
+	const defaultTime = new Time(16, 30, 0)
+	const [day, month, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
+	const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
+
+	const data = reactive<Order>({
+		name: '',
+		phone: '',
+		from: 'Кумертау',
+		from_address: '',
+		to: 'Уфа',
+		to_address: '',
+		date: shallowRef(currentDate),
+		time: shallowRef(defaultTime)
+	})
+
+	const clearToCity = (value: string) => {
+		if (value === 'Уфа') data.to = ''
+	}
+
+	watch(() => data.from, clearToCity)
+
+	const resetOrder = (): void => {
+		data.to_address = ''
+		data.from_address = ''
+		data.to = ''
+		data.from = ''
+		data.name = ''
+		data.phone = ''
+		data.date = currentDate
+		data.time = defaultTime
+	}
+
+	const createOrder = async () => {
+		await $fetch('/api/order/create', {
+			method: 'POST',
+			body: {
+				...data
+			}
 		})
-		.catch((response) => {
-			console.log(response)
-			toast.add({ title: 'Ответ', description: 'Произошла ошибка при создании заявки', color: 'error' })
-		})
+	}
+
+	const submitOrder = async () => {
+		createOrder()
+			.then(() => {
+				toast.add({ title: 'Ответ', description: 'Заявка была успешно создана', color: 'success' })
+				orderCreated.value = true
+			})
+			.catch((response) => {
+				console.log(response)
+				toast.add({ title: 'Ответ', description: 'Произошла ошибка при создании заявки', color: 'error' })
+			})
+	}
+
+	return { submitOrder, resetOrder, data, orderCreated, checkUserValidate }
 }
 </script>
 
@@ -103,7 +107,7 @@ const onSubmit = async () => {
 		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
 		:schema="schema"
 		:state="data"
-		@submit="onSubmit"
+		@submit="submitOrder"
 		id="form-create-order"
 	>
 		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
@@ -185,7 +189,7 @@ const onSubmit = async () => {
 
 			<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
 				<UCheckbox
-					v-model="check"
+					v-model="checkUserValidate"
 					label="Подтверждение"
 					description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
 					:ui="{
@@ -193,15 +197,15 @@ const onSubmit = async () => {
 						description: 'text-primary/70',
 						label: 'text-white text-lg'
 					}"
-					id="check"
+					id="check-user-validate"
 				/>
 			</div>
 		</div>
 		<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
-			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!check">
+			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!checkUserValidate">
 				Отправить
 			</UButton>
-			<UButton class="button-gradient h-16" @click="reset">Очистить</UButton>
+			<UButton class="button-gradient h-16" @click="resetOrder">Очистить</UButton>
 		</div>
 	</UForm>
 	<div v-else>

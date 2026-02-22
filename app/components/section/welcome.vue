@@ -2,6 +2,7 @@
 	<div class="welcome-section w-full pt-10 mx-auto">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10">
 			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
+				<p class="text-white not-sm:text-sm">Основные направления</p>
 				<h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
 					КУМЕРТАУ
 					<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
@@ -25,7 +26,7 @@
 				</div>
 			</div>
 			<h2
-				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
+				class="font-medium text-[clamp(1.25rem,3vw,3rem)] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
 				Круглосуточные перевозки
 			</h2>

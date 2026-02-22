@@ -1,5 +1,6 @@
 <script setup lang="ts">
 type Advantage = {
+	icon: string
 	message: {
 		color: string
 		text: string
@@ -10,6 +11,7 @@ type Advantage = {
 
 const advantages = <Advantage[]>[
 	{
+		icon: 'i-lucide-user-check',
 		message: [
 			{
 				color: '#FFCC00',
@@ -23,6 +25,7 @@ const advantages = <Advantage[]>[
 		description: 'стаж наших водителей от 7 - 10 лет опыта'
 	},
 	{
+		icon: 'i-lucide-clock',
 		message: [
 			{
 				color: '#FFFFFF',
@@ -36,6 +39,7 @@ const advantages = <Advantage[]>[
 		description: 'работаем круглосуточно'
 	},
 	{
+		icon: 'i-lucide-shield-check',
 		message: [
 			{
 				color: '#FFFFFF',
@@ -49,6 +53,7 @@ const advantages = <Advantage[]>[
 		description: 'предоставляем отчетные документы'
 	},
 	{
+		icon: 'i-lucide-truck',
 		message: [
 			{
 				color: '#FFFFFF',
@@ -71,28 +76,22 @@ const advantages = <Advantage[]>[
 			<SectionTitle title="Наши преимущества" />
 			<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5">
 				<template v-for="(item, index) in advantages as Advantage[]" :key="index">
-					<div class="item animation-box flex flex-col justify-center items-center gap-1 w-full">
-						<div class="flex flex-row justify-center items-center gap-2 w-full text-white">
-							<span
-								v-for="i in item.message"
-								:class="`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`"
-								>{{ i.text }}</span
-							>
-						</div>
-						<div
-							class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] w-full text-center uppercase"
-						>
-							{{ item.description }}
+					<div class="item animation-box flex flex-row justify-center items-center gap-5 w-full">
+						<UIcon class="text-white min-w-9 min-h-9 text-[4cqw]" :name="item.icon" />
+						<div>
+							<div class="flex flex-row justify-start items-center gap-2 text-white">
+								<span
+									v-for="i in item.message"
+									:class="`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`"
+									>{{ i.text }}</span
+								>
+							</div>
+							<div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase">
+								{{ item.description }}
+							</div>
 						</div>
 					</div>
-					<img
-						height="52"
-						width="12"
-						class="h-7"
-						v-if="!item.lost"
-						src="/images/svg/arrow-b.svg"
-						alt="arrow-b"
-					/>
+					<UIcon v-if="!item.lost" class="text-white text-[20px]" name="i-lucide-arrow-down" />
 				</template>
 			</div>
 		</UContainer>
