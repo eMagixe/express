@@ -51,7 +51,7 @@ const features = ref<PageFeatureProps[]>([
 			orientation="horizontal"
 			:features="features"
 			:ui="{
-				title: 'text-primary',
+				title: 'text-primary tracking-wider',
 				description: 'text-white',
 				container: 'py-10 sm:py-10 lg:py-10',
 				wrapper: 'text-white flex flex-col justify-start items-start gap-5 h-full w-full',
