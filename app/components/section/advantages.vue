@@ -100,6 +100,7 @@ const advantages = <Advantage[]>[
 
 <style scoped>
 .section-advantages {
+	border-top: 1px rgba(10, 11, 8, 1) solid;
 	background:
 		linear-gradient(rgba(10, 11, 8, 1) 10%, rgba(10, 11, 8, 0) 50%, rgba(153, 89, 0, 1) 100%),
 		url('/images/webp/two-section.webp') no-repeat center;
