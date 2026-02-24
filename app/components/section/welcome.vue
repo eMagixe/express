@@ -1,44 +1,92 @@
 <script setup lang="ts"></script>
 <template>
-	<div class="welcome-section w-full pt-10 mx-auto">
-		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-10 pt-10">
-			<div class="cities-list w-full flex flex-col justify-center items-center gap-2">
-				<p class="text-white not-sm:text-sm">Основные направления</p>
-				<NuxtLink to="/directions?from=кумертау&to=уфа">
-					<h1 class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
-						КУМЕРТАУ
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						УФА
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						КУМЕРТАУ
-					</h1>
-				</NuxtLink>
-				<NuxtLink to="/directions?from=мелеуз&to=уфа">
-					<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
-						МЕЛЕУЗ
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						УФА
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						МЕЛЕУЗ
-					</div>
-				</NuxtLink>
-				<NuxtLink to="/directions?from=салават&to=уфа">
-					<div class="flex text-[clamp(1.25rem,3vw,2.5rem)] justify-center items-center gap-1">
-						САЛАВАТ
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						УФА
-						<UIcon name="i-lucide-arrow-right" class="h-6 w-6" />
-						САЛАВАТ
-					</div>
-				</NuxtLink>
+	<div class="welcome-section w-full mx-auto">
+		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
+			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
+				<UPricingPlan
+					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					title="Кумертау - Уфа"
+					description="Пассажирские перевозки"
+					price="от 1300 руб."
+					:features="[
+						'Передача документации и посылок',
+						'До аэро - жд вокзалов и больниц',
+						'До места указанного заказчиком *',
+						'Билеты, отчётные документы, qr-коды'
+					]"
+					:ui="{
+						root: 'ring-0 item-direction',
+						title: 'text-primary title',
+						description: 'text-white',
+						price: 'text-primary',
+						featureTitle: 'text-white',
+						button: 'button-gradient'
+					}"
+					:button="{
+						label: 'Перейти к заказу',
+						to: '/directions/kumertau-ufa',
+						trailingIcon: 'i-lucide-arrow-right'
+					}"
+				/>
+				<UPricingPlan
+					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					title="Мелеуз - Уфа"
+					description="Пассажирские перевозки"
+					price="от 1300 руб."
+					:features="[
+						'Передача документации и посылок',
+						'До аэро - жд вокзалов и больниц',
+						'До места указанного заказчиком *',
+						'Билеты, отчётные документы, qr-коды'
+					]"
+					:ui="{
+						root: 'ring-0 item-direction',
+						title: 'text-primary title',
+						description: 'text-white',
+						price: 'text-primary',
+						featureTitle: 'text-white',
+						button: 'button-gradient'
+					}"
+					:button="{
+						label: 'Перейти к заказу',
+						to: '/directions/meleuz-ufa',
+						trailingIcon: 'i-lucide-arrow-right'
+					}"
+				/>
+				<UPricingPlan
+					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					title="Салават - Уфа"
+					description="Пассажирские перевозки"
+					price="от 1200 руб."
+					:features="[
+						'Передача документации и посылок',
+						'До аэро - жд вокзалов и больниц',
+						'До места указанного заказчиком *',
+						'Билеты, отчётные документы, qr-коды'
+					]"
+					:ui="{
+						root: 'ring-0 item-direction',
+						title: 'text-primary title',
+						description: 'text-white',
+						price: 'text-primary',
+						featureTitle: 'text-white',
+						button: 'button-gradient'
+					}"
+					:button="{
+						label: 'Перейти к заказу',
+						to: '/directions/salavat-ufa',
+						trailingIcon: 'i-lucide-arrow-right'
+					}"
+				/>
 			</div>
+			<p class="text-sm text-gray-400">* требуется дополнительная оплата</p>
 			<h2
-				class="font-medium text-[clamp(1.25rem,3vw,3rem)] pt-10 text-white text-center lg:text-left w-full lg:w-[70%]"
+				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
 				Круглосуточные перевозки
 			</h2>
 			<NuxtLink
-				class="lg:hidden button-gradient w-60 h-20 mx-auto my-10 flex items-center justify-center gap-3"
+				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				to="tel:+79177666833"
 				@click="utils.sendCallToTelegram('+79177666833')"

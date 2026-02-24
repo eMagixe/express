@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
 	<NuxtLink to="https://taxi-express.su/">
 		<picture>
@@ -9,5 +7,3 @@
 		</picture>
 	</NuxtLink>
 </template>
-
-<style scoped></style>

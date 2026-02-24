@@ -20,10 +20,10 @@ export const useReview = () => {
 	}
 
 	watch(modalAddReviewIsOpen, (value) => {
-		if (value) resetReview(current)
+		if (value) reset(current)
 	})
 
-	const resetReview = (obj: Ref) => {
+	const reset = (obj: Ref) => {
 		obj.value = {
 			name: '',
 			text: '',
@@ -32,7 +32,7 @@ export const useReview = () => {
 		}
 	}
 
-	const remakeReview = (review: Review) => {
+	const remake = (review: Review) => {
 		return {
 			name: review.name,
 			text: review.text,
@@ -49,7 +49,7 @@ export const useReview = () => {
 		}).then(({ data }: any): void => {
 			if (utils.isArray(data.value)) {
 				reviews.value = data.value.map((review: any) => {
-					return remakeReview(review) as Review
+					return remake(review) as Review
 				}) as Review[]
 			}
 		})
@@ -68,7 +68,7 @@ export const useReview = () => {
 		if (current.value.name && current.value.text && current.value.rating) {
 			create(current)
 				.then(() => {
-					resetReview(current)
+					reset(current)
 					toast.add({
 						title: 'Ответ',
 						description: 'Отзыв был отправлен',

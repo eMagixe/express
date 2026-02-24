@@ -4,7 +4,9 @@ import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
 
-const { data, orderCreated, checkUserValidate, resetOrder, submitOrder } = useOrder()
+const props = defineProps<{ direction?: boolean; from?: string; to?: string }>()
+
+const { orderData, isOrderCreated, isUserValidate, resetOrder, submitOrder } = useOrder()
 const { to_cities, from_cities } = useCities()
 
 const ERROR_EMPTY = 'Обязательное поле для заполнения'
@@ -29,7 +31,7 @@ function useCities() {
 	})
 
 	const to_cities = computed(() => {
-		if (data.from === 'Уфа') {
+		if (orderData.from === 'Уфа') {
 			return CITIES.value.filter((i) => i !== 'Уфа')
 		} else {
 			return CITIES.value.filter((i) => i === 'Уфа')
@@ -41,45 +43,45 @@ function useCities() {
 
 function useOrder() {
 	const toast = useToast()
-	const orderCreated = ref(false)
-	const checkUserValidate = ref(false)
+	const isOrderCreated = ref(false)
+	const isUserValidate = ref(false)
 	const defaultTime = new Time(16, 30, 0)
 	const [day, month, year] = new Date(Date.now()).toLocaleDateString('ru-RU').split('.')
 	const currentDate = new CalendarDate(Number(year), Number(month), Number(day))
 
-	const data = reactive<Order>({
+	let orderData = reactive<Order>({
 		name: '',
 		phone: '',
-		from: 'Кумертау',
+		from: props.from || 'Кумертау',
 		from_address: '',
-		to: 'Уфа',
+		to: props.to || 'Уфа',
 		to_address: '',
 		date: shallowRef(currentDate),
 		time: shallowRef(defaultTime)
 	})
 
 	const clearToCity = (value: string) => {
-		if (value === 'Уфа') data.to = ''
+		if (value === 'Уфа') orderData.to = ''
 	}
 
-	watch(() => data.from, clearToCity)
+	watch(() => orderData.from, clearToCity)
 
 	const resetOrder = (): void => {
-		data.to_address = ''
-		data.from_address = ''
-		data.to = ''
-		data.from = ''
-		data.name = ''
-		data.phone = ''
-		data.date = currentDate
-		data.time = defaultTime
+		orderData.to_address = ''
+		orderData.from_address = ''
+		orderData.to = ''
+		orderData.from = ''
+		orderData.name = ''
+		orderData.phone = ''
+		orderData.date = currentDate
+		orderData.time = defaultTime
 	}
 
 	const createOrder = async () => {
 		await $fetch('/api/order/create', {
 			method: 'POST',
 			body: {
-				...data
+				...orderData
 			}
 		})
 	}
@@ -88,36 +90,44 @@ function useOrder() {
 		createOrder()
 			.then(() => {
 				toast.add({ title: 'Ответ', description: 'Заявка была успешно создана', color: 'success' })
-				orderCreated.value = true
+				isOrderCreated.value = true
 			})
 			.catch((response) => {
-				console.log(response)
+				console.log('createOrder: ', response)
 				toast.add({ title: 'Ответ', description: 'Произошла ошибка при создании заявки', color: 'error' })
 			})
 	}
 
-	return { submitOrder, resetOrder, data, orderCreated, checkUserValidate }
+	return { submitOrder, resetOrder, orderData, isOrderCreated, isUserValidate }
 }
 </script>
 
 <template>
-	<SectionTitle v-if="!orderCreated" title="Оставить заявку" />
+	<SectionTitle v-if="!isOrderCreated" title="Сделать заказ" />
+	<div v-if="!isOrderCreated" class="flex flex-col justify-center items-center text-sm">
+		<p class="text-gray-200 text-center">
+			Заполните пожалуйста форму заказа, перед отправкой убедитесь что все данные введены верно
+		</p>
+		<p class="text-primary text-center">
+			* Внимание при доставке до определенного адреса взымается дополнительная плата!
+		</p>
+	</div>
 	<UForm
-		v-if="!orderCreated"
+		v-if="!isOrderCreated"
 		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
 		:schema="schema"
-		:state="data"
+		:state="orderData"
 		@submit="submitOrder"
 		id="form-create-order"
 	>
 		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
 			<UFormField name="name">
-				<UInput v-model="data.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
+				<UInput v-model="orderData.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
 			</UFormField>
 			<UFormField name="phone">
 				<UInput
 					v-maska="'+7-(###)-###-##-##'"
-					v-model="data.phone"
+					v-model="orderData.phone"
 					placeholder="+7-(000)-000-00-00"
 					icon="i-lucide-phone"
 					size="xl"
@@ -126,7 +136,7 @@ function useOrder() {
 			</UFormField>
 			<UFormField name="from">
 				<UInputMenu
-					v-model="data.from"
+					v-model="orderData.from"
 					:items="from_cities"
 					open-on-focus
 					color="primary"
@@ -137,7 +147,7 @@ function useOrder() {
 			</UFormField>
 			<UFormField name="from_address">
 				<UInput
-					v-model="data.from_address"
+					v-model="orderData.from_address"
 					color="primary"
 					placeholder="Адрес отправления"
 					size="xl"
@@ -146,7 +156,7 @@ function useOrder() {
 			</UFormField>
 			<UFormField name="to">
 				<UInputMenu
-					v-model="data.to"
+					v-model="orderData.to"
 					:items="to_cities"
 					open-on-focus
 					color="primary"
@@ -157,7 +167,7 @@ function useOrder() {
 			</UFormField>
 			<UFormField name="to_address">
 				<UInput
-					v-model="data.to_address"
+					v-model="orderData.to_address"
 					color="primary"
 					placeholder="Адрес прибытия"
 					size="xl"
@@ -172,24 +182,24 @@ function useOrder() {
 							id="date-button"
 							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
 						>
-							<NuxtTime v-if="data.date" :datetime="new Date(data.date)" locale="ru-RU" />
+							<NuxtTime v-if="orderData.date" :datetime="new Date(orderData.date)" locale="ru-RU" />
 							<p v-else>Выберете дату</p>
 						</UButton>
 
 						<template #content>
-							<UCalendar v-model="data.date" class="p-2" id="date" />
+							<UCalendar v-model="orderData.date" class="p-2" id="date" />
 						</template>
 					</UPopover>
 				</UFormField>
 
 				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
-					<UInputTime class="w-full" :hour-cycle="24" :default-value="data.time" id="time" />
+					<UInputTime class="w-full" :hour-cycle="24" :default-value="orderData.time" id="time" />
 				</UFormField>
 			</div>
 
 			<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
 				<UCheckbox
-					v-model="checkUserValidate"
+					v-model="isUserValidate"
 					label="Подтверждение"
 					description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
 					:ui="{
@@ -202,7 +212,7 @@ function useOrder() {
 			</div>
 		</div>
 		<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
-			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!checkUserValidate">
+			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!isUserValidate">
 				Отправить
 			</UButton>
 			<UButton class="button-gradient h-16" @click="resetOrder">Очистить</UButton>
@@ -213,12 +223,12 @@ function useOrder() {
 			<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
 			<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
 			<p>
-				Имя: <b>{{ data.name }}</b>
+				Имя: <b>{{ orderData.name }}</b>
 			</p>
-			<p>Телефон: {{ data.phone }}</p>
-			<p>Из: {{ data.from }}, {{ data.from_address }}</p>
-			<p>До: {{ data.to }}, {{ data.to_address }}</p>
-			<p>Дата: {{ data.date }}, время: {{ data.time }}</p>
+			<p>Телефон: {{ orderData.phone }}</p>
+			<p>Из: {{ orderData.from }}, {{ orderData.from_address }}</p>
+			<p>До: {{ orderData.to }}, {{ orderData.to_address }}</p>
+			<p>Дата: {{ orderData.date }}, время: {{ orderData.time }}</p>
 		</div>
 	</div>
 </template>

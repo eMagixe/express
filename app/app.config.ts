@@ -43,6 +43,12 @@ export default defineAppConfig({
 			slots: {
 				item: 'border-b border-b-gray-400 text-gray-700'
 			}
+		},
+		pageFeature: {
+			slots: {
+				title: 'text-gray-400',
+				description: 'text-primary text-xl'
+			}
 		}
 	}
 })
