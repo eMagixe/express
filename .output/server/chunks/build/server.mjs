@@ -1,6 +1,6 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, getCurrentInstance, defineAsyncComponent, defineComponent, h, computed, unref, shallowRef, provide, shallowReactive, createElementBlock, ref, Suspense, Fragment, createApp, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, mergeProps, getCurrentScope, toRef, withCtx, nextTick, isReadonly, useSSRContext, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { m as defuFn, n as klona, h as createError$1, o as hasProtocol, q as isScriptProtocol, k as joinURL, w as withQuery, s as sanitizeStatusCode, t as getContext, $ as $fetch$1, v as baseURL, x as createHooks, y as defu, z as executeAsync } from '../nitro/nitro.mjs';
-import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, defineComponent, ref, h, Suspense, getCurrentInstance, Fragment, provide, shallowReactive, defineAsyncComponent, computed, unref, shallowRef, createElementBlock, createApp, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, mergeProps, getCurrentScope, toRef, withCtx, nextTick, isReadonly, useSSRContext, isRef, isShallow, isReactive, toRaw } from 'vue';
+import { m as klona, n as defuFn, h as createError$1, o as hasProtocol, q as isScriptProtocol, k as joinURL, w as withQuery, s as sanitizeStatusCode, t as getContext, $ as $fetch$1, v as baseURL, x as createHooks, y as defu, z as executeAsync } from '../nitro/nitro.mjs';
+import { RouterView, useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
@@ -418,7 +418,27 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CQ0qds5-.mjs').then((n) => n.F)
+    component: () => import('./index-Cwz1djQt.mjs')
+  },
+  {
+    name: "directions",
+    path: "/directions",
+    component: () => import('./index-Ba71dy4R.mjs')
+  },
+  {
+    name: "directions-meleuz-ufa",
+    path: "/directions/meleuz-ufa",
+    component: () => import('./meleuz-ufa-BAIg3k1K.mjs')
+  },
+  {
+    name: "directions-salavat-ufa",
+    path: "/directions/salavat-ufa",
+    component: () => import('./salavat-ufa-YiiVvaRp.mjs')
+  },
+  {
+    name: "directions-kumertau-ufa",
+    path: "/directions/kumertau-ufa",
+    component: () => import('./kumertau-ufa-CqughZaB.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -776,7 +796,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-DzyKUT5r.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-DMLNqBde.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -833,6 +853,12 @@ const cfg0 = defineAppConfig({
     accordion: {
       slots: {
         item: "border-b border-b-gray-400 text-gray-700"
+      }
+    },
+    pageFeature: {
+      slots: {
+        title: "text-gray-400",
+        description: "text-primary text-xl"
       }
     }
   }
@@ -1233,7 +1259,9 @@ const plugins = [
   colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo,
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
 ];
-const layouts = {};
+const layouts = {
+  default: defineAsyncComponent(() => import('./default-C_xTjEpq.mjs').then((n) => n.a).then((m) => m.default || m))
+};
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -1500,7 +1528,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-DTffzJCG.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CrTCngIv.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1582,4 +1610,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, appConfig as b, useAppConfig as c, useRoute as d, entry_default as default, useRuntimeConfig as e, useSeoMeta as f, useRouter as g, nuxtLinkDefaults as h, injectHead as i, asyncDataDefaults as j, createError as k, fetchDefaults as l, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useRoute as c, useNuxtApp as d, entry_default as default, useRuntimeConfig as e, __nuxt_component_2 as f, appConfig as g, useRouter as h, injectHead as i, nuxtLinkDefaults as j, asyncDataDefaults as k, createError as l, fetchDefaults as m, navigateTo as n, resolveRouteObject as r, useHead as u };
