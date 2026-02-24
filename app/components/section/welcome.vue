@@ -105,6 +105,7 @@
 
 <style scoped>
 .welcome-section {
+	border-bottom: 1px rgba(10, 11, 8, 1) solid;
 	@media (min-width: 1122px) {
 		background:
 			linear-gradient(rgba(10, 11, 8, 1) 0%, rgba(10, 11, 8, 0) 50%, rgba(10, 11, 8, 1) 98%),
