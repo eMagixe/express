@@ -418,7 +418,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BomuXT-i.mjs')
+    component: () => import('./index-DIxObYea.mjs')
   },
   {
     name: "directions",
