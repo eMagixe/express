@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-	<div class="welcome-section w-full mx-auto">
+	<div class="welcome-section w-full mx-auto pb-5">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
