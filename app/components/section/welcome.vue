@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
-	<div class="welcome-section w-full mx-auto">
-		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10 pb-10">
+	<div class="welcome-section w-full mx-auto mb-10">
+		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
 					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
