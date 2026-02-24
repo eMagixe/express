@@ -29,7 +29,7 @@
 					}"
 				/>
 				<UPricingPlan
-					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] not-md:hidden min-w-80"
 					title="Мелеуз - Уфа"
 					description="Пассажирские перевозки"
 					price="от 1300 руб."
@@ -54,7 +54,7 @@
 					}"
 				/>
 				<UPricingPlan
-					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] not-lg:hidden min-w-80"
 					title="Салават - Уфа"
 					description="Пассажирские перевозки"
 					price="от 1200 руб."
