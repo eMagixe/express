@@ -79,7 +79,11 @@
 					}"
 				/>
 			</div>
-			<p class="text-sm text-center text-primary">* требуется дополнительная оплата</p>
+			<p
+				class="text-sm text-center text-white rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]"
+			>
+				* требуется дополнительная оплата
+			</p>
 			<h2
 				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>

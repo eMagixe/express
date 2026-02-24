@@ -38,11 +38,11 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_UPricingPlan = _sfc_main$2;
   const _component_NuxtLink = __nuxt_component_0$1;
   const _component_UIcon = _sfc_main$5;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-6322533a>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-194c521b>`);
   _push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="cities-list w-full flex flex-row justify-center items-center gap-10" data-v-6322533a${_scopeId}>`);
+        _push2(`<div class="cities-list w-full flex flex-row justify-center items-center gap-10" data-v-194c521b${_scopeId}>`);
         _push2(ssrRenderComponent(_component_UPricingPlan, {
           class: "p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
           title: "Кумертау - Уфа",
@@ -118,7 +118,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
             trailingIcon: "i-lucide-arrow-right"
           }
         }, null, _parent2, _scopeId));
-        _push2(`</div><p class="text-sm text-center text-primary" data-v-6322533a${_scopeId}>* требуется дополнительная оплата</p><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" data-v-6322533a${_scopeId}> Круглосуточные перевозки </h2>`);
+        _push2(`</div><p class="text-sm text-center text-white rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]" data-v-194c521b${_scopeId}> * требуется дополнительная оплата </p><h2 class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" data-v-194c521b${_scopeId}> Круглосуточные перевозки </h2>`);
         _push2(ssrRenderComponent(_component_NuxtLink, {
           class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
           icon: "i-lucide-phone-call",
@@ -144,7 +144,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
           }),
           _: 1
         }, _parent2, _scopeId));
-        _push2(`<div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" data-v-6322533a${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+        _push2(`<div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]" data-v-194c521b${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
       } else {
         return [
           createVNode("div", { class: "cities-list w-full flex flex-row justify-center items-center gap-10" }, [
@@ -224,7 +224,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
               }
             })
           ]),
-          createVNode("p", { class: "text-sm text-center text-primary" }, "* требуется дополнительная оплата"),
+          createVNode("p", { class: "text-sm text-center text-white rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]" }, " * требуется дополнительная оплата "),
           createVNode("h2", { class: "font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]" }, " Круглосуточные перевозки "),
           createVNode(_component_NuxtLink, {
             class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
@@ -255,7 +255,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-6322533a"]]), { __name: "SectionWelcome" });
+const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-194c521b"]]), { __name: "SectionWelcome" });
 const __nuxt_component_1_lazy = defineAsyncComponent(() => import('./advantages-D1NQF0OZ.mjs').then((c) => c.default || c));
 const __nuxt_component_2_lazy = defineAsyncComponent(() => import('./reviews-CeMpbMsF.mjs').then((c) => c.default || c));
 const __nuxt_component_3_lazy = defineAsyncComponent(() => import('./questions-LO4YZf1r.mjs').then((c) => c.default || c));
