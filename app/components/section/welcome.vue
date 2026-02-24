@@ -79,7 +79,7 @@
 					}"
 				/>
 			</div>
-			<p class="text-sm text-gray-400">* требуется дополнительная оплата</p>
+			<p class="text-sm text-center text-gray-400">* требуется дополнительная оплата</p>
 			<h2
 				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
@@ -95,7 +95,7 @@
 				Вызвать
 			</NuxtLink>
 			<div
-				class="text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"
+				class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"
 			>
 				Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи
 			</div>
