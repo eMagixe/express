@@ -11,6 +11,19 @@ const items = ref<BreadcrumbItem[]>([
 		to: '/directions'
 	}
 ])
+
+useSeoMeta({
+	title: 'Такси Экспресс | Все направления',
+	description:
+		'Страница всех доступных основных направлений нашего такси | Такси Express - быстро, комфортно и надежно',
+	ogTitle: 'Такси Экспресс | Все направления',
+	ogDescription:
+		'Страница всех доступных основных направлений нашего такси | Такси Express - быстро, комфортно и надежно',
+	ogUrl: 'https://taxi-express.su/directions',
+	ogType: 'website',
+	ogLocale: 'ru_RU',
+	twitterCard: 'summary_large_image'
+})
 </script>
 <template>
 	<UContainer class="flex flex-col justify-start gap-5 pt-10">

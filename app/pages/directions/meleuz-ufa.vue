@@ -32,6 +32,19 @@ const features = ref<PageFeatureProps[]>([
 		icon: 'i-lucide-receipt-russian-ruble'
 	}
 ])
+
+useSeoMeta({
+	title: 'Такси Экспресс | направление из Мелеуза в Уфу',
+	description:
+		'Такси Мелеуз - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!',
+	ogTitle: 'Такси Экспресс | направление из Мелеуза в Уфу',
+	ogDescription:
+		'Такси Мелеуз - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!',
+	ogUrl: 'https://taxi-express.su/directions/meleuz-ufa',
+	ogType: 'website',
+	ogLocale: 'ru_RU',
+	twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>

@@ -423,22 +423,22 @@ const _routes = [
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-Ba71dy4R.mjs')
+    component: () => import('./index-3jaJJoer.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-V6P25gVa.mjs')
+    component: () => import('./meleuz-ufa-B1zW_JZw.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-D-o3v8y4.mjs')
+    component: () => import('./salavat-ufa-BFqGSTku.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-wf7WgWCb.mjs')
+    component: () => import('./kumertau-ufa-B3jcOW24.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {

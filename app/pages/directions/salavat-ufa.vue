@@ -32,6 +32,19 @@ const features = ref<PageFeatureProps[]>([
 		icon: 'i-lucide-receipt-russian-ruble'
 	}
 ])
+
+useSeoMeta({
+	title: 'Такси Экспресс | направление из Салавата в Уфу',
+	description:
+		'Такси Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!',
+	ogTitle: 'Такси Экспресс | направление из Салавата в Уфу',
+	ogDescription:
+		'Такси Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!',
+	ogUrl: 'https://taxi-express.su/directions/salavat-ufa',
+	ogType: 'website',
+	ogLocale: 'ru_RU',
+	twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>
