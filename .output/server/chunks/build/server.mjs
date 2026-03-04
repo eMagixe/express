@@ -418,7 +418,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-DIxObYea.mjs')
+    component: () => import('./index-D1skdpJ-.mjs')
   },
   {
     name: "directions",

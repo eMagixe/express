@@ -79,11 +79,13 @@
 					}"
 				/>
 			</div>
-			<p
-				class="text-sm text-center mx-5 text-white rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]"
+			<div
+				class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5"
 			>
-				* требуется дополнительная оплата
-			</p>
+				<p class="text-sm text-white">* требуется дополнительная оплата</p>
+				<NuxtLink class="text-primary underline" to="/directions">Список основных направлений</NuxtLink>
+			</div>
+
 			<h2
 				class="font-medium text-[clamp(1.25rem,3vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
