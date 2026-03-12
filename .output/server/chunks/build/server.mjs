@@ -421,6 +421,16 @@ const _routes = [
     component: () => import('./index-D1skdpJ-.mjs')
   },
   {
+    name: "contacts",
+    path: "/contacts",
+    component: () => import('./contacts-DG6grPS6.mjs')
+  },
+  {
+    name: "vacancies",
+    path: "/vacancies",
+    component: () => import('./vacancies-B1JInKlS.mjs')
+  },
+  {
     name: "directions",
     path: "/directions",
     component: () => import('./index-3jaJJoer.mjs')
@@ -1260,7 +1270,7 @@ const plugins = [
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-C_xTjEpq.mjs').then((n) => n.a).then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-BgP0xF9Z.mjs').then((n) => n.a).then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
