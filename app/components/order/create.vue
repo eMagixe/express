@@ -193,7 +193,13 @@ function useOrder() {
 				</UFormField>
 
 				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
-					<UInputTime class="w-full" :hour-cycle="24" :default-value="orderData.time" id="time" />
+					<UInputTime
+						v-model="orderData.time"
+						class="w-full"
+						:hour-cycle="24"
+						:default-value="orderData.time"
+						id="time"
+					/>
 				</UFormField>
 			</div>
 
