@@ -5,10 +5,12 @@
 			<UHeader back="/" class="border-b-0 relative">
 				<template #left>
 					<Logo />
-					<Menu />
+					<Menu class="not-sm:hidden" />
 				</template>
 
-				<template #default> </template>
+				<template #body>
+					<Phones />
+				</template>
 
 				<template #right>
 					<Phones class="not-lg:hidden" />

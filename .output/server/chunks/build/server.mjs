@@ -1270,7 +1270,7 @@ const plugins = [
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-BgP0xF9Z.mjs').then((n) => n.a).then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-EtYuZ9r3.mjs').then((n) => n.a).then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
