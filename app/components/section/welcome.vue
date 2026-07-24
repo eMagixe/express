@@ -18,7 +18,7 @@ await useLazyFetch('/api/direction/all', {
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
 					v-for="direction in directions"
-					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					class="not-sm:not-last:hidden not-lg:first:hidden p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
 					:title="direction.name"
 					description="Пассажирские перевозки"
 					:price="`от ${direction.price} руб.`"
