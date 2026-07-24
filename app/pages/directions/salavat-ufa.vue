@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BreadcrumbItem, PageFeatureProps } from '@nuxt/ui'
+import type { Direction } from '#shared/types/global'
 
 const items = ref<BreadcrumbItem[]>([
 	{
@@ -45,10 +46,48 @@ useSeoMeta({
 	ogLocale: 'ru_RU',
 	twitterCard: 'summary_large_image'
 })
+
+const directions = ref<Direction[]>([])
+
+await useLazyFetch('/api/direction/all', {
+	key: 'directions',
+	method: 'GET'
+}).then(({ data }: any): void => {
+	if (data.value) {
+		directions.value = data.value as Direction[]
+	}
+})
+
+const direction = computed(() => {
+	const [current] = directions.value.filter((direction: Direction) => {
+		return direction.slug === 'salavat-ufa'
+	})
+
+	if (current) {
+		current.features = [
+			{
+				title: 'Расстояние',
+				description: `${current.distance} км`,
+				icon: 'i-lucide-arrow-right-left'
+			},
+			{
+				title: 'Расчетное время в пути',
+				description: current.time,
+				icon: 'i-lucide-clock'
+			},
+			{
+				title: 'Стоимость',
+				description: `от ${current.price} руб *`,
+				icon: 'i-lucide-receipt-russian-ruble'
+			}
+		]
+		return current
+	} else return null
+})
 </script>
 
 <template>
-	<div class="directions-page">
+	<div v-if="direction" class="directions-page">
 		<UContainer class="pt-10">
 			<UBreadcrumb
 				:items="items"
@@ -59,10 +98,10 @@ useSeoMeta({
 			/>
 		</UContainer>
 		<UPageSection
-			title="Салават - Уфа"
-			description="Одно из основных направлений нашего такси, по нему ежедневно едут маршруты с опытными водителями. Направление так же работает в обратную сторону по той же цене. Дополнительную информацию вы можете уточнить у диспетчера"
+			:title="direction.name"
+			:description="direction.description"
 			orientation="horizontal"
-			:features="features"
+			:features="direction.features"
 			:ui="{
 				title: 'text-primary tracking-wider',
 				description: 'text-white',

@@ -1,13 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { Direction } from '#shared/types/global'
+
+const directions = ref<Direction[]>([])
+
+await useLazyFetch('/api/direction/all', {
+	key: 'directions',
+	method: 'GET'
+}).then(({ data }: any): void => {
+	if (data.value) {
+		directions.value = data.value as Direction[]
+	}
+})
+</script>
 <template>
 	<div class="welcome-section w-full mx-auto mb-10">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
+					v-for="direction in directions"
 					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
-					title="Кумертау - Уфа"
+					:title="direction.name"
 					description="Пассажирские перевозки"
-					price="от 1300 руб."
+					:price="`от ${direction.price} руб.`"
 					:features="[
 						'Передача документации и посылок',
 						'До аэро - жд вокзалов и больниц',
@@ -24,57 +38,7 @@
 					}"
 					:button="{
 						label: 'Перейти к заказу',
-						to: '/directions/kumertau-ufa',
-						trailingIcon: 'i-lucide-arrow-right'
-					}"
-				/>
-				<UPricingPlan
-					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] not-md:hidden min-w-80"
-					title="Мелеуз - Уфа"
-					description="Пассажирские перевозки"
-					price="от 1300 руб."
-					:features="[
-						'Передача документации и посылок',
-						'До аэро - жд вокзалов и больниц',
-						'До места указанного заказчиком *',
-						'Билеты, отчётные документы, qr-коды'
-					]"
-					:ui="{
-						root: 'ring-0 item-direction',
-						title: 'text-primary title',
-						description: 'text-white',
-						price: 'text-primary',
-						featureTitle: 'text-white',
-						button: 'button-gradient'
-					}"
-					:button="{
-						label: 'Перейти к заказу',
-						to: '/directions/meleuz-ufa',
-						trailingIcon: 'i-lucide-arrow-right'
-					}"
-				/>
-				<UPricingPlan
-					class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] not-lg:hidden min-w-80"
-					title="Салават - Уфа"
-					description="Пассажирские перевозки"
-					price="от 1200 руб."
-					:features="[
-						'Передача документации и посылок',
-						'До аэро - жд вокзалов и больниц',
-						'До места указанного заказчиком *',
-						'Билеты, отчётные документы, qr-коды'
-					]"
-					:ui="{
-						root: 'ring-0 item-direction',
-						title: 'text-primary title',
-						description: 'text-white',
-						price: 'text-primary',
-						featureTitle: 'text-white',
-						button: 'button-gradient'
-					}"
-					:button="{
-						label: 'Перейти к заказу',
-						to: '/directions/salavat-ufa',
+						to: `/directions/${direction.slug}`,
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
 				/>

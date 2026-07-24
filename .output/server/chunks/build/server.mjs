@@ -418,37 +418,37 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BhFxLXWO.mjs')
+    component: () => import('./index-QBm7ZjL2.mjs')
   },
   {
     name: "contacts",
     path: "/contacts",
-    component: () => import('./contacts-DG6grPS6.mjs')
+    component: () => import('./contacts-D3oFtY3i.mjs')
   },
   {
     name: "vacancies",
     path: "/vacancies",
-    component: () => import('./vacancies-B1JInKlS.mjs')
+    component: () => import('./vacancies-DZACVDHC.mjs')
   },
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-3jaJJoer.mjs')
+    component: () => import('./index-SFJH5Hj-.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-BSk6LSD4.mjs')
+    component: () => import('./meleuz-ufa-DwGM5Ov3.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-Co9mBvgp.mjs')
+    component: () => import('./salavat-ufa-BCt-npe1.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-C0qObiC-.mjs')
+    component: () => import('./kumertau-ufa-DQOrYreo.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -806,7 +806,7 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-DMLNqBde.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-Bk1EpVUR.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1270,7 +1270,7 @@ const plugins = [
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-EtYuZ9r3.mjs').then((n) => n.a).then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-Cdwo46EZ.mjs').then((n) => n.a).then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
@@ -1538,7 +1538,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-CrTCngIv.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CEoz9che.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1620,4 +1620,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useRoute as c, useNuxtApp as d, entry_default as default, useRuntimeConfig as e, __nuxt_component_2 as f, appConfig as g, useRouter as h, injectHead as i, nuxtLinkDefaults as j, asyncDataDefaults as k, createError as l, fetchDefaults as m, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, useRoute as d, entry_default as default, useRuntimeConfig as e, fetchDefaults as f, __nuxt_component_2 as g, appConfig as h, injectHead as i, useRouter as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };

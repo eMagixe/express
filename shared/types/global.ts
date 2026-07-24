@@ -6,6 +6,16 @@ export type Review = {
 	createdAt?: string
 }
 
+export type Direction = {
+	name: string
+	description: string
+	time: string
+	price: number
+	slug: string
+	distance: number
+	features?: object[]
+}
+
 export type Order = {
 	name: string
 	phone: string
