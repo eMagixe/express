@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		routeRules: {
+			'/dashboard/**': {
+				ssr: false
+			},
 			'/fonts/**': {
 				headers: {
 					'Cache-Control': `public, max-age=${year}, s-maxage=${year}`

@@ -26,3 +26,8 @@ export type Order = {
 	date: any
 	time: any
 }
+
+export type User = {
+	full_name: string
+	phone: string
+}

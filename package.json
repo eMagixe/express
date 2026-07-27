@@ -1,25 +1,25 @@
 {
-  "name": "express",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@nuxt/scripts": "^0.13.2",
-    "@nuxt/ui": "^4.4.0",
-    "maska": "^3.2.0",
-    "nuxt": "^4.3.0",
-    "tailwindcss": "^4.1.18",
-    "valibot": "^1.2.0",
-    "vue": "^3.5.27",
-    "vue-router": "^4.6.4"
-  },
-  "devDependencies": {
-    "@iconify-json/lucide": "^1.2.89"
-  }
+	"name": "express",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@nuxt/scripts": "^0.13.2",
+		"@nuxt/ui": "^4.9.0",
+		"maska": "^3.2.0",
+		"nuxt": "^4.3.0",
+		"tailwindcss": "^4.1.18",
+		"valibot": "^1.2.0",
+		"vue": "^3.5.27",
+		"vue-router": "^4.6.4"
+	},
+	"devDependencies": {
+		"@iconify-json/lucide": "^1.2.89"
+	}
 }

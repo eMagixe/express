@@ -1,8 +1,8 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, defineComponent, ref, h, Suspense, getCurrentInstance, Fragment, provide, shallowReactive, defineAsyncComponent, computed, unref, shallowRef, createElementBlock, createApp, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, mergeProps, getCurrentScope, toRef, withCtx, nextTick, isReadonly, useSSRContext, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { m as klona, n as defuFn, h as createError$1, o as hasProtocol, q as isScriptProtocol, k as joinURL, w as withQuery, s as sanitizeStatusCode, t as getContext, $ as $fetch$1, v as baseURL, x as createHooks, y as defu, z as executeAsync } from '../nitro/nitro.mjs';
+import { n as klona, o as defuFn, q as hasProtocol, t as isScriptProtocol, l as joinURL, i as createError$1, w as withQuery, v as sanitizeStatusCode, x as getContext, $ as $fetch$1, y as baseURL, z as createHooks, A as defu, B as executeAsync } from '../nitro/nitro.mjs';
 import { RouterView, useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
-import colors from 'tailwindcss/colors';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
+import colors from 'tailwindcss/colors';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
 import { u as useSeoMeta$1, h as headSymbol, a as useHead$1 } from '../routes/renderer.mjs';
 import 'node:http';
@@ -391,6 +391,9 @@ const matcher = /* @__PURE__ */ (() => {
     if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
     let s = p.split("/");
     s.length - 1;
+    if (s[1] === "dashboard") {
+      r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+    }
     if (s[1] === "fonts") {
       r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
     }
@@ -414,41 +417,59 @@ function getRouteRules(arg) {
     return {};
   }
 }
+const __nuxt_page_meta$1 = {
+  layout: "dashboard"
+};
+const __nuxt_page_meta = {
+  layout: "empty"
+};
 const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-Dw8WM9Ra.mjs')
+    component: () => import('./index-B-NvcgAF.mjs')
   },
   {
     name: "contacts",
     path: "/contacts",
-    component: () => import('./contacts-D3oFtY3i.mjs')
+    component: () => import('./contacts-is5DQGLf.mjs')
   },
   {
     name: "vacancies",
     path: "/vacancies",
-    component: () => import('./vacancies-DZACVDHC.mjs')
+    component: () => import('./vacancies-BeUszPpH.mjs')
+  },
+  {
+    name: "dashboard",
+    path: "/dashboard",
+    meta: { ...__nuxt_page_meta$1 || {}, ...{ "middleware": "auth" } },
+    component: () => import('./index-DPGfWhHk.mjs')
+  },
+  {
+    name: "dashboard-login",
+    path: "/dashboard/login",
+    meta: __nuxt_page_meta || {},
+    component: () => import('./login-BkzTrRkN.mjs')
   },
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-SFJH5Hj-.mjs')
+    component: () => import('./index-veKBAL8c.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-DwGM5Ov3.mjs')
+    component: () => import('./meleuz-ufa-D53nfEMp.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-BCt-npe1.mjs')
+    component: () => import('./salavat-ufa-BavjUld8.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-DQOrYreo.mjs')
+    component: () => import('./kumertau-ufa-DrkqWcWA.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -570,7 +591,9 @@ const globalMiddleware = [
   validate,
   manifest_45route_45rule
 ];
-const namedMiddleware = {};
+const namedMiddleware = {
+  auth: () => import('./auth-D_4zx0hT.mjs')
+};
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
   enforce: "pre",
@@ -806,19 +829,6 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-Bk1EpVUR.mjs').then((n) => n.i).then((r) => r["default"] || r.default || r));
-const lazyGlobalComponents = [
-  ["Icon", LazyIcon]
-];
-const components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8 = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt:global-components",
-  setup(nuxtApp) {
-    for (const [name, component] of lazyGlobalComponents) {
-      nuxtApp.vueApp.component(name, component);
-      nuxtApp.vueApp.component("Lazy" + name, component);
-    }
-  }
-});
 const cfg0 = defineAppConfig({
   ui: {
     toast: {
@@ -923,6 +933,7 @@ const inlineConfig = {
       "reload": "i-lucide-rotate-ccw",
       "search": "i-lucide-search",
       "stop": "i-lucide-square",
+      "star": "i-lucide-star",
       "success": "i-lucide-circle-check",
       "system": "i-lucide-monitor",
       "tip": "i-lucide-lightbulb",
@@ -942,7 +953,7 @@ const inlineConfig = {
     "fallbackToApi": true,
     "cssSelectorPrefix": "i-",
     "cssWherePseudo": true,
-    "cssLayer": "components",
+    "cssLayer": "base",
     "mode": "css",
     "attrs": {
       "aria-hidden": true
@@ -1178,47 +1189,6 @@ function useAppConfig() {
   nuxtApp._appConfig ||= klona(appConfig);
   return nuxtApp._appConfig;
 }
-const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
-function getColor(color, shade) {
-  if (color in colors && typeof colors[color] === "object" && shade in colors[color]) {
-    return colors[color][shade];
-  }
-  return "";
-}
-function generateShades(key, value, prefix) {
-  const prefixStr = prefix ? `${prefix}-` : "";
-  return `${shades.map((shade) => `--ui-color-${key}-${shade}: var(--${prefixStr}color-${value === "neutral" ? "old-neutral" : value}-${shade}, ${getColor(value, shade)});`).join("\n  ")}`;
-}
-function generateColor(key, shade) {
-  return `--ui-${key}: var(--ui-color-${key}-${shade});`;
-}
-const colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo = /* @__PURE__ */ defineNuxtPlugin(() => {
-  const appConfig2 = useAppConfig();
-  useNuxtApp();
-  const root = computed(() => {
-    const { neutral, ...colors2 } = appConfig2.ui.colors;
-    const prefix = appConfig2.ui.prefix;
-    return `@layer theme {
-  :root, :host {
-  ${Object.entries(appConfig2.ui.colors).map(([key, value]) => generateShades(key, value, prefix)).join("\n  ")}
-  }
-  :root, :host, .light {
-  ${Object.keys(colors2).map((key) => generateColor(key, 500)).join("\n  ")}
-  }
-  .dark {
-  ${Object.keys(colors2).map((key) => generateColor(key, 400)).join("\n  ")}
-  }
-}`;
-  });
-  const headData = {
-    style: [{
-      innerHTML: () => root.value,
-      tagPriority: -2,
-      id: "nuxt-ui-colors"
-    }]
-  };
-  useHead(headData);
-});
 const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defineNuxtPlugin({
   name: "@nuxt/icon",
   setup() {
@@ -1261,16 +1231,72 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
+const LazyIcon = defineAsyncComponent(() => import('./index-ByCR7jEh.mjs').then((r) => r["default"] || r.default || r));
+const lazyGlobalComponents = [
+  ["Icon", LazyIcon]
+];
+const components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8 = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt:global-components",
+  setup(nuxtApp) {
+    for (const [name, component] of lazyGlobalComponents) {
+      nuxtApp.vueApp.component(name, component);
+      nuxtApp.vueApp.component("Lazy" + name, component);
+    }
+  }
+});
+const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+function getColor(color, shade) {
+  if (color in colors && typeof colors[color] === "object" && shade in colors[color]) {
+    return colors[color][shade];
+  }
+  return "";
+}
+function generateShades(key, value, prefix) {
+  const prefixStr = prefix ? `${prefix}-` : "";
+  return `${shades.map((shade) => `--ui-color-${key}-${shade}: var(--${prefixStr}color-${value === "neutral" ? "old-neutral" : value}-${shade}, ${getColor(value, shade)});`).join("\n  ")}`;
+}
+function generateColor(key, shade) {
+  return `--ui-${key}: var(--ui-color-${key}-${shade});`;
+}
+const colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo = /* @__PURE__ */ defineNuxtPlugin(() => {
+  const appConfig2 = useAppConfig();
+  useNuxtApp();
+  const root = computed(() => {
+    const { neutral, ...colors2 } = appConfig2.ui.colors;
+    const prefix = appConfig2.ui.prefix;
+    return `@layer theme {
+  :root, :host {
+  ${Object.entries(appConfig2.ui.colors).map(([key, value]) => generateShades(key, value, prefix)).join("\n  ")}
+  }
+  :root, :host, .light {
+  ${Object.keys(colors2).map((key) => generateColor(key, 500)).join("\n  ")}
+  }
+  .dark {
+  ${Object.keys(colors2).map((key) => generateColor(key, 400)).join("\n  ")}
+  }
+}`;
+  });
+  const headData = {
+    style: [{
+      innerHTML: root,
+      tagPriority: "critical",
+      id: "nuxt-ui-colors"
+    }]
+  };
+  useHead(headData);
+});
 const plugins = [
   unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU,
   plugin,
   revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms,
+  plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8,
   components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8,
-  colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo,
-  plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8
+  colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-Cdwo46EZ.mjs').then((n) => n.a).then((m) => m.default || m))
+  dashboard: defineAsyncComponent(() => import('./dashboard-kmrwfM2a.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-D2Ipnxrm.mjs').then((n) => n.a).then((m) => m.default || m)),
+  empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
@@ -1538,8 +1564,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-CEoz9che.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-WmHfSgIl.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-AwledOqO.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-CM1eHief.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1620,4 +1646,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, useRoute as d, entry_default as default, useRuntimeConfig as e, fetchDefaults as f, __nuxt_component_2 as g, appConfig as h, injectHead as i, useRouter as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, useRuntimeConfig as g, __nuxt_component_2 as h, injectHead as i, appConfig as j, useRouter as k, nuxtLinkDefaults as l, asyncDataDefaults as m, navigateTo as n, createError as o, resolveRouteObject as r, useHead as u };
