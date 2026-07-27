@@ -9,8 +9,8 @@ const schema = v.object({
 })
 
 const form = reactive({
-	email: 'svetlwzg@mail.ru',
-	password: 'svetaTaxi&Express768!'
+	email: '',
+	password: ''
 })
 
 const onSubmit = async () => {
