@@ -35,20 +35,20 @@ export default defineEventHandler(async (event) => {
 		})
 			.then(async (response) => {
 				if (response && response.hasOwnProperty('error') && (response as Error).error === true) {
-					if (response.error === true) {
+					if ((response as Error).error) {
 						throw createError({
 							statusCode: 401,
-							statusMessage: error.message
+							statusMessage: (response as Error).message
 						})
 					}
 				} else if (response && response.hasOwnProperty('full_name') && (response as User).full_name) {
 					setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
 					return Promise.resolve(response)
 				} else {
-					if (response.error === true) {
+					if ((response as Error).error === true) {
 						throw createError({
 							statusCode: 401,
-							statusMessage: 'Неверные данные пользователя'
+							statusMessage: (response as Error).message
 						})
 					}
 				}
