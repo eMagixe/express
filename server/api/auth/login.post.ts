@@ -12,15 +12,40 @@ const optionsCookie: CookieSerializeOptions = {
 	maxAge: 60 * 60 * 24 * 7
 }
 
+type User = {
+	full_name: string
+	phone: string
+}
+
+type Error = {
+	error: boolean
+	message: string
+}
+
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event)
-	if (body.password === 'svetaTaxi&Express768!' && body.email === 'svetlwzg@mail.ru') {
-		setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
-		return {
-			full_name: 'Администратор',
-			phone: '89999999999'
-		}
-	} else {
-		await sendRedirect(event, '/dashboard/login')
+
+	console.log('body', body)
+
+	try {
+		return $fetch('/login', {
+			method: 'POST',
+			baseURL: useRuntimeConfig().apiBase,
+			body
+		})
+			.then(async (response) => {
+				if (response && response.hasOwnProperty('error') && (response as Error).error === true) {
+					await sendRedirect(event, '/dashboard/login')
+				}
+
+				setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
+				return response
+			})
+			.catch(async (error) => {
+				return Error(error.message)
+			})
+	} catch (error) {
+		console.error(error)
+		return false
 	}
 })

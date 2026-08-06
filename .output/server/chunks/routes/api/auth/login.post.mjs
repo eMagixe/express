@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, s as setCookie, a as sendRedirect } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, u as useRuntimeConfig, s as sendRedirect, a as setCookie } from '../../../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -18,14 +18,24 @@ const optionsCookie = {
 };
 const login_post = defineEventHandler(async (event) => {
   const body = await readBody(event);
-  if (body.password === "svetaTaxi&Express768!" && body.email === "svetlwzg@mail.ru") {
-    setCookie(event, "access_token", crypto.randomUUID(), optionsCookie);
-    return {
-      full_name: "\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440",
-      phone: "89999999999"
-    };
-  } else {
-    await sendRedirect(event, "/dashboard/login");
+  console.log("body", body);
+  try {
+    return $fetch("/login", {
+      method: "POST",
+      baseURL: useRuntimeConfig().apiBase,
+      body
+    }).then(async (response) => {
+      if (response && response.hasOwnProperty("error") && response.error === true) {
+        await sendRedirect(event, "/dashboard/login");
+      }
+      setCookie(event, "access_token", crypto.randomUUID(), optionsCookie);
+      return response;
+    }).catch(async (error) => {
+      return Error(error.message);
+    });
+  } catch (error) {
+    console.error(error);
+    return false;
   }
 });
 
