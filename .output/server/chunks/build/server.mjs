@@ -449,7 +449,7 @@ const _routes = [
     name: "dashboard-login",
     path: "/dashboard/login",
     meta: __nuxt_page_meta || {},
-    component: () => import('./login-DWlHL9C5.mjs')
+    component: () => import('./login-CzwL7RLc.mjs')
   },
   {
     name: "directions",

@@ -16,9 +16,10 @@ const form = reactive({
 const onSubmit = async () => {
 	const toast = useToast()
 	try {
-		await auth.login(form.email, form.password)
-		toast.add({ title: 'Выполнено', description: 'Вход успешно выполнен.', color: 'success' })
-		await navigateTo('/dashboard')
+		await auth.login(form.email, form.password).then(() => {
+			toast.add({ title: 'Выполнено', description: 'Вход успешно выполнен.', color: 'success' })
+			navigateTo('/dashboard')
+		})
 	} catch {
 		toast.add({ title: 'Ошибка', description: 'Неверный email или пароль.', color: 'error' })
 	}

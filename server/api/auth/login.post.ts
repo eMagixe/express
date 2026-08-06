@@ -36,12 +36,15 @@ export default defineEventHandler(async (event) => {
 			.then(async (response) => {
 				if (response && response.hasOwnProperty('error') && (response as Error).error === true) {
 					await sendRedirect(event, '/dashboard/login')
+				} else if (response && response.hasOwnProperty('full_name') && (response as User).full_name) {
+					setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
+					return response
+				} else {
+					return false
 				}
-
-				setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
-				return response
 			})
 			.catch(async (error) => {
+				console.error(error)
 				return Error(error.message)
 			})
 	} catch (error) {
