@@ -11,7 +11,7 @@ import { u as useToast, t as toastMaxInjectionKey } from './useToast-CZLK1bG2.mj
 import { isClient, useTimeout } from '@vueuse/shared';
 import { h as __nuxt_component_2, c as useNuxtApp, i as injectHead$1, _ as _export_sfc, g as useRuntimeConfig, e as useRoute, b as useAppConfig } from './server.mjs';
 import { _ as _sfc_main$b } from './Container-BxaGJmMa.mjs';
-import { A as defu, p as publicAssetsURL } from '../nitro/nitro.mjs';
+import { z as defu, p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { _ as _sfc_main$d } from './Modal-BGQEWp84.mjs';
 import { _ as _sfc_main$c } from './Drawer-CBvvA4dC.mjs';
 import { _ as __nuxt_component_0$2 } from './nuxt-link-BVaogQjF.mjs';

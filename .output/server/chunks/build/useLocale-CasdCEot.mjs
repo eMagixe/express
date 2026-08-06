@@ -1,6 +1,6 @@
 import { toRef, inject, computed, unref, isRef, ref } from 'vue';
 import { f as get } from './Button-D7hwtKF6.mjs';
-import { A as defu } from '../nitro/nitro.mjs';
+import { z as defu } from '../nitro/nitro.mjs';
 
 function buildTranslator(locale) {
   return (path, option) => translate(path, option, unref(locale));

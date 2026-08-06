@@ -35,20 +35,38 @@ export default defineEventHandler(async (event) => {
 		})
 			.then(async (response) => {
 				if (response && response.hasOwnProperty('error') && (response as Error).error === true) {
-					await sendRedirect(event, '/dashboard/login')
+					if (response.error === true) {
+						throw createError({
+							statusCode: 401,
+							statusMessage: error.message
+						})
+					}
 				} else if (response && response.hasOwnProperty('full_name') && (response as User).full_name) {
 					setCookie(event, 'access_token', crypto.randomUUID(), optionsCookie)
-					return response
+					return Promise.resolve(response)
 				} else {
-					return false
+					if (response.error === true) {
+						throw createError({
+							statusCode: 401,
+							statusMessage: 'Неверные данные пользователя'
+						})
+					}
 				}
 			})
 			.catch(async (error) => {
-				console.error(error)
-				return Error(error.message)
+				if (error) {
+					throw createError({
+						statusCode: 401,
+						statusMessage: 'Неверные данные пользователя'
+					})
+				}
 			})
 	} catch (error) {
-		console.error(error)
-		return false
+		if (error) {
+			throw createError({
+				statusCode: 500,
+				statusMessage: 'Ошибка сервера. Пожалуйста, попробуйте позже.'
+			})
+		}
 	}
 })

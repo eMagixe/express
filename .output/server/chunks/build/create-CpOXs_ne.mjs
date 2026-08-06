@@ -9,7 +9,7 @@ import { u as useForwardExpose } from './useForwardExpose-C3mVDiKg.mjs';
 import { u as useCollection, a as usePrimitiveElement } from './Collection-Bx5WsODp.mjs';
 import { reactivePick, reactiveOmit, createReusableTemplate, useVModel, useFocusWithin } from '@vueuse/core';
 import { a as usePortal, u as useId$1, i as isNullish, V as VisuallyHidden_default, P as Presence_default } from './overlay-BG1xKR7v.mjs';
-import { A as defu, E as isEqual } from '../nitro/nitro.mjs';
+import { z as defu, D as isEqual } from '../nitro/nitro.mjs';
 import { u as useLocale } from './useLocale-CasdCEot.mjs';
 import { _ as _export_sfc, b as useAppConfig, c as useNuxtApp } from './server.mjs';
 import { _ as _sfc_main$8, i as isValueEqualOrExist } from './Popover-BLX7US29.mjs';
