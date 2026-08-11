@@ -427,7 +427,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-B-NvcgAF.mjs')
+    component: () => import('./index-Z9k3K2-e.mjs')
   },
   {
     name: "contacts",
@@ -459,17 +459,17 @@ const _routes = [
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-D53nfEMp.mjs')
+    component: () => import('./meleuz-ufa-BBva5YhF.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-BavjUld8.mjs')
+    component: () => import('./salavat-ufa-BG3PDeop.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-DrkqWcWA.mjs')
+    component: () => import('./kumertau-ufa-t1hzsaDo.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {

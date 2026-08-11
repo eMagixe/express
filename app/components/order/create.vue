@@ -3,6 +3,7 @@ import { CalendarDate, Time } from '@internationalized/date'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
+import { utils } from '~/utils'
 
 const props = defineProps<{ direction?: boolean; from?: string; to?: string }>()
 
@@ -100,143 +101,162 @@ function useOrder() {
 
 	return { submitOrder, resetOrder, orderData, isOrderCreated, isUserValidate }
 }
+
+const config = useRuntimeConfig()
 </script>
 
 <template>
-	<SectionTitle v-if="!isOrderCreated" title="Сделать заказ" />
-	<div v-if="!isOrderCreated" class="flex flex-col justify-center items-center text-sm">
-		<p class="text-gray-200 text-center">
-			Заполните пожалуйста форму заказа, перед отправкой убедитесь что все данные введены верно
-		</p>
-		<p class="text-primary text-center">
-			* Внимание при доставке до определенного адреса взымается дополнительная плата!
-		</p>
-	</div>
-	<UForm
-		v-if="!isOrderCreated"
-		class="w-full flex flex-col justify-start items-center pt-5 gap-5"
-		:schema="schema"
-		:state="orderData"
-		@submit="submitOrder"
-		id="form-create-order"
-	>
-		<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
-			<UFormField name="name">
-				<UInput v-model="orderData.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
-			</UFormField>
-			<UFormField name="phone">
-				<UInput
-					v-maska="'+7-(###)-###-##-##'"
-					v-model="orderData.phone"
-					placeholder="+7-(000)-000-00-00"
-					icon="i-lucide-phone"
-					size="xl"
-					id="phone"
-				/>
-			</UFormField>
-			<UFormField name="from">
-				<UInputMenu
-					v-model="orderData.from"
-					:items="from_cities"
-					open-on-focus
-					color="primary"
-					placeholder="Город отправления"
-					size="xl"
-					id="from"
-				/>
-			</UFormField>
-			<UFormField name="from_address">
-				<UInput
-					v-model="orderData.from_address"
-					color="primary"
-					placeholder="Адрес отправления"
-					size="xl"
-					id="from_address"
-				/>
-			</UFormField>
-			<UFormField name="to">
-				<UInputMenu
-					v-model="orderData.to"
-					:items="to_cities"
-					open-on-focus
-					color="primary"
-					placeholder="Город прибытия"
-					size="xl"
-					id="to"
-				/>
-			</UFormField>
-			<UFormField name="to_address">
-				<UInput
-					v-model="orderData.to_address"
-					color="primary"
-					placeholder="Адрес прибытия"
-					size="xl"
-					id="to_address"
-				/>
-			</UFormField>
-			<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
-				<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
-					<UPopover>
-						<UButton
-							icon="i-lucide-calendar"
-							id="date-button"
-							class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
-						>
-							<NuxtTime v-if="orderData.date" :datetime="new Date(orderData.date)" locale="ru-RU" />
-							<p v-else>Выберете дату</p>
-						</UButton>
-
-						<template #content>
-							<UCalendar v-model="orderData.date" class="p-2" id="date" />
-						</template>
-					</UPopover>
+	<template v-if="config.public.orderVisible">
+		<SectionTitle v-if="!isOrderCreated" title="Сделать заказ" />
+		<div v-if="!isOrderCreated" class="flex flex-col justify-center items-center text-sm">
+			<p class="text-gray-200 text-center">
+				Заполните пожалуйста форму заказа, перед отправкой убедитесь что все данные введены верно
+			</p>
+			<p class="text-primary text-center">
+				* Внимание при доставке до определенного адреса взымается дополнительная плата!
+			</p>
+		</div>
+		<UForm
+			v-if="!isOrderCreated"
+			class="w-full flex flex-col justify-start items-center pt-5 gap-5"
+			:schema="schema"
+			:state="orderData"
+			@submit="submitOrder"
+			id="form-create-order"
+		>
+			<div class="flex flex-col lg:grid lg:grid-cols-2 justify-start items-center lg:items-start gap-5">
+				<UFormField name="name">
+					<UInput v-model="orderData.name" color="primary" placeholder="Ф.И.О" size="xl" id="name" />
 				</UFormField>
-
-				<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
-					<UInputTime
-						v-model="orderData.time"
-						class="w-full"
-						:hour-cycle="24"
-						:default-value="orderData.time"
-						id="time"
+				<UFormField name="phone">
+					<UInput
+						v-maska="'+7-(###)-###-##-##'"
+						v-model="orderData.phone"
+						placeholder="+7-(000)-000-00-00"
+						icon="i-lucide-phone"
+						size="xl"
+						id="phone"
 					/>
 				</UFormField>
-			</div>
+				<UFormField name="from">
+					<UInputMenu
+						v-model="orderData.from"
+						:items="from_cities"
+						open-on-focus
+						color="primary"
+						placeholder="Город отправления"
+						size="xl"
+						id="from"
+					/>
+				</UFormField>
+				<UFormField name="from_address">
+					<UInput
+						v-model="orderData.from_address"
+						color="primary"
+						placeholder="Адрес отправления"
+						size="xl"
+						id="from_address"
+					/>
+				</UFormField>
+				<UFormField name="to">
+					<UInputMenu
+						v-model="orderData.to"
+						:items="to_cities"
+						open-on-focus
+						color="primary"
+						placeholder="Город прибытия"
+						size="xl"
+						id="to"
+					/>
+				</UFormField>
+				<UFormField name="to_address">
+					<UInput
+						v-model="orderData.to_address"
+						color="primary"
+						placeholder="Адрес прибытия"
+						size="xl"
+						id="to_address"
+					/>
+				</UFormField>
+				<div class="date-time w-full flex not-sm:flex-col justify-start items-center gap-5">
+					<UFormField name="date" class="w-[50%] not-sm:w-[320px]">
+						<UPopover>
+							<UButton
+								icon="i-lucide-calendar"
+								id="date-button"
+								class="w-full bg-gray-600 h-12 rounded-[26px] border border-white justify-between text-left"
+							>
+								<NuxtTime v-if="orderData.date" :datetime="new Date(orderData.date)" locale="ru-RU" />
+								<p v-else>Выберете дату</p>
+							</UButton>
 
-			<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
-				<UCheckbox
-					v-model="isUserValidate"
-					label="Подтверждение"
-					description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
-					:ui="{
-						base: 'h-5 w-5 text-white bg-gray-600 mt-10 m-2',
-						description: 'text-primary/70',
-						label: 'text-white text-lg'
-					}"
-					id="check-user-validate"
-				/>
+							<template #content>
+								<UCalendar v-model="orderData.date" class="p-2" id="date" />
+							</template>
+						</UPopover>
+					</UFormField>
+
+					<UFormField name="time" class="w-[50%] not-sm:w-[320px]">
+						<UInputTime
+							v-model="orderData.time"
+							class="w-full"
+							:hour-cycle="24"
+							:default-value="orderData.time"
+							id="time"
+						/>
+					</UFormField>
+				</div>
+
+				<div class="min-w-[320px] max-w-110 flex flex-col justify-center items-center">
+					<UCheckbox
+						v-model="isUserValidate"
+						label="Подтверждение"
+						description="Даю согласие на обработку персональных данных и подтверждаю правильность введенных данных"
+						:ui="{
+							base: 'h-5 w-5 text-white bg-gray-600 mt-10 m-2',
+							description: 'text-primary/70',
+							label: 'text-white text-lg'
+						}"
+						id="check-user-validate"
+					/>
+				</div>
+			</div>
+			<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
+				<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!isUserValidate">
+					Отправить
+				</UButton>
+				<UButton class="button-gradient h-16" @click="resetOrder">Очистить</UButton>
+			</div>
+		</UForm>
+		<div v-else>
+			<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
+				<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
+				<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
+				<p>
+					Имя: <b>{{ orderData.name }}</b>
+				</p>
+				<p>Телефон: {{ orderData.phone }}</p>
+				<p>Из: {{ orderData.from }}, {{ orderData.from_address }}</p>
+				<p>До: {{ orderData.to }}, {{ orderData.to_address }}</p>
+				<p>Дата: {{ orderData.date }}, время: {{ orderData.time }}</p>
 			</div>
 		</div>
-		<div class="w-full flex flex-row justify-center items-center pt-5 mb-20 gap-5">
-			<UButton type="submit" class="button-gradient h-16" icon="i-lucide-send" :disabled="!isUserValidate">
-				Отправить
-			</UButton>
-			<UButton class="button-gradient h-16" @click="resetOrder">Очистить</UButton>
+	</template>
+	<template v-else>
+		<div class="flex flex-col justify-start items-start gap-10 mb-10">
+			<h3 class="text-2xl">Связаться с диспетчером</h3>
+			<NuxtLink
+				class="button-gradient h-16 max-w-1/3 flex items-center justify-center gap-3"
+				icon="i-lucide-phone-call"
+				to="tel:+79177666833"
+				@click="utils.sendCallToTelegram('+79177666833')"
+			>
+				<UIcon name="i-lucide-phone-call" size="18" />
+				Вызвать
+			</NuxtLink>
+			<p class="w-1/3 text-gray-300 text-sm">Всю дополнительную информацию можно уточнить у диспетчера</p>
 		</div>
-	</UForm>
-	<div v-else>
-		<div class="order-created w-full flex flex-col justify-start items-start mb-20 gap-5">
-			<h3 class="text-2xl font-bold text-center">Ваша заявка принята.</h3>
-			<p class="w-full text-center">Спасибо, водитель свяжеться с вами.</p>
-			<p>
-				Имя: <b>{{ orderData.name }}</b>
-			</p>
-			<p>Телефон: {{ orderData.phone }}</p>
-			<p>Из: {{ orderData.from }}, {{ orderData.from_address }}</p>
-			<p>До: {{ orderData.to }}, {{ orderData.to_address }}</p>
-			<p>Дата: {{ orderData.date }}, время: {{ orderData.time }}</p>
-		</div>
-	</div>
+	</template>
 </template>
 
 <style scoped>

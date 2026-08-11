@@ -1,0 +1,1 @@
+import{P as s,Q as o,L as u}from"./B0fVXsGt.js";import{u as i}from"./Cw4Bj_lY.js";import"./XQo5XrFX.js";import"./B4GGuPWF.js";const p=s(async a=>{let t,e;const r=i();if([t,e]=o(()=>r.checkAuth()),t=await t,e(),t)return!0;if(a.path!=="/dashboard/login")return u("/dashboard/login")});export{p as default};

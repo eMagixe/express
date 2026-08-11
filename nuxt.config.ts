@@ -8,7 +8,10 @@ export default defineNuxtConfig({
 	css: ['/assets/css/main.css'],
 	debug: false,
 	runtimeConfig: {
-		apiBase: 'https://tidideckasast.beget.app/webhook'
+		apiBase: 'https://tidideckasast.beget.app/webhook',
+		public: {
+			orderVisible: false
+		}
 	},
 	ui: {
 		colorMode: false,

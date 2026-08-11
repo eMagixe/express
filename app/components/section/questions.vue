@@ -31,7 +31,7 @@ const items = [
 </script>
 
 <template>
-	<div class="section-questions w-full mx-auto h-auto pt-5 pb-10 border-b border-b-primary/70">
+	<div class="section-questions w-full mx-auto h-auto pt-5 pb-10">
 		<UContainer class="flex flex-col justify-center items-center gap-5">
 			<SectionTitle title="Популярные вопросы" />
 			<div class="w-full animation-box flex flex-col justify-start items-center pt-10 gap-10">
@@ -58,7 +58,8 @@ const items = [
 
 <style scoped>
 .section-questions {
-	background: rgba(255, 146, 0, 0.7);
+	background: linear-gradient(rgba(255, 146, 0, 0.7) 0%, rgba(10, 11, 8, 1) 100%) no-repeat center;
+	background-size: cover;
 
 	.questions {
 		background: linear-gradient(white 0%, #f3f3f3 100%);
