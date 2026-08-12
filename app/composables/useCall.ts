@@ -6,12 +6,14 @@ export const useCall = () => {
 
 		return {
 			uid: uuid.split('-').shift(),
+			phone: '',
 			modalVisible: false
 		}
 	})
 
 	async function sendCallToTelegram(phone: string) {
 		order.value.modalVisible = true
+		order.value.phone = phone
 
 		await $fetch('/api/call/send', {
 			method: 'POST',

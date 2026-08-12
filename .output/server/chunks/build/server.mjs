@@ -427,7 +427,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CdkaTle7.mjs')
+    component: () => import('./index-rMqYZo82.mjs')
   },
   {
     name: "contacts",
@@ -459,17 +459,17 @@ const _routes = [
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-BLOk2oaA.mjs')
+    component: () => import('./meleuz-ufa-DysGM4hD.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-D48ZPpKi.mjs')
+    component: () => import('./salavat-ufa-D4XkFk2W.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-Cf0IQpba.mjs')
+    component: () => import('./kumertau-ufa-Dy2cV_Xf.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -1295,7 +1295,7 @@ const plugins = [
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-CGbAAUYe.mjs').then((n) => n.a).then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-ChNU2bxM.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
