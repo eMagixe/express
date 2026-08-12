@@ -1,10 +1,10 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, defineComponent, ref, h, Suspense, getCurrentInstance, Fragment, provide, shallowReactive, defineAsyncComponent, computed, unref, shallowRef, createElementBlock, createApp, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, mergeProps, getCurrentScope, toRef, withCtx, nextTick, isReadonly, useSSRContext, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { m as klona, n as defuFn, o as hasProtocol, q as isScriptProtocol, k as joinURL, c as createError$1, w as withQuery, t as sanitizeStatusCode, v as getContext, $ as $fetch$1, x as baseURL, y as createHooks, z as defu, A as executeAsync } from '../nitro/nitro.mjs';
+import { m as klona, n as defuFn, c as createError$1, o as hasProtocol, q as isScriptProtocol, k as joinURL, w as withQuery, t as sanitizeStatusCode, v as getContext, $ as $fetch$1, x as baseURL, y as createHooks, z as defu, A as executeAsync } from '../nitro/nitro.mjs';
 import { RouterView, useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import colors from 'tailwindcss/colors';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
-import { u as useSeoMeta$1, h as headSymbol, a as useHead$1 } from '../routes/renderer.mjs';
+import { u as useSeoMeta$1, a as useHead$1, h as headSymbol } from '../routes/renderer.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -427,49 +427,49 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-Z9k3K2-e.mjs')
+    component: () => import('./index-_o6S8m8R.mjs')
   },
   {
     name: "contacts",
     path: "/contacts",
-    component: () => import('./contacts-is5DQGLf.mjs')
+    component: () => import('./contacts-q74izgNL.mjs')
   },
   {
     name: "vacancies",
     path: "/vacancies",
-    component: () => import('./vacancies-BeUszPpH.mjs')
+    component: () => import('./vacancies-CeG9dadj.mjs')
   },
   {
     name: "dashboard",
     path: "/dashboard",
     meta: { ...__nuxt_page_meta$1 || {}, ...{ "middleware": "auth" } },
-    component: () => import('./index-DPGfWhHk.mjs')
+    component: () => import('./index-CL9UAE5y.mjs')
   },
   {
     name: "dashboard-login",
     path: "/dashboard/login",
     meta: __nuxt_page_meta || {},
-    component: () => import('./login-CzwL7RLc.mjs')
+    component: () => import('./login-DOI-Ejby.mjs')
   },
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-veKBAL8c.mjs')
+    component: () => import('./index-Cig7fUL6.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-BBva5YhF.mjs')
+    component: () => import('./meleuz-ufa-N9LL-sro.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-BG3PDeop.mjs')
+    component: () => import('./salavat-ufa-DFVhp9Ev.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-t1hzsaDo.mjs')
+    component: () => import('./kumertau-ufa-BdM0DYiu.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -592,7 +592,7 @@ const globalMiddleware = [
   manifest_45route_45rule
 ];
 const namedMiddleware = {
-  auth: () => import('./auth-D_4zx0hT.mjs')
+  auth: () => import('./auth-BYqvGapc.mjs')
 };
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
@@ -1231,7 +1231,7 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-ByCR7jEh.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-zQtgCi6v.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1294,8 +1294,8 @@ const plugins = [
   colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo
 ];
 const layouts = {
-  dashboard: defineAsyncComponent(() => import('./dashboard-kmrwfM2a.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-C38cQB7W.mjs').then((n) => n.a).then((m) => m.default || m)),
+  dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-CGbAAUYe.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
@@ -1465,7 +1465,7 @@ const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   }
 });
 const RouteProvider = defineRouteProvider();
-const __nuxt_component_2 = defineComponent({
+const __nuxt_component_5 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1527,7 +1527,7 @@ const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLayout = __nuxt_component_0;
   const _component_NuxtRouteAnnouncer = ServerPlaceholder;
-  const _component_NuxtPage = __nuxt_component_2;
+  const _component_NuxtPage = __nuxt_component_5;
   _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -1564,7 +1564,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-AwledOqO.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CPnyNvn8.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-CM1eHief.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1646,4 +1646,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, useRuntimeConfig as g, __nuxt_component_2 as h, injectHead as i, appConfig as j, useRouter as k, nuxtLinkDefaults as l, asyncDataDefaults as m, navigateTo as n, createError as o, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, __nuxt_component_5 as g, appConfig as h, useRouter as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };

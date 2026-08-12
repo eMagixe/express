@@ -3,7 +3,6 @@ import { CalendarDate, Time } from '@internationalized/date'
 import { vMaska } from 'maska/vue'
 import * as v from 'valibot'
 import { minLength } from 'valibot'
-import { utils } from '~/utils'
 
 const props = defineProps<{ direction?: boolean; from?: string; to?: string }>()
 
@@ -248,8 +247,7 @@ const config = useRuntimeConfig()
 			<NuxtLink
 				class="button-gradient h-16 max-w-1/3 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
-				to="tel:+79177666833"
-				@click="utils.sendCallToTelegram('+79177666833')"
+				@click="useCall().sendCallToTelegram('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать

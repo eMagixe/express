@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { utils } from '~/utils'
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<footer class="flex flex-col w-full justify-end items-center gap-5 sm:gap-2 pt-5">
@@ -10,22 +8,14 @@ import { utils } from '~/utils'
 		<div
 			class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"
 		>
-			<a href="tel:+7 (917) 766-68-33" @click="utils.sendCallToTelegram('+79177666833')">
+			<a @click="useCall().sendCallToTelegram('+79177666833')">
 				<UIcon name="i-lucide-phone" size="18" />
 				+7 (917) 766-68-33
 			</a>
-			<a href="tel:+7 (927) 324-25-82" @click="utils.sendCallToTelegram('+79177666833')">
+			<a @click="useCall().sendCallToTelegram('+79177666833')">
 				<UIcon name="i-lucide-phone" size="18" />
 				+7 (927) 324-25-82
 			</a>
-			<noscript
-				><div>
-					<img
-						src="https://mc.yandex.ru/watch/111529680"
-						style="position: absolute; left: -9999px"
-						alt=""
-					/></div
-			></noscript>
 		</div>
 	</footer>
 </template>
