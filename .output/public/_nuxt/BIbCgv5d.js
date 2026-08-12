@@ -1,1 +1,0 @@
-import{u as o}from"./DOaAZfVb.js";const d=()=>{const e=o("orderUid",()=>({uid:crypto.randomUUID().split("-").shift(),modalVisible:!1}));async function a(t){e.value.modalVisible=!0,await $fetch("/api/call/send",{method:"POST",body:{phone:t,orderUid:e.value.uid,date:new Date().toLocaleDateString("ru-RU")}})}return{order:e,sendCallToTelegram:a}};export{d as u};
