@@ -18,6 +18,14 @@ import { utils } from '~/utils'
 				<UIcon name="i-lucide-phone" size="18" />
 				+7 (927) 324-25-82
 			</a>
+			<noscript
+				><div>
+					<img
+						src="https://mc.yandex.ru/watch/111529680"
+						style="position: absolute; left: -9999px"
+						alt=""
+					/></div
+			></noscript>
 		</div>
 	</footer>
 </template>

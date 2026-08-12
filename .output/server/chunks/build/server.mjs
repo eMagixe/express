@@ -1295,7 +1295,7 @@ const plugins = [
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-kmrwfM2a.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-D2Ipnxrm.mjs').then((n) => n.a).then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-C38cQB7W.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
