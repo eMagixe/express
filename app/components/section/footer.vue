@@ -8,11 +8,11 @@
 		<div
 			class="flex flex-col sm:flex-row justify-center text-center p-5 gap-5 sm:gap-10 text-[#FFCC00] text-[24px] italic"
 		>
-			<a @click="useCall().sendCallToTelegram('+79177666833')">
+			<a @click="useCall().openModalCall('+79177666833')">
 				<UIcon name="i-lucide-phone" size="18" />
 				+7 (917) 766-68-33
 			</a>
-			<a @click="useCall().sendCallToTelegram('+79177666833')">
+			<a @click="useCall().openModalCall('+79177666833')">
 				<UIcon name="i-lucide-phone" size="18" />
 				+7 (927) 324-25-82
 			</a>

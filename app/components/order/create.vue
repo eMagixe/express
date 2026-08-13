@@ -247,7 +247,7 @@ const config = useRuntimeConfig()
 			<NuxtLink
 				class="button-gradient h-16 max-w-1/3 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
-				@click="useCall().sendCallToTelegram('+79177666833')"
+				@click="useCall().openModalCall('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать

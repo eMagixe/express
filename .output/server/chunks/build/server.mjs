@@ -427,7 +427,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-rMqYZo82.mjs')
+    component: () => import('./index-C6AK0wlT.mjs')
   },
   {
     name: "contacts",
@@ -459,17 +459,17 @@ const _routes = [
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-DysGM4hD.mjs')
+    component: () => import('./meleuz-ufa-BlD586E2.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-D4XkFk2W.mjs')
+    component: () => import('./salavat-ufa-4iwpOEUF.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-Dy2cV_Xf.mjs')
+    component: () => import('./kumertau-ufa-fjACbWhN.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -1295,7 +1295,7 @@ const plugins = [
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-ChNU2bxM.mjs').then((n) => n.a).then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-Kk-K8-7w.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
@@ -1465,7 +1465,7 @@ const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   }
 });
 const RouteProvider = defineRouteProvider();
-const __nuxt_component_5 = defineComponent({
+const __nuxt_component_3 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1527,7 +1527,7 @@ const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLayout = __nuxt_component_0;
   const _component_NuxtRouteAnnouncer = ServerPlaceholder;
-  const _component_NuxtPage = __nuxt_component_5;
+  const _component_NuxtPage = __nuxt_component_3;
   _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -1646,4 +1646,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, __nuxt_component_5 as g, appConfig as h, useRouter as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, __nuxt_component_3 as g, appConfig as h, useRouter as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };

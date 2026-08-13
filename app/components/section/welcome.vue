@@ -58,7 +58,7 @@ await useLazyFetch('/api/direction/all', {
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
-				@click="useCall().sendCallToTelegram('+79177666833')"
+				@click="useCall().openModalCall('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать
