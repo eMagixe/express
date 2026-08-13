@@ -78,7 +78,11 @@ const columns: TableColumn<object>[] = [
 </script>
 
 <template>
-	<UModal class="bg-gray-400" v-model:open="openModalUpdateDirection" title="Изменение направления">
+	<UModal
+		class="bg-gray-400"
+		v-model:open="openModalUpdateDirection"
+		title="Изменение направления"
+	>
 		<template #body>
 			<DirectionUpdate :direction="currentSelectedDirection" @close="openModalUpdateDirection = false" />
 		</template>

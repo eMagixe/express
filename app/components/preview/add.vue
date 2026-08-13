@@ -12,7 +12,8 @@ const { add, modalAddReviewIsOpen, current } = useReview()
 		:ui="{
 			body: 'bg-gray-600 text-gray-200 flex flex-col justify-center items-start gap-5',
 			header: 'bg-gray-600 border-gray-600',
-			title: 'text-gray-200'
+			title: 'text-gray-200',
+			close: 'text-gray-200 hover:text-gray-600'
 		}"
 	>
 		<UButton class="button-gradient" icon="i-lucide-plus">Оставить отзыв</UButton>

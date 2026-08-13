@@ -427,7 +427,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-C6AK0wlT.mjs')
+    component: () => import('./index-DVGt1hqd.mjs')
   },
   {
     name: "contacts",
@@ -1295,7 +1295,7 @@ const plugins = [
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-Kk-K8-7w.mjs').then((n) => n.a).then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-BqR7ZSbG.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;

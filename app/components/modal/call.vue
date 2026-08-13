@@ -12,6 +12,7 @@ const call = useCall()
 		:ui="{
 			body: 'bg-gray-600 text-white flex flex-col justify-center items-center gap-5 mb-10',
 			header: 'bg-gray-600 border-gray-600 min-h-auto',
+			close: 'text-gray-200 hover:text-gray-600',
 			title: 'text-gray-200',
 			content: 'bg-gray-600 border-gray-600'
 		}"
