@@ -427,7 +427,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-DVGt1hqd.mjs')
+    component: () => import('./index-BXCniz4X.mjs')
   },
   {
     name: "contacts",
@@ -1285,13 +1285,30 @@ const colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo = /* @__PURE__ */ defin
   };
   useHead(headData);
 });
+const canonical_5eKaosBdhaFwsOQeXPu_geOhU_yggK6OuRdQnGOPCnA = /* @__PURE__ */ defineNuxtPlugin(() => {
+  const route = useRoute();
+  useHead({
+    link: [
+      {
+        rel: "canonical",
+        href: computed(() => {
+          if (route.path.startsWith("/dashboard")) {
+            return void 0;
+          }
+          return `https://taxi-express.su${route.path}`;
+        })
+      }
+    ]
+  });
+});
 const plugins = [
   unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU,
   plugin,
   revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms,
   plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8,
   components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8,
-  colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo
+  colors_E7kSti5pGZ28QhUUurq6gGRU3l65WuXO_KJC3GQgzFo,
+  canonical_5eKaosBdhaFwsOQeXPu_geOhU_yggK6OuRdQnGOPCnA
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),

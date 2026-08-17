@@ -86,7 +86,7 @@ function createHead(options = {}) {
 
 const NUXT_RUNTIME_PAYLOAD_EXTRACTION = false;
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"yandex-verification","content":"a20d3bdc1ac81b9a"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.png"}],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"ru"}};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"yandex-verification","content":"a20d3bdc1ac81b9a"},{"name":"robots","content":"index, follow"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.png"}],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"ru"}};
 
 const appRootTag = "div";
 

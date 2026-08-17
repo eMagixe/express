@@ -59,6 +59,10 @@ export default defineNuxtConfig({
 				{
 					name: 'yandex-verification',
 					content: 'a20d3bdc1ac81b9a'
+				},
+				{
+					name: 'robots',
+					content: 'index, follow'
 				}
 			],
 			link: [
