@@ -3,7 +3,7 @@ import type { Direction } from '#shared/types/global'
 
 const directions = ref<Direction[]>([])
 
-await useLazyFetch('/api/direction/all', {
+await useFetch('/api/direction/all', {
 	key: 'directions',
 	method: 'GET'
 }).then(({ data }: any): void => {
@@ -53,7 +53,7 @@ await useLazyFetch('/api/direction/all', {
 			<h1
 				class="font-medium text-[clamp(1rem,2.5vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
-				Межгороднее такси Кумертау — Уфа
+				Междугороднее такси Кумертау — Уфа
 			</h1>
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"

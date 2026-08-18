@@ -427,49 +427,49 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BXCniz4X.mjs')
+    component: () => import('./index-D0KaagcL.mjs')
   },
   {
     name: "contacts",
     path: "/contacts",
-    component: () => import('./contacts-q74izgNL.mjs')
+    component: () => import('./contacts-BYlTpWdZ.mjs')
   },
   {
     name: "vacancies",
     path: "/vacancies",
-    component: () => import('./vacancies-CeG9dadj.mjs')
+    component: () => import('./vacancies-BoYEZKZI.mjs')
   },
   {
     name: "dashboard",
     path: "/dashboard",
     meta: { ...__nuxt_page_meta$1 || {}, ...{ "middleware": "auth" } },
-    component: () => import('./index-CL9UAE5y.mjs')
+    component: () => import('./index-DJm-ePh6.mjs')
   },
   {
     name: "dashboard-login",
     path: "/dashboard/login",
     meta: __nuxt_page_meta || {},
-    component: () => import('./login-DOI-Ejby.mjs')
+    component: () => import('./login-C_AsyTly.mjs')
   },
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-Cig7fUL6.mjs')
+    component: () => import('./index-BVwYqFmu.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-BlD586E2.mjs')
+    component: () => import('./meleuz-ufa-DcAI3lvL.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-4iwpOEUF.mjs')
+    component: () => import('./salavat-ufa-BjALzj35.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-fjACbWhN.mjs')
+    component: () => import('./kumertau-ufa-D5jbQfj4.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -592,7 +592,7 @@ const globalMiddleware = [
   manifest_45route_45rule
 ];
 const namedMiddleware = {
-  auth: () => import('./auth-BYqvGapc.mjs')
+  auth: () => import('./auth-BcatNmUF.mjs')
 };
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
@@ -1231,7 +1231,7 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyIcon = defineAsyncComponent(() => import('./index-zQtgCi6v.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index-qAEP9vXy.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1311,8 +1311,8 @@ const plugins = [
   canonical_5eKaosBdhaFwsOQeXPu_geOhU_yggK6OuRdQnGOPCnA
 ];
 const layouts = {
-  dashboard: defineAsyncComponent(() => import('./dashboard-BKcuQr9-.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-BqR7ZSbG.mjs').then((n) => n.a).then((m) => m.default || m)),
+  dashboard: defineAsyncComponent(() => import('./dashboard-BHp8WqCl.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-LcbMWRQ4.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
@@ -1581,7 +1581,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-CPnyNvn8.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-BZRUyiuW.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-CM1eHief.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1663,4 +1663,4 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useSeoMeta as a, useAppConfig as b, useNuxtApp as c, defineNuxtRouteMiddleware as d, entry_default as default, useRoute as e, fetchDefaults as f, __nuxt_component_3 as g, appConfig as h, useRouter as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };
+export { _export_sfc as _, useRoute as a, useAppConfig as b, useSeoMeta as c, useNuxtApp as d, entry_default as default, defineNuxtRouteMiddleware as e, fetchDefaults as f, __nuxt_component_3 as g, appConfig as h, useRouter as i, useRuntimeConfig as j, nuxtLinkDefaults as k, asyncDataDefaults as l, createError as m, navigateTo as n, resolveRouteObject as r, useHead as u };
