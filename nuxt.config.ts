@@ -65,6 +65,13 @@ export default defineNuxtConfig({
 					content: 'index, follow'
 				}
 			],
+			script: [
+				{
+					src: '/js/yandex-metrika.js',
+					tagPosition: 'bodyClose',
+					defer: true
+				}
+			],
 			link: [
 				{
 					rel: 'icon',
