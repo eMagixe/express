@@ -1,7 +1,0 @@
-const create_vue_vue_type_style_index_0_scoped_8119d880_lang = ".order-created[data-v-8119d880]{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background:linear-gradient(#fff,#bdbdbd);border-radius:16px;box-shadow:0 4px 4px #0003,0 6px 6px #00000030;padding:26px}h2[data-v-8119d880]{color:#fff;font-weight:500;text-transform:uppercase}";
-
-const createStyles_Dy4vHxPp = [
-  create_vue_vue_type_style_index_0_scoped_8119d880_lang
-];
-
-export { createStyles_Dy4vHxPp as default };

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: false },
 	modules: ['@nuxt/ui', '@nuxt/scripts'],
 	css: ['/assets/css/main.css'],
-	debug: false,
+	debug: true,
 	runtimeConfig: {
 		apiBase: 'https://tidideckasast.beget.app/webhook',
 		public: {
@@ -63,13 +63,6 @@ export default defineNuxtConfig({
 				{
 					name: 'robots',
 					content: 'index, follow'
-				}
-			],
-			script: [
-				{
-					src: '/js/yandex-metrika.js',
-					tagPosition: 'bodyClose',
-					defer: true
 				}
 			],
 			link: [

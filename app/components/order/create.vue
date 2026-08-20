@@ -245,7 +245,7 @@ const config = useRuntimeConfig()
 		<div class="flex flex-col justify-start items-start not-md:justify-center not-md:items-center gap-10 mb-10">
 			<h3 class="text-2xl">Связаться с диспетчером</h3>
 			<NuxtLink
-				class="button-gradient h-16 max-w-1/3 flex items-center justify-center gap-3"
+				class="button-gradient h-16 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				@click="useCall().openModalCall('+79177666833')"
 			>

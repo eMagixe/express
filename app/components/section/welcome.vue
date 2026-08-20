@@ -53,7 +53,7 @@ await useFetch('/api/direction/all', {
 			<h1
 				class="font-medium text-[clamp(1rem,2.5vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
 			>
-				Междугороднее такси Кумертау — Уфа
+				Такси межгород Кумертау — Уфа
 			</h1>
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
