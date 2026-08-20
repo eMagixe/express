@@ -31,7 +31,7 @@ useHead({
 				openingHours: 'Mo-Su 00:00-24:00',
 				priceRange: '₽'
 			})
-		}
+		},
 	]
 })
 </script>

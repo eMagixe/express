@@ -252,8 +252,8 @@ const config = useRuntimeConfig()
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать
 			</NuxtLink>
-			<p class="w-1/3 text-gray-300 text-sm not-md:text-center">
-				Всю дополнительную информацию можно уточнить у диспетчера
+			<p class="w-2/3 text-gray-300 text-sm not-md:text-center">
+				* Всю дополнительную информацию можно уточнить у диспетчера
 			</p>
 		</div>
 	</template>
