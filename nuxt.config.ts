@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: false },
 	modules: ['@nuxt/ui', '@nuxt/scripts'],
 	css: ['/assets/css/main.css'],
-	debug: true,
+	debug: false,
 	runtimeConfig: {
 		apiBase: 'https://tidideckasast.beget.app/webhook',
 		public: {
