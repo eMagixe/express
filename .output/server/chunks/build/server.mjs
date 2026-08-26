@@ -454,7 +454,7 @@ const _routes = [
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-DHHpgXgw.mjs')
+    component: () => import('./index-BXb5uHYi.mjs')
   },
   {
     name: "directions-meleuz-ufa",

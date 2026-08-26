@@ -71,7 +71,7 @@ await useLazyFetch('/api/direction/all', {
 					button: 'button-gradient'
 				}"
 				:button="{
-					label: 'Перейти к заказу',
+					label: 'Подробнее',
 					to: `/directions/${direction.slug}`,
 					trailingIcon: 'i-lucide-arrow-right'
 				}"
