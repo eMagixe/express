@@ -427,49 +427,49 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-5VmwuXjE.mjs')
+    component: () => import('./index-BbjtTE0n.mjs')
   },
   {
     name: "contacts",
     path: "/contacts",
-    component: () => import('./contacts-BYlTpWdZ.mjs')
+    component: () => import('./contacts-CW2UF0Km.mjs')
   },
   {
     name: "vacancies",
     path: "/vacancies",
-    component: () => import('./vacancies-BoYEZKZI.mjs')
+    component: () => import('./vacancies-lb4rAqAv.mjs')
   },
   {
     name: "dashboard",
     path: "/dashboard",
     meta: { ...__nuxt_page_meta$1 || {}, ...{ "middleware": "auth" } },
-    component: () => import('./index-DJm-ePh6.mjs')
+    component: () => import('./index-Cic77MZS.mjs')
   },
   {
     name: "dashboard-login",
     path: "/dashboard/login",
     meta: __nuxt_page_meta || {},
-    component: () => import('./login-C_AsyTly.mjs')
+    component: () => import('./login-D_ozXsd_.mjs')
   },
   {
     name: "directions",
     path: "/directions",
-    component: () => import('./index-BVwYqFmu.mjs')
+    component: () => import('./index-DHHpgXgw.mjs')
   },
   {
     name: "directions-meleuz-ufa",
     path: "/directions/meleuz-ufa",
-    component: () => import('./meleuz-ufa-c-GMdwQD.mjs')
+    component: () => import('./meleuz-ufa-DjOzFqUh.mjs')
   },
   {
     name: "directions-salavat-ufa",
     path: "/directions/salavat-ufa",
-    component: () => import('./salavat-ufa-BXfeXGrE.mjs')
+    component: () => import('./salavat-ufa-Dav5ZFwy.mjs')
   },
   {
     name: "directions-kumertau-ufa",
     path: "/directions/kumertau-ufa",
-    component: () => import('./kumertau-ufa-CnuabMjo.mjs')
+    component: () => import('./kumertau-ufa-CYhHFGNY.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -1311,8 +1311,8 @@ const plugins = [
   canonical_5eKaosBdhaFwsOQeXPu_geOhU_yggK6OuRdQnGOPCnA
 ];
 const layouts = {
-  dashboard: defineAsyncComponent(() => import('./dashboard-BHp8WqCl.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-LcbMWRQ4.mjs').then((n) => n.a).then((m) => m.default || m)),
+  dashboard: defineAsyncComponent(() => import('./dashboard-DfrnlgAi.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-DNUwKw3L.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
