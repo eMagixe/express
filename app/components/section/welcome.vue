@@ -15,6 +15,19 @@ await useFetch('/api/direction/all', {
 <template>
 	<div class="welcome-section w-full mx-auto mb-10">
 		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
+			<h1
+				class="font-medium text-[clamp(1.5rem,2.5vw,3rem)] text-white text-center w-full"
+			>
+				Такси межгород Кумертау — Уфа
+			</h1>
+			<NuxtLink
+				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
+				icon="i-lucide-phone-call"
+				@click="useCall().openModalCall('+791****6833')"
+			>
+				<UIcon name="i-lucide-phone-call" size="18" />
+				Вызвать
+			</NuxtLink>
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
 					v-for="direction in directions"
@@ -37,7 +50,7 @@ await useFetch('/api/direction/all', {
 						button: 'button-gradient'
 					}"
 					:button="{
-						label: 'Перейти к заказу',
+						label: 'Подробнее',
 						to: `/directions/${direction.slug}`,
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
@@ -47,24 +60,10 @@ await useFetch('/api/direction/all', {
 				class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5"
 			>
 				<p class="text-sm text-white">* требуется дополнительная оплата</p>
-				<NuxtLink class="text-primary underline" to="/directions">Список основных направлений</NuxtLink>
+				<NuxtLink class="text-primary underline flex flex-row justify-center items-center gap-2" to="/directions"><UIcon name="i-lucide-split"/> Основные направления</NuxtLink>
 			</div>
-
-			<h1
-				class="font-medium text-[clamp(1rem,2.5vw,3rem)] text-white text-center lg:text-left w-full lg:w-[70%]"
-			>
-				Такси межгород Кумертау — Уфа
-			</h1>
-			<NuxtLink
-				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
-				icon="i-lucide-phone-call"
-				@click="useCall().openModalCall('+791****6833')"
-			>
-				<UIcon name="i-lucide-phone-call" size="18" />
-				Вызвать
-			</NuxtLink>
 			<div
-				class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] border-t-3 border-t-primary/20 pt-10 text-white text-center lg:text-left w-full lg:w-[60%]"
+				class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3"
 			>
 				Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи
 			</div>
