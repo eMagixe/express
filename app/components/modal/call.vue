@@ -18,8 +18,8 @@ const call = useCall()
 		}"
 	>
 		<template #body>
-			<h2 class="text-primary text-2xl">Ваш номер заявки: #{{ call.order.value.uid }}</h2>
-			<p class="text-sm text-white">Назовите его диспетчеру при необходимости...</p>
+			<h2 class="text-primary text-2xl text-center w-full">Ваш номер заявки: #{{ call.order.value.uid }}</h2>
+			<p class="text-sm text-white text-center w-full">Назовите его диспетчеру при необходимости...</p>
 			<NuxtLink
 				v-if="call.order.value.callEnabled"
 				class="button-gradient h-16 flex items-center justify-center gap-3"

@@ -1312,7 +1312,7 @@ const plugins = [
 ];
 const layouts = {
   dashboard: defineAsyncComponent(() => import('./dashboard-DfrnlgAi.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-DNUwKw3L.mjs').then((n) => n.a).then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-CrS-YPvV.mjs').then((n) => n.a).then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-BiFdBjOI.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
