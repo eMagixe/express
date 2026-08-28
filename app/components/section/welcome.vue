@@ -23,7 +23,7 @@ await useFetch('/api/direction/all', {
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
-				@click="useCall().openModalCall('+791****6833')"
+				@click="useCall().openModalCall('+79177666833')"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать
@@ -31,7 +31,7 @@ await useFetch('/api/direction/all', {
 			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
 				<UPricingPlan
 					v-for="direction in directions"
-					class="not-sm:not-last:hidden not-lg:first:hidden p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					class="not-sm:not-last:hidden not-lg:first:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
 					:title="direction.name"
 					description="Пассажирские перевозки"
 					:price="`от ${direction.price} руб.`"

@@ -1,1 +1,0 @@
-import{_ as t,c as o,A as s,o as c}from"./D0w9Vj4P.js";const n={},a={class:"login-page"};function r(e,d){return c(),o("div",a,[s(e.$slots,"default",{},void 0,!0)])}const l=t(n,[["render",r],["__scopeId","data-v-64d9c598"]]);export{l as default};
