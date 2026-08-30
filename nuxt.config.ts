@@ -4,13 +4,23 @@ const year = 31536000
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
 	devtools: { enabled: false },
-	modules: ['@nuxt/ui', '@nuxt/scripts'],
+	modules: ['@nuxt/ui', '@nuxt/scripts', 'nuxt-yandex-metrika'],
 	css: ['/assets/css/main.css'],
 	debug: false,
 	runtimeConfig: {
 		apiBase: 'https://tidideckasast.beget.app/webhook',
 		public: {
 			orderVisible: false
+		}
+	},
+	yandexMetrika: {
+		id: '111727262',
+		position: 'bodyClose',
+		options: {
+			webvisor: true,
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
 		}
 	},
 	ui: {
