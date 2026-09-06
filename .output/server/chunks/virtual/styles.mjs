@@ -1,8 +1,8 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
   "pages/index.vue": () => import('../build/index-styles.DHnw_1JP.mjs').then(interopDefault),
-  "../node_modules/nuxt/dist/app/components/error-500.vue": () => import('../build/error-500-styles.CB5z51D_.mjs').then(interopDefault),
   "../node_modules/nuxt/dist/app/components/error-404.vue": () => import('../build/error-404-styles.CbLQIMfl.mjs').then(interopDefault),
+  "../node_modules/nuxt/dist/app/components/error-500.vue": () => import('../build/error-500-styles.CB5z51D_.mjs').then(interopDefault),
   "components/order/create.vue": () => import('../build/create-styles.Bl0iX2EI.mjs').then(interopDefault),
   "components/section/welcome.vue": () => import('../build/welcome-styles.-BEZqD0h.mjs').then(interopDefault),
   "layouts/empty.vue": () => import('../build/empty-styles.Dh3EOWO7.mjs').then(interopDefault),
