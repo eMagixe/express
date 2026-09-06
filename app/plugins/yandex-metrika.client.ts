@@ -10,7 +10,7 @@ export default defineNuxtPlugin(() => {
 
 		const script = document.createElement('script')
 		script.async = true
-		script.src = 'https://yandex.ru'
+		script.src = 'https://mc.yandex.ru/metrika/tag.js?id=111727262'
 		document.head.appendChild(script)
 
 		w.ym(counterId, 'init', {
