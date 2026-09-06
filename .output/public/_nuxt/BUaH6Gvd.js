@@ -1,0 +1,1 @@
+import{b as e,mt as t,xt as n}from"./CrzdsfCC.js";import{t as r}from"#entry";var i={},a={class:`login-page`};function o(r,i){return t(),e(`div`,a,[n(r.$slots,`default`,{},void 0,!0)])}var s=r(i,[[`render`,o],[`__scopeId`,`data-v-64d9c598`]]);export{s as default};

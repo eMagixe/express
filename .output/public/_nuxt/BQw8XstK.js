@@ -1,0 +1,1 @@
+import{b as e,k as t,mt as n,nr as r}from"./CrzdsfCC.js";var i={class:`w-full text-[clamp(1.25rem,3vw,3rem)] text-center`},a=Object.assign(t({__name:`title`,props:{title:{}},setup(t){return(a,o)=>(n(),e(`h2`,i,r(t.title),1))}}),{__name:`SectionTitle`});export{a as t};

@@ -1,0 +1,1 @@
+import{h as e}from"./ImxwKdzM.js";import{at as t,rt as n}from"./DwHo6rxn.js";import{t as r}from"./CZZ4wlml.js";var i=n(async n=>{let i,a,o=r();if([i,a]=e(()=>o.checkAuth()),i=await i,a(),i)return!0;if(n.path!==`/dashboard/login`)return t(`/dashboard/login`)},1);export{i as default};

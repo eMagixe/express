@@ -18,7 +18,6 @@ const optionsCookie = {
 };
 const login_post = defineEventHandler(async (event) => {
   const body = await readBody(event);
-  console.log("body", body);
   try {
     return $fetch("/login", {
       method: "POST",

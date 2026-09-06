@@ -1,0 +1,4 @@
+//#region app/components/section/advantages.vue?vue&type=style&index=0&scoped=b09f82c8&inline&used&lang.css
+var advantages_vue_vue_type_style_index_0_scoped_b09f82c8_inline_used_lang_default = ".section-advantages[data-v-b09f82c8]{background-color:#0000;background-image:linear-gradient(#0a0b08 10%,#0a0b0800 50%,#995900),url(/images/webp/two-section.webp);background-position:0 0,50%;background-repeat:repeat,no-repeat;background-size:cover;background-attachment:scroll,scroll;background-origin:padding-box,padding-box;background-clip:border-box,border-box}.section-advantages h2[data-v-b09f82c8]{color:var(--ui-bg-muted);text-transform:uppercase;font-weight:500}.section-advantages .item[data-v-b09f82c8]{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background:linear-gradient(#565656cc 10%,#91919133 50%);border-radius:16px;padding:16px}";
+
+export { advantages_vue_vue_type_style_index_0_scoped_b09f82c8_inline_used_lang_default as a };
