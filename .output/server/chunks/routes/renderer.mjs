@@ -1,6 +1,6 @@
 import { u as useRuntimeConfig, e as encodePath, j as joinRelativeURL, a as defineRenderHandler, g as getQuery, c as createError, b as destr, f as getRouteRules, h as relative, i as joinURL, k as getResponseStatusText, l as getResponseStatus, m as useNitroApp } from '../nitro/nitro.mjs';
 import { createHead as createHead$1, propsToString, renderSSRHead } from 'unhead/server';
-import { isRef, toValue } from 'vue';
+import { hasInjectionContext, inject, isRef, toValue } from 'vue';
 import { DeprecationsPlugin } from 'unhead/legacy';
 import { PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'unhead/plugins';
 import { defineDiagnostics, createConsoleReporter } from 'nostics';
@@ -49,6 +49,15 @@ const NUXT_RUNTIME_PAYLOAD_EXTRACTION = false;
 const NUXT_SSR_STREAMING = false;
 
 const headSymbol = "usehead";
+// @__NO_SIDE_EFFECTS__
+function injectHead() {
+  if (hasInjectionContext()) {
+    const instance = inject(headSymbol);
+    if (instance)
+      return instance;
+  }
+  throw new Error("useHead() was called without provide context, ensure you call it through the setup() function.");
+}
 // @__NO_SIDE_EFFECTS__
 function vueInstall(head) {
   const plugin = {
@@ -409,4 +418,4 @@ const renderer = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	default: handler
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { baseURL as b, publicAssetsURL as p, renderer as r };
+export { VueResolver as V, baseURL as b, headSymbol as h, injectHead as i, publicAssetsURL as p, renderer as r };

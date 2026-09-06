@@ -1,32 +1,14 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineProdDiagnostics } from 'nostics';
 import { ansiFormatter } from 'nostics/formatters/ansi';
-import { hasInjectionContext, inject, isRef, toValue, getCurrentScope, ref, watchEffect, getCurrentInstance, onBeforeUnmount, onDeactivated, onActivated, shallowReactive, reactive, effectScope, createApp, provide, onErrorCaptured, onServerPrefetch, unref, createVNode, resolveDynamicComponent, defineAsyncComponent, mergeProps, toRef, shallowRef, isReadonly, computed, defineComponent, h, createElementBlock, useSSRContext, isShallow, isReactive, toRaw, isVNode, createCommentVNode, withCtx, Suspense, nextTick, Fragment } from 'vue';
+import { getCurrentScope, ref, watchEffect, getCurrentInstance, onBeforeUnmount, onDeactivated, onActivated, shallowReactive, reactive, effectScope, hasInjectionContext, createApp, provide, onErrorCaptured, onServerPrefetch, unref, createVNode, resolveDynamicComponent, inject, defineAsyncComponent, mergeProps, toRef, shallowRef, isReadonly, computed, defineComponent, h, createElementBlock, useSSRContext, isRef, isShallow, isReactive, toRaw, isVNode, createCommentVNode, withCtx, Suspense, nextTick, Fragment } from 'vue';
 import { c as createError, $ as $fetch, n as hasProtocol, i as joinURL, o as klona, p as defu, w as withQuery, q as sanitizeStatusCode, t as parseURL, e as encodePath, v as decodePath, x as defuFn, y as isScriptProtocol } from '../nitro/nitro.mjs';
-import { b as baseURL } from '../routes/renderer.mjs';
+import { i as injectHead$1, V as VueResolver, b as baseURL, h as headSymbol } from '../routes/renderer.mjs';
 import { createMemoryHistory, createRouter, START_LOCATION, useRoute, RouterView } from 'vue-router';
 import { _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import colors$1 from 'tailwindcss/colors';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
 import { FlatMetaPlugin } from 'unhead/plugins';
 import { walkResolver, hasOwn } from 'unhead/utils';
-
-const headSymbol = "usehead";
-// @__NO_SIDE_EFFECTS__
-function injectHead$1() {
-  if (hasInjectionContext()) {
-    const instance = inject(headSymbol);
-    if (instance)
-      return instance;
-  }
-  throw new Error("useHead() was called without provide context, ensure you call it through the setup() function.");
-}
-
-const VueResolver = /* @__PURE__ */ Object.assign(
-  (_, value) => isRef(value) ? toValue(value) : value,
-  // identity for plain non-reactive values, so the SSR default init entry
-  // keeps its precomputed fast path (see unhead/server createHead)
-  { _static: true }
-);
 
 function useHead(input, options = {}) {
   const head = options.head || injectHead$1();
@@ -1031,7 +1013,7 @@ function getRouteRules(arg) {
 //#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fmiddleware.mjs
 var globalMiddleware = [middleware$1, /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {})];
-var namedMiddleware = { auth: () => import('../build/auth-CRTo0Ylg.mjs') };
+var namedMiddleware = { auth: () => import('../build/auth-e0ozkKM5.mjs') };
 //#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Froutes.mjs
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
@@ -1039,27 +1021,27 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 		name: "dashboard-login",
 		path: "/dashboard/login",
 		meta: { layout: "empty" },
-		component: () => import('../build/login-DF0Q8fDi.mjs')
+		component: () => import('../build/login-NbnE3Af_.mjs')
 	},
 	{
 		name: "directions-kumertau-ufa",
 		path: "/directions/kumertau-ufa",
-		component: () => import('../build/kumertau-ufa-lqZXLGLo.mjs')
+		component: () => import('../build/kumertau-ufa-DOw_QtNl.mjs')
 	},
 	{
 		name: "directions-meleuz-ufa",
 		path: "/directions/meleuz-ufa",
-		component: () => import('../build/meleuz-ufa-rChjoZ6w.mjs')
+		component: () => import('../build/meleuz-ufa-B8QmhfIW.mjs')
 	},
 	{
 		name: "directions-salavat-ufa",
 		path: "/directions/salavat-ufa",
-		component: () => import('../build/salavat-ufa-D2nHPpP0.mjs')
+		component: () => import('../build/salavat-ufa-DjLE3SYK.mjs')
 	},
 	{
 		name: "contacts",
 		path: "/contacts",
-		component: () => import('../build/contacts-BlkxZVu-.mjs')
+		component: () => import('../build/contacts-CUKbclzt.mjs')
 	},
 	{
 		name: "dashboard",
@@ -1068,22 +1050,22 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 			layout: "dashboard",
 			"middleware": "auth"
 		},
-		component: () => import('../build/dashboard-qw8S--K2.mjs')
+		component: () => import('../build/dashboard-CrNByPGW.mjs')
 	},
 	{
 		name: "directions",
 		path: "/directions",
-		component: () => import('../build/directions-U4C3eTRk.mjs')
+		component: () => import('../build/directions-DzLQi7XM.mjs')
 	},
 	{
 		name: "vacancies",
 		path: "/vacancies",
-		component: () => import('../build/vacancies-Bfli5g6g.mjs')
+		component: () => import('../build/vacancies-CdTVumy9.mjs')
 	},
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-C6qh2Xhl.mjs')
+		component: () => import('../build/pages-BBoRf5sm.mjs')
 	}
 ];
 //#endregion
@@ -1731,7 +1713,7 @@ var plugin_default = defineNuxtPlugin({
 });
 //#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fcomponents.plugin.mjs
-var lazyGlobalComponents = [["Icon", defineAsyncComponent(() => import('../build/components-CEYKtFqx.mjs').then((n) => n.n).then((r) => r["default"] || r.default || r))]];
+var lazyGlobalComponents = [["Icon", defineAsyncComponent(() => import('../build/components-DTuZdOqa.mjs').then((n) => n.n).then((r) => r["default"] || r.default || r))]];
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fcomponents_plugin_default = defineNuxtPlugin({
 	name: "nuxt:global-components",
 	setup(nuxtApp) {
@@ -1818,8 +1800,8 @@ function resolveLayoutName(route, name) {
 //#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Flayouts.mjs
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Flayouts_default = {
-	dashboard: defineAsyncComponent(() => import('../build/dashboard-C75qrcru.mjs').then((m) => m.default || m)),
-	default: defineAsyncComponent(() => import('../build/default-MWEyk3AA.mjs').then((n) => n.t).then((m) => m.default || m)),
+	dashboard: defineAsyncComponent(() => import('../build/dashboard-BPBAWdTB.mjs').then((m) => m.default || m)),
+	default: defineAsyncComponent(() => import('../build/default-D2E5CfzZ.mjs').then((n) => n.t).then((m) => m.default || m)),
 	empty: defineAsyncComponent(() => import('../build/empty-Dz1Q1BdG.mjs').then((m) => m.default || m))
 };
 //#endregion
@@ -2091,7 +2073,7 @@ var _sfc_main$1 = {
 		const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
 		const description = _error.message || _error.toString();
 		const stack = void 0;
-		const _Error404 = defineAsyncComponent(() => import('../build/error-404-BeqPiL3O.mjs'));
+		const _Error404 = defineAsyncComponent(() => import('../build/error-404-C0t4KtXW.mjs'));
 		const _Error = defineAsyncComponent(() => import('../build/error-500-yzKr03IM.mjs'));
 		const ErrorTemplate = is404 ? _Error404 : _Error;
 		return (_ctx, _push, _parent, _attrs) => {
