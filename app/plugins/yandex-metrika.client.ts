@@ -18,12 +18,12 @@ export default defineNuxtPlugin(() => {
 			trackLinks: true,
 			accurateTrackBounce: true,
 			webvisor: true
-		});
+		})
 
-		const router = useRouter();
+		const router = useRouter()
 		router.afterEach((to) => {
 			if (typeof w.ym === 'function') {
-				w.ym(counterId, 'hit', to.fullPath);
+				w.ym(counterId, 'hit', to.fullPath)
 			}
 		})
 	}
