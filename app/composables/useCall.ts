@@ -9,7 +9,7 @@ export const useCall = () => {
 			modalVisible: false,
 			callEnabled: true,
 			timeOut: undefined as any,
-			route: useRoute().name
+			route: useRoute().path
 		}
 	})
 
