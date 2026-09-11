@@ -3,13 +3,13 @@ import { useState } from '#imports'
 export const useCall = () => {
 	const order = useState('orderUid', () => {
 		const uuid = crypto.randomUUID()
-
 		return {
 			uid: uuid.split('-').shift(),
 			phone: '',
 			modalVisible: false,
 			callEnabled: true,
-			timeOut: undefined as any
+			timeOut: undefined as any,
+			route: useRoute().fullPath
 		}
 	})
 
@@ -25,6 +25,7 @@ export const useCall = () => {
 			await $fetch('/api/call/send', {
 				method: 'POST',
 				body: {
+					route: order.value.route,
 					phone: order.value.phone,
 					orderUid: order.value.uid,
 					date: new Date().toLocaleDateString('ru-RU')
