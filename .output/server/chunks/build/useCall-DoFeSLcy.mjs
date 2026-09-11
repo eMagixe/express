@@ -10,7 +10,7 @@ var useCall = () => {
 			modalVisible: false,
 			callEnabled: true,
 			timeOut: void 0,
-			route: useRoute$1().fullPath
+			route: useRoute$1().name
 		};
 	});
 	function openModalCall(phone) {

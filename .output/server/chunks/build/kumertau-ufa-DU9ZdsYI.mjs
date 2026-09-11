@@ -1,5 +1,5 @@
 import { u as useSeoMeta$1 } from '../virtual/entry.mjs';
-import { c as create_default } from './create-DCmnwxr6.mjs';
+import { c as create_default } from './create-DJQsJmGu.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { _ as _sfc_main$1 } from './Breadcrumb-D1-Ungc1.mjs';
@@ -52,7 +52,7 @@ import './Input-BoJ6XMWD.mjs';
 import './useLocale-Cji6XXXY.mjs';
 import './useToast-DbOihFhv.mjs';
 import './state-CjjX6iZP.mjs';
-import './useCall-GIjMyjw0.mjs';
+import './useCall-DoFeSLcy.mjs';
 import 'maska/vue';
 import 'valibot';
 import '@vue/shared';
@@ -60,9 +60,9 @@ import 'fnv1a-64';
 import 'object-identity';
 import './usePrefix-wIR1GMpN.mjs';
 
-//#region app/pages/directions/salavat-ufa.vue?vue&type=script&setup=true&lang.ts
-var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
-	__name: "salavat-ufa",
+//#region app/pages/directions/kumertau-ufa.vue?vue&type=script&setup=true&lang.ts
+var kumertau_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
+	__name: "kumertau-ufa",
 	__ssrInlineRender: true,
 	async setup(__props) {
 		let __temp, __restore;
@@ -75,31 +75,14 @@ var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defi
 				label: "Все направления",
 				to: "/directions"
 			},
-			{ label: "Салават - Уфа" }
-		]);
-		ref([
-			{
-				title: "Расстояние",
-				description: "163 км",
-				icon: "i-lucide-arrow-right-left"
-			},
-			{
-				title: "Расчетное время в пути",
-				description: "~ 2 часа 30 мин",
-				icon: "i-lucide-clock"
-			},
-			{
-				title: "Стоимость",
-				description: "от 1200 руб *",
-				icon: "i-lucide-receipt-russian-ruble"
-			}
+			{ label: "Кумертау - Уфа" }
 		]);
 		useSeoMeta$1({
-			title: "Такси Экспресс | направление из Салавата в Уфу",
-			description: "Такси Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
-			ogTitle: "Такси Экспресс | направление из Салавата в Уфу",
-			ogDescription: "Такси Салават - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
-			ogUrl: "https://taxi-express.su/directions/salavat-ufa",
+			title: "Такси Экспресс | направление из Кумертау в Уфу",
+			description: "Такси Кумертау - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+			ogTitle: "Такси Экспресс | направление из Кумертау в Уфу",
+			ogDescription: "Такси Кумертау - Уфа | Такси Express - быстро, комфортно и надежно. Закажите такси онлайн и наслаждайтесь поездкой!",
+			ogUrl: "https://taxi-express.su/directions/kumertau-ufa",
 			ogType: "website",
 			ogLocale: "ru_RU",
 			twitterCard: "summary_large_image"
@@ -108,12 +91,12 @@ var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defi
 		[__temp, __restore] = withAsyncContext(() => useLazyFetch("/api/direction/all", {
 			key: "directions",
 			method: "GET"
-		}, "$aX9OEP9rsq").then(({ data }) => {
+		}, "$ux8vMxo-zT").then(({ data }) => {
 			if (data.value) directions.value = data.value;
 		})), await __temp, __restore();
 		const direction = computed(() => {
 			const [current] = directions.value.filter((direction) => {
-				return direction.slug === "salavat-ufa";
+				return direction.slug === "kumertau-ufa";
 			});
 			if (current) {
 				current.features = [
@@ -178,10 +161,10 @@ var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defi
 					}
 				}, {
 					default: withCtx((_, _push, _parent, _scopeId) => {
-						if (_push) _push(`<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d740479.3925558841!2d55.03231519424448!3d54.001191569699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x43d7fffbafa7009d%3A0x56073e4216dfddeb!2z0KHQsNC70LDQstCw0YIsINCg0LXRgdC_LiDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0!3m2!1d53.386043699999995!2d55.925947199999996!4m5!1s0x43d93a259216bce1%3A0xaceec0921eda92cc!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!3m2!1d54.734790999999994!2d55.9578555!5e0!3m2!1sru!2sru!4v1771932003232!5m2!1sru!2sru" class="w-full h-full min-h-100 rounded-lg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"${_scopeId}></iframe>`);
+						if (_push) _push(`<iframe class="w-full h-full min-h-100 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1208092.1886191373!2d54.56173983277664!3d53.74399896852182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x417d11bb52a09059%3A0x4687ffa7b692119d!2z0JrRg9C80LXRgNGC0LDRgywg0KDQtdGB0L8uINCR0LDRiNC60L7RgNGC0L7RgdGC0LDQvQ!3m2!1d52.7637387!2d55.811568199999996!4m5!1s0x43d93a259216bce1%3A0xaceec0921eda92cc!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!3m2!1d54.734790999999994!2d55.9578555!5e0!3m2!1sru!2sru!4v1771857283209!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"${_scopeId}></iframe>`);
 						else return [createVNode("iframe", {
-							src: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d740479.3925558841!2d55.03231519424448!3d54.001191569699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x43d7fffbafa7009d%3A0x56073e4216dfddeb!2z0KHQsNC70LDQstCw0YIsINCg0LXRgdC_LiDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0!3m2!1d53.386043699999995!2d55.925947199999996!4m5!1s0x43d93a259216bce1%3A0xaceec0921eda92cc!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!3m2!1d54.734790999999994!2d55.9578555!5e0!3m2!1sru!2sru!4v1771932003232!5m2!1sru!2sru",
 							class: "w-full h-full min-h-100 rounded-lg",
+							src: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1208092.1886191373!2d54.56173983277664!3d53.74399896852182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x417d11bb52a09059%3A0x4687ffa7b692119d!2z0JrRg9C80LXRgNGC0LDRgywg0KDQtdGB0L8uINCR0LDRiNC60L7RgNGC0L7RgdGC0LDQvQ!3m2!1d52.7637387!2d55.811568199999996!4m5!1s0x43d93a259216bce1%3A0xaceec0921eda92cc!2z0KPRhNCwLCDQoNC10YHQvy4g0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9!3m2!1d54.734790999999994!2d55.9578555!5e0!3m2!1sru!2sru!4v1771857283209!5m2!1sru!2sru",
 							loading: "lazy",
 							referrerpolicy: "no-referrer-when-downgrade"
 						})];
@@ -192,12 +175,12 @@ var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defi
 					default: withCtx((_, _push, _parent, _scopeId) => {
 						if (_push) _push(ssrRenderComponent(_component_OrderCreate, {
 							direction: true,
-							from: "Салават",
+							from: "Кумертау",
 							to: "Уфа"
 						}, null, _parent, _scopeId));
 						else return [createVNode(_component_OrderCreate, {
 							direction: true,
-							from: "Салават",
+							from: "Кумертау",
 							to: "Уфа"
 						})];
 					}),
@@ -209,13 +192,13 @@ var salavat_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defi
 	}
 });
 //#endregion
-//#region app/pages/directions/salavat-ufa.vue
-var _sfc_setup = salavat_ufa_vue_vue_type_script_setup_true_lang_default.setup;
-salavat_ufa_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
+//#region app/pages/directions/kumertau-ufa.vue
+var _sfc_setup = kumertau_ufa_vue_vue_type_script_setup_true_lang_default.setup;
+kumertau_ufa_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/directions/salavat-ufa.vue");
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/directions/kumertau-ufa.vue");
 	return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-var salavat_ufa_default = salavat_ufa_vue_vue_type_script_setup_true_lang_default;
+var kumertau_ufa_default = kumertau_ufa_vue_vue_type_script_setup_true_lang_default;
 
-export { salavat_ufa_default as default };
+export { kumertau_ufa_default as default };
