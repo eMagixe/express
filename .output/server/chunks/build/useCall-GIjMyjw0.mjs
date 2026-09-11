@@ -1,4 +1,4 @@
-import { $ as $fetch$2 } from '../virtual/entry.mjs';
+import { c as useRoute$1, $ as $fetch$2 } from '../virtual/entry.mjs';
 import { u as useState } from './state-CjjX6iZP.mjs';
 
 //#region app/composables/useCall.ts
@@ -9,7 +9,8 @@ var useCall = () => {
 			phone: "",
 			modalVisible: false,
 			callEnabled: true,
-			timeOut: void 0
+			timeOut: void 0,
+			route: useRoute$1().fullPath
 		};
 	});
 	function openModalCall(phone) {
@@ -22,6 +23,7 @@ var useCall = () => {
 			await $fetch$2("/api/call/send", {
 				method: "POST",
 				body: {
+					route: order.value.route,
 					phone: order.value.phone,
 					orderUid: order.value.uid,
 					date: (/* @__PURE__ */ new Date()).toLocaleDateString("ru-RU")

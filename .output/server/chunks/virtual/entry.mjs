@@ -1026,17 +1026,17 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions-kumertau-ufa",
 		path: "/directions/kumertau-ufa",
-		component: () => import('../build/kumertau-ufa-DOw_QtNl.mjs')
+		component: () => import('../build/kumertau-ufa-DHiGgG2c.mjs')
 	},
 	{
 		name: "directions-meleuz-ufa",
 		path: "/directions/meleuz-ufa",
-		component: () => import('../build/meleuz-ufa-B8QmhfIW.mjs')
+		component: () => import('../build/meleuz-ufa-CpTnfP5b.mjs')
 	},
 	{
 		name: "directions-salavat-ufa",
 		path: "/directions/salavat-ufa",
-		component: () => import('../build/salavat-ufa-DjLE3SYK.mjs')
+		component: () => import('../build/salavat-ufa-Dpxcuu97.mjs')
 	},
 	{
 		name: "contacts",
@@ -1065,7 +1065,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-BBoRf5sm.mjs')
+		component: () => import('../build/pages-CQzRedld.mjs')
 	}
 ];
 //#endregion
@@ -1801,7 +1801,7 @@ function resolveLayoutName(route, name) {
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Flayouts.mjs
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Flayouts_default = {
 	dashboard: defineAsyncComponent(() => import('../build/dashboard-BPBAWdTB.mjs').then((m) => m.default || m)),
-	default: defineAsyncComponent(() => import('../build/default-D2E5CfzZ.mjs').then((n) => n.t).then((m) => m.default || m)),
+	default: defineAsyncComponent(() => import('../build/default-BjHXGCLb.mjs').then((n) => n.t).then((m) => m.default || m)),
 	empty: defineAsyncComponent(() => import('../build/empty-Dz1Q1BdG.mjs').then((m) => m.default || m))
 };
 //#endregion
