@@ -2519,6 +2519,11 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 	__ssrInlineRender: true,
 	setup(__props) {
 		const call = useCall();
+		const route = useRoute$1();
+		function sendCall() {
+			call.order.value.route = route.path;
+			call.sendData();
+		}
 		return (_ctx, _push, _parent, _attrs) => {
 			const _component_UModal = _sfc_main$a;
 			const _component_NuxtLink = NuxtLink;
@@ -2544,7 +2549,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 							class: "button-gradient h-16 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
 							to: `tel:${unref(call).order.value.phone}`,
-							onClick: ($event) => unref(useCall)().sendData()
+							onClick: ($event) => sendCall()
 						}, {
 							default: withCtx((_, _push, _parent, _scopeId) => {
 								if (_push) {
@@ -2569,7 +2574,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 							class: "button-gradient h-16 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
 							to: `tel:${unref(call).order.value.phone}`,
-							onClick: ($event) => unref(useCall)().sendData()
+							onClick: ($event) => sendCall()
 						}, {
 							default: withCtx(() => [createVNode(_component_UIcon, {
 								name: "i-lucide-phone-call",
@@ -3058,7 +3063,7 @@ var header_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 //#endregion
 //#region app/layouts/default.vue
 var default_exports = /* @__PURE__ */ __exportAll({ default: () => default_default });
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-CXOhJlXI.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-TholT9gG.mjs').then((c) => c.default || c));
 var _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 	const _component_UApp = App_default;

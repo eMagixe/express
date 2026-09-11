@@ -2,6 +2,12 @@
 import { useCall } from '~/composables/useCall'
 
 const call = useCall()
+const route = useRoute()
+
+function sendCall() {
+	call.order.value.route = route.path
+	call.sendData()
+}
 </script>
 
 <template>
@@ -25,7 +31,7 @@ const call = useCall()
 				class="button-gradient h-16 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
 				:to="`tel:${call.order.value.phone}`"
-				@click="useCall().sendData()"
+				@click="sendCall()"
 			>
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Позвонить
