@@ -1,4 +1,4 @@
-import { u as useSeoMeta$1, b as useHead$1, _ as _plugin_vue_export_helper_default, a as useAppConfig, c as useRoute$1 } from '../virtual/entry.mjs';
+import { u as useSeoMeta$1, b as useHead$1, _ as _plugin_vue_export_helper_default, a as useAppConfig, c as useRoute$1, $ as $fetch$2 } from '../virtual/entry.mjs';
 import { N as NuxtLink } from './nuxt-link-By4uHnr8.mjs';
 import { b as _sfc_main$5$1, u as useComponentProps, t as tv, P as Primitive, g as getSlotChildrenText, c as _sfc_main$1$1, _ as _sfc_main$8, a as useForwardProps, h as useFormField, i as useComponentIcons, e as _sfc_main$3$1, l as looseToNumber } from './Button-D5UK4P4A.mjs';
 import { _ as _sfc_main$9 } from './Modal-BqSeB7U2.mjs';
@@ -72,11 +72,11 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 			const _component_NuxtLink = NuxtLink;
 			const _component_UIcon = _sfc_main$5$1;
 			const _component_UPricingPlan = _sfc_main$6;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-9bce0c03>`);
-			_push(ssrRenderComponent(_component_UContainer, { class: "h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10" }, {
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-33451898>`);
+			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<h1 class="font-medium text-[clamp(1.5rem,2.5vw,3rem)] text-white text-center w-full" data-v-9bce0c03${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
+						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-33451898${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
@@ -96,7 +96,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex flex-row justify-center items-center gap-10" data-v-9bce0c03${_scopeId}><!--[-->`);
+						_push(`<div class="cities-list w-full flex flex-row justify-center items-center gap-10" data-v-33451898${_scopeId}><!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								class: "not-sm:not-last:hidden not-lg:first:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
@@ -124,7 +124,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 								}
 							}, null, _parent, _scopeId));
 						});
-						_push(`<!--]--></div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-9bce0c03${_scopeId}><p class="text-sm text-white" data-v-9bce0c03${_scopeId}>* требуется дополнительная оплата</p>`);
+						_push(`<!--]--></div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-33451898${_scopeId}><p class="text-sm text-white" data-v-33451898${_scopeId}>* требуется дополнительная оплата</p>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "text-primary underline flex flex-row justify-center items-center gap-2",
 							to: "/directions"
@@ -137,9 +137,9 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-9bce0c03${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-33451898${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
 					} else return [
-						createVNode("h1", { class: "font-medium text-[clamp(1.5rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
+						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
 						createVNode(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
@@ -206,7 +206,7 @@ welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
 	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
 };
-var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-9bce0c03"]]), { __name: "SectionWelcome" });
+var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-33451898"]]), { __name: "SectionWelcome" });
 //#endregion
 //#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
 var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
@@ -357,8 +357,8 @@ var useReview = () => {
 		};
 	};
 	const getAll = async () => {
-		return useFetch("/api/review/all", { method: "GET" }, "$9RxkCj8pEZ").then(({ data }) => {
-			if (utils.isArray(data.value)) reviews.value = data.value.map((review) => {
+		return $fetch$2("/api/review/all", { method: "GET" }).then((data) => {
+			if (utils.isArray(data)) reviews.value = data.map((review) => {
 				return remake(review);
 			});
 		});
@@ -367,7 +367,7 @@ var useReview = () => {
 		return useFetch("/api/review/add", {
 			method: "POST",
 			body: { ...review.value }
-		}, "$GMk1CtyGrk");
+		}, "$9RxkCj8pEZ");
 	};
 	const add = async () => {
 		if (current.value.name && current.value.text && current.value.rating) create(current).then(() => {
@@ -955,7 +955,7 @@ var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 			}, _attrs), {
 				content: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<div class="modal-reviews" data-v-70f571c8${_scopeId}>`);
+						_push(`<div class="modal-reviews" data-v-c1adb4e7${_scopeId}>`);
 						_push(ssrRenderComponent(_component_UCarousel, {
 							loop: "",
 							autoplay: { delay: 2200 },
@@ -965,18 +965,18 @@ var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 						}, {
 							default: withCtx(({ item }, _push, _parent, _scopeId) => {
 								if (_push) {
-									_push(`<div class="item flex flex-col justify-start items-start gap-1" data-v-70f571c8${_scopeId}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-70f571c8${_scopeId}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-70f571c8${_scopeId}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-70f571c8${_scopeId}>`);
+									_push(`<div class="item flex flex-col justify-start items-start gap-1" data-v-c1adb4e7${_scopeId}><div class="flex w-full flex-row justify-between items-start gap-2" data-v-c1adb4e7${_scopeId}><div class="flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" data-v-c1adb4e7${_scopeId}><div class="uppercase text-[14px] not-lg:text-[30px]" data-v-c1adb4e7${_scopeId}>`);
 									_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent, _scopeId));
-									_push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-70f571c8${_scopeId}><!--[-->`);
+									_push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-c1adb4e7${_scopeId}><!--[-->`);
 									ssrRenderList(item.rating, (n) => {
-										_push(`<img height="20" width="20"${ssrRenderAttr("src", _virtual_public__2Fimages_2Fsvg_2Fstar_default)}${ssrRenderAttr("alt", `star +${n}`)} data-v-70f571c8${_scopeId}>`);
+										_push(`<img height="20" width="20"${ssrRenderAttr("src", _virtual_public__2Fimages_2Fsvg_2Fstar_default)}${ssrRenderAttr("alt", `star +${n}`)} data-v-c1adb4e7${_scopeId}>`);
 									});
-									_push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-70f571c8${_scopeId}>`);
+									_push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-c1adb4e7${_scopeId}>`);
 									_push(ssrRenderComponent(_component_UIcon, {
 										name: "i-lucide-calendar",
 										size: "14"
 									}, null, _parent, _scopeId));
-									_push(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-70f571c8${_scopeId}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-70f571c8${_scopeId}>${ssrInterpolate(item.text)}</div></div>`);
+									_push(`<p class="text-[clamp(.8rem,1vw,1rem)]" data-v-c1adb4e7${_scopeId}>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-c1adb4e7${_scopeId}>${ssrInterpolate(item.text)}</div></div>`);
 								} else return [createVNode("div", { class: "item flex flex-col justify-start items-start gap-1" }, [createVNode("div", { class: "flex w-full flex-row justify-between items-start gap-2" }, [createVNode("div", { class: "flex xl:flex-row flex-col lg:justify-center lg:items-center gap-5 text-gray-600" }, [createVNode("div", { class: "uppercase text-[14px] not-lg:text-[30px]" }, [createVNode(_component_UIcon, { name: "i-lucide-circle-user-round" }), createTextVNode(" " + toDisplayString(item.name), 1)]), createVNode("div", { class: "flex flex-row justify-start items-start gap-1 mb-5" }, [(openBlock(true), createBlock(Fragment, null, renderList(item.rating, (n) => {
 									return openBlock(), createBlock("img", {
 										height: "20",
@@ -1020,8 +1020,8 @@ var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 						icon: "i-lucide-ellipsis"
 					}, {
 						default: withCtx((_, _push, _parent, _scopeId) => {
-							if (_push) _push(`Все отзывы`);
-							else return [createTextVNode("Все отзывы")];
+							if (_push) _push(`Смотреть`);
+							else return [createTextVNode("Смотреть")];
 						}),
 						_: 1
 					}, _parent, _scopeId));
@@ -1030,7 +1030,7 @@ var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 						class: "button-gradient",
 						icon: "i-lucide-ellipsis"
 					}, {
-						default: withCtx(() => [createTextVNode("Все отзывы")]),
+						default: withCtx(() => [createTextVNode("Смотреть")]),
 						_: 1
 					}, 8, ["onClick"])];
 				}),
@@ -1047,7 +1047,7 @@ all_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/all.vue");
 	return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-var all_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(all_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-70f571c8"]]), { __name: "PreviewAll" });
+var all_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(all_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-c1adb4e7"]]), { __name: "PreviewAll" });
 //#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fui%2Ftextarea.ts
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Ftextarea_default = {
@@ -1784,8 +1784,8 @@ var add_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 						icon: "i-lucide-plus"
 					}, {
 						default: withCtx((_, _push, _parent, _scopeId) => {
-							if (_push) _push(`Оставить отзыв`);
-							else return [createTextVNode("Оставить отзыв")];
+							if (_push) _push(`Новый`);
+							else return [createTextVNode("Новый")];
 						}),
 						_: 1
 					}, _parent, _scopeId));
@@ -1793,7 +1793,7 @@ var add_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 						class: "button-gradient",
 						icon: "i-lucide-plus"
 					}, {
-						default: withCtx(() => [createTextVNode("Оставить отзыв")]),
+						default: withCtx(() => [createTextVNode("Новый")]),
 						_: 1
 					})];
 				}),
