@@ -16,7 +16,7 @@ const { add, modalAddReviewIsOpen, current } = useReview()
 			close: 'text-gray-200 hover:text-gray-600'
 		}"
 	>
-		<UButton class="button-gradient" icon="i-lucide-plus">Оставить отзыв</UButton>
+		<UButton class="button-gradient" icon="i-lucide-plus">Новый</UButton>
 		<template #body>
 			<UInput
 				v-model="current.name"

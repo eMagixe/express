@@ -14,9 +14,9 @@ await useFetch('/api/direction/all', {
 </script>
 <template>
 	<div class="welcome-section w-full mx-auto mb-10">
-		<UContainer class="h-[calc(100vh-100px)] min-h-160 flex flex-col justify-start gap-5 pt-10">
+		<UContainer class="min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10">
 			<h1
-				class="font-medium text-[clamp(1.5rem,2.5vw,3rem)] text-white text-center w-full"
+				class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full"
 			>
 				Такси межгород Кумертау — Уфа
 			</h1>

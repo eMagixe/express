@@ -11,7 +11,7 @@ const { reviews, preload } = useReview()
 			content: 'min-h-[400px] bg-gray-600 border-gray-600'
 		}"
 	>
-		<UButton @click="preload" class="button-gradient" icon="i-lucide-ellipsis">Все отзывы</UButton>
+		<UButton @click="preload" class="button-gradient" icon="i-lucide-ellipsis">Смотреть</UButton>
 		<template #content>
 			<div class="modal-reviews">
 				<UCarousel

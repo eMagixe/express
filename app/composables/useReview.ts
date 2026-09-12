@@ -44,11 +44,11 @@ export const useReview = () => {
 	}
 
 	const getAll = async () => {
-		return useFetch('/api/review/all', {
+		return $fetch('/api/review/all', {
 			method: 'GET'
-		}).then(({ data }: any): void => {
-			if (utils.isArray(data.value)) {
-				reviews.value = data.value.map((review: any) => {
+		}).then((data: any): void => {
+			if (utils.isArray(data)) {
+				reviews.value = data.map((review: any) => {
 					return remake(review) as Review
 				}) as Review[]
 			}
