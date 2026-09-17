@@ -53,8 +53,8 @@ var _virtual_public__2Fimages_2Fsvg_2Flogo_default = publicAssetsURL("/images/sv
 var _virtual_public__2Fimages_2Fsvg_2Fsm_logo_default = publicAssetsURL("/images/svg/sm-logo.svg");
 //#endregion
 //#region app/components/logo.vue
-var _sfc_main$10 = {};
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
+var _sfc_main$9 = {};
+function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
 	_push(ssrRenderComponent(NuxtLink, mergeProps({ to: "https://taxi-express.su/" }, _attrs), {
 		default: withCtx((_, _push, _parent, _scopeId) => {
 			if (_push) _push(`<picture${_scopeId}><source media="(min-width: 573px)"${ssrRenderAttr("srcset", _virtual_public__2Fimages_2Fsvg_2Flogo_default)}${_scopeId}><source media="(max-width: 573px)"${ssrRenderAttr("srcset", _virtual_public__2Fimages_2Fsvg_2Fsm_logo_default)}${_scopeId}><img height="72" width="240"${ssrRenderAttr("src", _virtual_public__2Fimages_2Fsvg_2Flogo_default)} alt="logo" style="${ssrRenderStyle({ "width": "auto" })}"${_scopeId}></picture>`);
@@ -79,13 +79,13 @@ function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
 		_: 1
 	}, _parent));
 }
-var _sfc_setup$11 = _sfc_main$10.setup;
-_sfc_main$10.setup = (props, ctx) => {
+var _sfc_setup$11 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/logo.vue");
 	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
 };
-var logo_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(_sfc_main$10, [["ssrRender", _sfc_ssrRender$4]]), { __name: "Logo" });
+var logo_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(_sfc_main$9, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Logo" });
 //#endregion
 //#region node_modules/reka-ui/dist/DismissableLayer/DismissableLayerBranch.js
 var DismissableLayerBranch_default = /* @__PURE__ */ defineComponent({
@@ -1318,7 +1318,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Fprogress_default = 
 };
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/Progress.vue
-var _sfc_main$9 = {
+var _sfc_main$8 = {
 	__name: "UProgress",
 	__ssrInlineRender: true,
 	props: {
@@ -1532,8 +1532,8 @@ var _sfc_main$9 = {
 		};
 	}
 };
-var _sfc_setup$10 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+var _sfc_setup$10 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Progress.vue");
 	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
@@ -1600,7 +1600,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Ftoast_default = {
 };
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/Toast.vue
-var _sfc_main$8 = {
+var _sfc_main$7 = {
 	__name: "UToast",
 	__ssrInlineRender: true,
 	props: {
@@ -1864,7 +1864,7 @@ var _sfc_main$8 = {
 							else _push(`<!---->`);
 							_push(`</div>`);
 						} else _push(`<!---->`);
-						if (unref(props).progress && open && remaining > 0 && totalDuration) _push(ssrRenderComponent(_sfc_main$9, mergeProps({
+						if (unref(props).progress && open && remaining > 0 && totalDuration) _push(ssrRenderComponent(_sfc_main$8, mergeProps({
 							"model-value": remaining / totalDuration * 100,
 							color: unref(props).color
 						}, typeof unref(props).progress === "object" ? unref(props).progress : {}, {
@@ -1967,7 +1967,7 @@ var _sfc_main$8 = {
 							])) : createCommentVNode("", true)])]),
 							_: 3
 						})) : createCommentVNode("", true)], 2)) : createCommentVNode("", true),
-						unref(props).progress && open && remaining > 0 && totalDuration ? (openBlock(), createBlock(_sfc_main$9, mergeProps({
+						unref(props).progress && open && remaining > 0 && totalDuration ? (openBlock(), createBlock(_sfc_main$8, mergeProps({
 							key: 1,
 							"model-value": remaining / totalDuration * 100,
 							color: unref(props).color
@@ -1987,8 +1987,8 @@ var _sfc_main$8 = {
 		};
 	}
 };
-var _sfc_setup$9 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+var _sfc_setup$9 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Toast.vue");
 	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
@@ -2052,7 +2052,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Ftoaster_default = {
 };
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/Toaster.vue
-var _sfc_main$7 = /*@__PURE__*/ Object.assign({ name: "Toaster" }, {
+var _sfc_main$6 = /*@__PURE__*/ Object.assign({ name: "Toaster" }, {
 	__ssrInlineRender: true,
 	props: {
 		position: {
@@ -2150,7 +2150,7 @@ var _sfc_main$7 = /*@__PURE__*/ Object.assign({ name: "Toaster" }, {
 						ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent, _scopeId);
 						_push(`<!--[-->`);
 						ssrRenderList(unref(toasts), (toast, index) => {
-							_push(ssrRenderComponent(_sfc_main$8, mergeProps({
+							_push(ssrRenderComponent(_sfc_main$7, mergeProps({
 								key: toast.id,
 								ref_for: true,
 								ref_key: "refs",
@@ -2223,7 +2223,7 @@ var _sfc_main$7 = /*@__PURE__*/ Object.assign({ name: "Toaster" }, {
 					} else return [
 						renderSlot(_ctx.$slots, "default"),
 						(openBlock(true), createBlock(Fragment, null, renderList(unref(toasts), (toast, index) => {
-							return openBlock(), createBlock(_sfc_main$8, mergeProps({
+							return openBlock(), createBlock(_sfc_main$7, mergeProps({
 								key: toast.id,
 								ref_for: true,
 								ref_key: "refs",
@@ -2293,13 +2293,13 @@ var _sfc_main$7 = /*@__PURE__*/ Object.assign({ name: "Toaster" }, {
 		};
 	}
 });
-var _sfc_setup$8 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+var _sfc_setup$8 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Toaster.vue");
 	return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-var Toaster_default = Object.assign(_sfc_main$7, { __name: "UToaster" });
+var Toaster_default = Object.assign(_sfc_main$6, { __name: "UToaster" });
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/composables/useOverlay.js
 function _useOverlay() {
@@ -2388,7 +2388,7 @@ function _useOverlay() {
 var useOverlay = /* @__PURE__ */ createSharedComposable(_useOverlay);
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/OverlayProvider.vue
-var _sfc_main$6 = {
+var _sfc_main$5 = {
 	__name: "UOverlayProvider",
 	__ssrInlineRender: true,
 	setup(__props) {
@@ -2415,15 +2415,15 @@ var _sfc_main$6 = {
 		};
 	}
 };
-var _sfc_setup$7 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+var _sfc_setup$7 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/OverlayProvider.vue");
 	return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/App.vue
-var _sfc_main$5 = /*@__PURE__*/ Object.assign({ name: "App" }, {
+var _sfc_main$4 = /*@__PURE__*/ Object.assign({ name: "App" }, {
 	__ssrInlineRender: true,
 	props: {
 		tooltip: {
@@ -2484,11 +2484,11 @@ var _sfc_main$5 = /*@__PURE__*/ Object.assign({ name: "App" }, {
 									_: 3
 								}, _parent, _scopeId));
 								else ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent, _scopeId);
-								_push(ssrRenderComponent(_sfc_main$6, null, null, _parent, _scopeId));
+								_push(ssrRenderComponent(_sfc_main$5, null, null, _parent, _scopeId));
 							} else return [__props.toaster !== null ? (openBlock(), createBlock(Toaster_default, mergeProps({ key: 0 }, toasterProps.value), {
 								default: withCtx(() => [renderSlot(_ctx.$slots, "default")]),
 								_: 3
-							}, 16)) : renderSlot(_ctx.$slots, "default", {}, void 0, void 0, 1), createVNode(_sfc_main$6)];
+							}, 16)) : renderSlot(_ctx.$slots, "default", {}, void 0, void 0, 1), createVNode(_sfc_main$5)];
 						}),
 						_: 3
 					}, _parent, _scopeId));
@@ -2496,7 +2496,7 @@ var _sfc_main$5 = /*@__PURE__*/ Object.assign({ name: "App" }, {
 						default: withCtx(() => [__props.toaster !== null ? (openBlock(), createBlock(Toaster_default, mergeProps({ key: 0 }, toasterProps.value), {
 							default: withCtx(() => [renderSlot(_ctx.$slots, "default")]),
 							_: 3
-						}, 16)) : renderSlot(_ctx.$slots, "default", {}, void 0, void 0, 1), createVNode(_sfc_main$6)]),
+						}, 16)) : renderSlot(_ctx.$slots, "default", {}, void 0, void 0, 1), createVNode(_sfc_main$5)]),
 						_: 3
 					}, 16)];
 				}),
@@ -2505,13 +2505,13 @@ var _sfc_main$5 = /*@__PURE__*/ Object.assign({ name: "App" }, {
 		};
 	}
 });
-var _sfc_setup$6 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+var _sfc_setup$6 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/App.vue");
 	return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-var App_default = Object.assign(_sfc_main$5, { __name: "UApp" });
+var App_default = Object.assign(_sfc_main$4, { __name: "UApp" });
 //#endregion
 //#region app/components/modal/call.vue?vue&type=script&setup=true&lang.ts
 var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
@@ -2528,7 +2528,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 			const _component_UModal = _sfc_main$a;
 			const _component_NuxtLink = NuxtLink;
 			const _component_UIcon = _sfc_main$5$1;
-			const _component_UProgress = _sfc_main$9;
+			const _component_UProgress = _sfc_main$8;
 			_push(ssrRenderComponent(_component_UModal, mergeProps({
 				class: "z-500",
 				open: unref(call).order.value.modalVisible,
@@ -2621,7 +2621,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Fheader_default = {
 };
 //#endregion
 //#region node_modules/@nuxt/ui/dist/runtime/components/Header.vue
-var _sfc_main$4 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
+var _sfc_main$3 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
 	__name: "UHeader",
 	__ssrInlineRender: true,
 	props: /*@__PURE__*/ mergeModels({
@@ -2910,58 +2910,66 @@ var _sfc_main$4 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
 		};
 	}
 });
-var _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+var _sfc_setup$4 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Header.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 //#endregion
+//#region app/components/menu.vue?vue&type=script&setup=true&lang.ts
+var menu_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
+	__name: "menu",
+	__ssrInlineRender: true,
+	props: { classes: String },
+	setup(__props) {
+		return (_ctx, _push, _parent, _attrs) => {
+			const _component_NuxtLink = NuxtLink;
+			const _component_UIcon = _sfc_main$5$1;
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: __props.classes }, _attrs))}>`);
+			_push(ssrRenderComponent(_component_NuxtLink, { to: "/contacts" }, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(ssrRenderComponent(_component_UIcon, {
+							name: "i-lucide-contact",
+							size: "18"
+						}, null, _parent, _scopeId));
+						_push(` Контакты `);
+					} else return [createVNode(_component_UIcon, {
+						name: "i-lucide-contact",
+						size: "18"
+					}), createTextVNode(" Контакты ")];
+				}),
+				_: 1
+			}, _parent));
+			_push(ssrRenderComponent(_component_NuxtLink, { to: "/vacancies" }, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(ssrRenderComponent(_component_UIcon, {
+							name: "i-lucide-clipboard-list",
+							size: "18"
+						}, null, _parent, _scopeId));
+						_push(` Вакансии `);
+					} else return [createVNode(_component_UIcon, {
+						name: "i-lucide-clipboard-list",
+						size: "18"
+					}), createTextVNode(" Вакансии ")];
+				}),
+				_: 1
+			}, _parent));
+			_push(`</div>`);
+		};
+	}
+});
+//#endregion
 //#region app/components/menu.vue
-var _sfc_main$3 = {};
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
-	const _component_NuxtLink = NuxtLink;
-	const _component_UIcon = _sfc_main$5$1;
-	_push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col gap-2 text-[#FFCC00] text-[24px] pl-10 italic" }, _attrs))}>`);
-	_push(ssrRenderComponent(_component_NuxtLink, { to: "/contacts" }, {
-		default: withCtx((_, _push, _parent, _scopeId) => {
-			if (_push) {
-				_push(ssrRenderComponent(_component_UIcon, {
-					name: "i-lucide-contact",
-					size: "18"
-				}, null, _parent, _scopeId));
-				_push(` Контакты `);
-			} else return [createVNode(_component_UIcon, {
-				name: "i-lucide-contact",
-				size: "18"
-			}), createTextVNode(" Контакты ")];
-		}),
-		_: 1
-	}, _parent));
-	_push(ssrRenderComponent(_component_NuxtLink, { to: "/vacancies" }, {
-		default: withCtx((_, _push, _parent, _scopeId) => {
-			if (_push) {
-				_push(ssrRenderComponent(_component_UIcon, {
-					name: "i-lucide-clipboard-list",
-					size: "18"
-				}, null, _parent, _scopeId));
-				_push(` Вакансии `);
-			} else return [createVNode(_component_UIcon, {
-				name: "i-lucide-clipboard-list",
-				size: "18"
-			}), createTextVNode(" Вакансии ")];
-		}),
-		_: 1
-	}, _parent));
-	_push(`</div>`);
-}
-var _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+var _sfc_setup$3 = menu_vue_vue_type_script_setup_true_lang_default.setup;
+menu_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/menu.vue");
 	return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-var menu_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3]]), { __name: "Menu" });
+var menu_default = Object.assign(menu_vue_vue_type_script_setup_true_lang_default, { __name: "Menu" });
 //#endregion
 //#region app/components/phones.vue
 var _sfc_main$2 = {};
@@ -3012,7 +3020,7 @@ var phones_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 var _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
 	const _component_UContainer = _sfc_main$e;
-	const _component_UHeader = _sfc_main$4;
+	const _component_UHeader = _sfc_main$3;
 	const _component_Logo = logo_default;
 	const _component_Menu = menu_default;
 	const _component_Phones = phones_default;
@@ -3026,12 +3034,14 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
 				left: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(ssrRenderComponent(_component_Logo, null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(_component_Menu, { class: "not-sm:hidden" }, null, _parent, _scopeId));
-					} else return [createVNode(_component_Logo), createVNode(_component_Menu, { class: "not-sm:hidden" })];
+						_push(ssrRenderComponent(_component_Menu, { classes: "not-sm:hidden flex flex-col gap-2 text-[#FFCC00] text-[24px] pl-10 italic" }, null, _parent, _scopeId));
+					} else return [createVNode(_component_Logo), createVNode(_component_Menu, { classes: "not-sm:hidden flex flex-col gap-2 text-[#FFCC00] text-[24px] pl-10 italic" })];
 				}),
 				body: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(ssrRenderComponent(_component_Phones, null, null, _parent, _scopeId));
-					else return [createVNode(_component_Phones)];
+					if (_push) {
+						_push(ssrRenderComponent(_component_Phones, null, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_component_Menu, { classes: "flex flex-col justify-center items-center mt-5 gap-2 text-[#FFCC00] text-[24px] italic" }, null, _parent, _scopeId));
+					} else return [createVNode(_component_Phones), createVNode(_component_Menu, { classes: "flex flex-col justify-center items-center mt-5 gap-2 text-[#FFCC00] text-[24px] italic" })];
 				}),
 				right: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) _push(ssrRenderComponent(_component_Phones, { class: "not-lg:hidden" }, null, _parent, _scopeId));
@@ -3043,8 +3053,8 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
 				back: "/",
 				class: "border-b-0 relative"
 			}, {
-				left: withCtx(() => [createVNode(_component_Logo), createVNode(_component_Menu, { class: "not-sm:hidden" })]),
-				body: withCtx(() => [createVNode(_component_Phones)]),
+				left: withCtx(() => [createVNode(_component_Logo), createVNode(_component_Menu, { classes: "not-sm:hidden flex flex-col gap-2 text-[#FFCC00] text-[24px] pl-10 italic" })]),
+				body: withCtx(() => [createVNode(_component_Phones), createVNode(_component_Menu, { classes: "flex flex-col justify-center items-center mt-5 gap-2 text-[#FFCC00] text-[24px] italic" })]),
 				right: withCtx(() => [createVNode(_component_Phones, { class: "not-lg:hidden" })]),
 				_: 1
 			})];
@@ -3063,7 +3073,7 @@ var header_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 //#endregion
 //#region app/layouts/default.vue
 var default_exports = /* @__PURE__ */ __exportAll({ default: () => default_default });
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-DdFROHpU.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-r2zMJ0Ca.mjs').then((c) => c.default || c));
 var _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 	const _component_UApp = App_default;

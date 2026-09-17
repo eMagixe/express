@@ -1,5 +1,12 @@
+<script setup lang="ts">
+const props = defineProps({
+	classes: String,
+})
+
+</script>
+
 <template>
-	<div class="flex flex-col gap-2 text-[#FFCC00] text-[24px] pl-10 italic">
+	<div :class="classes">
 		<NuxtLink to="/contacts">
 			<UIcon name="i-lucide-contact" size="18" />
 			Контакты
