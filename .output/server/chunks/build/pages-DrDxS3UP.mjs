@@ -2692,7 +2692,7 @@ questions_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var questions_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(questions_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-28f06034"]]), { __name: "SectionQuestions" });
 //#endregion
 //#region app/pages/index.vue?vue&type=script&setup=true&lang.ts
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-B6nxD38Y.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-DIoASfi5.mjs').then((c) => c.default || c));
 var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
 	__name: "index",
 	__ssrInlineRender: true,

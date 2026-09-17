@@ -16,7 +16,12 @@ const props = defineProps({
 		class="flex flex-col not-md:justify-center not-md:items-center gap-10 mb-10"
 		:class="`justify-${props.position} items-${props.position}`"
 	>
-		<h3 class="text-2xl">Связаться с диспетчером</h3>
+		<h3
+			class="text-2xl px-5 w-full"
+			:class="`text-${props.text}`"
+		>
+			Связаться с диспетчером
+		</h3>
 		<NuxtLink
 			class="button-gradient h-16 flex items-center justify-center gap-3"
 			icon="i-lucide-phone-call"

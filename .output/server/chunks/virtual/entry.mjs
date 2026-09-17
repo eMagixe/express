@@ -1026,17 +1026,17 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions-kumertau-ufa",
 		path: "/directions/kumertau-ufa",
-		component: () => import('../build/kumertau-ufa-B8Rtg7dU.mjs')
+		component: () => import('../build/kumertau-ufa-DUVA81sl.mjs')
 	},
 	{
 		name: "directions-meleuz-ufa",
 		path: "/directions/meleuz-ufa",
-		component: () => import('../build/meleuz-ufa-CyTxAn6u.mjs')
+		component: () => import('../build/meleuz-ufa-j-KdM6lv.mjs')
 	},
 	{
 		name: "directions-salavat-ufa",
 		path: "/directions/salavat-ufa",
-		component: () => import('../build/salavat-ufa-CYvD7N2E.mjs')
+		component: () => import('../build/salavat-ufa-CnJS0zx_.mjs')
 	},
 	{
 		name: "contacts",
@@ -1065,7 +1065,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-CvirzvAC.mjs')
+		component: () => import('../build/pages-DrDxS3UP.mjs')
 	}
 ];
 //#endregion

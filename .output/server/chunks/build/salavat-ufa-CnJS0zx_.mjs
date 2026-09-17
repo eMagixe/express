@@ -1,5 +1,5 @@
 import { u as useSeoMeta$1 } from '../virtual/entry.mjs';
-import { c as create_default } from './create-CKNvRClp.mjs';
+import { c as create_default } from './create-Lm4Rh34v.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { _ as _sfc_main$1 } from './Breadcrumb-D1-Ungc1.mjs';
