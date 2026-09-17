@@ -17,7 +17,7 @@ const props = defineProps({
 		:class="`justify-${props.position} items-${props.position}`"
 	>
 		<h3
-			class="text-2xl px-5 w-full"
+			class="text-2xl not-md:px-5 w-full not-md:text-center"
 			:class="`text-${props.text}`"
 		>
 			Связаться с диспетчером
