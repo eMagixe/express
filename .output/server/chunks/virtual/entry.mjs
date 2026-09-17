@@ -1055,7 +1055,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions",
 		path: "/directions",
-		component: () => import('../build/directions-DzLQi7XM.mjs')
+		component: () => import('../build/directions-CTjZ1oLA.mjs')
 	},
 	{
 		name: "vacancies",
@@ -1065,7 +1065,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-BOX2WmJ3.mjs')
+		component: () => import('../build/pages-CU6cPT-U.mjs')
 	}
 ];
 //#endregion

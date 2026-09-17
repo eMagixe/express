@@ -95,7 +95,7 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "horizontal",
-								class: "p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
 								title: direction.name,
 								description: "Пассажирские перевозки",
 								price: `от ${direction.price} руб.`,
@@ -136,7 +136,7 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 						createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
 							return openBlock(), createBlock(_component_UPricingPlan, {
 								orientation: "horizontal",
-								class: "p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
 								title: direction.name,
 								description: "Пассажирские перевозки",
 								price: `от ${direction.price} руб.`,

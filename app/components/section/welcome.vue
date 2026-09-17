@@ -56,7 +56,7 @@ await useFetch('/api/direction/all', {
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
 				/>
-				<UMarquee class="lg:hidden w-full p-5" :overlay="false">
+				<UMarquee class="lg:hidden w-full p-5" :overlay="false" pause-on-hover>
 					<UPricingPlan
 						v-for="direction in directions"
 						orientation="horizontal"
