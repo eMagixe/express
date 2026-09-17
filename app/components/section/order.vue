@@ -8,6 +8,9 @@ const config = useRuntimeConfig()
 			<OrderCreate />
 		</UContainer>
 	</div>
+	<template v-else>
+		<Call position="center" text="center"/>
+	</template>
 </template>
 
 <style scoped>

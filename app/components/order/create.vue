@@ -242,20 +242,7 @@ const config = useRuntimeConfig()
 		</div>
 	</template>
 	<template v-else>
-		<div class="flex flex-col justify-start items-start not-md:justify-center not-md:items-center gap-10 mb-10">
-			<h3 class="text-2xl">Связаться с диспетчером</h3>
-			<NuxtLink
-				class="button-gradient h-16 flex items-center justify-center gap-3"
-				icon="i-lucide-phone-call"
-				@click="useCall().openModalCall('+79177666833')"
-			>
-				<UIcon name="i-lucide-phone-call" size="18" />
-				Вызвать
-			</NuxtLink>
-			<p class="w-2/3 text-gray-300 text-sm not-md:text-center">
-				* Всю дополнительную информацию можно уточнить у диспетчера
-			</p>
-		</div>
+		<Call />
 	</template>
 </template>
 
