@@ -3,7 +3,7 @@ const year = 31536000
 
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	modules: ['@nuxt/ui', '@nuxt/scripts'],
 	css: ['~/assets/css/main.css'],
 	debug: false,

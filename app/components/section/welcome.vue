@@ -28,10 +28,11 @@ await useFetch('/api/direction/all', {
 				<UIcon name="i-lucide-phone-call" size="18" />
 				Вызвать
 			</NuxtLink>
-			<div class="cities-list w-full flex flex-row justify-center items-center gap-10">
+			<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10">
 				<UPricingPlan
 					v-for="direction in directions"
-					class="not-sm:not-last:hidden not-lg:first:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
+					orientation="vertical"
+					class="not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
 					:title="direction.name"
 					description="Пассажирские перевозки"
 					:price="`от ${direction.price} руб.`"
@@ -55,9 +56,36 @@ await useFetch('/api/direction/all', {
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
 				/>
+				<UMarquee class="lg:hidden w-full p-5" :overlay="false">
+					<UPricingPlan
+						v-for="direction in directions"
+						orientation="horizontal"
+						class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-1/2 min-h-60"
+						:title="direction.name"
+						:features="[
+						'Передача документации и посылок',
+						'Пассажирские перевозки',
+					]"
+						:price="`от ${direction.price} руб.`"
+						:ui="{
+						root: 'ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5',
+						title: 'text-primary title',
+						description: 'text-white',
+						price: 'text-primary',
+						featureTitle: 'text-white',
+						button: 'button-gradient'
+					}"
+						:button="{
+						label: 'Подробнее',
+						to: `/directions/${direction.slug}`,
+						trailingIcon: 'i-lucide-arrow-right'
+					}"
+					/>
+				</UMarquee>
+
 			</div>
 			<div
-				class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5"
+				class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5"
 			>
 				<p class="text-sm text-white">* требуется дополнительная оплата</p>
 				<NuxtLink class="text-primary underline flex flex-row justify-center items-center gap-2" to="/directions"><UIcon name="i-lucide-split"/> Основные направления</NuxtLink>

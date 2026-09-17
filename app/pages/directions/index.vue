@@ -52,7 +52,7 @@ await useLazyFetch('/api/direction/all', {
 			<UPricingPlan
 				v-for="direction in directions"
 				orientation="horizontal"
-				class="p-10 bg-gradient-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]"
+				class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]"
 				:title="direction.name"
 				description="Пассажирские перевозки"
 				:price="`от ${direction.price} руб.`"
