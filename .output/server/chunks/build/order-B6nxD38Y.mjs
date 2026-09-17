@@ -1,5 +1,5 @@
 import { _ as _plugin_vue_export_helper_default, i as useRuntimeConfig } from '../virtual/entry.mjs';
-import { c as create_default } from './create-ggqAdz0P.mjs';
+import { c as create_default, a as call_default } from './create-CKNvRClp.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { defineComponent, unref, mergeProps, withCtx, createVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
@@ -47,9 +47,9 @@ import './FormField-B9FP6L9G.mjs';
 import './title-pte2Tibk.mjs';
 import './Input-BoJ6XMWD.mjs';
 import './useLocale-Cji6XXXY.mjs';
-import './useToast-DbOihFhv.mjs';
-import './state-CjjX6iZP.mjs';
 import './useCall-DsxJco-E.mjs';
+import './state-CjjX6iZP.mjs';
+import './useToast-DbOihFhv.mjs';
 import 'maska/vue';
 import 'valibot';
 
@@ -62,8 +62,9 @@ var order_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 		return (_ctx, _push, _parent, _attrs) => {
 			const _component_UContainer = _sfc_main;
 			const _component_OrderCreate = create_default;
+			const _component_Call = call_default;
 			if (unref(config).public.orderVisible) {
-				_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]" }, _attrs))} data-v-0ab721c1>`);
+				_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-order w-full mx-auto h-auto py-5 border-b border-b-[#0A0B08]" }, _attrs))} data-v-d6673c60>`);
 				_push(ssrRenderComponent(_component_UContainer, { class: "flex animation-box flex-col justify-center items-center gap-5" }, {
 					default: withCtx((_, _push, _parent, _scopeId) => {
 						if (_push) _push(ssrRenderComponent(_component_OrderCreate, null, null, _parent, _scopeId));
@@ -72,7 +73,10 @@ var order_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 					_: 1
 				}, _parent));
 				_push(`</div>`);
-			} else _push(`<!---->`);
+			} else _push(ssrRenderComponent(_component_Call, mergeProps({
+				position: "center",
+				text: "center"
+			}, _attrs), null, _parent));
 		};
 	}
 });
@@ -84,6 +88,6 @@ order_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/order.vue");
 	return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-var order_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(order_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-0ab721c1"]]), { __name: "SectionOrder" });
+var order_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(order_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-d6673c60"]]), { __name: "SectionOrder" });
 
 export { order_default as default };

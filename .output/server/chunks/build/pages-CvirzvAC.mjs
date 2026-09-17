@@ -7,8 +7,8 @@ import { _ as _sfc_main$6 } from './Container-CLUPcRvH.mjs';
 import { t as title_default } from './title-pte2Tibk.mjs';
 import { _ as _sfc_main$b } from './Input-BoJ6XMWD.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
-import { u as useToast } from './useToast-DbOihFhv.mjs';
 import { u as useCall } from './useCall-DsxJco-E.mjs';
+import { u as useToast } from './useToast-DbOihFhv.mjs';
 import { _ as _sfc_main$8 } from './Drawer-DirMqvds.mjs';
 import { u as usePrefix } from './usePrefix-wIR1GMpN.mjs';
 import { _ as _sfc_main$7 } from './PricingPlan-g40oX2Te.mjs';
@@ -2692,7 +2692,7 @@ questions_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var questions_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(questions_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-28f06034"]]), { __name: "SectionQuestions" });
 //#endregion
 //#region app/pages/index.vue?vue&type=script&setup=true&lang.ts
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-C6ZIMN-w.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-B6nxD38Y.mjs').then((c) => c.default || c));
 var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
 	__name: "index",
 	__ssrInlineRender: true,
