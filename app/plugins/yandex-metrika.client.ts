@@ -16,7 +16,7 @@ export default defineNuxtPlugin(() => {
 		w.ym(counterId, 'init', {
 			clickmap: true,
 			trackLinks: true,
-			accurateTrackBounce: true,
+			accurateTrackBounce: 5000,
 			webvisor: true
 		})
 
