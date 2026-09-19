@@ -1801,7 +1801,7 @@ function resolveLayoutName(route, name) {
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Flayouts.mjs
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Flayouts_default = {
 	dashboard: defineAsyncComponent(() => import('../build/dashboard-BPBAWdTB.mjs').then((m) => m.default || m)),
-	default: defineAsyncComponent(() => import('../build/default-Pphp3GcT.mjs').then((n) => n.t).then((m) => m.default || m)),
+	default: defineAsyncComponent(() => import('../build/default-DBUk2v8i.mjs').then((n) => n.t).then((m) => m.default || m)),
 	empty: defineAsyncComponent(() => import('../build/empty-Dz1Q1BdG.mjs').then((m) => m.default || m))
 };
 //#endregion

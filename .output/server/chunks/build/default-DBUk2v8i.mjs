@@ -1,17 +1,17 @@
 import { r as __exportAll } from './components-DTuZdOqa.mjs';
-import { _ as _plugin_vue_export_helper_default, a as useAppConfig, c as useRoute$1, p as page_default } from '../virtual/entry.mjs';
+import { _ as _plugin_vue_export_helper_default, a as useAppConfig, c as useRoute$1, p as page_default, n as navigateTo } from '../virtual/entry.mjs';
 import { N as NuxtLink } from './nuxt-link-By4uHnr8.mjs';
-import { u as useComponentProps, a as useForwardProps, t as tv, o as omit, n as useForwardProps$1, b as _sfc_main$5$1, g as getSlotChildrenText, _ as _sfc_main$d, c as _sfc_main$1$1, P as Primitive, e as _sfc_main$3$1, m as createContext } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, a as useForwardProps, t as tv, o as omit, n as useForwardProps$1, _ as _sfc_main$b, g as getSlotChildrenText, c as _sfc_main$1$1, P as Primitive, b as _sfc_main$5$1, e as _sfc_main$3$1, m as createContext } from './Button-D5UK4P4A.mjs';
 import { a as usePortal, p as portalTargetInjectionKey, C as ConfigProvider_default, T as Teleport_default, f as focusFirst$1, P as Presence_default, g as getActiveElement, V as VisuallyHidden_default, b as getTabbableCandidates, i as isNullish } from './overlay-CnuoVSfw.mjs';
 import { u as useForwardExpose } from './useForwardExpose-lTVrimVg.mjs';
 import { u as useCollection } from './Collection-CMR0dnYu.mjs';
 import { _ as _sfc_main$a } from './Modal-BqSeB7U2.mjs';
-import { T as TooltipProvider_default, _ as _sfc_main$c } from './Slideover-CkTj-WSe.mjs';
+import { T as TooltipProvider_default, _ as _sfc_main$d } from './Slideover-CkTj-WSe.mjs';
 import { _ as _sfc_main$e } from './Container-CLUPcRvH.mjs';
 import { l as localeContextInjectionKey, u as useLocale } from './useLocale-Cji6XXXY.mjs';
 import { u as useCall } from './useCall-DsxJco-E.mjs';
 import { u as useToast, t as toastMaxInjectionKey } from './useToast-DbOihFhv.mjs';
-import { _ as _sfc_main$b } from './Drawer-DirMqvds.mjs';
+import { _ as _sfc_main$c } from './Drawer-DirMqvds.mjs';
 import { useSSRContext, defineAsyncComponent, mergeProps, withCtx, createVNode, provide, toRef, computed, ref, unref, renderSlot, openBlock, createBlock, Fragment, renderList, useId, defineComponent, createTextVNode, toDisplayString, useSlots, useModel, watch, createCommentVNode, mergeModels, toRefs, useTemplateRef, resolveDynamicComponent, withModifiers, normalizeProps, guardReactiveProps, watchEffect, normalizeStyle, nextTick, createElementBlock, Teleport, shallowReactive, onScopeDispose, reactive, markRaw } from 'vue';
 import { p as publicAssetsURL } from '../routes/renderer.mjs';
 import { p as defu } from '../nitro/nitro.mjs';
@@ -1780,11 +1780,11 @@ var _sfc_main$7 = {
 										onClick: () => {}
 									}, {
 										default: withCtx((_, _push, _parent, _scopeId) => {
-											if (_push) _push(ssrRenderComponent(_sfc_main$d, mergeProps({
+											if (_push) _push(ssrRenderComponent(_sfc_main$b, mergeProps({
 												size: "xs",
 												color: unref(props).color
 											}, { ref_for: true }, action), null, _parent, _scopeId));
-											else return [createVNode(_sfc_main$d, mergeProps({
+											else return [createVNode(_sfc_main$b, mergeProps({
 												size: "xs",
 												color: unref(props).color
 											}, { ref_for: true }, action), null, 16, ["color"])];
@@ -1812,11 +1812,11 @@ var _sfc_main$7 = {
 										onClick: () => {}
 									}, {
 										default: withCtx((_, _push, _parent, _scopeId) => {
-											if (_push) _push(ssrRenderComponent(_sfc_main$d, mergeProps({
+											if (_push) _push(ssrRenderComponent(_sfc_main$b, mergeProps({
 												size: "xs",
 												color: unref(props).color
 											}, { ref_for: true }, action), null, _parent, _scopeId));
-											else return [createVNode(_sfc_main$d, mergeProps({
+											else return [createVNode(_sfc_main$b, mergeProps({
 												size: "xs",
 												color: unref(props).color
 											}, { ref_for: true }, action), null, 16, ["color"])];
@@ -1830,7 +1830,7 @@ var _sfc_main$7 = {
 							if (unref(props).close || !!slots.close) _push(ssrRenderComponent(unref(ToastClose_default), { "as-child": "" }, {
 								default: withCtx((_, _push, _parent, _scopeId) => {
 									if (_push) ssrRenderSlot(_ctx.$slots, "close", { ui: ui.value }, () => {
-										if (unref(props).close) _push(ssrRenderComponent(_sfc_main$d, mergeProps({
+										if (unref(props).close) _push(ssrRenderComponent(_sfc_main$b, mergeProps({
 											icon: unref(props).closeIcon || unref(appConfig).ui.icons.close,
 											color: "neutral",
 											variant: "link",
@@ -1842,7 +1842,7 @@ var _sfc_main$7 = {
 										}), null, _parent, _scopeId));
 										else _push(`<!---->`);
 									}, _push, _parent, _scopeId);
-									else return [renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [unref(props).close ? (openBlock(), createBlock(_sfc_main$d, mergeProps({
+									else return [renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [unref(props).close ? (openBlock(), createBlock(_sfc_main$b, mergeProps({
 										key: 0,
 										icon: unref(props).closeIcon || unref(appConfig).ui.icons.close,
 										color: "neutral",
@@ -1917,7 +1917,7 @@ var _sfc_main$7 = {
 									"as-child": "",
 									onClick: withModifiers(() => {}, ["stop"])
 								}, {
-									default: withCtx(() => [createVNode(_sfc_main$d, mergeProps({
+									default: withCtx(() => [createVNode(_sfc_main$b, mergeProps({
 										size: "xs",
 										color: unref(props).color
 									}, { ref_for: true }, action), null, 16, ["color"])]),
@@ -1939,7 +1939,7 @@ var _sfc_main$7 = {
 								"as-child": "",
 								onClick: withModifiers(() => {}, ["stop"])
 							}, {
-								default: withCtx(() => [createVNode(_sfc_main$d, mergeProps({
+								default: withCtx(() => [createVNode(_sfc_main$b, mergeProps({
 									size: "xs",
 									color: unref(props).color
 								}, { ref_for: true }, action), null, 16, ["color"])]),
@@ -1949,7 +1949,7 @@ var _sfc_main$7 = {
 							key: 1,
 							"as-child": ""
 						}, {
-							default: withCtx(() => [renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [unref(props).close ? (openBlock(), createBlock(_sfc_main$d, mergeProps({
+							default: withCtx(() => [renderSlot(_ctx.$slots, "close", { ui: ui.value }, () => [unref(props).close ? (openBlock(), createBlock(_sfc_main$b, mergeProps({
 								key: 0,
 								icon: unref(props).closeIcon || unref(appConfig).ui.icons.close,
 								color: "neutral",
@@ -2520,14 +2520,18 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 	setup(__props) {
 		const call = useCall();
 		const route = useRoute$1();
+		const isDisabled = ref(false);
 		function sendCall() {
+			isDisabled.value = true;
 			call.order.value.route = route.path;
-			call.sendData();
+			navigateTo(`tel:${call.order.value.phone}`, { external: true });
+			call.sendData().finally(() => {
+				isDisabled.value = false;
+			});
 		}
 		return (_ctx, _push, _parent, _attrs) => {
 			const _component_UModal = _sfc_main$a;
-			const _component_NuxtLink = NuxtLink;
-			const _component_UIcon = _sfc_main$5$1;
+			const _component_UButton = _sfc_main$b;
 			const _component_UProgress = _sfc_main$8;
 			_push(ssrRenderComponent(_component_UModal, mergeProps({
 				class: "z-500",
@@ -2545,23 +2549,15 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 				body: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(`<h2 class="text-primary text-2xl text-center w-full"${_scopeId}>Ваш номер заявки: #${ssrInterpolate(unref(call).order.value.uid)}</h2><p class="text-sm text-white text-center w-full"${_scopeId}>Назовите его диспетчеру при необходимости...</p>`);
-						if (unref(call).order.value.callEnabled) _push(ssrRenderComponent(_component_NuxtLink, {
+						if (unref(call).order.value.callEnabled) _push(ssrRenderComponent(_component_UButton, {
+							disabled: unref(isDisabled),
 							class: "button-gradient h-16 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
-							to: `tel:${unref(call).order.value.phone}`,
 							onClick: ($event) => sendCall()
 						}, {
 							default: withCtx((_, _push, _parent, _scopeId) => {
-								if (_push) {
-									_push(ssrRenderComponent(_component_UIcon, {
-										name: "i-lucide-phone-call",
-										size: "18"
-									}, null, _parent, _scopeId));
-									_push(` Позвонить `);
-								} else return [createVNode(_component_UIcon, {
-									name: "i-lucide-phone-call",
-									size: "18"
-								}), createTextVNode(" Позвонить ")];
+								if (_push) _push(` Позвонить `);
+								else return [createTextVNode(" Позвонить ")];
 							}),
 							_: 1
 						}, _parent, _scopeId));
@@ -2569,19 +2565,16 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 					} else return [
 						createVNode("h2", { class: "text-primary text-2xl text-center w-full" }, "Ваш номер заявки: #" + toDisplayString(unref(call).order.value.uid), 1),
 						createVNode("p", { class: "text-sm text-white text-center w-full" }, "Назовите его диспетчеру при необходимости..."),
-						unref(call).order.value.callEnabled ? (openBlock(), createBlock(_component_NuxtLink, {
+						unref(call).order.value.callEnabled ? (openBlock(), createBlock(_component_UButton, {
 							key: 0,
+							disabled: unref(isDisabled),
 							class: "button-gradient h-16 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
-							to: `tel:${unref(call).order.value.phone}`,
 							onClick: ($event) => sendCall()
 						}, {
-							default: withCtx(() => [createVNode(_component_UIcon, {
-								name: "i-lucide-phone-call",
-								size: "18"
-							}), createTextVNode(" Позвонить ")]),
+							default: withCtx(() => [createTextVNode(" Позвонить ")]),
 							_: 1
-						}, 8, ["to", "onClick"])) : (openBlock(), createBlock(_component_UProgress, { key: 1 }))
+						}, 8, ["disabled", "onClick"])) : (openBlock(), createBlock(_component_UProgress, { key: 1 }))
 					];
 				}),
 				_: 1
@@ -2706,9 +2699,9 @@ var _sfc_main$3 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
 			...appConfig.ui?.header || {}
 		})());
 		const Menu = computed(() => ({
-			slideover: _sfc_main$c,
+			slideover: _sfc_main$d,
 			modal: _sfc_main$a,
-			drawer: _sfc_main$b
+			drawer: _sfc_main$c
 		})[props.mode]);
 		const menuProps = toRef(() => defu(props.menu, {}, props.mode === "modal" ? {
 			fullscreen: true,
@@ -2726,7 +2719,7 @@ var _sfc_main$3 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
 						toggle: toggleOpen,
 						ui: ui.value
 					}, () => {
-						if (unref(props).toggle) _push(ssrRenderComponent(_sfc_main$d, mergeProps({
+						if (unref(props).toggle) _push(ssrRenderComponent(_sfc_main$b, mergeProps({
 							color: "neutral",
 							variant: "ghost",
 							"aria-label": open.value ? unref(t)("header.close") : unref(t)("header.open"),
@@ -2745,7 +2738,7 @@ var _sfc_main$3 = /*@__PURE__*/ Object.assign({ inheritAttrs: false }, {
 						open: open.value,
 						toggle: toggleOpen,
 						ui: ui.value
-					}, () => [unref(props).toggle ? (openBlock(), createBlock(_sfc_main$d, mergeProps({
+					}, () => [unref(props).toggle ? (openBlock(), createBlock(_sfc_main$b, mergeProps({
 						key: 0,
 						color: "neutral",
 						variant: "ghost",
@@ -3073,7 +3066,7 @@ var header_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 //#endregion
 //#region app/layouts/default.vue
 var default_exports = /* @__PURE__ */ __exportAll({ default: () => default_default });
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-r2zMJ0Ca.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-B94MYRpr.mjs').then((c) => c.default || c));
 var _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 	const _component_UApp = App_default;

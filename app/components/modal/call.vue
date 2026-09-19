@@ -3,15 +3,22 @@ import { useCall } from '~/composables/useCall'
 
 const call = useCall()
 const route = useRoute()
+const isDisabled = ref(false)
 
 function sendCall() {
+	isDisabled.value = true
 	call.order.value.route = route.path
-	call.sendData()
+	navigateTo(`tel:${call.order.value.phone}`, {
+		external: true
+	})
+	call.sendData().finally(() => {
+		isDisabled.value = false
+	})
 }
 </script>
 
 <template>
-	<UModal
+<UModal
 		class="z-500"
 		v-model:open="call.order.value.modalVisible"
 		close-icon="i-lucide-circle-x"
@@ -26,16 +33,15 @@ function sendCall() {
 		<template #body>
 			<h2 class="text-primary text-2xl text-center w-full">Ваш номер заявки: #{{ call.order.value.uid }}</h2>
 			<p class="text-sm text-white text-center w-full">Назовите его диспетчеру при необходимости...</p>
-			<NuxtLink
+			<UButton
 				v-if="call.order.value.callEnabled"
+				:disabled="isDisabled"
 				class="button-gradient h-16 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
-				:to="`tel:${call.order.value.phone}`"
 				@click="sendCall()"
 			>
-				<UIcon name="i-lucide-phone-call" size="18" />
 				Позвонить
-			</NuxtLink>
+			</UButton>
 			<UProgress v-else />
 		</template>
 	</UModal>
