@@ -259,7 +259,7 @@ const renderSSRHeadOptions = {"omitLineBreaks":true};
 
 const entryIds = [];
 
-const entryFileName = "DSshqLJT.js";
+const entryFileName = "BF0FDnju.js";
 
 //#region src/runtime/handlers/renderer.ts
 globalThis.__buildAssetsURL = buildAssetsURL;

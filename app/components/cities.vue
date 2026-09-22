@@ -14,7 +14,7 @@ onMounted(() => {
 		});
 	}
 
-	setInterval(play, 5000)
+	setInterval(play, 3000)
 })
 
 </script>
