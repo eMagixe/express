@@ -1,11 +1,13 @@
-import { c as useRoute$1, $ as $fetch$2 } from '../virtual/entry.mjs';
+import { c as useRoute$1, $ as $fetch$2, n as navigateTo } from '../virtual/entry.mjs';
 import { u as useState } from './state-CjjX6iZP.mjs';
 
 //#region app/composables/useCall.ts
 var useCall = () => {
 	const order = useState("orderUid", () => {
+		const uuid = crypto.randomUUID();
+		useRoute$1();
 		return {
-			uid: crypto.randomUUID().split("-").shift(),
+			uid: uuid.split("-").shift(),
 			phone: "",
 			modalVisible: false,
 			callEnabled: true,
@@ -13,9 +15,11 @@ var useCall = () => {
 			route: useRoute$1().path
 		};
 	});
-	function openModalCall(phone) {
-		order.value.modalVisible = true;
+	async function toCall(phone) {
 		order.value.phone = phone;
+		order.value.route = useRoute$1().path;
+		await sendData();
+		await navigateTo(`tel:${phone}`, { external: true });
 	}
 	async function sendData() {
 		if (order.value.phone && order.value.uid && order.value.callEnabled) {
@@ -37,7 +41,7 @@ var useCall = () => {
 	}
 	return {
 		order,
-		openModalCall,
+		toCall,
 		sendData
 	};
 };

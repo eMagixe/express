@@ -10,7 +10,7 @@ import { _ as _sfc_main$1$1, a as _sfc_main$5, L as Label_default } from './Form
 import { t as title_default } from './title-pte2Tibk.mjs';
 import { _ as _sfc_main$6 } from './Input-BoJ6XMWD.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
-import { u as useCall } from './useCall-DsxJco-E.mjs';
+import { u as useCall } from './useCall-YpyXK-2N.mjs';
 import { u as useToast } from './useToast-DbOihFhv.mjs';
 import { defineComponent, ref, computed, reactive, shallowRef, watch, unref, withCtx, createVNode, mergeProps, withDirectives, openBlock, createBlock, isRef, createTextVNode, useSlots, useModel, useAttrs, toRef, useTemplateRef, onScopeDispose, nextTick, renderSlot, toDisplayString, createCommentVNode, withModifiers, Fragment, renderList, mergeModels, getCurrentInstance, useId, resolveDynamicComponent, toRaw, toRefs, withKeys, toHandlers, createElementBlock, useSSRContext } from 'vue';
 import { p as defu, A as isEqual } from '../nitro/nitro.mjs';
@@ -6598,11 +6598,11 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 		return (_ctx, _push, _parent, _attrs) => {
 			const _component_NuxtLink = NuxtLink;
 			const _component_UIcon = _sfc_main$5$1;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: ["flex flex-col not-md:justify-center not-md:items-center gap-10 mb-10", `justify-${props.position} items-${props.position}`] }, _attrs))} data-v-e02498d9><h3 class="${ssrRenderClass([`text-${props.text}`, "text-2xl not-md:px-5 w-full not-md:text-center"])}" data-v-e02498d9> Связаться с диспетчером </h3>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: ["flex flex-col not-md:justify-center not-md:items-center gap-10 mb-10", `justify-${props.position} items-${props.position}`] }, _attrs))} data-v-e3db985a><h3 class="${ssrRenderClass([`text-${props.text}`, "text-2xl not-md:px-5 w-full not-md:text-center"])}" data-v-e3db985a> Связаться с диспетчером </h3>`);
 			_push(ssrRenderComponent(_component_NuxtLink, {
 				class: "button-gradient h-16 flex items-center justify-center gap-3",
 				icon: "i-lucide-phone-call",
-				onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+				onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
@@ -6618,7 +6618,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 				}),
 				_: 1
 			}, _parent));
-			_push(`<p class="${ssrRenderClass([`text-${props.text}`, "w-2/3 text-gray-300 text-sm not-md:text-center"])}" data-v-e02498d9> * Всю дополнительную информацию можно уточнить у диспетчера </p></div>`);
+			_push(`<p class="${ssrRenderClass([`text-${props.text}`, "w-2/3 text-gray-300 text-sm not-md:text-center"])}" data-v-e3db985a> * Всю дополнительную информацию можно уточнить у диспетчера </p></div>`);
 		};
 	}
 });
@@ -6630,7 +6630,7 @@ call_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/call.vue");
 	return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-var call_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(call_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-e02498d9"]]), { __name: "Call" });
+var call_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(call_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-e3db985a"]]), { __name: "Call" });
 //#endregion
 //#region app/components/order/create.vue?vue&type=script&setup=true&lang.ts
 var ERROR_EMPTY = "Обязательное поле для заполнения";

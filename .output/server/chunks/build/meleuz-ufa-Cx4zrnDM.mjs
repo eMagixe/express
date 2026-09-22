@@ -1,5 +1,5 @@
 import { u as useSeoMeta$1 } from '../virtual/entry.mjs';
-import { c as create_default } from './create-CdS3M94j.mjs';
+import { c as create_default } from './create-77Ym_qaV.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { _ as _sfc_main$1 } from './Breadcrumb-D1-Ungc1.mjs';
@@ -50,7 +50,7 @@ import './FormField-B9FP6L9G.mjs';
 import './title-pte2Tibk.mjs';
 import './Input-BoJ6XMWD.mjs';
 import './useLocale-Cji6XXXY.mjs';
-import './useCall-DsxJco-E.mjs';
+import './useCall-YpyXK-2N.mjs';
 import './state-CjjX6iZP.mjs';
 import './useToast-DbOihFhv.mjs';
 import 'maska/vue';

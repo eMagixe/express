@@ -7,7 +7,7 @@ import { _ as _sfc_main$5 } from './Container-CLUPcRvH.mjs';
 import { t as title_default } from './title-pte2Tibk.mjs';
 import { _ as _sfc_main$a } from './Input-BoJ6XMWD.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
-import { u as useCall } from './useCall-DsxJco-E.mjs';
+import { u as useCall } from './useCall-YpyXK-2N.mjs';
 import { u as useToast } from './useToast-DbOihFhv.mjs';
 import { _ as _sfc_main$8 } from './Drawer-DirMqvds.mjs';
 import { u as usePrefix } from './usePrefix-wIR1GMpN.mjs';
@@ -559,15 +559,15 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 			const _component_UIcon = _sfc_main$5$1;
 			const _component_UPricingPlan = _sfc_main$6;
 			const _component_UCarousel = _sfc_main$4;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-a80996d6>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-d84f553e>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-a80996d6${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
+						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-d84f553e${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
-							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
 						}, {
 							default: withCtx((_, _push, _parent, _scopeId) => {
 								if (_push) {
@@ -583,7 +583,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-a80996d6${_scopeId}><!--[-->`);
+						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-d84f553e${_scopeId}><!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "vertical",
@@ -668,7 +668,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-a80996d6${_scopeId}><p class="text-sm text-white" data-v-a80996d6${_scopeId}>* требуется дополнительная оплата</p>`);
+						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-d84f553e${_scopeId}><p class="text-sm text-white" data-v-d84f553e${_scopeId}>* требуется дополнительная оплата</p>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "text-primary underline flex flex-row justify-center items-center gap-2",
 							to: "/directions"
@@ -681,13 +681,13 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-a80996d6${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-d84f553e${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
 					} else return [
 						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
 						createVNode(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
-							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
 						}, {
 							default: withCtx(() => [createVNode(_component_UIcon, {
 								name: "i-lucide-phone-call",
@@ -783,7 +783,7 @@ welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
 	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
-var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-a80996d6"]]), { __name: "SectionWelcome" });
+var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-d84f553e"]]), { __name: "SectionWelcome" });
 //#endregion
 //#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
 var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
@@ -2555,7 +2555,7 @@ questions_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var questions_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(questions_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-28f06034"]]), { __name: "SectionQuestions" });
 //#endregion
 //#region app/pages/index.vue?vue&type=script&setup=true&lang.ts
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-BEcJBhUs.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./order-DxdH1NEm.mjs').then((c) => c.default || c));
 var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
 	__name: "index",
 	__ssrInlineRender: true,

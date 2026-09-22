@@ -31,7 +31,7 @@ function sendCall() {
 		}"
 	>
 		<template #body>
-			<h2 class="text-primary text-2xl text-center w-full">Ваш номер заявки: #{{ call.order.value.uid }}</h2>
+			<h2 class="text-primary text-2xl text-center w-full">ID: #{{ call.order.value.uid }}</h2>
 			<p class="text-sm text-white text-center w-full">Назовите его диспетчеру при необходимости...</p>
 			<UButton
 				v-if="call.order.value.callEnabled"

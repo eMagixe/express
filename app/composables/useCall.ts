@@ -3,6 +3,8 @@ import { useState } from '#imports'
 export const useCall = () => {
 	const order = useState('orderUid', () => {
 		const uuid = crypto.randomUUID()
+		const route = useRoute()
+
 		return {
 			uid: uuid.split('-').shift(),
 			phone: '',
@@ -13,9 +15,13 @@ export const useCall = () => {
 		}
 	})
 
-	function openModalCall(phone: string) {
-		order.value.modalVisible = true
+	async function toCall(phone: string) {
 		order.value.phone = phone
+		order.value.route = useRoute().path
+		await sendData()
+		await navigateTo(`tel:${phone}`, {
+			external: true
+		})
 	}
 
 	async function sendData() {
@@ -41,7 +47,7 @@ export const useCall = () => {
 
 	return {
 		order,
-		openModalCall,
+		toCall,
 		sendData
 	}
 }

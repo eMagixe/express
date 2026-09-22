@@ -9,7 +9,7 @@ import { _ as _sfc_main$a } from './Modal-BqSeB7U2.mjs';
 import { T as TooltipProvider_default, _ as _sfc_main$d } from './Slideover-CkTj-WSe.mjs';
 import { _ as _sfc_main$e } from './Container-CLUPcRvH.mjs';
 import { l as localeContextInjectionKey, u as useLocale } from './useLocale-Cji6XXXY.mjs';
-import { u as useCall } from './useCall-DsxJco-E.mjs';
+import { u as useCall } from './useCall-YpyXK-2N.mjs';
 import { u as useToast, t as toastMaxInjectionKey } from './useToast-DbOihFhv.mjs';
 import { _ as _sfc_main$c } from './Drawer-DirMqvds.mjs';
 import { useSSRContext, defineAsyncComponent, mergeProps, withCtx, createVNode, provide, toRef, computed, ref, unref, renderSlot, openBlock, createBlock, Fragment, renderList, useId, defineComponent, createTextVNode, toDisplayString, useSlots, useModel, watch, createCommentVNode, mergeModels, toRefs, useTemplateRef, resolveDynamicComponent, withModifiers, normalizeProps, guardReactiveProps, watchEffect, normalizeStyle, nextTick, createElementBlock, Teleport, shallowReactive, onScopeDispose, reactive, markRaw } from 'vue';
@@ -2548,7 +2548,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 			}, _attrs), {
 				body: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<h2 class="text-primary text-2xl text-center w-full"${_scopeId}>Ваш номер заявки: #${ssrInterpolate(unref(call).order.value.uid)}</h2><p class="text-sm text-white text-center w-full"${_scopeId}>Назовите его диспетчеру при необходимости...</p>`);
+						_push(`<h2 class="text-primary text-2xl text-center w-full"${_scopeId}>ID: #${ssrInterpolate(unref(call).order.value.uid)}</h2><p class="text-sm text-white text-center w-full"${_scopeId}>Назовите его диспетчеру при необходимости...</p>`);
 						if (unref(call).order.value.callEnabled) _push(ssrRenderComponent(_component_UButton, {
 							disabled: unref(isDisabled),
 							class: "button-gradient h-16 flex items-center justify-center gap-3",
@@ -2563,7 +2563,7 @@ var call_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompo
 						}, _parent, _scopeId));
 						else _push(ssrRenderComponent(_component_UProgress, null, null, _parent, _scopeId));
 					} else return [
-						createVNode("h2", { class: "text-primary text-2xl text-center w-full" }, "Ваш номер заявки: #" + toDisplayString(unref(call).order.value.uid), 1),
+						createVNode("h2", { class: "text-primary text-2xl text-center w-full" }, "ID: #" + toDisplayString(unref(call).order.value.uid), 1),
 						createVNode("p", { class: "text-sm text-white text-center w-full" }, "Назовите его диспетчеру при необходимости..."),
 						unref(call).order.value.callEnabled ? (openBlock(), createBlock(_component_UButton, {
 							key: 0,
@@ -2983,7 +2983,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
 	_push(ssrRenderComponent(_component_NuxtLink, {
 		class: "button-gradient h-16 flex items-center justify-center gap-3",
 		icon: "i-lucide-phone-call",
-		onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+		onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
 	}, {
 		default: withCtx((_, _push, _parent, _scopeId) => {
 			if (_push) {
@@ -3066,7 +3066,7 @@ var header_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 //#endregion
 //#region app/layouts/default.vue
 var default_exports = /* @__PURE__ */ __exportAll({ default: () => default_default });
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-B94MYRpr.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-mPVIO-WC.mjs').then((c) => c.default || c));
 var _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 	const _component_UApp = App_default;
