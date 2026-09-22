@@ -559,11 +559,11 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 			const _component_UIcon = _sfc_main$5$1;
 			const _component_UPricingPlan = _sfc_main$6;
 			const _component_UCarousel = _sfc_main$4;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-d84f553e>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-962ffebf>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-d84f553e${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
+						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-962ffebf${_scopeId}> Такси межгород <br class="sm:hidden" data-v-962ffebf${_scopeId}> Кумертау — Уфа </h1>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
@@ -583,7 +583,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-d84f553e${_scopeId}><!--[-->`);
+						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-962ffebf${_scopeId}><!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "vertical",
@@ -625,7 +625,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 									orientation: "horizontal",
 									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 									title: item.name,
-									features: ["Передача документации и посылок", "Пассажирские перевозки"],
+									features: ["Пассажирские перевозки", "Передача документации и посылок"],
 									price: `от ${item.price} руб.`,
 									ui: {
 										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -645,7 +645,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 									orientation: "horizontal",
 									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 									title: item.name,
-									features: ["Передача документации и посылок", "Пассажирские перевозки"],
+									features: ["Пассажирские перевозки", "Передача документации и посылок"],
 									price: `от ${item.price} руб.`,
 									ui: {
 										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -668,7 +668,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-d84f553e${_scopeId}><p class="text-sm text-white" data-v-d84f553e${_scopeId}>* требуется дополнительная оплата</p>`);
+						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-962ffebf${_scopeId}><p class="text-sm text-white" data-v-962ffebf${_scopeId}>* требуется дополнительная оплата</p>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "text-primary underline flex flex-row justify-center items-center gap-2",
 							to: "/directions"
@@ -681,9 +681,13 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-d84f553e${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-962ffebf${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
 					} else return [
-						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
+						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, [
+							createTextVNode(" Такси межгород "),
+							createVNode("br", { class: "sm:hidden" }),
+							createTextVNode(" Кумертау — Уфа ")
+						]),
 						createVNode(_component_NuxtLink, {
 							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
 							icon: "i-lucide-phone-call",
@@ -737,7 +741,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 								orientation: "horizontal",
 								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 								title: item.name,
-								features: ["Передача документации и посылок", "Пассажирские перевозки"],
+								features: ["Пассажирские перевозки", "Передача документации и посылок"],
 								price: `от ${item.price} руб.`,
 								ui: {
 									root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -783,7 +787,7 @@ welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
 	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
-var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-d84f553e"]]), { __name: "SectionWelcome" });
+var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-962ffebf"]]), { __name: "SectionWelcome" });
 //#endregion
 //#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
 var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
@@ -841,23 +845,23 @@ var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defin
 			const _component_UContainer = _sfc_main$5;
 			const _component_SectionTitle = title_default;
 			const _component_UIcon = _sfc_main$5$1;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-b09f82c8>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-b2fb7166>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent, _scopeId));
-						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-b09f82c8${_scopeId}><!--[-->`);
+						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-b2fb7166${_scopeId}><!--[-->`);
 						ssrRenderList(advantages, (item, index) => {
-							_push(`<!--[--><div class="item animation-box flex flex-row justify-center items-center gap-5 w-full" data-v-b09f82c8${_scopeId}>`);
+							_push(`<!--[--><div class="item animation-box flex flex-row justify-start items-center gap-5 w-full" data-v-b2fb7166${_scopeId}>`);
 							_push(ssrRenderComponent(_component_UIcon, {
 								class: "text-white min-w-9 min-h-9 text-[4cqw]",
 								name: item.icon
 							}, null, _parent, _scopeId));
-							_push(`<div data-v-b09f82c8${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-b09f82c8${_scopeId}><!--[-->`);
+							_push(`<div data-v-b2fb7166${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-b2fb7166${_scopeId}><!--[-->`);
 							ssrRenderList(item.message, (i) => {
-								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-b09f82c8${_scopeId}>${ssrInterpolate(i.text)}</span>`);
+								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-b2fb7166${_scopeId}>${ssrInterpolate(i.text)}</span>`);
 							});
-							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-b09f82c8${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
+							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-b2fb7166${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
 							if (!item.lost) _push(ssrRenderComponent(_component_UIcon, {
 								class: "text-white text-[20px]",
 								name: "i-lucide-arrow-down"
@@ -867,7 +871,7 @@ var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defin
 						});
 						_push(`<!--]--></div>`);
 					} else return [createVNode(_component_SectionTitle, { title: "Наши преимущества" }), createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [(openBlock(true), createBlock(Fragment, null, renderList(advantages, (item, index) => {
-						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row justify-center items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
+						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row justify-start items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
 							class: "text-white min-w-9 min-h-9 text-[4cqw]",
 							name: item.icon
 						}, null, 8, ["name"]), createVNode("div", null, [createVNode("div", { class: "flex flex-row justify-start items-center gap-2 text-white" }, [(openBlock(true), createBlock(Fragment, null, renderList(item.message, (i) => {
@@ -893,7 +897,7 @@ advantages_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
 	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-b09f82c8"]]), { __name: "SectionAdvantages" });
+var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-b2fb7166"]]), { __name: "SectionAdvantages" });
 //#endregion
 //#region app/utils/index.ts
 var utils = { isArray: (data) => {

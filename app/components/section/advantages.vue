@@ -78,7 +78,7 @@ const advantages = <Advantage[]>[
 			<SectionTitle title="Наши преимущества" />
 			<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5">
 				<template v-for="(item, index) in advantages as Advantage[]" :key="index">
-					<div class="item animation-box flex flex-row justify-center items-center gap-5 w-full">
+					<div class="item animation-box flex flex-row justify-start items-center gap-5 w-full">
 						<UIcon class="text-white min-w-9 min-h-9 text-[4cqw]" :name="item.icon" />
 						<div>
 							<div class="flex flex-row justify-start items-center gap-2 text-white">

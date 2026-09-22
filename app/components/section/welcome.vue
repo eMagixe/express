@@ -18,7 +18,7 @@ await useFetch('/api/direction/all', {
 			<h1
 				class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full"
 			>
-				Такси межгород Кумертау — Уфа
+				Такси межгород <br class="sm:hidden"> Кумертау — Уфа
 			</h1>
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
@@ -68,9 +68,9 @@ await useFetch('/api/direction/all', {
 						class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60"
 						:title="item.name"
 						:features="[
-						'Передача документации и посылок',
-						'Пассажирские перевозки',
-					]"
+							'Пассажирские перевозки',
+							'Передача документации и посылок',
+						]"
 						:price="`от ${item.price} руб.`"
 						:ui="{
 						root: 'ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5',

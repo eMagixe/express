@@ -1065,7 +1065,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-bNvD_Agv.mjs')
+		component: () => import('../build/pages-O1ZQf355.mjs')
 	}
 ];
 //#endregion
