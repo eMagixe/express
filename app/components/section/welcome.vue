@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Direction } from '#shared/types/global'
+import Cities from '~/components/cities.vue'
 
 const directions = ref<Direction[]>([])
 
@@ -18,8 +19,9 @@ await useFetch('/api/direction/all', {
 			<h1
 				class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full"
 			>
-				Такси межгород <br class="sm:hidden"> Кумертау — Уфа
+				Такси межгород <br class="sm:hidden">Уфа - <Cities/> - Уфа
 			</h1>
+
 			<NuxtLink
 				class="lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3"
 				icon="i-lucide-phone-call"
@@ -34,7 +36,7 @@ await useFetch('/api/direction/all', {
 					orientation="vertical"
 					class="not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
 					:title="direction.name"
-					description="Пассажирские перевозки"
+					description="маршрут в обоих направлениях"
 					:price="`от ${direction.price} руб.`"
 					:features="[
 						'Передача документации и посылок',
@@ -143,5 +145,16 @@ await useFetch('/api/direction/all', {
 	span {
 		color: white;
 	}
+}
+
+.text-changer::before {
+	content: "Кумертау";
+	animation: swap-text 10s infinite;
+}
+
+@keyframes swap-text {
+	0%, 33% { content: "Кумертау"; }
+	34%, 66% { content: "Мелеуз"; }
+	67%, 100% { content: "Салават"; }
 }
 </style>
