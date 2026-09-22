@@ -146,15 +146,4 @@ await useFetch('/api/direction/all', {
 		color: white;
 	}
 }
-
-.text-changer::before {
-	content: "Кумертау";
-	animation: swap-text 10s infinite;
-}
-
-@keyframes swap-text {
-	0%, 33% { content: "Кумертау"; }
-	34%, 66% { content: "Мелеуз"; }
-	67%, 100% { content: "Салават"; }
-}
 </style>
