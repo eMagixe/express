@@ -9,7 +9,7 @@ await useFetch('/api/direction/all', {
 	method: 'GET'
 }).then(({ data }: any): void => {
 	if (data.value) {
-		directions.value = data.value as Direction[]
+		directions.value = data.value.sort((a: Direction, b: Direction) => a.name.localeCompare(b.name)) as Direction[]
 	}
 })
 </script>
