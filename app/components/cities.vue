@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <span ref="cities" class="inline-block w-35 md:w-50 lg:w-55">Кумертау</span>
+  <span ref="cities" class="inline-block w-[5em] shrink-0 whitespace-nowrap">Кумертау</span>
 </template>
 
 <style scoped>

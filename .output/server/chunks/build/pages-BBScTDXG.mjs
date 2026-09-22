@@ -550,7 +550,7 @@ var cities_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCom
 			_push(`<span${ssrRenderAttrs(mergeProps({
 				ref_key: "cities",
 				ref: cities,
-				class: "inline-block w-35 md:w-50 lg:w-55"
+				class: "inline-block w-[5em] shrink-0 whitespace-nowrap"
 			}, _attrs))}>Кумертау</span>`);
 		};
 	}
