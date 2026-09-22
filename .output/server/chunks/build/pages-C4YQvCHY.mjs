@@ -845,23 +845,23 @@ var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defin
 			const _component_UContainer = _sfc_main$5;
 			const _component_SectionTitle = title_default;
 			const _component_UIcon = _sfc_main$5$1;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-b2fb7166>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-9677c5bf>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent, _scopeId));
-						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-b2fb7166${_scopeId}><!--[-->`);
+						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-9677c5bf${_scopeId}><!--[-->`);
 						ssrRenderList(advantages, (item, index) => {
-							_push(`<!--[--><div class="item animation-box flex flex-row justify-start items-center gap-5 w-full" data-v-b2fb7166${_scopeId}>`);
+							_push(`<!--[--><div class="item animation-box flex flex-row not-sm:justify-start sm:justify-center items-center gap-5 w-full" data-v-9677c5bf${_scopeId}>`);
 							_push(ssrRenderComponent(_component_UIcon, {
 								class: "text-white min-w-9 min-h-9 text-[4cqw]",
 								name: item.icon
 							}, null, _parent, _scopeId));
-							_push(`<div data-v-b2fb7166${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-b2fb7166${_scopeId}><!--[-->`);
+							_push(`<div data-v-9677c5bf${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-9677c5bf${_scopeId}><!--[-->`);
 							ssrRenderList(item.message, (i) => {
-								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-b2fb7166${_scopeId}>${ssrInterpolate(i.text)}</span>`);
+								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-9677c5bf${_scopeId}>${ssrInterpolate(i.text)}</span>`);
 							});
-							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-b2fb7166${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
+							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-9677c5bf${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
 							if (!item.lost) _push(ssrRenderComponent(_component_UIcon, {
 								class: "text-white text-[20px]",
 								name: "i-lucide-arrow-down"
@@ -871,7 +871,7 @@ var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defin
 						});
 						_push(`<!--]--></div>`);
 					} else return [createVNode(_component_SectionTitle, { title: "Наши преимущества" }), createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [(openBlock(true), createBlock(Fragment, null, renderList(advantages, (item, index) => {
-						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row justify-start items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
+						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row not-sm:justify-start sm:justify-center items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
 							class: "text-white min-w-9 min-h-9 text-[4cqw]",
 							name: item.icon
 						}, null, 8, ["name"]), createVNode("div", null, [createVNode("div", { class: "flex flex-row justify-start items-center gap-2 text-white" }, [(openBlock(true), createBlock(Fragment, null, renderList(item.message, (i) => {
@@ -897,7 +897,7 @@ advantages_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
 	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-b2fb7166"]]), { __name: "SectionAdvantages" });
+var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-9677c5bf"]]), { __name: "SectionAdvantages" });
 //#endregion
 //#region app/utils/index.ts
 var utils = { isArray: (data) => {
