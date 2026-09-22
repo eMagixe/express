@@ -1,21 +1,21 @@
 import { u as useSeoMeta$1, b as useHead$1, _ as _plugin_vue_export_helper_default, a as useAppConfig, c as useRoute$1, $ as $fetch$2 } from '../virtual/entry.mjs';
 import { N as NuxtLink } from './nuxt-link-By4uHnr8.mjs';
-import { b as _sfc_main$5$1, u as useComponentProps, t as tv, P as Primitive, g as getSlotChildrenText, c as _sfc_main$1$1, _ as _sfc_main$9, a as useForwardProps, h as useFormField, i as useComponentIcons, e as _sfc_main$3$1, l as looseToNumber } from './Button-D5UK4P4A.mjs';
-import { _ as _sfc_main$a } from './Modal-BqSeB7U2.mjs';
+import { b as _sfc_main$5$1, u as useComponentProps, a as useForwardProps, t as tv, P as Primitive, _ as _sfc_main$7, g as getSlotChildrenText, c as _sfc_main$1$1, h as useFormField, i as useComponentIcons, e as _sfc_main$3$1, l as looseToNumber } from './Button-D5UK4P4A.mjs';
+import { _ as _sfc_main$9 } from './Modal-BqSeB7U2.mjs';
 import { a as useFetch } from './fetch-DUhcUvKg.mjs';
-import { _ as _sfc_main$6 } from './Container-CLUPcRvH.mjs';
+import { _ as _sfc_main$5 } from './Container-CLUPcRvH.mjs';
 import { t as title_default } from './title-pte2Tibk.mjs';
-import { _ as _sfc_main$b } from './Input-BoJ6XMWD.mjs';
+import { _ as _sfc_main$a } from './Input-BoJ6XMWD.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
 import { u as useCall } from './useCall-DsxJco-E.mjs';
 import { u as useToast } from './useToast-DbOihFhv.mjs';
 import { _ as _sfc_main$8 } from './Drawer-DirMqvds.mjs';
 import { u as usePrefix } from './usePrefix-wIR1GMpN.mjs';
-import { _ as _sfc_main$7 } from './PricingPlan-g40oX2Te.mjs';
-import { defineComponent, defineAsyncComponent, ref, withAsyncContext, mergeProps, withCtx, unref, createVNode, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useId, computed, renderSlot, useSlots, watch, useTemplateRef, nextTick, onScopeDispose, useSSRContext } from 'vue';
+import { _ as _sfc_main$6 } from './PricingPlan-g40oX2Te.mjs';
+import { defineComponent, defineAsyncComponent, ref, withAsyncContext, mergeProps, withCtx, unref, createVNode, createTextVNode, openBlock, createBlock, Fragment, renderList, toDisplayString, createCommentVNode, useId, computed, watch, renderSlot, useSlots, useTemplateRef, nextTick, onScopeDispose, useSSRContext } from 'vue';
 import { p as publicAssetsURL } from '../routes/renderer.mjs';
 import { ssrRenderComponent, ssrRenderAttrs, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderSlot, ssrRenderAttr } from 'vue/server-renderer';
-import { pausableFilter, useMouseInElement, reactivePick, useVModel } from '@vueuse/core';
+import { reactivePick, pausableFilter, useMouseInElement, useVModel } from '@vueuse/core';
 import useEmblaCarousel from 'embla-carousel-vue';
 import 'nostics';
 import 'nostics/formatters/ansi';
@@ -54,628 +54,6 @@ import 'unhead/legacy';
 import 'vue-bundle-renderer/runtime';
 import 'devalue';
 
-//#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fui%2Fmarquee.ts
-var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Fmarquee_default = {
-	"slots": {
-		"root": "group relative flex items-center overflow-hidden gap-(--gap) [--gap:--spacing(16)] [--duration:20s]",
-		"content": "flex items-center shrink-0 justify-around gap-(--gap) min-w-max"
-	},
-	"variants": {
-		"orientation": {
-			"horizontal": { "content": "w-full" },
-			"vertical": { "content": "h-full" }
-		},
-		"pauseOnHover": { "true": { "content": "group-hover:[animation-play-state:paused]" } },
-		"reverse": { "true": { "content": "![animation-direction:reverse]" } },
-		"overlay": { "true": { "root": "before:absolute before:pointer-events-none before:content-[\"\"] before:z-2 before:from-default before:to-transparent after:absolute after:pointer-events-none after:content-[\"\"] after:z-2 after:from-default after:to-transparent" } }
-	},
-	"compoundVariants": [
-		{
-			"orientation": "horizontal",
-			"class": {
-				"root": "flex-row",
-				"content": "flex-row motion-safe:animate-[marquee_var(--duration)_linear_infinite] motion-safe:rtl:animate-[marquee-rtl_var(--duration)_linear_infinite] backface-hidden"
-			}
-		},
-		{
-			"orientation": "horizontal",
-			"overlay": true,
-			"class": { "root": "before:inset-y-0 before:start-0 before:h-full before:w-1/3 before:bg-gradient-to-r rtl:before:bg-gradient-to-l after:inset-y-0 after:end-0 after:h-full after:w-1/3 after:bg-gradient-to-l rtl:after:bg-gradient-to-r backface-hidden" }
-		},
-		{
-			"orientation": "vertical",
-			"class": {
-				"root": "flex-col",
-				"content": "flex-col motion-safe:animate-[marquee-vertical_var(--duration)_linear_infinite] h-[fit-content] backface-hidden"
-			}
-		},
-		{
-			"orientation": "vertical",
-			"overlay": true,
-			"class": { "root": "before:inset-x-0 before:top-0 before:w-full before:h-1/3 before:bg-gradient-to-b after:inset-x-0 after:bottom-0 after:w-full after:h-1/3 after:bg-gradient-to-t backface-hidden" }
-		}
-	]
-};
-//#endregion
-//#region node_modules/@nuxt/ui/dist/runtime/components/Marquee.vue
-var _sfc_main$5 = {
-	__name: "UMarquee",
-	__ssrInlineRender: true,
-	props: {
-		as: {
-			type: null,
-			required: false
-		},
-		pauseOnHover: {
-			type: Boolean,
-			required: false
-		},
-		reverse: {
-			type: Boolean,
-			required: false
-		},
-		orientation: {
-			type: null,
-			required: false,
-			default: "horizontal"
-		},
-		repeat: {
-			type: Number,
-			required: false,
-			default: 4
-		},
-		overlay: {
-			type: Boolean,
-			required: false,
-			default: true
-		},
-		class: {
-			type: null,
-			required: false
-		},
-		ui: {
-			type: Object,
-			required: false
-		}
-	},
-	setup(__props) {
-		const props = useComponentProps("marquee", __props);
-		const appConfig = useAppConfig();
-		const ui = computed(() => tv({
-			extend: virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Fmarquee_default,
-			...appConfig.ui?.marquee || {}
-		})({
-			pauseOnHover: props.pauseOnHover,
-			orientation: props.orientation,
-			reverse: props.reverse,
-			overlay: props.overlay
-		}));
-		return (_ctx, _push, _parent, _attrs) => {
-			_push(ssrRenderComponent(unref(Primitive), mergeProps({
-				as: unref(props).as,
-				"data-orientation": unref(props).orientation,
-				"data-slot": "root",
-				class: ui.value.root({ class: [unref(props).ui?.root, unref(props).class] })
-			}, _attrs), {
-				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) {
-						_push(`<!--[-->`);
-						ssrRenderList(unref(props).repeat, (i) => {
-							_push(`<div data-slot="content" class="${ssrRenderClass(ui.value.content({ class: [unref(props).ui?.content] }))}"${_scopeId}>`);
-							ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent, _scopeId);
-							_push(`</div>`);
-						});
-						_push(`<!--]-->`);
-					} else return [(openBlock(true), createBlock(Fragment, null, renderList(unref(props).repeat, (i) => {
-						return openBlock(), createBlock("div", {
-							key: i,
-							"data-slot": "content",
-							class: ui.value.content({ class: [unref(props).ui?.content] })
-						}, [renderSlot(_ctx.$slots, "default")], 2);
-					}), 128))];
-				}),
-				_: 3
-			}, _parent));
-		};
-	}
-};
-var _sfc_setup$12 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Marquee.vue");
-	return _sfc_setup$12 ? _sfc_setup$12(props, ctx) : void 0;
-};
-//#endregion
-//#region app/components/section/welcome.vue?vue&type=script&setup=true&lang.ts
-var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
-	__name: "welcome",
-	__ssrInlineRender: true,
-	async setup(__props) {
-		let __temp, __restore;
-		const directions = ref([]);
-		[__temp, __restore] = withAsyncContext(() => useFetch("/api/direction/all", {
-			key: "directions",
-			method: "GET"
-		}, "$3M2AynSjUx").then(({ data }) => {
-			if (data.value) directions.value = data.value;
-		})), await __temp, __restore();
-		return (_ctx, _push, _parent, _attrs) => {
-			const _component_UContainer = _sfc_main$6;
-			const _component_NuxtLink = NuxtLink;
-			const _component_UIcon = _sfc_main$5$1;
-			const _component_UPricingPlan = _sfc_main$7;
-			const _component_UMarquee = _sfc_main$5;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-50519406>`);
-			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
-				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) {
-						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-50519406${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
-						_push(ssrRenderComponent(_component_NuxtLink, {
-							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
-							icon: "i-lucide-phone-call",
-							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
-						}, {
-							default: withCtx((_, _push, _parent, _scopeId) => {
-								if (_push) {
-									_push(ssrRenderComponent(_component_UIcon, {
-										name: "i-lucide-phone-call",
-										size: "18"
-									}, null, _parent, _scopeId));
-									_push(` Вызвать `);
-								} else return [createVNode(_component_UIcon, {
-									name: "i-lucide-phone-call",
-									size: "18"
-								}), createTextVNode(" Вызвать ")];
-							}),
-							_: 1
-						}, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-50519406${_scopeId}><!--[-->`);
-						ssrRenderList(unref(directions), (direction) => {
-							_push(ssrRenderComponent(_component_UPricingPlan, {
-								orientation: "vertical",
-								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
-								title: direction.name,
-								description: "Пассажирские перевозки",
-								price: `от ${direction.price} руб.`,
-								features: [
-									"Передача документации и посылок",
-									"До аэро - жд вокзалов и больниц",
-									"До места указанного заказчиком *",
-									"Билеты, отчётные документы, qr-коды"
-								],
-								ui: {
-									root: "ring-0 item-direction",
-									title: "text-primary title",
-									description: "text-white",
-									price: "text-primary",
-									featureTitle: "text-white",
-									button: "button-gradient"
-								},
-								button: {
-									label: "Подробнее",
-									to: `/directions/${direction.slug}`,
-									trailingIcon: "i-lucide-arrow-right"
-								}
-							}, null, _parent, _scopeId));
-						});
-						_push(`<!--]-->`);
-						_push(ssrRenderComponent(_component_UMarquee, {
-							class: "lg:hidden w-full p-5",
-							overlay: false,
-							"pause-on-hover": ""
-						}, {
-							default: withCtx((_, _push, _parent, _scopeId) => {
-								if (_push) {
-									_push(`<!--[-->`);
-									ssrRenderList(unref(directions), (direction) => {
-										_push(ssrRenderComponent(_component_UPricingPlan, {
-											orientation: "horizontal",
-											class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-1/2 min-h-60",
-											title: direction.name,
-											features: ["Передача документации и посылок", "Пассажирские перевозки"],
-											price: `от ${direction.price} руб.`,
-											ui: {
-												root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
-												title: "text-primary title",
-												description: "text-white",
-												price: "text-primary",
-												featureTitle: "text-white",
-												button: "button-gradient"
-											},
-											button: {
-												label: "Подробнее",
-												to: `/directions/${direction.slug}`,
-												trailingIcon: "i-lucide-arrow-right"
-											}
-										}, null, _parent, _scopeId));
-									});
-									_push(`<!--]-->`);
-								} else return [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
-									return openBlock(), createBlock(_component_UPricingPlan, {
-										orientation: "horizontal",
-										class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-1/2 min-h-60",
-										title: direction.name,
-										features: ["Передача документации и посылок", "Пассажирские перевозки"],
-										price: `от ${direction.price} руб.`,
-										ui: {
-											root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
-											title: "text-primary title",
-											description: "text-white",
-											price: "text-primary",
-											featureTitle: "text-white",
-											button: "button-gradient"
-										},
-										button: {
-											label: "Подробнее",
-											to: `/directions/${direction.slug}`,
-											trailingIcon: "i-lucide-arrow-right"
-										}
-									}, null, 8, [
-										"title",
-										"price",
-										"button"
-									]);
-								}), 256))];
-							}),
-							_: 1
-						}, _parent, _scopeId));
-						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-50519406${_scopeId}><p class="text-sm text-white" data-v-50519406${_scopeId}>* требуется дополнительная оплата</p>`);
-						_push(ssrRenderComponent(_component_NuxtLink, {
-							class: "text-primary underline flex flex-row justify-center items-center gap-2",
-							to: "/directions"
-						}, {
-							default: withCtx((_, _push, _parent, _scopeId) => {
-								if (_push) {
-									_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-split" }, null, _parent, _scopeId));
-									_push(` Основные направления`);
-								} else return [createVNode(_component_UIcon, { name: "i-lucide-split" }), createTextVNode(" Основные направления")];
-							}),
-							_: 1
-						}, _parent, _scopeId));
-						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-50519406${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
-					} else return [
-						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
-						createVNode(_component_NuxtLink, {
-							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
-							icon: "i-lucide-phone-call",
-							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
-						}, {
-							default: withCtx(() => [createVNode(_component_UIcon, {
-								name: "i-lucide-phone-call",
-								size: "18"
-							}), createTextVNode(" Вызвать ")]),
-							_: 1
-						}, 8, ["onClick"]),
-						createVNode("div", { class: "cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
-							return openBlock(), createBlock(_component_UPricingPlan, {
-								orientation: "vertical",
-								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
-								title: direction.name,
-								description: "Пассажирские перевозки",
-								price: `от ${direction.price} руб.`,
-								features: [
-									"Передача документации и посылок",
-									"До аэро - жд вокзалов и больниц",
-									"До места указанного заказчиком *",
-									"Билеты, отчётные документы, qr-коды"
-								],
-								ui: {
-									root: "ring-0 item-direction",
-									title: "text-primary title",
-									description: "text-white",
-									price: "text-primary",
-									featureTitle: "text-white",
-									button: "button-gradient"
-								},
-								button: {
-									label: "Подробнее",
-									to: `/directions/${direction.slug}`,
-									trailingIcon: "i-lucide-arrow-right"
-								}
-							}, null, 8, [
-								"title",
-								"price",
-								"button"
-							]);
-						}), 256)), createVNode(_component_UMarquee, {
-							class: "lg:hidden w-full p-5",
-							overlay: false,
-							"pause-on-hover": ""
-						}, {
-							default: withCtx(() => [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
-								return openBlock(), createBlock(_component_UPricingPlan, {
-									orientation: "horizontal",
-									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-1/2 min-h-60",
-									title: direction.name,
-									features: ["Передача документации и посылок", "Пассажирские перевозки"],
-									price: `от ${direction.price} руб.`,
-									ui: {
-										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
-										title: "text-primary title",
-										description: "text-white",
-										price: "text-primary",
-										featureTitle: "text-white",
-										button: "button-gradient"
-									},
-									button: {
-										label: "Подробнее",
-										to: `/directions/${direction.slug}`,
-										trailingIcon: "i-lucide-arrow-right"
-									}
-								}, null, 8, [
-									"title",
-									"price",
-									"button"
-								]);
-							}), 256))]),
-							_: 1
-						})]),
-						createVNode("div", { class: "flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" }, [createVNode("p", { class: "text-sm text-white" }, "* требуется дополнительная оплата"), createVNode(_component_NuxtLink, {
-							class: "text-primary underline flex flex-row justify-center items-center gap-2",
-							to: "/directions"
-						}, {
-							default: withCtx(() => [createVNode(_component_UIcon, { name: "i-lucide-split" }), createTextVNode(" Основные направления")]),
-							_: 1
-						})]),
-						createVNode("div", { class: "not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" }, " Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи ")
-					];
-				}),
-				_: 1
-			}, _parent));
-			_push(`</div>`);
-		};
-	}
-});
-//#endregion
-//#region app/components/section/welcome.vue
-var _sfc_setup$11 = welcome_vue_vue_type_script_setup_true_lang_default.setup;
-welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
-	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
-};
-var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-50519406"]]), { __name: "SectionWelcome" });
-//#endregion
-//#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
-var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
-	__name: "advantages",
-	__ssrInlineRender: true,
-	setup(__props) {
-		const advantages = [
-			{
-				icon: "i-lucide-user-check",
-				message: [{
-					color: "#FFCC00",
-					text: "Высокий стаж"
-				}, {
-					color: "#FFFFFF",
-					text: "водителей"
-				}],
-				description: "стаж наших водителей от 7 - 10 лет опыта"
-			},
-			{
-				icon: "i-lucide-clock",
-				message: [{
-					color: "#FFFFFF",
-					text: "скорость и"
-				}, {
-					color: "#FFCC00",
-					text: "доступность"
-				}],
-				description: "работаем круглосуточно"
-			},
-			{
-				icon: "i-lucide-shield-check",
-				message: [{
-					color: "#FFFFFF",
-					text: "Безопасность и"
-				}, {
-					color: "#FFCC00",
-					text: "гарантия"
-				}],
-				description: "предоставляем отчетные документы"
-			},
-			{
-				icon: "i-lucide-truck",
-				message: [{
-					color: "#FFFFFF",
-					text: "Перевозка и"
-				}, {
-					color: "#FFCC00",
-					text: "доставка"
-				}],
-				description: "осуществляем перевозки и доставки посылок",
-				lost: true
-			}
-		];
-		return (_ctx, _push, _parent, _attrs) => {
-			const _component_UContainer = _sfc_main$6;
-			const _component_SectionTitle = title_default;
-			const _component_UIcon = _sfc_main$5$1;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-b09f82c8>`);
-			_push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
-				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) {
-						_push(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent, _scopeId));
-						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-b09f82c8${_scopeId}><!--[-->`);
-						ssrRenderList(advantages, (item, index) => {
-							_push(`<!--[--><div class="item animation-box flex flex-row justify-center items-center gap-5 w-full" data-v-b09f82c8${_scopeId}>`);
-							_push(ssrRenderComponent(_component_UIcon, {
-								class: "text-white min-w-9 min-h-9 text-[4cqw]",
-								name: item.icon
-							}, null, _parent, _scopeId));
-							_push(`<div data-v-b09f82c8${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-b09f82c8${_scopeId}><!--[-->`);
-							ssrRenderList(item.message, (i) => {
-								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-b09f82c8${_scopeId}>${ssrInterpolate(i.text)}</span>`);
-							});
-							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-b09f82c8${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
-							if (!item.lost) _push(ssrRenderComponent(_component_UIcon, {
-								class: "text-white text-[20px]",
-								name: "i-lucide-arrow-down"
-							}, null, _parent, _scopeId));
-							else _push(`<!---->`);
-							_push(`<!--]-->`);
-						});
-						_push(`<!--]--></div>`);
-					} else return [createVNode(_component_SectionTitle, { title: "Наши преимущества" }), createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [(openBlock(true), createBlock(Fragment, null, renderList(advantages, (item, index) => {
-						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row justify-center items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
-							class: "text-white min-w-9 min-h-9 text-[4cqw]",
-							name: item.icon
-						}, null, 8, ["name"]), createVNode("div", null, [createVNode("div", { class: "flex flex-row justify-start items-center gap-2 text-white" }, [(openBlock(true), createBlock(Fragment, null, renderList(item.message, (i) => {
-							return openBlock(), createBlock("span", { class: `uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]` }, toDisplayString(i.text), 3);
-						}), 256))]), createVNode("div", { class: "text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" }, toDisplayString(item.description), 1)])]), !item.lost ? (openBlock(), createBlock(_component_UIcon, {
-							key: 0,
-							class: "text-white text-[20px]",
-							name: "i-lucide-arrow-down"
-						})) : createCommentVNode("", true)], 64);
-					}), 128))])];
-				}),
-				_: 1
-			}, _parent));
-			_push(`</div>`);
-		};
-	}
-});
-//#endregion
-//#region app/components/section/advantages.vue
-var _sfc_setup$10 = advantages_vue_vue_type_script_setup_true_lang_default.setup;
-advantages_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
-	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
-};
-var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-b09f82c8"]]), { __name: "SectionAdvantages" });
-//#endregion
-//#region app/utils/index.ts
-var utils = { isArray: (data) => {
-	return data && Array.isArray(data);
-} };
-//#endregion
-//#region app/composables/useReview.ts
-var useReview = () => {
-	const reviews = ref([]);
-	const current = ref({
-		name: "",
-		text: "",
-		rating: 0,
-		date: ""
-	});
-	const route = useRoute$1();
-	const toast = useToast();
-	const modalAddReviewIsOpen = ref(false);
-	const modalAllReviewsOpen = ref(false);
-	if (route.query.review === "open") modalAddReviewIsOpen.value = true;
-	watch(modalAddReviewIsOpen, (value) => {
-		if (value) reset(current);
-	});
-	const reset = (obj) => {
-		obj.value = {
-			name: "",
-			text: "",
-			rating: 0,
-			date: ""
-		};
-	};
-	const remake = (review) => {
-		return {
-			name: review.name,
-			text: review.text,
-			rating: Number(review.rating),
-			date: review.createdAt ? new Date(review.createdAt).toLocaleDateString("ru-RU") : Date.now().toLocaleString("ru-RU")
-		};
-	};
-	const getAll = async () => {
-		return $fetch$2("/api/review/all", { method: "GET" }).then((data) => {
-			if (utils.isArray(data)) reviews.value = data.map((review) => {
-				return remake(review);
-			});
-		});
-	};
-	const create = async (review) => {
-		return useFetch("/api/review/add", {
-			method: "POST",
-			body: { ...review.value }
-		}, "$9RxkCj8pEZ");
-	};
-	const add = async () => {
-		if (current.value.name && current.value.text && current.value.rating) create(current).then(() => {
-			reset(current);
-			toast.add({
-				title: "Ответ",
-				description: "Отзыв был отправлен",
-				color: "success"
-			});
-			modalAddReviewIsOpen.value = false;
-		}).catch(() => {
-			toast.add({
-				title: "Ответ",
-				description: "Произошла ошибка при отправке отзыва",
-				color: "error"
-			});
-		});
-		else toast.add({
-			title: "Отправка отзыва",
-			description: "Пожалуйста, заполните все поля",
-			color: "error"
-		});
-	};
-	const preload = async () => {
-		if (reviews.value.length < 3) await getAll().then(() => {
-			modalAllReviewsOpen.value = false;
-		});
-	};
-	return {
-		preload,
-		add,
-		current,
-		modalAddReviewIsOpen,
-		modalAllReviewsOpen,
-		reviews
-	};
-};
-//#endregion
-//#region \0virtual:public?%2Fimages%2Fsvg%2Fstar.svg
-var _virtual_public__2Fimages_2Fsvg_2Fstar_default = publicAssetsURL("/images/svg/star.svg");
-//#endregion
-//#region app/components/preview/viewer.vue?vue&type=script&setup=true&lang.ts
-var viewer_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
-	__name: "viewer",
-	__ssrInlineRender: true,
-	async setup(__props) {
-		let __temp, __restore;
-		const { reviews, preload } = useReview();
-		[__temp, __restore] = withAsyncContext(() => preload()), await __temp, __restore();
-		return (_ctx, _push, _parent, _attrs) => {
-			const _component_UIcon = _sfc_main$5$1;
-			_push(`<!--[-->`);
-			ssrRenderList(unref(reviews).slice(0, 3), (item) => {
-				_push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-6f4ffd20><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-6f4ffd20><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-6f4ffd20><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-6f4ffd20>`);
-				_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
-				_push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-6f4ffd20><!--[-->`);
-				ssrRenderList(item.rating, (n) => {
-					_push(`<img height="20" width="20"${ssrRenderAttr("src", _virtual_public__2Fimages_2Fsvg_2Fstar_default)}${ssrRenderAttr("alt", `star +${n}`)} data-v-6f4ffd20>`);
-				});
-				_push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-6f4ffd20>`);
-				_push(ssrRenderComponent(_component_UIcon, {
-					name: "i-lucide-calendar",
-					size: "14"
-				}, null, _parent));
-				_push(`<p data-v-6f4ffd20>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-6f4ffd20>${ssrInterpolate(item.text)}</div></div>`);
-			});
-			_push(`<!--]-->`);
-		};
-	}
-});
-//#endregion
-//#region app/components/preview/viewer.vue
-var _sfc_setup$9 = viewer_vue_vue_type_script_setup_true_lang_default.setup;
-viewer_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/viewer.vue");
-	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
-};
-var viewer_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(viewer_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-6f4ffd20"]]), { __name: "PreviewViewer" });
-//#endregion
 //#region virtual:nuxt:node_modules%2F.cache%2Fnuxt%2F.nuxt%2Fui%2Fcarousel.ts
 var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Fui_2Fcarousel_default = {
 	"slots": {
@@ -1025,7 +403,7 @@ var _sfc_main$4 = {
 							_push(`<div data-slot="controls" class="${ssrRenderClass(ui.value.controls({ class: unref(props).ui?.controls }))}"${_scopeId}>`);
 							if (unref(props).arrows) {
 								_push(`<div data-slot="arrows" class="${ssrRenderClass(ui.value.arrows({ class: unref(props).ui?.arrows }))}"${_scopeId}>`);
-								_push(ssrRenderComponent(_sfc_main$9, mergeProps({
+								_push(ssrRenderComponent(_sfc_main$7, mergeProps({
 									disabled: !canScrollPrev.value,
 									icon: prevIcon.value,
 									color: "neutral",
@@ -1036,7 +414,7 @@ var _sfc_main$4 = {
 									class: ui.value.prev({ class: unref(props).ui?.prev }),
 									onClick: scrollPrev
 								}), null, _parent, _scopeId));
-								_push(ssrRenderComponent(_sfc_main$9, mergeProps({
+								_push(ssrRenderComponent(_sfc_main$7, mergeProps({
 									disabled: !canScrollNext.value,
 									icon: nextIcon.value,
 									color: "neutral",
@@ -1092,7 +470,7 @@ var _sfc_main$4 = {
 						key: 0,
 						"data-slot": "arrows",
 						class: ui.value.arrows({ class: unref(props).ui?.arrows })
-					}, [createVNode(_sfc_main$9, mergeProps({
+					}, [createVNode(_sfc_main$7, mergeProps({
 						disabled: !canScrollPrev.value,
 						icon: prevIcon.value,
 						color: "neutral",
@@ -1107,7 +485,7 @@ var _sfc_main$4 = {
 						"icon",
 						"aria-label",
 						"class"
-					]), createVNode(_sfc_main$9, mergeProps({
+					]), createVNode(_sfc_main$7, mergeProps({
 						disabled: !canScrollNext.value,
 						icon: nextIcon.value,
 						color: "neutral",
@@ -1155,12 +533,497 @@ var _sfc_main$4 = {
 		};
 	}
 };
-var _sfc_setup$8 = _sfc_main$4.setup;
+var _sfc_setup$11 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/@nuxt/ui/dist/runtime/components/Carousel.vue");
+	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
+};
+//#endregion
+//#region app/components/section/welcome.vue?vue&type=script&setup=true&lang.ts
+var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
+	__name: "welcome",
+	__ssrInlineRender: true,
+	async setup(__props) {
+		let __temp, __restore;
+		const directions = ref([]);
+		[__temp, __restore] = withAsyncContext(() => useFetch("/api/direction/all", {
+			key: "directions",
+			method: "GET"
+		}, "$3M2AynSjUx").then(({ data }) => {
+			if (data.value) directions.value = data.value;
+		})), await __temp, __restore();
+		return (_ctx, _push, _parent, _attrs) => {
+			const _component_UContainer = _sfc_main$5;
+			const _component_NuxtLink = NuxtLink;
+			const _component_UIcon = _sfc_main$5$1;
+			const _component_UPricingPlan = _sfc_main$6;
+			const _component_UCarousel = _sfc_main$4;
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-a80996d6>`);
+			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-a80996d6${_scopeId}> Такси межгород Кумертау — Уфа </h1>`);
+						_push(ssrRenderComponent(_component_NuxtLink, {
+							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
+							icon: "i-lucide-phone-call",
+							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+						}, {
+							default: withCtx((_, _push, _parent, _scopeId) => {
+								if (_push) {
+									_push(ssrRenderComponent(_component_UIcon, {
+										name: "i-lucide-phone-call",
+										size: "18"
+									}, null, _parent, _scopeId));
+									_push(` Вызвать `);
+								} else return [createVNode(_component_UIcon, {
+									name: "i-lucide-phone-call",
+									size: "18"
+								}), createTextVNode(" Вызвать ")];
+							}),
+							_: 1
+						}, _parent, _scopeId));
+						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-a80996d6${_scopeId}><!--[-->`);
+						ssrRenderList(unref(directions), (direction) => {
+							_push(ssrRenderComponent(_component_UPricingPlan, {
+								orientation: "vertical",
+								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
+								title: direction.name,
+								description: "Пассажирские перевозки",
+								price: `от ${direction.price} руб.`,
+								features: [
+									"Передача документации и посылок",
+									"До аэро - жд вокзалов и больниц",
+									"До места указанного заказчиком *",
+									"Билеты, отчётные документы, qr-коды"
+								],
+								ui: {
+									root: "ring-0 item-direction",
+									title: "text-primary title",
+									description: "text-white",
+									price: "text-primary",
+									featureTitle: "text-white",
+									button: "button-gradient"
+								},
+								button: {
+									label: "Подробнее",
+									to: `/directions/${direction.slug}`,
+									trailingIcon: "i-lucide-arrow-right"
+								}
+							}, null, _parent, _scopeId));
+						});
+						_push(`<!--]-->`);
+						_push(ssrRenderComponent(_component_UCarousel, {
+							dots: "",
+							items: unref(directions),
+							class: "lg:hidden w-full p-5 mb-10",
+							autoplay: { delay: 3e3 },
+							loop: ""
+						}, {
+							default: withCtx(({ item }, _push, _parent, _scopeId) => {
+								if (_push) _push(ssrRenderComponent(_component_UPricingPlan, {
+									orientation: "horizontal",
+									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
+									title: item.name,
+									features: ["Передача документации и посылок", "Пассажирские перевозки"],
+									price: `от ${item.price} руб.`,
+									ui: {
+										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
+										title: "text-primary title",
+										description: "text-white",
+										price: "text-primary",
+										featureTitle: "text-white",
+										button: "button-gradient"
+									},
+									button: {
+										label: "Подробнее",
+										to: `/directions/${item.slug}`,
+										trailingIcon: "i-lucide-arrow-right"
+									}
+								}, null, _parent, _scopeId));
+								else return [createVNode(_component_UPricingPlan, {
+									orientation: "horizontal",
+									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
+									title: item.name,
+									features: ["Передача документации и посылок", "Пассажирские перевозки"],
+									price: `от ${item.price} руб.`,
+									ui: {
+										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
+										title: "text-primary title",
+										description: "text-white",
+										price: "text-primary",
+										featureTitle: "text-white",
+										button: "button-gradient"
+									},
+									button: {
+										label: "Подробнее",
+										to: `/directions/${item.slug}`,
+										trailingIcon: "i-lucide-arrow-right"
+									}
+								}, null, 8, [
+									"title",
+									"price",
+									"button"
+								])];
+							}),
+							_: 1
+						}, _parent, _scopeId));
+						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-a80996d6${_scopeId}><p class="text-sm text-white" data-v-a80996d6${_scopeId}>* требуется дополнительная оплата</p>`);
+						_push(ssrRenderComponent(_component_NuxtLink, {
+							class: "text-primary underline flex flex-row justify-center items-center gap-2",
+							to: "/directions"
+						}, {
+							default: withCtx((_, _push, _parent, _scopeId) => {
+								if (_push) {
+									_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-split" }, null, _parent, _scopeId));
+									_push(` Основные направления`);
+								} else return [createVNode(_component_UIcon, { name: "i-lucide-split" }), createTextVNode(" Основные направления")];
+							}),
+							_: 1
+						}, _parent, _scopeId));
+						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-a80996d6${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+					} else return [
+						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, " Такси межгород Кумертау — Уфа "),
+						createVNode(_component_NuxtLink, {
+							class: "lg:hidden button-gradient w-60 h-15 mx-auto my-5 flex items-center justify-center gap-3",
+							icon: "i-lucide-phone-call",
+							onClick: ($event) => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().openModalCall("+79177666833")
+						}, {
+							default: withCtx(() => [createVNode(_component_UIcon, {
+								name: "i-lucide-phone-call",
+								size: "18"
+							}), createTextVNode(" Вызвать ")]),
+							_: 1
+						}, 8, ["onClick"]),
+						createVNode("div", { class: "cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
+							return openBlock(), createBlock(_component_UPricingPlan, {
+								orientation: "vertical",
+								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
+								title: direction.name,
+								description: "Пассажирские перевозки",
+								price: `от ${direction.price} руб.`,
+								features: [
+									"Передача документации и посылок",
+									"До аэро - жд вокзалов и больниц",
+									"До места указанного заказчиком *",
+									"Билеты, отчётные документы, qr-коды"
+								],
+								ui: {
+									root: "ring-0 item-direction",
+									title: "text-primary title",
+									description: "text-white",
+									price: "text-primary",
+									featureTitle: "text-white",
+									button: "button-gradient"
+								},
+								button: {
+									label: "Подробнее",
+									to: `/directions/${direction.slug}`,
+									trailingIcon: "i-lucide-arrow-right"
+								}
+							}, null, 8, [
+								"title",
+								"price",
+								"button"
+							]);
+						}), 256)), createVNode(_component_UCarousel, {
+							dots: "",
+							items: unref(directions),
+							class: "lg:hidden w-full p-5 mb-10",
+							autoplay: { delay: 3e3 },
+							loop: ""
+						}, {
+							default: withCtx(({ item }) => [createVNode(_component_UPricingPlan, {
+								orientation: "horizontal",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
+								title: item.name,
+								features: ["Передача документации и посылок", "Пассажирские перевозки"],
+								price: `от ${item.price} руб.`,
+								ui: {
+									root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
+									title: "text-primary title",
+									description: "text-white",
+									price: "text-primary",
+									featureTitle: "text-white",
+									button: "button-gradient"
+								},
+								button: {
+									label: "Подробнее",
+									to: `/directions/${item.slug}`,
+									trailingIcon: "i-lucide-arrow-right"
+								}
+							}, null, 8, [
+								"title",
+								"price",
+								"button"
+							])]),
+							_: 1
+						}, 8, ["items"])]),
+						createVNode("div", { class: "flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" }, [createVNode("p", { class: "text-sm text-white" }, "* требуется дополнительная оплата"), createVNode(_component_NuxtLink, {
+							class: "text-primary underline flex flex-row justify-center items-center gap-2",
+							to: "/directions"
+						}, {
+							default: withCtx(() => [createVNode(_component_UIcon, { name: "i-lucide-split" }), createTextVNode(" Основные направления")]),
+							_: 1
+						})]),
+						createVNode("div", { class: "not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" }, " Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи ")
+					];
+				}),
+				_: 1
+			}, _parent));
+			_push(`</div>`);
+		};
+	}
+});
+//#endregion
+//#region app/components/section/welcome.vue
+var _sfc_setup$10 = welcome_vue_vue_type_script_setup_true_lang_default.setup;
+welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
+	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
+};
+var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-a80996d6"]]), { __name: "SectionWelcome" });
+//#endregion
+//#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
+var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
+	__name: "advantages",
+	__ssrInlineRender: true,
+	setup(__props) {
+		const advantages = [
+			{
+				icon: "i-lucide-user-check",
+				message: [{
+					color: "#FFCC00",
+					text: "Высокий стаж"
+				}, {
+					color: "#FFFFFF",
+					text: "водителей"
+				}],
+				description: "стаж наших водителей от 7 - 10 лет опыта"
+			},
+			{
+				icon: "i-lucide-clock",
+				message: [{
+					color: "#FFFFFF",
+					text: "скорость и"
+				}, {
+					color: "#FFCC00",
+					text: "доступность"
+				}],
+				description: "работаем круглосуточно"
+			},
+			{
+				icon: "i-lucide-shield-check",
+				message: [{
+					color: "#FFFFFF",
+					text: "Безопасность и"
+				}, {
+					color: "#FFCC00",
+					text: "гарантия"
+				}],
+				description: "предоставляем отчетные документы"
+			},
+			{
+				icon: "i-lucide-truck",
+				message: [{
+					color: "#FFFFFF",
+					text: "Перевозка и"
+				}, {
+					color: "#FFCC00",
+					text: "доставка"
+				}],
+				description: "осуществляем перевозки и доставки посылок",
+				lost: true
+			}
+		];
+		return (_ctx, _push, _parent, _attrs) => {
+			const _component_UContainer = _sfc_main$5;
+			const _component_SectionTitle = title_default;
+			const _component_UIcon = _sfc_main$5$1;
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "section-advantages w-full mx-auto h-auto pt-5 pb-10 border-t border-t-gray-900/70 border-b border-b-primary/70" }, _attrs))} data-v-b09f82c8>`);
+			_push(ssrRenderComponent(_component_UContainer, { class: "flex flex-col justify-start items-center gap-5" }, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(ssrRenderComponent(_component_SectionTitle, { title: "Наши преимущества" }, null, _parent, _scopeId));
+						_push(`<div class="lg:w-[70%] flex flex-col justify-center items-center gap-5" data-v-b09f82c8${_scopeId}><!--[-->`);
+						ssrRenderList(advantages, (item, index) => {
+							_push(`<!--[--><div class="item animation-box flex flex-row justify-center items-center gap-5 w-full" data-v-b09f82c8${_scopeId}>`);
+							_push(ssrRenderComponent(_component_UIcon, {
+								class: "text-white min-w-9 min-h-9 text-[4cqw]",
+								name: item.icon
+							}, null, _parent, _scopeId));
+							_push(`<div data-v-b09f82c8${_scopeId}><div class="flex flex-row justify-start items-center gap-2 text-white" data-v-b09f82c8${_scopeId}><!--[-->`);
+							ssrRenderList(item.message, (i) => {
+								_push(`<span class="${ssrRenderClass(`uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]`)}" data-v-b09f82c8${_scopeId}>${ssrInterpolate(i.text)}</span>`);
+							});
+							_push(`<!--]--></div><div class="text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" data-v-b09f82c8${_scopeId}>${ssrInterpolate(item.description)}</div></div></div>`);
+							if (!item.lost) _push(ssrRenderComponent(_component_UIcon, {
+								class: "text-white text-[20px]",
+								name: "i-lucide-arrow-down"
+							}, null, _parent, _scopeId));
+							else _push(`<!---->`);
+							_push(`<!--]-->`);
+						});
+						_push(`<!--]--></div>`);
+					} else return [createVNode(_component_SectionTitle, { title: "Наши преимущества" }), createVNode("div", { class: "lg:w-[70%] flex flex-col justify-center items-center gap-5" }, [(openBlock(true), createBlock(Fragment, null, renderList(advantages, (item, index) => {
+						return openBlock(), createBlock(Fragment, { key: index }, [createVNode("div", { class: "item animation-box flex flex-row justify-center items-center gap-5 w-full" }, [createVNode(_component_UIcon, {
+							class: "text-white min-w-9 min-h-9 text-[4cqw]",
+							name: item.icon
+						}, null, 8, ["name"]), createVNode("div", null, [createVNode("div", { class: "flex flex-row justify-start items-center gap-2 text-white" }, [(openBlock(true), createBlock(Fragment, null, renderList(item.message, (i) => {
+							return openBlock(), createBlock("span", { class: `uppercase sm:text-[16px] md:text-[24px] lg:text-[40px] text-[${i.color}]` }, toDisplayString(i.text), 3);
+						}), 256))]), createVNode("div", { class: "text-white sm:text-[10px] md:text-[14px] lg:text-[20px] text-left uppercase" }, toDisplayString(item.description), 1)])]), !item.lost ? (openBlock(), createBlock(_component_UIcon, {
+							key: 0,
+							class: "text-white text-[20px]",
+							name: "i-lucide-arrow-down"
+						})) : createCommentVNode("", true)], 64);
+					}), 128))])];
+				}),
+				_: 1
+			}, _parent));
+			_push(`</div>`);
+		};
+	}
+});
+//#endregion
+//#region app/components/section/advantages.vue
+var _sfc_setup$9 = advantages_vue_vue_type_script_setup_true_lang_default.setup;
+advantages_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/advantages.vue");
+	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+};
+var advantages_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(advantages_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-b09f82c8"]]), { __name: "SectionAdvantages" });
+//#endregion
+//#region app/utils/index.ts
+var utils = { isArray: (data) => {
+	return data && Array.isArray(data);
+} };
+//#endregion
+//#region app/composables/useReview.ts
+var useReview = () => {
+	const reviews = ref([]);
+	const current = ref({
+		name: "",
+		text: "",
+		rating: 0,
+		date: ""
+	});
+	const route = useRoute$1();
+	const toast = useToast();
+	const modalAddReviewIsOpen = ref(false);
+	const modalAllReviewsOpen = ref(false);
+	if (route.query.review === "open") modalAddReviewIsOpen.value = true;
+	watch(modalAddReviewIsOpen, (value) => {
+		if (value) reset(current);
+	});
+	const reset = (obj) => {
+		obj.value = {
+			name: "",
+			text: "",
+			rating: 0,
+			date: ""
+		};
+	};
+	const remake = (review) => {
+		return {
+			name: review.name,
+			text: review.text,
+			rating: Number(review.rating),
+			date: review.createdAt ? new Date(review.createdAt).toLocaleDateString("ru-RU") : Date.now().toLocaleString("ru-RU")
+		};
+	};
+	const getAll = async () => {
+		return $fetch$2("/api/review/all", { method: "GET" }).then((data) => {
+			if (utils.isArray(data)) reviews.value = data.map((review) => {
+				return remake(review);
+			});
+		});
+	};
+	const create = async (review) => {
+		return useFetch("/api/review/add", {
+			method: "POST",
+			body: { ...review.value }
+		}, "$9RxkCj8pEZ");
+	};
+	const add = async () => {
+		if (current.value.name && current.value.text && current.value.rating) create(current).then(() => {
+			reset(current);
+			toast.add({
+				title: "Ответ",
+				description: "Отзыв был отправлен",
+				color: "success"
+			});
+			modalAddReviewIsOpen.value = false;
+		}).catch(() => {
+			toast.add({
+				title: "Ответ",
+				description: "Произошла ошибка при отправке отзыва",
+				color: "error"
+			});
+		});
+		else toast.add({
+			title: "Отправка отзыва",
+			description: "Пожалуйста, заполните все поля",
+			color: "error"
+		});
+	};
+	const preload = async () => {
+		if (reviews.value.length < 3) await getAll().then(() => {
+			modalAllReviewsOpen.value = false;
+		});
+	};
+	return {
+		preload,
+		add,
+		current,
+		modalAddReviewIsOpen,
+		modalAllReviewsOpen,
+		reviews
+	};
+};
+//#endregion
+//#region \0virtual:public?%2Fimages%2Fsvg%2Fstar.svg
+var _virtual_public__2Fimages_2Fsvg_2Fstar_default = publicAssetsURL("/images/svg/star.svg");
+//#endregion
+//#region app/components/preview/viewer.vue?vue&type=script&setup=true&lang.ts
+var viewer_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
+	__name: "viewer",
+	__ssrInlineRender: true,
+	async setup(__props) {
+		let __temp, __restore;
+		const { reviews, preload } = useReview();
+		[__temp, __restore] = withAsyncContext(() => preload()), await __temp, __restore();
+		return (_ctx, _push, _parent, _attrs) => {
+			const _component_UIcon = _sfc_main$5$1;
+			_push(`<!--[-->`);
+			ssrRenderList(unref(reviews).slice(0, 3), (item) => {
+				_push(`<div class="item animation-box transition-all duration-150 flex flex-col justify-start items-start gap-1 w-full" data-v-6f4ffd20><div class="flex flex-row justify-between items-start gap-2 w-full" data-v-6f4ffd20><div class="flex sm:flex-row flex-col sm:justify-center sm:items-center gap-5 text-gray-600" data-v-6f4ffd20><div class="uppercase sm:text-[20px] md:text-[30px] lg:text-[36px]" data-v-6f4ffd20>`);
+				_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-circle-user-round" }, null, _parent));
+				_push(` ${ssrInterpolate(item.name)}</div><div class="flex flex-row justify-start items-start gap-1 mb-5" data-v-6f4ffd20><!--[-->`);
+				ssrRenderList(item.rating, (n) => {
+					_push(`<img height="20" width="20"${ssrRenderAttr("src", _virtual_public__2Fimages_2Fsvg_2Fstar_default)}${ssrRenderAttr("alt", `star +${n}`)} data-v-6f4ffd20>`);
+				});
+				_push(`<!--]--></div></div><div class="flex flex-row justify-center items-center gap-1 text-gray-600" data-v-6f4ffd20>`);
+				_push(ssrRenderComponent(_component_UIcon, {
+					name: "i-lucide-calendar",
+					size: "14"
+				}, null, _parent));
+				_push(`<p data-v-6f4ffd20>${ssrInterpolate(item.date)}</p></div></div><div class="text-gray-600 text-[1rem]" data-v-6f4ffd20>${ssrInterpolate(item.text)}</div></div>`);
+			});
+			_push(`<!--]-->`);
+		};
+	}
+});
+//#endregion
+//#region app/components/preview/viewer.vue
+var _sfc_setup$8 = viewer_vue_vue_type_script_setup_true_lang_default.setup;
+viewer_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/preview/viewer.vue");
 	return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
+var viewer_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(viewer_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-6f4ffd20"]]), { __name: "PreviewViewer" });
 //#endregion
 //#region app/components/preview/all.vue?vue&type=script&setup=true&lang.ts
 var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
@@ -1170,7 +1033,7 @@ var all_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 		const { reviews, preload } = useReview();
 		return (_ctx, _push, _parent, _attrs) => {
 			const _component_UDrawer = _sfc_main$8;
-			const _component_UButton = _sfc_main$9;
+			const _component_UButton = _sfc_main$7;
 			const _component_UCarousel = _sfc_main$4;
 			const _component_UIcon = _sfc_main$5$1;
 			_push(ssrRenderComponent(_component_UDrawer, mergeProps({
@@ -1906,9 +1769,9 @@ var add_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 	setup(__props) {
 		const { add, modalAddReviewIsOpen, current } = useReview();
 		return (_ctx, _push, _parent, _attrs) => {
-			const _component_UModal = _sfc_main$a;
-			const _component_UButton = _sfc_main$9;
-			const _component_UInput = _sfc_main$b;
+			const _component_UModal = _sfc_main$9;
+			const _component_UButton = _sfc_main$7;
+			const _component_UInput = _sfc_main$a;
 			const _component_UTextarea = _sfc_main$3;
 			_push(ssrRenderComponent(_component_UModal, mergeProps({
 				title: "Оставить отзыв",
@@ -2043,7 +1906,7 @@ var add_default = Object.assign(add_vue_vue_type_script_setup_true_lang_default,
 //#region app/components/section/reviews.vue
 var _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-	const _component_UContainer = _sfc_main$6;
+	const _component_UContainer = _sfc_main$5;
 	const _component_SectionTitle = title_default;
 	const _component_PreviewViewer = viewer_default;
 	const _component_PreviewAll = all_default;
@@ -2619,7 +2482,7 @@ var questions_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ define
 			}
 		];
 		return (_ctx, _push, _parent, _attrs) => {
-			const _component_UContainer = _sfc_main$6;
+			const _component_UContainer = _sfc_main$5;
 			const _component_SectionTitle = title_default;
 			const _component_UPageList = _sfc_main$1;
 			const _component_UPageCard = _sfc_main;
