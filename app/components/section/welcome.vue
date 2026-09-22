@@ -56,17 +56,22 @@ await useFetch('/api/direction/all', {
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
 				/>
-				<UMarquee class="lg:hidden w-full p-5" :overlay="false" pause-on-hover>
+				<UCarousel
+					dots v-slot="{ item }"
+					:items="directions"
+					class="lg:hidden w-full p-5 mb-10"
+					:autoplay="{ delay: 3000 }"
+					loop
+				>
 					<UPricingPlan
-						v-for="direction in directions"
 						orientation="horizontal"
-						class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-1/2 min-h-60"
-						:title="direction.name"
+						class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60"
+						:title="item.name"
 						:features="[
 						'Передача документации и посылок',
 						'Пассажирские перевозки',
 					]"
-						:price="`от ${direction.price} руб.`"
+						:price="`от ${item.price} руб.`"
 						:ui="{
 						root: 'ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5',
 						title: 'text-primary title',
@@ -77,11 +82,11 @@ await useFetch('/api/direction/all', {
 					}"
 						:button="{
 						label: 'Подробнее',
-						to: `/directions/${direction.slug}`,
+						to: `/directions/${item.slug}`,
 						trailingIcon: 'i-lucide-arrow-right'
 					}"
 					/>
-				</UMarquee>
+				</UCarousel>
 
 			</div>
 			<div
