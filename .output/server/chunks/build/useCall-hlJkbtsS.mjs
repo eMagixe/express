@@ -19,8 +19,10 @@ var useCall = () => {
 		order.value.phone = phone;
 		order.value.route = useRoute$1().path;
 		await sendData();
+		await sendGoal();
 		await navigateTo(`tel:${phone}`, { external: true });
 	}
+	async function sendGoal() {}
 	async function sendData() {
 		if (order.value.phone && order.value.uid && order.value.callEnabled) {
 			order.value.callEnabled = false;

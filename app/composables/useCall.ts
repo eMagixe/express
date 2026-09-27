@@ -15,16 +15,27 @@ export const useCall = () => {
 		}
 	})
 
-	async function toCall(phone: string) {
+	async function toCall(phone: string): Promise<void> {
 		order.value.phone = phone
 		order.value.route = useRoute().path
+
 		await sendData()
+		await sendGoal()
 		await navigateTo(`tel:${phone}`, {
 			external: true
 		})
 	}
 
-	async function sendData() {
+	async function sendGoal(): Promise<void>  {
+		if (typeof window !== 'undefined') {
+			const w: Window = window
+			if ('ym' in w && typeof w.ym === 'function') {
+				await w.ym('111727262', 'reachGoal', '599129800')
+			}
+		}
+	}
+
+	async function sendData(): Promise<void> {
 		if (order.value.phone && order.value.uid && order.value.callEnabled) {
 			order.value.callEnabled = false
 

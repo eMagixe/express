@@ -9,7 +9,7 @@ import { _ as _sfc_main$a } from './Modal-BqSeB7U2.mjs';
 import { T as TooltipProvider_default, _ as _sfc_main$d } from './Slideover-CkTj-WSe.mjs';
 import { _ as _sfc_main$e } from './Container-CLUPcRvH.mjs';
 import { l as localeContextInjectionKey, u as useLocale } from './useLocale-Cji6XXXY.mjs';
-import { u as useCall } from './useCall-YpyXK-2N.mjs';
+import { u as useCall } from './useCall-hlJkbtsS.mjs';
 import { u as useToast, t as toastMaxInjectionKey } from './useToast-DbOihFhv.mjs';
 import { _ as _sfc_main$c } from './Drawer-DirMqvds.mjs';
 import { useSSRContext, defineAsyncComponent, mergeProps, withCtx, createVNode, provide, toRef, computed, ref, unref, renderSlot, openBlock, createBlock, Fragment, renderList, useId, defineComponent, createTextVNode, toDisplayString, useSlots, useModel, watch, createCommentVNode, mergeModels, toRefs, useTemplateRef, resolveDynamicComponent, withModifiers, normalizeProps, guardReactiveProps, watchEffect, normalizeStyle, nextTick, createElementBlock, Teleport, shallowReactive, onScopeDispose, reactive, markRaw } from 'vue';
@@ -3066,7 +3066,7 @@ var header_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_defau
 //#endregion
 //#region app/layouts/default.vue
 var default_exports = /* @__PURE__ */ __exportAll({ default: () => default_default });
-var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-mPVIO-WC.mjs').then((c) => c.default || c));
+var __nuxt_component_4_lazy = defineAsyncComponent(() => import('./footer-CGUe8KSF.mjs').then((c) => c.default || c));
 var _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 	const _component_UApp = App_default;
