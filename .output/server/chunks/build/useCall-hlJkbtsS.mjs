@@ -1,4 +1,4 @@
-import { c as useRoute$1, $ as $fetch$2, n as navigateTo } from '../virtual/entry.mjs';
+import { $ as $fetch$2, c as useRoute$1, n as navigateTo } from '../virtual/entry.mjs';
 import { u as useState } from './state-CjjX6iZP.mjs';
 
 //#region app/composables/useCall.ts

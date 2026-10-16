@@ -91,11 +91,37 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 							class: "text-white",
 							title: "Все направления"
 						}, null, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex flex-col justify-center items-center gap-10"${_scopeId}><!--[-->`);
+						_push(`<div class="cities-list w-full flex flex-col justify-center items-center gap-10"${_scopeId}>`);
+						_push(ssrRenderComponent(_component_UPricingPlan, {
+							orientation: "horizontal",
+							class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
+							title: "Из Уфы",
+							description: "Пассажирские перевозки",
+							features: [
+								"Передача документации и посылок",
+								"До аэро - жд вокзалов и больниц",
+								"До места указанного заказчиком *",
+								"Билеты, отчётные документы, qr-коды"
+							],
+							ui: {
+								root: "ring-0 item-direction",
+								title: "text-primary title",
+								description: "text-white",
+								price: "text-primary",
+								featureTitle: "text-white",
+								button: "button-gradient"
+							},
+							button: {
+								label: "Подробнее",
+								to: `/directions/from-ufa`,
+								trailingIcon: "i-lucide-arrow-right"
+							}
+						}, null, _parent, _scopeId));
+						_push(`<!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "horizontal",
-								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
 								title: direction.name,
 								description: "Пассажирские перевозки",
 								price: `от ${direction.price} руб.`,
@@ -133,10 +159,34 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 							class: "text-white",
 							title: "Все направления"
 						}),
-						createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
+						createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-10" }, [createVNode(_component_UPricingPlan, {
+							orientation: "horizontal",
+							class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
+							title: "Из Уфы",
+							description: "Пассажирские перевозки",
+							features: [
+								"Передача документации и посылок",
+								"До аэро - жд вокзалов и больниц",
+								"До места указанного заказчиком *",
+								"Билеты, отчётные документы, qr-коды"
+							],
+							ui: {
+								root: "ring-0 item-direction",
+								title: "text-primary title",
+								description: "text-white",
+								price: "text-primary",
+								featureTitle: "text-white",
+								button: "button-gradient"
+							},
+							button: {
+								label: "Подробнее",
+								to: `/directions/from-ufa`,
+								trailingIcon: "i-lucide-arrow-right"
+							}
+						}), (openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
 							return openBlock(), createBlock(_component_UPricingPlan, {
 								orientation: "horizontal",
-								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
 								title: direction.name,
 								description: "Пассажирские перевозки",
 								price: `от ${direction.price} руб.`,

@@ -1024,6 +1024,11 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 		component: () => import('../build/login-NbnE3Af_.mjs')
 	},
 	{
+		name: "directions-from-ufa",
+		path: "/directions/from-ufa",
+		component: () => import('../build/from-ufa-gVMV6cdc.mjs')
+	},
+	{
 		name: "directions-kumertau-ufa",
 		path: "/directions/kumertau-ufa",
 		component: () => import('../build/kumertau-ufa-CzE8chTY.mjs')
@@ -1055,7 +1060,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions",
 		path: "/directions",
-		component: () => import('../build/directions-CTjZ1oLA.mjs')
+		component: () => import('../build/directions-DdQK6T2j.mjs')
 	},
 	{
 		name: "vacancies",
