@@ -50,9 +50,34 @@ await useLazyFetch('/api/direction/all', {
 
 		<div class="cities-list w-full flex flex-col justify-center items-center gap-10">
 			<UPricingPlan
+				orientation="horizontal"
+				class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full"
+				title="Из Уфы"
+				description="Пассажирские перевозки"
+				:features="[
+					'Передача документации и посылок',
+					'До аэро - жд вокзалов и больниц',
+					'До места указанного заказчиком *',
+					'Билеты, отчётные документы, qr-коды'
+				]"
+				:ui="{
+					root: 'ring-0 item-direction',
+					title: 'text-primary title',
+					description: 'text-white',
+					price: 'text-primary',
+					featureTitle: 'text-white',
+					button: 'button-gradient'
+				}"
+				:button="{
+					label: 'Подробнее',
+					to: `/directions/from-ufa`,
+					trailingIcon: 'i-lucide-arrow-right'
+				}"
+			/>
+			<UPricingPlan
 				v-for="direction in directions"
 				orientation="horizontal"
-				class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px]"
+				class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full"
 				:title="direction.name"
 				description="Пассажирские перевозки"
 				:price="`от ${direction.price} руб.`"
