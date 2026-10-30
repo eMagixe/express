@@ -584,11 +584,11 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 			const _component_UIcon = _sfc_main$5$1;
 			const _component_UPricingPlan = _sfc_main$6;
 			const _component_UCarousel = _sfc_main$4;
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-dd407aba>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "welcome-section w-full mx-auto mb-10" }, _attrs))} data-v-0a38a93c>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "min-h-[calc(100vh-100px)] flex flex-col justify-start gap-5 pt-10" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-dd407aba${_scopeId}> Такси межгород <br class="sm:hidden" data-v-dd407aba${_scopeId}>Уфа - `);
+						_push(`<h1 class="font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" data-v-0a38a93c${_scopeId}> Такси межгород <br class="sm:hidden" data-v-0a38a93c${_scopeId}>Уфа - `);
 						_push(ssrRenderComponent(cities_default, null, null, _parent, _scopeId));
 						_push(` - Уфа </h1>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
@@ -610,19 +610,19 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-dd407aba${_scopeId}><!--[-->`);
+						_push(`<div class="cities-list w-full flex lg:flex-row not-lg:flex-col justify-center items-center gap-10" data-v-0a38a93c${_scopeId}><!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "vertical",
 								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
 								title: direction.name,
-								description: "маршрут в обоих направлениях",
+								description: "До места указанного заказчиком *",
 								price: `от ${direction.price} руб.`,
 								features: [
-									"Передача документации и посылок",
-									"До аэро - жд вокзалов и больниц",
-									"До места указанного заказчиком *",
-									"Билеты, отчётные документы, qr-коды"
+									`${direction.distance} км - всего ${(direction.price / direction.distance).toFixed(0)} руб. за км`,
+									`Доставим за ${direction.time}`,
+									"Билеты, отчётные документы, qr-коды",
+									"Передача документации и посылок"
 								],
 								ui: {
 									root: "ring-0 item-direction",
@@ -652,7 +652,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 									orientation: "horizontal",
 									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 									title: item.name,
-									features: ["Пассажирские перевозки", "Передача документации и посылок"],
+									features: [`${item.distance} км - всего ${(item.price / item.distance).toFixed(0)} руб. за км`, `Доставим за ${item.time}`],
 									price: `от ${item.price} руб.`,
 									ui: {
 										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -672,7 +672,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 									orientation: "horizontal",
 									class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 									title: item.name,
-									features: ["Пассажирские перевозки", "Передача документации и посылок"],
+									features: [`${item.distance} км - всего ${(item.price / item.distance).toFixed(0)} руб. за км`, `Доставим за ${item.time}`],
 									price: `от ${item.price} руб.`,
 									ui: {
 										root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -689,13 +689,14 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 									}
 								}, null, 8, [
 									"title",
+									"features",
 									"price",
 									"button"
 								])];
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-dd407aba${_scopeId}><p class="text-sm text-white" data-v-dd407aba${_scopeId}>* требуется дополнительная оплата</p>`);
+						_push(`</div><div class="flex flex-col md:flex-row justify-between items-center gap-2 py-2 px-3 rounded-lg bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] mx-5" data-v-0a38a93c${_scopeId}><p class="text-sm text-white" data-v-0a38a93c${_scopeId}>* требуется дополнительная оплата</p>`);
 						_push(ssrRenderComponent(_component_NuxtLink, {
 							class: "text-primary underline flex flex-row justify-center items-center gap-2",
 							to: "/directions"
@@ -708,7 +709,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-dd407aba${_scopeId}> Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи </div>`);
+						_push(`</div><div class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" data-v-0a38a93c${_scopeId}><h2 class="mb-3" data-v-0a38a93c${_scopeId}>Такси из Кумертау, Мелеуза, Салавата до Уфы</h2><p class="text-sm mx-auto text-gray-400 text-center" data-v-0a38a93c${_scopeId}>Мы организуем комфортные и надёжные междугородние поездки между Кумертау, Мелеузом, Салаватом и Уфой.</p><p class="text-sm mx-auto text-gray-400 text-center" data-v-0a38a93c${_scopeId}>Маршруты работают в обоих направлениях.</p></div>`);
 					} else return [
 						createVNode("h1", { class: "font-medium text-[clamp(1.8rem,2.5vw,3rem)] text-white text-center w-full" }, [
 							createTextVNode(" Такси межгород "),
@@ -733,13 +734,13 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 								orientation: "vertical",
 								class: "not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80",
 								title: direction.name,
-								description: "маршрут в обоих направлениях",
+								description: "До места указанного заказчиком *",
 								price: `от ${direction.price} руб.`,
 								features: [
-									"Передача документации и посылок",
-									"До аэро - жд вокзалов и больниц",
-									"До места указанного заказчиком *",
-									"Билеты, отчётные документы, qr-коды"
+									`${direction.distance} км - всего ${(direction.price / direction.distance).toFixed(0)} руб. за км`,
+									`Доставим за ${direction.time}`,
+									"Билеты, отчётные документы, qr-коды",
+									"Передача документации и посылок"
 								],
 								ui: {
 									root: "ring-0 item-direction",
@@ -757,6 +758,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							}, null, 8, [
 								"title",
 								"price",
+								"features",
 								"button"
 							]);
 						}), 256)), createVNode(_component_UCarousel, {
@@ -770,7 +772,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 								orientation: "horizontal",
 								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60",
 								title: item.name,
-								features: ["Пассажирские перевозки", "Передача документации и посылок"],
+								features: [`${item.distance} км - всего ${(item.price / item.distance).toFixed(0)} руб. за км`, `Доставим за ${item.time}`],
 								price: `от ${item.price} руб.`,
 								ui: {
 									root: "ring-0 item-direction flex not-sm:flex-col sm:flex-row justify-around items-center gap-5",
@@ -787,6 +789,7 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 								}
 							}, null, 8, [
 								"title",
+								"features",
 								"price",
 								"button"
 							])]),
@@ -799,7 +802,11 @@ var welcome_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCo
 							default: withCtx(() => [createVNode(_component_UIcon, { name: "i-lucide-split" }), createTextVNode(" Основные направления")]),
 							_: 1
 						})]),
-						createVNode("div", { class: "not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" }, " Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи ")
+						createVNode("div", { class: "not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3" }, [
+							createVNode("h2", { class: "mb-3" }, "Такси из Кумертау, Мелеуза, Салавата до Уфы"),
+							createVNode("p", { class: "text-sm mx-auto text-gray-400 text-center" }, "Мы организуем комфортные и надёжные междугородние поездки между Кумертау, Мелеузом, Салаватом и Уфой."),
+							createVNode("p", { class: "text-sm mx-auto text-gray-400 text-center" }, "Маршруты работают в обоих направлениях.")
+						])
 					];
 				}),
 				_: 1
@@ -816,7 +823,7 @@ welcome_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/section/welcome.vue");
 	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
-var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-dd407aba"]]), { __name: "SectionWelcome" });
+var welcome_default = /*#__PURE__*/ Object.assign(_plugin_vue_export_helper_default(welcome_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-0a38a93c"]]), { __name: "SectionWelcome" });
 //#endregion
 //#region app/components/section/advantages.vue?vue&type=script&setup=true&lang.ts
 var advantages_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({

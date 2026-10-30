@@ -36,13 +36,13 @@ await useFetch('/api/direction/all', {
 					orientation="vertical"
 					class="not-lg:hidden p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] min-w-80"
 					:title="direction.name"
-					description="маршрут в обоих направлениях"
+					description="До места указанного заказчиком *"
 					:price="`от ${direction.price} руб.`"
 					:features="[
-						'Передача документации и посылок',
-						'До аэро - жд вокзалов и больниц',
-						'До места указанного заказчиком *',
-						'Билеты, отчётные документы, qr-коды'
+						`${direction.distance} км - всего ${(direction.price / direction.distance).toFixed(0)} руб. за км`,
+						`Доставим за ${direction.time}`,
+						'Билеты, отчётные документы, qr-коды',
+						'Передача документации и посылок'
 					]"
 					:ui="{
 						root: 'ring-0 item-direction',
@@ -70,8 +70,8 @@ await useFetch('/api/direction/all', {
 						class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full min-h-60"
 						:title="item.name"
 						:features="[
-							'Пассажирские перевозки',
-							'Передача документации и посылок',
+							`${item.distance} км - всего ${(item.price / item.distance).toFixed(0)} руб. за км`,
+							`Доставим за ${item.time}`,
 						]"
 						:price="`от ${item.price} руб.`"
 						:ui="{
@@ -100,8 +100,11 @@ await useFetch('/api/direction/all', {
 			<div
 				class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3"
 			>
-				Быстро и с комфортом доставим вас в нужное место в любое время дня и ночи
+				<h2 class="mb-3">Такси из Кумертау, Мелеуза, Салавата до Уфы</h2>
+				<p class="text-sm mx-auto text-gray-400 text-center">Мы организуем комфортные и надёжные междугородние поездки между Кумертау, Мелеузом, Салаватом и Уфой.</p>
+				<p class="text-sm mx-auto text-gray-400 text-center">Маршруты работают в обоих направлениях.</p>
 			</div>
+
 		</UContainer>
 	</div>
 </template>
