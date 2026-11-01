@@ -85,14 +85,14 @@ await useLazyFetch('/api/direction/all', {
 					orientation="horizontal"
 					class="p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full"
 					:title="`Уфа - ${direction.name}`"
-					description="Пассажирские перевозки"
+					description="Заказ возможен в обоих направлениях"
 					:price="`от ${direction.price} руб.`"
 					:features="[
-					'Передача документации и посылок',
-					'До аэро - жд вокзалов и больниц',
-					'До места указанного заказчиком *',
-					'Билеты, отчётные документы, qr-коды'
-				]"
+						`${direction.distance} км - всего ${(direction.price / direction.distance).toFixed(0)} руб. за км`,
+						`Доставим за ${direction.time}`,
+						'Билеты, отчётные документы, qr-коды',
+						'Передача документации и посылок'
+					]"
 					:ui="{
 					root: 'ring-0 item-direction',
 					title: 'text-primary title',
