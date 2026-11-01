@@ -1,4 +1,5 @@
 import { u as useSeoMeta$1 } from '../virtual/entry.mjs';
+import { a as _sfc_main$5 } from './Button-D5UK4P4A.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { t as title_default } from './title-pte2Tibk.mjs';
@@ -29,16 +30,15 @@ import 'vue-router';
 import '@iconify/vue';
 import 'tailwindcss/colors';
 import 'unhead/utils';
-import './asyncData-D2HMHIUX.mjs';
-import '@vue/shared';
-import 'fnv1a-64';
-import 'object-identity';
-import './Button-D5UK4P4A.mjs';
 import './components-DTuZdOqa.mjs';
+import './asyncData-D2HMHIUX.mjs';
 import '@iconify/utils/lib/css/icon';
 import './nuxt-link-By4uHnr8.mjs';
 import '@vueuse/core';
 import 'tailwind-variants';
+import '@vue/shared';
+import 'fnv1a-64';
+import 'object-identity';
 import './useLocale-Cji6XXXY.mjs';
 import './Badge-Cz_GlsYG.mjs';
 
@@ -76,6 +76,7 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 			const _component_UContainer = _sfc_main;
 			const _component_UBreadcrumb = _sfc_main$1;
 			const _component_SectionTitle = title_default;
+			const _component_UIcon = _sfc_main$5;
 			const _component_UPricingPlan = _sfc_main$2;
 			_push(ssrRenderComponent(_component_UContainer, mergeProps({ class: "flex flex-col justify-start gap-5 pt-10" }, _attrs), {
 				default: withCtx((_, _push, _parent, _scopeId) => {
@@ -91,7 +92,9 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 							class: "text-white",
 							title: "Все направления"
 						}, null, _parent, _scopeId));
-						_push(`<div class="cities-list w-full flex flex-col justify-center items-center gap-10"${_scopeId}>`);
+						_push(`<div class="flex flex-row gap-3"${_scopeId}>`);
+						_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-info" }, null, _parent, _scopeId));
+						_push(`<div${_scopeId}><p class="text-white text-sm pb-1"${_scopeId}> Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет. </p><p class="text-white text-sm pb-1"${_scopeId}>Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. </p><p class="text-white text-sm pb-5"${_scopeId}>Дополнительную информацию вы можете уточнить у диспетчера...</p></div></div><h2 class="text-primary text-2xl pb-10 text-center"${_scopeId}>Круглосуточный прием заказов</h2><div class="cities-list w-full flex flex-col justify-center items-center gap-10"${_scopeId}>`);
 						_push(ssrRenderComponent(_component_UPricingPlan, {
 							orientation: "horizontal",
 							class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
@@ -159,6 +162,12 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 							class: "text-white",
 							title: "Все направления"
 						}),
+						createVNode("div", { class: "flex flex-row gap-3" }, [createVNode(_component_UIcon, { name: "i-lucide-info" }), createVNode("div", null, [
+							createVNode("p", { class: "text-white text-sm pb-1" }, " Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет. "),
+							createVNode("p", { class: "text-white text-sm pb-1" }, "Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. "),
+							createVNode("p", { class: "text-white text-sm pb-5" }, "Дополнительную информацию вы можете уточнить у диспетчера...")
+						])]),
+						createVNode("h2", { class: "text-primary text-2xl pb-10 text-center" }, "Круглосуточный прием заказов"),
 						createVNode("div", { class: "cities-list w-full flex flex-col justify-center items-center gap-10" }, [createVNode(_component_UPricingPlan, {
 							orientation: "horizontal",
 							class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",

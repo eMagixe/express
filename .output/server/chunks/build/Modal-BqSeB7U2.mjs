@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, a as useForwardProps, t as tv, _ as _sfc_main$1, F as FieldGroupReset, r as useEmitAsProps, P as Primitive, m as createContext } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, b as useForwardProps, t as tv, _ as _sfc_main$1, F as FieldGroupReset, r as useEmitAsProps, P as Primitive, m as createContext } from './Button-D5UK4P4A.mjs';
 import { a as usePortal, c as pointerDownOutside, V as VisuallyHidden_default, P as Presence_default, u as useId$1, T as Teleport_default, d as useHideOthers, e as useBodyScrollLock, F as FocusScope_default, D as DismissableLayer_default, h as getOpenState } from './overlay-CnuoVSfw.mjs';
 import { u as useForwardExpose } from './useForwardExpose-lTVrimVg.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';

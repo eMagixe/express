@@ -1026,7 +1026,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions-from-ufa",
 		path: "/directions/from-ufa",
-		component: () => import('../build/from-ufa-gVMV6cdc.mjs')
+		component: () => import('../build/from-ufa-DSARIzm7.mjs')
 	},
 	{
 		name: "directions-kumertau-ufa",
@@ -1060,7 +1060,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "directions",
 		path: "/directions",
-		component: () => import('../build/directions-DdQK6T2j.mjs')
+		component: () => import('../build/directions-B4h1Ck35.mjs')
 	},
 	{
 		name: "vacancies",
@@ -1070,7 +1070,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-DwPWFw-k.mjs')
+		component: () => import('../build/pages-BrxbIEDM.mjs')
 	}
 ];
 //#endregion

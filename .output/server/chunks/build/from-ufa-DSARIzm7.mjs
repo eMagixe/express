@@ -1,4 +1,5 @@
 import { u as useSeoMeta$1 } from '../virtual/entry.mjs';
+import { a as _sfc_main$5 } from './Button-D5UK4P4A.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';
 import { _ as _sfc_main } from './Container-CLUPcRvH.mjs';
 import { u as useCall } from './useCall-hlJkbtsS.mjs';
@@ -30,16 +31,15 @@ import 'vue-router';
 import '@iconify/vue';
 import 'tailwindcss/colors';
 import 'unhead/utils';
-import './asyncData-D2HMHIUX.mjs';
-import '@vue/shared';
-import 'fnv1a-64';
-import 'object-identity';
-import './Button-D5UK4P4A.mjs';
 import './components-DTuZdOqa.mjs';
+import './asyncData-D2HMHIUX.mjs';
 import '@iconify/utils/lib/css/icon';
 import './nuxt-link-By4uHnr8.mjs';
 import '@vueuse/core';
 import 'tailwind-variants';
+import '@vue/shared';
+import 'fnv1a-64';
+import 'object-identity';
 import './state-CjjX6iZP.mjs';
 import './useLocale-Cji6XXXY.mjs';
 import './usePrefix-wIR1GMpN.mjs';
@@ -83,6 +83,7 @@ var from_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineC
 			const _component_UContainer = _sfc_main;
 			const _component_UBreadcrumb = _sfc_main$1;
 			const _component_UPageSection = _sfc_main$2;
+			const _component_UIcon = _sfc_main$5;
 			const _component_UPricingPlan = _sfc_main$3;
 			_push(`<div${ssrRenderAttrs(mergeProps({ class: "directions-page" }, _attrs))}>`);
 			_push(ssrRenderComponent(_component_UContainer, { class: "pt-10" }, {
@@ -111,7 +112,7 @@ var from_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineC
 				ui: {
 					title: "text-primary tracking-wider",
 					description: "text-white",
-					container: "py-10 sm:py-10 lg:py-10",
+					container: "pb-5 sm:pb-5 lg:pb-5 pt-10 sm:pt-10 lg:pt-10",
 					wrapper: "text-white flex flex-col justify-start items-start gap-5 h-full w-full",
 					links: "w-full flex flex-col justify-center items-center gap-5",
 					footer: "w-full",
@@ -121,7 +122,9 @@ var from_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineC
 			_push(ssrRenderComponent(_component_UContainer, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<div class="w-full flex flex-col justify-center items-center gap-10"${_scopeId}><!--[-->`);
+						_push(`<div class="flex flex-row gap-3"${_scopeId}>`);
+						_push(ssrRenderComponent(_component_UIcon, { name: "i-lucide-info" }, null, _parent, _scopeId));
+						_push(`<div${_scopeId}><p class="text-white text-sm pb-1"${_scopeId}> Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет. </p><p class="text-white text-sm pb-1"${_scopeId}>Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. </p><p class="text-white text-sm pb-5"${_scopeId}>Дополнительную информацию вы можете уточнить у диспетчера...</p></div></div><h2 class="text-primary text-2xl py-10 text-center"${_scopeId}>Круглосуточный прием заказов</h2><div class="w-full flex flex-col justify-center items-center gap-10"${_scopeId}><!--[-->`);
 						ssrRenderList(unref(directions), (direction) => {
 							_push(ssrRenderComponent(_component_UPricingPlan, {
 								orientation: "horizontal",
@@ -151,38 +154,46 @@ var from_ufa_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineC
 							}, null, _parent, _scopeId));
 						});
 						_push(`<!--]--><p class="text-sm text-gray-400 text-center mb-10"${_scopeId}>* требуется дополнительная оплата</p></div>`);
-					} else return [createVNode("div", { class: "w-full flex flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
-						return openBlock(), createBlock(_component_UPricingPlan, {
-							orientation: "horizontal",
-							class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
-							title: `Уфа - ${direction.name}`,
-							description: "Пассажирские перевозки",
-							price: `от ${direction.price} руб.`,
-							features: [
-								"Передача документации и посылок",
-								"До аэро - жд вокзалов и больниц",
-								"До места указанного заказчиком *",
-								"Билеты, отчётные документы, qr-коды"
-							],
-							ui: {
-								root: "ring-0 item-direction",
-								title: "text-primary title",
-								description: "text-white",
-								price: "text-primary",
-								featureTitle: "text-white",
-								button: "button-gradient"
-							},
-							button: {
-								label: "Позвонить",
-								trailingIcon: "i-lucide-phone",
-								onClick: () => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
-							}
-						}, null, 8, [
-							"title",
-							"price",
-							"button"
-						]);
-					}), 256)), createVNode("p", { class: "text-sm text-gray-400 text-center mb-10" }, "* требуется дополнительная оплата")])];
+					} else return [
+						createVNode("div", { class: "flex flex-row gap-3" }, [createVNode(_component_UIcon, { name: "i-lucide-info" }), createVNode("div", null, [
+							createVNode("p", { class: "text-white text-sm pb-1" }, " Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет. "),
+							createVNode("p", { class: "text-white text-sm pb-1" }, "Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. "),
+							createVNode("p", { class: "text-white text-sm pb-5" }, "Дополнительную информацию вы можете уточнить у диспетчера...")
+						])]),
+						createVNode("h2", { class: "text-primary text-2xl py-10 text-center" }, "Круглосуточный прием заказов"),
+						createVNode("div", { class: "w-full flex flex-col justify-center items-center gap-10" }, [(openBlock(true), createBlock(Fragment, null, renderList(unref(directions), (direction) => {
+							return openBlock(), createBlock(_component_UPricingPlan, {
+								orientation: "horizontal",
+								class: "p-10 bg-linear-to-r from-gray-600/30 to-gray-700/30 backdrop-blur-[5px] w-full",
+								title: `Уфа - ${direction.name}`,
+								description: "Пассажирские перевозки",
+								price: `от ${direction.price} руб.`,
+								features: [
+									"Передача документации и посылок",
+									"До аэро - жд вокзалов и больниц",
+									"До места указанного заказчиком *",
+									"Билеты, отчётные документы, qr-коды"
+								],
+								ui: {
+									root: "ring-0 item-direction",
+									title: "text-primary title",
+									description: "text-white",
+									price: "text-primary",
+									featureTitle: "text-white",
+									button: "button-gradient"
+								},
+								button: {
+									label: "Позвонить",
+									trailingIcon: "i-lucide-phone",
+									onClick: () => ("useCall" in _ctx ? _ctx.useCall : unref(useCall))().toCall("+79177666833")
+								}
+							}, null, 8, [
+								"title",
+								"price",
+								"button"
+							]);
+						}), 256)), createVNode("p", { class: "text-sm text-gray-400 text-center mb-10" }, "* требуется дополнительная оплата")])
+					];
 				}),
 				_: 1
 			}, _parent));

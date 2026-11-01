@@ -1,5 +1,5 @@
 import { a as useAppConfig, $ as $fetch$2 } from '../virtual/entry.mjs';
-import { u as useComponentProps, t as tv, a as useForwardProps, P as Primitive, _ as _sfc_main$3 } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, t as tv, b as useForwardProps, P as Primitive, _ as _sfc_main$3 } from './Button-D5UK4P4A.mjs';
 import { _ as _sfc_main$1 } from './Modal-BqSeB7U2.mjs';
 import { _ as _sfc_main$1$1, a as _sfc_main$4 } from './FormField-B9FP6L9G.mjs';
 import { u as useLazyFetch } from './fetch-DUhcUvKg.mjs';

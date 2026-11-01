@@ -101,7 +101,7 @@ await useFetch('/api/direction/all', {
 				class="not-sm:hidden text-[clamp(1rem,3vw,2rem)] pt-10 mx-auto text-white text-center w-2/3"
 			>
 				<h2 class="mb-3">Такси из Кумертау, Мелеуза, Салавата до Уфы</h2>
-				<p class="text-sm mx-auto text-gray-400 text-center">Мы организуем комфортные и надёжные междугородние поездки между Кумертау, Мелеузом, Салаватом и Уфой.</p>
+				<p class="text-sm mx-auto text-gray-400 text-center">Мы организуем комфортные и надёжные междугородние поездки</p>
 				<p class="text-sm mx-auto text-gray-400 text-center">Маршруты работают в обоих направлениях.</p>
 			</div>
 

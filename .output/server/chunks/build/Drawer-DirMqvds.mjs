@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, a as useForwardProps, t as tv, F as FieldGroupReset, _ as _sfc_main$1 } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, b as useForwardProps, t as tv, F as FieldGroupReset, _ as _sfc_main$1 } from './Button-D5UK4P4A.mjs';
 import { a as usePortal, c as pointerDownOutside, V as VisuallyHidden_default } from './overlay-CnuoVSfw.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
 import { useSlots, toRef, computed, createVNode, resolveDynamicComponent, unref, mergeProps, withCtx, renderSlot, toHandlers, createTextVNode, toDisplayString, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';

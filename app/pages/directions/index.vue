@@ -47,7 +47,17 @@ await useLazyFetch('/api/direction/all', {
 			}"
 		/>
 		<SectionTitle class="text-white" title="Все направления" />
-
+		<div class="flex flex-row gap-3">
+			<UIcon name="i-lucide-info"/>
+			<div>
+				<p class="text-white text-sm pb-1">
+					Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет.
+				</p>
+				<p class="text-white text-sm pb-1">Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. </p>
+				<p class="text-white text-sm pb-5">Дополнительную информацию вы можете уточнить у диспетчера...</p>
+			</div>
+		</div>
+		<h2 class="text-primary text-2xl pb-10 text-center">Круглосуточный прием заказов</h2>
 		<div class="cities-list w-full flex flex-col justify-center items-center gap-10">
 			<UPricingPlan
 				orientation="horizontal"

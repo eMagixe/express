@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, a as useForwardProps, t as tv, F as FieldGroupReset, _ as _sfc_main$1, m as createContext } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, b as useForwardProps, t as tv, F as FieldGroupReset, _ as _sfc_main$1, m as createContext } from './Button-D5UK4P4A.mjs';
 import { a as usePortal, c as pointerDownOutside, V as VisuallyHidden_default } from './overlay-CnuoVSfw.mjs';
 import { u as useForwardExpose } from './useForwardExpose-lTVrimVg.mjs';
 import { D as DialogRoot_default, a as DialogTrigger_default, b as DialogPortal_default, c as DialogOverlay_default, d as DialogContent_default, e as DialogTitle_default, f as DialogDescription_default, g as DialogClose_default } from './Modal-BqSeB7U2.mjs';

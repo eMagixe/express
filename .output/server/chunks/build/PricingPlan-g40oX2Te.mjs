@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, t as tv, P as Primitive, b as _sfc_main$5, _ as _sfc_main$2 } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, t as tv, P as Primitive, a as _sfc_main$5, _ as _sfc_main$2 } from './Button-D5UK4P4A.mjs';
 import { _ as _sfc_main$1 } from './Badge-Cz_GlsYG.mjs';
 import { useSlots, computed, unref, withCtx, openBlock, createBlock, renderSlot, createTextVNode, toDisplayString, createCommentVNode, createVNode, mergeProps, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderClass, ssrRenderSlot, ssrInterpolate, ssrRenderList } from 'vue/server-renderer';

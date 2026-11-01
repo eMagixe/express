@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, t as tv, P as Primitive, c as _sfc_main$1, p as pickLinkProps, d as _sfc_main$2, b as _sfc_main$5, e as _sfc_main$3, f as get } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, t as tv, P as Primitive, c as _sfc_main$1, p as pickLinkProps, d as _sfc_main$2, a as _sfc_main$5, e as _sfc_main$3, f as get } from './Button-D5UK4P4A.mjs';
 import { u as useLocale } from './useLocale-Cji6XXXY.mjs';
 import { useSlots, computed, unref, mergeProps, withCtx, renderSlot, openBlock, createBlock, createCommentVNode, createTextVNode, toDisplayString, createVNode, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderClass, ssrRenderList, ssrRenderSlot, ssrInterpolate } from 'vue/server-renderer';

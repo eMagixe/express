@@ -59,7 +59,7 @@ await useLazyFetch('/api/direction/all', {
 			:ui="{
 				title: 'text-primary tracking-wider',
 				description: 'text-white',
-				container: 'py-10 sm:py-10 lg:py-10',
+				container: 'pb-5 sm:pb-5 lg:pb-5 pt-10 sm:pt-10 lg:pt-10',
 				wrapper: 'text-white flex flex-col justify-start items-start gap-5 h-full w-full',
 				links: 'w-full flex flex-col justify-center items-center gap-5',
 				footer: 'w-full',
@@ -67,6 +67,18 @@ await useLazyFetch('/api/direction/all', {
 			}"
 		/>
 		<UContainer>
+			<div class="flex flex-row gap-3">
+				<UIcon name="i-lucide-info"/>
+				<div>
+					<p class="text-white text-sm pb-1">
+						Основные направления нашего такси, по ним ежедневно едут маршруты с опытными водителями со стажем от 7 - 10 лет.
+					</p>
+					<p class="text-white text-sm pb-1">Предоставляем отчетные документы, билеты, qr-коды. а также осуществляем перевозки и доставки посылок и документации. </p>
+					<p class="text-white text-sm pb-5">Дополнительную информацию вы можете уточнить у диспетчера...</p>
+				</div>
+
+			</div>
+			<h2 class="text-primary text-2xl py-10 text-center">Круглосуточный прием заказов</h2>
 			<div class="w-full flex flex-col justify-center items-center gap-10">
 				<UPricingPlan
 					v-for="direction in directions"

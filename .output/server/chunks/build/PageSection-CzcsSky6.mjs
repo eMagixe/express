@@ -1,5 +1,5 @@
 import { a as useAppConfig } from '../virtual/entry.mjs';
-import { u as useComponentProps, t as tv, P as Primitive, b as _sfc_main$5, _ as _sfc_main$3, g as getSlotChildrenText, c as _sfc_main$1$1 } from './Button-D5UK4P4A.mjs';
+import { u as useComponentProps, t as tv, P as Primitive, a as _sfc_main$5, _ as _sfc_main$3, g as getSlotChildrenText, c as _sfc_main$1$1 } from './Button-D5UK4P4A.mjs';
 import { _ as _sfc_main$2 } from './Container-CLUPcRvH.mjs';
 import { u as usePrefix } from './usePrefix-wIR1GMpN.mjs';
 import { useSlots, computed, unref, mergeProps, withCtx, openBlock, createBlock, renderSlot, createCommentVNode, createTextVNode, toDisplayString, Fragment, renderList, createVNode, useSSRContext } from 'vue';

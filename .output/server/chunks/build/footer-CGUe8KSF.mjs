@@ -1,5 +1,5 @@
 import { _ as _plugin_vue_export_helper_default } from '../virtual/entry.mjs';
-import { b as _sfc_main$5 } from './Button-D5UK4P4A.mjs';
+import { a as _sfc_main$5 } from './Button-D5UK4P4A.mjs';
 import { n as logo_default } from './default-Hlp3SH0S.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
